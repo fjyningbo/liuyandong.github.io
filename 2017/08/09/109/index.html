@@ -1,0 +1,706 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="欢迎收听软件那些事儿，第109期。如果按照上一期的打算，我是不想过多的讲TCP/IP的，但是，我知识面本来就不行，好不容易碰到一个我还算了解的领域，如果不多吹吹牛，总感觉可能会死，不吹牛会死！ 在互联网诞生以前，在那个阿帕网上，只运行了三种服务，一个是telnet，一个是FTP，一个是E-Mail。这三种服务，现在也在广泛的应用，但是已经不是杀手应用了，现在的杀手应用是如何在网上购物，如何在网上看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="109. 互联网事(2)-TCP&#x2F;IP">
+<meta property="og:url" content="http://yoursite.com/2017/08/09/109/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="欢迎收听软件那些事儿，第109期。如果按照上一期的打算，我是不想过多的讲TCP/IP的，但是，我知识面本来就不行，好不容易碰到一个我还算了解的领域，如果不多吹吹牛，总感觉可能会死，不吹牛会死！ 在互联网诞生以前，在那个阿帕网上，只运行了三种服务，一个是telnet，一个是FTP，一个是E-Mail。这三种服务，现在也在广泛的应用，但是已经不是杀手应用了，现在的杀手应用是如何在网上购物，如何在网上看">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-09T13:51:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="109. 互联网事(2)-TCP&#x2F;IP">
+<meta name="twitter:description" content="欢迎收听软件那些事儿，第109期。如果按照上一期的打算，我是不想过多的讲TCP/IP的，但是，我知识面本来就不行，好不容易碰到一个我还算了解的领域，如果不多吹吹牛，总感觉可能会死，不吹牛会死！ 在互联网诞生以前，在那个阿帕网上，只运行了三种服务，一个是telnet，一个是FTP，一个是E-Mail。这三种服务，现在也在广泛的应用，但是已经不是杀手应用了，现在的杀手应用是如何在网上购物，如何在网上看">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/09/109/"/>
+
+
+
+
+
+  <title> 109. 互联网事(2)-TCP/IP | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/109/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                109. 互联网事(2)-TCP/IP
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T21:49:50+08:00">
+                2017-08-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>欢迎收听软件那些事儿，第109期。如果按照上一期的打算，我是不想过多的讲TCP/IP的，但是，我知识面本来就不行，好不容易碰到一个我还算了解的领域，如果不多吹吹牛，总感觉可能会死，不吹牛会死！</p>
+<p>在互联网诞生以前，在那个阿帕网上，只运行了三种服务，一个是telnet，一个是FTP，一个是E-Mail。这三种服务，现在也在广泛的应用，但是已经不是杀手应用了，现在的杀手应用是如何在网上购物，如何在网上看女主播露大腿，如何在网上玩黄鳝。时代已经变了，以前那种无聊的上网，几乎已经没人用了。telnet现在几乎没有人用了，只有很少一部分程序员和运维人员还在用ssh，FTP几乎也没有什么人用了，现在大家首先不用下载了，即使下载，也是用BT这种方式下载。至于E-mail，现在仍然是个杀手应用吧。</p>
+<p>虽然说每年总会出现100多种号称要代替Email的工具，但是，几乎没有意外的，他们都失败了。现在几乎所有的IT巨头，都有免费的Email提供，除了百度公司，一心一意的卖药，主要的用户都是不会用Email的人，所以，百度很精明的不做Email，毕竟会使用Email的人，是不会太相信莆田医院的。前一段时间，不是百度起诉了一个公众号，因为那个公众号说了这样一句话，百度一下，你就完了。百度就是这么任性，其实对那个在2016年去世的魏则西来说，真的是百度一下，你就玩了，善良的人，总是被骗子骗财。在我的最希望的名单里，就有百度倒闭这一条。</p>
+<p>同样是一个网络，可以叫不同的名字。和人一样，比如我在外面，同事喊我刘延栋，听我电台的人喊我栋哥或者栋叔，朋友喊我SB。在家里，没人叫这几个名字，比如老婆喊我大熊，孩子喊我老爸，我父母喊我大狗。虽然名字不一样，但是，人是一样的，都是血肉之躯。网络这个东西也是这样，名字不一样，但是，内容都是一样的，都是电脑，网线，路由器组成的。从区域和范围来分，可以分为4种，从大到小分别是互联网，英文名叫(Internet)，有中国特色的互联网(Chinese Internet)，广域网(WAN)，最小的叫局域网(LAN)。如果不从区域上来划分，从传输技术上来划分，可以分为，以太网(Ethernet)，ATM网，FDDI网(光纤分布式数据接口网)，这都无所谓。如果从区域上来说，有中国特色的互联网(Chinese Internet)风头正劲，现在从技术上来说，以太网占据主流。在业界有这样一句话，互联网正在中国特色化，传输正在以太化。电脑上的接口叫以太网接口，还有Wi-Fi接口，交换机、路由器上的千兆，万兆以太网口，还有网线，它们都是以太网的组成部分。我们每天都用的技术是以太网技术。</p>
+<p>现在很难见到网线了，如果有人弄断一根网线的话，可以看到里面是8根金属丝，如果买的是非常贵的真货的话，应该是铜的，无氧铜的。如果买的是有中国特色的网线的话，可能是4根铁，4根铝，或者就是4根铁丝，电阻很大，200米就能有个150欧姆，能传个30米，50米就非常不错了。重要的是，便宜啊！这8根线，要接在一个水晶头上，学名叫RJ45接头。栋哥打工的，肩膀上放一条毛巾，就扛着路由器上楼，还能手捏水晶头，都是硬功夫。我已经不懂现在的无线路由器了，我第一次见智能手机的时候，就开始找网线接口，至今无法理解不插一根网线，手机是怎么上网的。好奇怪。</p>
+<p>我还是讲一下我那个年代的网线吧，8根铜线为什么就能传递信号呢？这个就是以太网的原理。以太网是一个物理协议，主要是描述了数字信息是如何转换成铜线中的电信号，也就是电压。然后，这些电压又如何转换成数字信号。以太网是个5V的系统，不是从0-5伏，是-2.5V到+2.5V。当然，10M，100M和1000M有点不同，好像100BASE-TX这个使用两对非屏蔽双绞线的系统是-1V到+1V，不过，这个不重要，反正，说以太网是个5V系统是没毛病的。</p>
+<p>当我们开机以后，在网线上加上2.5V的直流电，这时候，是不是万事大吉了呢？对程序员来说，当然了，软件完美的运行在机器之上，当想传0的时候，就来个-2.5V，当想传1的时候，来个+2.5V。但是，对电子工程师来说，如果听到我们程序员这么说，人家连跟你撕B都不撕，在程序员界，日常为技术问题撕B是常态。实际情况是，在模拟电路的世界里，一切都不是非黒即白，一般情况下，比如在CMOS电路里，高于1.67V的电压，就是1，如果低于1.67V，就是0。为什么选在1.67V这个地方呢？这个我也不知道，而且不同的模拟电路有不同的电压，我就不懂了。</p>
+<p>相对来说，设计模拟电路的人，要比设计数字电路的人NB一些，因为如果你的数字电路要在现实生活中应用，必须要有一个和真实世界的接口，这个和大自然的接口，必须是模拟的。比如，测温度的软件，现在不是所有的测评都要测量一个温度么？那这个温度和水银温度计哪个准呢？这个我试过，个人感觉，红外测温枪基本是都是使用的热敏传感器是MAX 6642。这个的误差是多少呢？正负1.5，也就是说，你测50，和测51.5，48.5是没有区别的。网上有卖准确度是小数点后两位的红外测温枪，这种就是耍流氓。现在连Intel的CPU里的测温传感器都达不到正负1度的精确，小数点后一位如果是估读的话，小数点后两位，就是流氓了。</p>
+<p>网线是模拟的，所以很多的算法，就是为了让混乱的真实世界，能模拟一下。在网线里，信号几乎是完全的将真实信号按比例表现为电压的形式，因此，信号的微小偏差都会表现为相当显著，造成信息损失。在数字电路里，我们只关心高电平还是低电平，显然，要简单了一些，所以，有大批的人转行当程序员，但是，绝对没有人转行当模拟电路的工程师，因为，太难了！只要人类还在使用电信号来处理信息，模拟电路就不会消亡。</p>
+<p>反而是程序员整天为这个语言，那框架的撕来撕去的，前端撕完后端后，觉得自己赢了，这些前端开始按照不同的框架互相撕; 一般前端和后端撕完以后，会产生两个赢家，都觉得自己是赢家。后端撕了前端后，一般开始按照后端语言的不同，开始互相撕，基本上，PHP后端人数最多，Python后端战斗力最强。将来说不好程序员就消失了。不过我不怕，因为我的主业是脱衣舞厅跳钢管舞的。</p>
+<p>以太网建立在真实世界之上，因此，这根古老的网线决定了很多事情。无论数字的世界多么的魔幻，有些真实世界上规定的东西是无法改变的。比如，一个以太网最大是1.5KB。为什么规定了1500个字节呢？我曾经思考过这个问题，也看过很多似是而非的解释，科学，对99.9999%的人来说，唯一的功能是为了能一本正经的扯蛋，用科学的方法来说服自己。反正我觉得没有什么道理，反正就是这样规定了，我这根铜线上，能传的最大的包是1500字节，还有一个42字节的附加信息。有的材料说这个1500个字节效率最高，还给出了数学公式，这简直太搞了。</p>
+<p>正是因为这个没有什么道理的1500个字节，直接就限制了IP的发挥，因为IP要通过这要古老的铜线，而不是意念来传输。IP的头部又要20个字节，这样1500个字节只能传1480了。又因为TCP要基于IP来工作，TCP的头部又要20个字节，这样可用的又成了1480-20=1460个字节了。然后，后面还有一大堆其它的协议呢，每个协议都想占据一点东西，结果，本来1542的数据包，正经的数据还没传，各种协议已经占了接近10%了…..这搞下去就没得搞了。</p>
+<p>这就类似于中国16亿人，按照2015年的数据，有6000多万吃财政饭的，每30个中国人就得养一个吃财政饭的。比例比以太网上的负担还小一些，因为以太网上，1542个字节里，只有1400个字节是数据，其它的，都是些附加的信息。对以太网上的数据传输来说，10%的税，这是一个非常沉重的代价。毕竟，我们是30个人，养一个吃财政饭的，都觉得很苦，以太网上的数据包可是每10个就得养一个数据包，比我们苦多了。苦不苦，想想以太网的2万5…</p>
+<p>按照2006年北京大学的一个教授，叫王锡锌的，他说，中国的三公消费每年是9000亿，三公就是公款招待，公车消费，公款出国。这个数字一出来，让人民日报极力反驳，说远远不到9000亿。随后，中央党校出面澄清了，说是7500亿，不是9000亿，竟然多说了1500亿。我们就按照7500亿来算，按照中国说得第二个航母的造价400来亿，这样也就不是很多了，一年的三公消费，才花掉不到20个航母的钱，这个负担比起以太网上的负担，小多了！</p>
+<p>正是因为这个负担太重了，所以，各大公司，厂商决定，不能让传输的有用信息于1400个字节，因此，各大公司开始了一个漫长的推进计划，比如HTTP2.0的时候，头部要压缩一下，在HTTP2.0的规定里，多个请求被压缩成一个数据包。当然了，Google有自己的一套，叫SPDY。我觉得，再过个几年，应该就能用上HTTP/2.0协议了，现在主流的国外浏览器已经支持HTTP2.0了，并且默认开启。</p>
+<p>因为工作的原因，包括HTTP2.0和SPDY这个协议，我们这些码农都看过，我的感觉是，好肯定是好，各方面都好，毕竟是各大公司，包括Google，Facebook好几百个工程师搞出来的东西，肯定很好。但是，也就这样了。可能是我个人的癖好，相比于工程界奇迹的空中客车A380，我更喜欢莱特兄弟的小飞机，飞不高，也飞不远，还不安全。相比于现在这个HTTP2.0，我更喜欢以前HTTP，IP，或者TCP刚诞生时候的故事，混乱不堪，漏洞百出，就几个人，几条枪，但是，我很喜欢那时候的故事。</p>
+<p>我觉得，和人一样，年轻气胜是最好的时候，像我这样了，就有点没有意思了。所以，我不太讲公司成功以后的故事。公司成功以后，就没有什么意思了。</p>
+<p>今年我36岁了，已经没有年轻时候想改变世界的想法了，感觉已经被世界改变了。见到黑暗势力，也不是直着脖子做横眉冷对状，现在已经学会低头了。我现在的想法就是能好好的活着，身体健康一点，给家里的两个孩子力所能及的帮助，照顾他们长大成人。 我之所以说这些，算是回答下面这类网友的留言，因为总是会有一些人问类似的问题，我在这里一并回答了。实在是报歉了，我不是你们想的那么有追求，我也不是那种和这个世界死磕的人。问题我就不念了，太敏感，以后希望大家也不要问类似的问题了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/03/108/" rel="next" title="108.互联网事(1)-历史和技术">
+                <i class="fa fa-chevron-left"></i> 108.互联网事(1)-历史和技术
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
