@@ -1,0 +1,715 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="可能是我一直以来都不太讲正能量的事情，而且这几期还发牢骚，抱怨生活过的不如意。其实，我说的是实话，我也没觉得是在抱怨，我的真实生活状态就是这样，并不是每天都很高兴，觉得出门就是去改变世界了。 如果有人在我的公众号留言的话，会发现我回复的时候都是早上6点多，因为这个点我就要起床出门了。大部分时间都是去菜市场买菜，还有早饭，很难有自豪感，买个菜，自豪啥啊。所以有人说我变了的人，可能是误解我了，我感觉我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="110 互联网事(3) 扯很多正能量，说一点HTTP">
+<meta property="og:url" content="http://yoursite.com/2017/08/16/110/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="可能是我一直以来都不太讲正能量的事情，而且这几期还发牢骚，抱怨生活过的不如意。其实，我说的是实话，我也没觉得是在抱怨，我的真实生活状态就是这样，并不是每天都很高兴，觉得出门就是去改变世界了。 如果有人在我的公众号留言的话，会发现我回复的时候都是早上6点多，因为这个点我就要起床出门了。大部分时间都是去菜市场买菜，还有早饭，很难有自豪感，买个菜，自豪啥啊。所以有人说我变了的人，可能是误解我了，我感觉我">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-16T02:31:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="110 互联网事(3) 扯很多正能量，说一点HTTP">
+<meta name="twitter:description" content="可能是我一直以来都不太讲正能量的事情，而且这几期还发牢骚，抱怨生活过的不如意。其实，我说的是实话，我也没觉得是在抱怨，我的真实生活状态就是这样，并不是每天都很高兴，觉得出门就是去改变世界了。 如果有人在我的公众号留言的话，会发现我回复的时候都是早上6点多，因为这个点我就要起床出门了。大部分时间都是去菜市场买菜，还有早饭，很难有自豪感，买个菜，自豪啥啊。所以有人说我变了的人，可能是误解我了，我感觉我">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/16/110/"/>
+
+
+
+
+
+  <title> 110 互联网事(3) 扯很多正能量，说一点HTTP | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/110/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                110 互联网事(3) 扯很多正能量，说一点HTTP
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T10:28:53+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>可能是我一直以来都不太讲正能量的事情，而且这几期还发牢骚，抱怨生活过的不如意。其实，我说的是实话，我也没觉得是在抱怨，我的真实生活状态就是这样，并不是每天都很高兴，觉得出门就是去改变世界了。</p>
+<p>如果有人在我的公众号留言的话，会发现我回复的时候都是早上6点多，因为这个点我就要起床出门了。大部分时间都是去菜市场买菜，还有早饭，很难有自豪感，买个菜，自豪啥啊。所以有人说我变了的人，可能是误解我了，我感觉我一直这样，不是一个很有正能量的人。毕竟我上有老，下有小，还很穷，哪有这么多正能量。</p>
+<p>不过，我这一期可以讲一讲正能量这个事。在我的印象中，正能量是一个叫凡客的公司，满大街的刷广告。我坐公交车上班，总能看见韩寒的广告，衣服上写了三个大字，正能量。这就是我对正能量的最初印象，凡客做的广告。但是，凡客这个公司，虽然广告做的非常正能量，但是，公司做的事情非常的不正能量。我买过他家的69元的衣服，质量差的让人想哭。后来听说这个公司转型了，不卖质量差的衣服了，但是，我已经不买了。我做事的风格，一般不给人第二次机会。我发现，伤害你的人，还是会第二次伤害你。帮助你的人，还是会第二次帮助你。所以，能算上我朋友的人，肯定没有伤害过我，当然了，我至今只有3个人算得上朋友。</p>
+<p>在正能量界，有句话还是很有份量的，叫“有志者、事竟成，破釜沉舟，百二秦关终属楚； 苦心人、天不负，卧薪尝胆，三千越甲可吞吴。”这个非常励志的话是蒲松龄写的，就是写聊斋的那个人。这个人是山东人，淄博的，他家离我家很近，我曾经去过。他很有才华，但是，科举并不成功，所以，他最后当了个老师，没有当成公务员。</p>
+<p>(他一生都很穷，死后没有什么家产，在他死后，陪葬品非常的少，就是几个很廉价的印章，还有几个瓷器，茶具什么的，还有一本书。在文革的时候，因为要破四旧，所以，他的坟墓就被当年的小粉红给挖了，当年响应国家号召去挖坟的人，现在已经到了跳广场舞的年龄了。挖坑在当年是非常爱国的行为。据说，他的尸骨就被丢在一边，因为坟墓里实在没什么东西，这几个印章就被随意丢在路边了，因为是非常普通的石头做的印章，当时的小粉红觉得没什么保留价值。然后蒲松龄夫妻两人的尸骨就被扔了，头骨还被打开了一个大洞。他的后人刚开始不敢埋回去，后来才偷偷的又把尸骨埋回去。现在已经是山东省的爱国主义教育基地之一了。以前是因为爱国，把人家的墓挖了，家也拆了，现在因为爱国，修的好大一个院子，里面还有一个池塘，是在80年代以后重修的。爱国这个东西，还是很神奇的。我这里是引用《狐鬼与人间:解读奇书聊斋志异》这本书里的，不是我胡编的。作者叫马瑞芳，她上过百家讲坛讲聊斋，虽然我不觉得她讲的很好，甚至有点差，但是，她是名人啊，有机会采访到当兵的红小兵。如果有不信的人，去找马老师理论。不要来找栋哥。我不产生观点，我只做观点的搬运工。)</p>
+<p>我只是讲蒲松龄老先生的下半句，“苦心人、天不负，卧薪尝胆，三千越甲可吞吴”，这是讲的谁呢？越王勾践。勾践这个人呢，成功是成功了，但是这个成功是类似于百度赢了Google，YouKu赢了YouTube这样的成功，我个人认为这完全不是正能量，而是负能量。勾践这个人为了迷惑吴王夫差，吃了一口夫差的大便，这个想必大家都知道了，非常的重口味。在战国时期，人的底线放在今天，还是比较高的。</p>
+<p>比如，两国打仗，如果一个国家出现了饥荒，是要先赈灾的。因为一个君子是不会在对方虚弱的时候打击对手的。比如说，晋国连年大旱，庄稼没有收成，晋国和秦国之间，矛盾很多，但是，秦国还是把大量的粮食通过渭河运给了晋国，这也是著名的泛舟之役。但是，到了勾践这老哥，他的国家也闹了饥荒，吴国就运粮食给越国。但是，等到吴国闹饥荒了，这个哥不但不救，还来阴着。人家借种子，你不借也就算了，他借给人家的种子先放水里煮熟了。反正，这这么个货。</p>
+<p>吴王虽说也不是个大好人，但是，比起越王来，还是好太多了。在史记里，吴太伯世家里对吴国有详细的介绍，虽说吴国也有不少狗血的事情，但是，总体上，比越国还是体面多了。</p>
+<p>我为什么要说这个呢？因为正能量是个刚需。所以，也有朋友希望我提供一点正能量的东西。我觉得吧，我是可以编出来一些的。但是，这就不是我的本意了。我想说的是，有很多的正能量的故事是虚构的，或者是不同的方面解读的。比如我说的这个越王勾践的故事，他一方面是个最后成功的人，另一方面是一个毫无底线的烂人。</p>
+<p>成功的人，都有一些让常人难以理解的性格。比如，勾践为了隐忍，会主动吃人家的大便。相比于睡在木棍上，每天吃饭舔一下苦胆，还是吃翔更狠一点。我们在网上不是经常看到有人打赌说要吃翔么？勾践是真的吃过。一个人能忍，做事一定很狠。自古中外，都是如此。勾践成功以后，吴王自杀了，因为吴王知道，如果不自杀，肯定天天吃翔。所以正能量这事，如果你的偶像是一个正能量爆棚的人，能隐忍，能奋斗，做的几乎每一件事都像是在和命运斗争，如果不是有一些无法告人的关系和目的，最好还是离这种人远一点。记住，永远不要相信一个自己主动吃翔的人。对自己狠，对别人就更狠！</p>
+<p>如果你认为不是这样的，那我问问你，在这些爱豆里，不管是唱歌的偶像，还是跳舞的偶像，还是专门传播正能量的偶像，他们几百万，几千万的粉丝里，你TMD的算老几。就算你的偶像正能量爆棚，分到你身上，也是毛毛雨啊！</p>
+<p>这就是我对正能量的看法，嗯，好像有一点不正能量。我说这些，对我来说很重要。因为我没法做到对所有的意见置之不理，总有一些关注我的人，跑来说，这一期负能量太重，哪个意见不阳光，搞的我怎么说都不对。所以，我要说清楚我对正能量的看法。我是个不要正能量也能活下去的人。</p>
+<p>剩下的时间，就再讲一点HTTP。不管怎么强调HTTP的重要性都不过份，因为HTTP就是最重要的协议之一。用浏览器打开的网站，图片，音频都是用HTTP来完成的。比如你如果正在听这个音频，或者正在我的公众号上看这篇文章，那么，你就在使用HTTP协议。</p>
+<p>在HTTP被发明出来以前，人们用什么来传文件呢？用FTP。因为在最初的阿帕网上，最经常用的协议是telnet, E-mail，FTP协议。如果有人用过FTP来相互传文件的话，应该能知道有多么麻烦。</p>
+<p>比如，你有一个好看的文件，你要分享给你的好朋友，在没有HTTP之前，要怎么做么？流程是这样的，你先把你要分享的文件上传到一台FTP服务器上。然后，拿起电话，告诉你的朋友，你要分享的文件在根目录下的，那个叫teachers的文件夹里，那个叫XVSR-170.AVI的文件。非常的麻烦，因为没有一个好方法可以把这个文件分享出去。</p>
+<p>但是有了HTTP以后，资源就很容易定位了。比如我自己的个人网站是我的名字的拼音，liuyandong.com，如果我的网站上有一张名为girlfriend.jpg的文件，就能直接生成一个独一无二的链接。有了这个链接，就可以描述一台服务器上某个资源的位置。我们都见过链接，最开始的是以http或者https开始，这个呢，叫scheme。在互联网上，这一部分基本上是http/https，现在渐渐的从http向https转移。</p>
+<p>http协议是基于TCP/IP的，诞生的时间并不是太久远，在1989年的时候诞生了。是在欧洲的一个研究我不懂的东西的组织，看名字是研究原子，粒子这种东西的，名字叫欧洲核子研究组织。这里面的一个研究员叫Tim博士，他搞出来的HTTP，最初的想法是，如何把文件从服务器取回来。所以，最初的版本只支持文本协议，而且只有一种方法，就是GET。现在基本上大部分的网站现在还是支持0.9版本的，可以用telnet自己试试。</p>
+<p>HTTP 0.9版本是第一个非常简陋的协议，一张A4纸就能写出所有的规格，其实简单一点的话，几行就搞定了，一张邮票这么大小的纸就能写完了。我简化一下，我觉得用3句话就差不多了。</p>
+<ol>
+<li>请求只有一行</li>
+<li>只处理一种数据，纯文本</li>
+<li>只有一种方法：GET</li>
+</ol>
+<p>就这三句吧，没有HTTP头信息，也没有错误代码信息。不能处理文本以外的信息。</p>
+<p>那实现一个能处理HTTP请求的Web服务器难不难？这个问题，如果说是实现Apache或者Nginx这样的，肯定不简单，如果你只是想玩一下，就非常简单了，到github上搜一下，能搜出几百个几千个爱好者初学者实现的Web服务器。各种语言的都有。有兴趣的可以去找一个来看看，还是很有意思的。</p>
+<p>我上一期讲到了HTTP2.0和SPYD这个协议，结果有人想让我总结一下知识要点，这个我是办不到的。HTTP2.0大概100页，SPYD协议大概50页，如果你想学习的话，直接去看RFC就是了。我个人觉得类似的问题一来超过了我的认知水平，二来没什么意思，类似的问题还有，我如何读懂Linux源码，如何读懂Python源码，如果你连Linux命令都用不熟练，连Python都不会写，你读源码肯定读不懂啊。如果以后我开网站，一定不能有类似的问题。问题实在是太蠢了。这种问题类似于，我如何追上汤唯？根本没有任何讨论的意义。</p>
+<p>这一期就到这里了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/15/201708QA/" rel="next" title="2017年8月份公众号问答">
+                <i class="fa fa-chevron-left"></i> 2017年8月份公众号问答
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
