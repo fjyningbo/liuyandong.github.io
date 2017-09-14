@@ -85,22 +85,23 @@
 
 
 
-<meta name="description" content="前些日子，我在我自己的公众号里写了这样一篇文章——《编程15年，为何一直是菜鸟》，我反思了一下自己这十几年的职业生涯，希望能够给大家一些警示。在文中，我提到了一些我认为的学习方法，尤其是如何学习编程方面。我当时在文中的观点是，学习编程语言，在刚开始的时候，可以不用太拘泥于一些细节，也不要太过较真哪种语言好，X语言和Y语言，在很多方面，都是相通的。对于主流的编程语言，相似的地方要多于不同的地方。关注">
+<meta name="description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
 <meta name="keywords" content="编程感悟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《这些年编程的一些反思》00.前言">
-<meta property="og:url" content="http://yoursite.com/2017/09/10/00-programming-preface-md/index.html">
+<meta property="og:title" content="《这些年编程的一些反思》002. 变量">
+<meta property="og:url" content="http://yoursite.com/2017/09/14/02-programming-variable/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="前些日子，我在我自己的公众号里写了这样一篇文章——《编程15年，为何一直是菜鸟》，我反思了一下自己这十几年的职业生涯，希望能够给大家一些警示。在文中，我提到了一些我认为的学习方法，尤其是如何学习编程方面。我当时在文中的观点是，学习编程语言，在刚开始的时候，可以不用太拘泥于一些细节，也不要太过较真哪种语言好，X语言和Y语言，在很多方面，都是相通的。对于主流的编程语言，相似的地方要多于不同的地方。关注">
+<meta property="og:description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/uploads/00-puyi.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/00-draft-01.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/00-draft-02.jpg">
-<meta property="og:updated_time" content="2017-09-10T11:01:18.000Z">
+<meta property="og:image" content="http://yoursite.com/uploads/02-huoyunxueshen.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/02-programming-variable_1.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/02-programming-variable_2.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/002.programming-02.png">
+<meta property="og:updated_time" content="2017-09-14T04:45:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《这些年编程的一些反思》00.前言">
-<meta name="twitter:description" content="前些日子，我在我自己的公众号里写了这样一篇文章——《编程15年，为何一直是菜鸟》，我反思了一下自己这十几年的职业生涯，希望能够给大家一些警示。在文中，我提到了一些我认为的学习方法，尤其是如何学习编程方面。我当时在文中的观点是，学习编程语言，在刚开始的时候，可以不用太拘泥于一些细节，也不要太过较真哪种语言好，X语言和Y语言，在很多方面，都是相通的。对于主流的编程语言，相似的地方要多于不同的地方。关注">
-<meta name="twitter:image" content="http://yoursite.com/uploads/00-puyi.jpg">
+<meta name="twitter:title" content="《这些年编程的一些反思》002. 变量">
+<meta name="twitter:description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
+<meta name="twitter:image" content="http://yoursite.com/uploads/02-huoyunxueshen.jpg">
 
 
 
@@ -128,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/10/00-programming-preface-md/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/14/02-programming-variable/"/>
 
 
 
 
 
-  <title> 《这些年编程的一些反思》00.前言 | 栋哥的博客 </title>
+  <title> 《这些年编程的一些反思》002. 变量 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/00-programming-preface-md/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/02-programming-variable/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘延栋">
@@ -274,7 +275,7 @@
             
             
               
-                《这些年编程的一些反思》00.前言
+                《这些年编程的一些反思》002. 变量
               
             
           </h1>
@@ -289,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T18:38:49+08:00">
-                2017-09-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T12:32:27+08:00">
+                2017-09-14
               </time>
             
 
@@ -325,20 +326,29 @@
       
 
       
-        <p>前些日子，我在我自己的公众号里写了这样一篇文章——《编程15年，为何一直是菜鸟》，我反思了一下自己这十几年的职业生涯，希望能够给大家一些警示。在文中，我提到了一些我认为的学习方法，尤其是如何学习编程方面。我当时在文中的观点是，<strong>学习编程语言，在刚开始的时候，可以不用太拘泥于一些细节，也不要太过较真哪种语言好，X语言和Y语言，在很多方面，都是相通的。对于主流的编程语言，相似的地方要多于不同的地方。关注语言的共同特征，应该大于关注语言的种类。</strong></p>
-<p>我觉得在现实生活中，编程应该和开车，绘画，写文章一样，几乎是每个人都要掌握的一项最基本的技能。当然不会是所有人都要学会开车，学会写文章，但是，如果会这些技能，显然会让生活的质量提高一大截。尤其是未来的设备肯定会有巨大的进化，个人认为会一定的编程思维能更好的与之交互。</p>
-<p>我个人认为，编程是一种心理活动。这种心理活动在外人看来又是难以琢磨的，就像一种巫术，有的巫师是哈利波特，有的巫师可能就是个水货。但是，很难从外表分辨出来，只好也给水货巫师很多的薪水，只为了赌一下。这当然会让大型IT公司的管理人员心生不满。于是，几乎所有的编程语言，都或多或少的去除一个因素，那就是去除人的因素。大家也都知道了，现阶段的Java，Python等主流语言，无一不宣称自己易于阅读，易于合作。几乎就是在说，随便替换一个程序员，也能写出相同的代码，程序员就慢慢的成为了代码流水线上的一员。</p>
-<p>这难道不是非常的诡异么？当我们在欣赏一幅画的时候，我们会惊讶于某个画家独特的画风;当我们在阅读一本小说的时候，我们会惊讶于某个作家异于他人的文风。但是当我们在谈到软件的时候，态度就变了，我们会说这个程序写的易于让别人阅读和修改，每个软件都有大同小异的调用，都有大同小异的算法，甚至都有大同小异的缩进(在此，应该感谢python:)</p>
-<p>栋哥没有能力改变软件行业的发展，但是，既然软件行业的目标之一是让不同的开发人员写的程序变的相似，那么，我们是不是也可以同时学习几种相似的编程语言呢？</p>
-<p><strong>我认为是可以的。</strong></p>
-<p>同时熟悉几种编程语言的语法，对工作也有很大的好处。比如说，当你在网上搜索某个算法的实现，而能找到的算法，所采用的编程语言恰好不是你所需要的语言，你想要Java的实现，结果只找到了Python的代码。这个时候，能读懂Python的代码是非常重要的。</p>
-<p>学习编程的方法并不是多么的神奇，在刚开始的时候，与其说是在编程，不如说是把关键字，标点符号放置在正确的位置上。和拼图类似，只是拼多了，就慢慢的学会了。</p>
-<p>有人会说，没有兴趣怎么办？确实，如果没有兴趣的话，玩编程拼图这个游戏是很容易就放弃的。我先讲个故事吧。</p>
-<p><img src="/uploads/00-puyi.jpg" alt="溥仪"></p>
-<p>上面这个人叫溥仪，是中国最后一个皇帝，他是住在皇宫里的。我觉得他是对园艺工作没有兴趣的。但是，他最后在北京植物园，从一个完全不懂如何修剪植物的外行，变成了一个养花的能手，他一年时间，做了好几斤的笔记。</p>
-<p>如果听过栋哥电台的人，可能记得我说过一句话，兴趣是最好的老师，贫穷也是最好的老师（甚至更是）。如果你对编程没有兴趣，但是你和栋哥一样，穷的吃土，搬砖是工作，编程也是工作，既然都要在这个世界上来一遭，为什么不不来试一试呢？</p>
+        <h1 id="计算机计算的本质是什么？"><a href="#计算机计算的本质是什么？" class="headerlink" title="计算机计算的本质是什么？"></a>计算机计算的本质是什么？</h1><p>如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。</p>
+<p><img src="/uploads/02-huoyunxueshen.jpg" alt="快"></p>
+<p>计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在主流中档CPU<strong>1秒</strong>的运算量，在京东上可以花1000来块钱买一个。一个人计算100年，一个主流家用电脑计算1秒，这就是电脑在某些方面的过人之处吧。电脑每完成一次计算，光可以在空中行走10厘米。</p>
+<p>可以认为电脑里有个神奇的小精灵，他不知疲倦搬运数据，以人类无法想象的速度来做事。想必大家曾经看过闪电侠吧，他就是以极快的速度来做事，现在每台电脑里都有一个闪电侠。</p>
+<h1 id="比喻的好处和坏处"><a href="#比喻的好处和坏处" class="headerlink" title="比喻的好处和坏处"></a>比喻的好处和坏处</h1><p>在学习计算机的时候，有个必须要接受的现实，<strong>无论你研究到哪一个层次，下面总有一个层次是你无法了解的。</strong>所以，要学会和自己的无知相依相伴。</p>
+<p>不止在学习编程的过程中，在现实生活中，我们也无时无刻的不用到比喻。比如，我们会把孩子比喻成祖国的花朵，把老师比喻成辛勤的园丁。在软件开发中把流程描述成瀑布流开发模型，像瀑布一样从上而下的开发。这些比喻在一定程度上隐藏了一些东西，又在一定程度上展示了一些东西。</p>
+<p>当我在下面用到比喻的时候，希望你也能明白，这只是学自行车的时候，用到的那个辅助轮。比喻只是比喻，不是编程的本质。因为抽象的来解释，会让人昏昏欲睡。[这个方法借鉴自罗素，他在研究集合论的时候，没有办法给集合一个完美的定义，他就回避了这个定义，变抽象为具体。]</p>
+<h1 id="变量是什么"><a href="#变量是什么" class="headerlink" title="变量是什么"></a>变量是什么</h1><p>再回到本文最开始的时候，我们电脑里的那个小精灵在干什么呢？答案是，在不停的搬运并计算数据。数据存在哪里呢？准确的答案是，一部分在CPU里，一部分在内存里，还有一部分在硬盘里。</p>
+<p><strong>变量本质上是一段由0和1组成的数字串，他存放在内存里。</strong></p>
+<p>我要用到比喻了，希望能把这个事情说清楚一点。</p>
+<p>我家附近有个超市，这个超市有个规定，带包是不能进去的，可能怕别人进去偷一包辣条什么的。他有个自动的存包柜，你可以按一个按钮，就会弹开一个小柜子，让你把东西放进去，然后就会弹出一张条形码。用比喻的话，内存就是那个存包柜，弹出的那个条形码就是变量名，而存进去的东西就是变量。</p>
+<p>我觉得如果你不是特别的理解的话，可以停下来想一下，是不是这个样子？这个比喻是不是有一点道理？</p>
+<p>当你把包取走以后，就是程序员经常所说的内存释放，这个柜子又可以给别人使用了。</p>
+<h1 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h1><p>如果我们能够看到计算机内存的话，会发现无论什么样的数据，都是一样的表示方法，都是一串0和1组成的数字。在内存的层面上，并没有区分什么整数型，字符型，都是一样的。</p>
+<p>采用的这些类型，只是人为的加上的一些数据，如果搞错了这些类型，比如0110 0001这一串数字，在C语言中，如果解释成是整数，就是十进制的97，如果解释成字符，就是小写字母’a’。</p>
+<p>不同的语言，对数据类型的规定有些不同，我会在接下来的几篇文章里，(狂妄的试图)分析一下数据类型的进化历史。从古老的Fortran语言开始，在Fortran语言中，如果一个变量名是以I,J,K,L,M,N开头，那么，这个变量就是整数，非常的简单粗暴。再后来到C语言中有了隐性类型转换，到了C++中，类也是一种数据类型，再到了前两年Apple公司强推的Swift语言，所有的数据类型其实都是个Structure，每种数据类型都可以有自己的properties, initializers和methods。</p>
+<p>我一直试图从各种语言中找到一些共同点，找到几个主流语言的共同特点（共同点非常多），或者细微的区别。我接下来的文章，就写一下在这方面的我个人努力研究出来的谬论。</p>
 <hr>
-<h2 id="形成这篇文章的草稿"><a href="#形成这篇文章的草稿" class="headerlink" title="形成这篇文章的草稿"></a>形成这篇文章的草稿</h2><p><img src="/uploads/00-draft-01.jpg" alt="草稿1"><br><img src="/uploads/00-draft-02.jpg" alt="草稿2"></p>
+<p>形成本文的草稿</p>
+<p><img src="/uploads/02-programming-variable_1.jpg" alt="02-01"></p>
+<p><img src="/uploads/02-programming-variable_2.jpg" alt="02-02"></p>
+<h1 id="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><a href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？" class="headerlink" title="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"></a>找区别，左边是Apple推出的Swift语言，右边是Google支持的<a href="https://kotlinlang.org/" target="_blank" rel="external">Kotlin</a>语言，是不是非常的相似？</h1><p>也可以自己去这个网站看看。 <a href="http://nilhcem.com/swift-is-like-kotlin/" target="_blank" rel="external">http://nilhcem.com/swift-is-like-kotlin/</a></p>
+<p><img src="/uploads/002.programming-02.png" alt="kotlin"></p>
 
       
     </div>
@@ -407,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/05/114/" rel="next" title="114.互联网之父和互联网之子">
-                <i class="fa fa-chevron-left"></i> 114.互联网之父和互联网之子
+              <a href="/2017/09/13/115/" rel="next" title="115.虽然他很疯狂，但是他没有灭亡">
+                <i class="fa fa-chevron-left"></i> 115.虽然他很疯狂，但是他没有灭亡
               </a>
             
           </div>
@@ -416,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/12/01-programming-naming/" rel="prev" title="《这些年编程的一些反思》 001. 起一个好名字">
-                《这些年编程的一些反思》 001. 起一个好名字 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -568,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#形成这篇文章的草稿"><span class="nav-number">1.</span> <span class="nav-text">形成这篇文章的草稿</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机计算的本质是什么？"><span class="nav-number">1.</span> <span class="nav-text">计算机计算的本质是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比喻的好处和坏处"><span class="nav-number">2.</span> <span class="nav-text">比喻的好处和坏处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量是什么"><span class="nav-number">3.</span> <span class="nav-text">变量是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量的类型"><span class="nav-number">4.</span> <span class="nav-text">变量的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><span class="nav-number">5.</span> <span class="nav-text">找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？</span></a></li></ol></div>
             
 
           </div>
