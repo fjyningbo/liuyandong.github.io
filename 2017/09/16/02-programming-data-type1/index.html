@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="编程感悟," />
 
 
 
@@ -85,16 +85,23 @@
 
 
 
-<meta name="description" content="很少做正确的事,只去做简单的事。然后后悔。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="栋哥的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
+<meta name="keywords" content="编程感悟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《这些年编程的一些反思》003. 整型和浮点型">
+<meta property="og:url" content="http://yoursite.com/2017/09/16/02-programming-data-type1/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="很少做正确的事,只去做简单的事。然后后悔。">
+<meta property="og:description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/uploads/03.int.png">
+<meta property="og:image" content="http://yoursite.com/uploads/03-durex-point.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/03.float-03.png">
+<meta property="og:image" content="http://yoursite.com/uploads/03.float-04.png">
+<meta property="og:updated_time" content="2017-09-16T05:19:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="栋哥的博客">
-<meta name="twitter:description" content="很少做正确的事,只去做简单的事。然后后悔。">
+<meta name="twitter:title" content="《这些年编程的一些反思》003. 整型和浮点型">
+<meta name="twitter:description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
+<meta name="twitter:image" content="http://yoursite.com/uploads/03.int.png">
 
 
 
@@ -122,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/16/02-programming-data-type1/"/>
 
 
 
 
 
-  <title> 栋哥的博客 </title>
+  <title> 《这些年编程的一些反思》003. 整型和浮点型 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -153,9 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,9 +243,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,10 +275,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/09/16/02-programming-data-type1/" itemprop="url">
-                  《这些年编程的一些反思》003. 整型和浮点型
-                </a>
+                《这些年编程的一些反思》003. 整型和浮点型
               
             
           </h1>
@@ -324,9 +326,7 @@
       
 
       
-        
-          
-            <p>和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示都是数字0和数字1，但是，必须要人为的定义一种约定，让这些用0和1来表示的数字串有不同的意义。</p>
+        <p>和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示都是数字0和数字1，但是，必须要人为的定义一种约定，让这些用0和1来表示的数字串有不同的意义。</p>
 <p>中国有句古话：“橘生淮南则为橘，生于淮北则为枳。” 就有点这个意思，同样的一串数字，如果认为是整数则表示某种意义，如果认为是字符串则是另外一个意义。如果你是一个有名气的富人，如果在公共场合穿拖鞋，就是接地气，平易近人，如果你是个穷鬼，在公共场合穿拖鞋，就是个没素质的家伙。是的，同样是公共场合穿拖鞋这件事，因为不同的身分，就会被解读出不同的意义。</p>
 <p>计算机中的事情，总是能够找到现实中不同的解读。下面，我就来解读一下各种数据类型。</p>
 <h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><p>我们总是从123开始学习的数学，这个123就是整数类型。我记得小学时候的作业经常是回家写123456789，然后每个数字写10遍。如果给你一张田字格纸，每个格子里只能写一个数，你能写的最大的数是多少呢？顶多就是写满9，不能再大了，如果是在田字格纸上写数字，写满了还可以换一张纸继续写，但是，在计算机中就没有这么好的运气了。如果写满了，就会有个经典的错误叫：溢出。是的，就是精满则溢的溢，中出的出。溢出的根本原因是田字格不够用了。</p>
@@ -343,189 +343,98 @@
 <p><img src="/uploads/03.float-04.png" alt=""></p>
 <p>那还能用浮点类型么？当然了，用魅族的老大黄章说的那句名言“天线性能差？又不是不能用！”来结束这一小节吧！</p>
 
-          
-        
       
     </div>
 
     <div>
       
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
     </div>
 
     <div>
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/02-programming-variable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘延栋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="栋哥的博客">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/14/02-programming-variable/" itemprop="url">
-                  《这些年编程的一些反思》002. 变量
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T12:32:27+08:00">
-                2017-09-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
+
+      
+    </div>
+
+    <div>
       
         
-          
-            <h1 id="计算机计算的本质是什么？"><a href="#计算机计算的本质是什么？" class="headerlink" title="计算机计算的本质是什么？"></a>计算机计算的本质是什么？</h1><p>如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。</p>
-<p><img src="/uploads/02-huoyunxueshen.jpg" alt="快"></p>
-<p>计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在主流中档CPU<strong>1秒</strong>的运算量，在京东上可以花1000来块钱买一个。一个人计算100年，一个主流家用电脑计算1秒，这就是电脑在某些方面的过人之处吧。电脑每完成一次计算，光可以在空中行走10厘米。</p>
-<p>可以认为电脑里有个神奇的小精灵，他不知疲倦搬运数据，以人类无法想象的速度来做事。想必大家曾经看过闪电侠吧，他就是以极快的速度来做事，现在每台电脑里都有一个闪电侠。</p>
-<h1 id="比喻的好处和坏处"><a href="#比喻的好处和坏处" class="headerlink" title="比喻的好处和坏处"></a>比喻的好处和坏处</h1><p>在学习计算机的时候，有个必须要接受的现实，<strong>无论你研究到哪一个层次，下面总有一个层次是你无法了解的。</strong>所以，要学会和自己的无知相依相伴。</p>
-<p>不止在学习编程的过程中，在现实生活中，我们也无时无刻的不用到比喻。比如，我们会把孩子比喻成祖国的花朵，把老师比喻成辛勤的园丁。在软件开发中把流程描述成瀑布流开发模型，像瀑布一样从上而下的开发。这些比喻在一定程度上隐藏了一些东西，又在一定程度上展示了一些东西。</p>
-<p>当我在下面用到比喻的时候，希望你也能明白，这只是学自行车的时候，用到的那个辅助轮。比喻只是比喻，不是编程的本质。因为抽象的来解释，会让人昏昏欲睡。[这个方法借鉴自罗素，他在研究集合论的时候，没有办法给集合一个完美的定义，他就回避了这个定义，变抽象为具体。]</p>
-<h1 id="变量是什么"><a href="#变量是什么" class="headerlink" title="变量是什么"></a>变量是什么</h1><p>再回到本文最开始的时候，我们电脑里的那个小精灵在干什么呢？答案是，在不停的搬运并计算数据。数据存在哪里呢？准确的答案是，一部分在CPU里，一部分在内存里，还有一部分在硬盘里。</p>
-<p><strong>变量本质上是一段由0和1组成的数字串，他存放在内存里。</strong></p>
-<p>我要用到比喻了，希望能把这个事情说清楚一点。</p>
-<p>我家附近有个超市，这个超市有个规定，带包是不能进去的，可能怕别人进去偷一包辣条什么的。他有个自动的存包柜，你可以按一个按钮，就会弹开一个小柜子，让你把东西放进去，然后就会弹出一张条形码。用比喻的话，内存就是那个存包柜，弹出的那个条形码就是变量名，而存进去的东西就是变量。</p>
-<p>我觉得如果你不是特别的理解的话，可以停下来想一下，是不是这个样子？这个比喻是不是有一点道理？</p>
-<p>当你把包取走以后，就是程序员经常所说的内存释放，这个柜子又可以给别人使用了。</p>
-<h1 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h1><p>如果我们能够看到计算机内存的话，会发现无论什么样的数据，都是一样的表示方法，都是一串0和1组成的数字。在内存的层面上，并没有区分什么整数型，字符型，都是一样的。</p>
-<p>采用的这些类型，只是人为的加上的一些数据，如果搞错了这些类型，比如0110 0001这一串数字，在C语言中，如果解释成是整数，就是十进制的97，如果解释成字符，就是小写字母’a’。</p>
-<p>不同的语言，对数据类型的规定有些不同，我会在接下来的几篇文章里，(狂妄的试图)分析一下数据类型的进化历史。从古老的Fortran语言开始，在Fortran语言中，如果一个变量名是以I,J,K,L,M,N开头，那么，这个变量就是整数，非常的简单粗暴。再后来到C语言中有了隐性类型转换，到了C++中，类也是一种数据类型，再到了前两年Apple公司强推的Swift语言，所有的数据类型其实都是个Structure，每种数据类型都可以有自己的properties, initializers和methods。</p>
-<p>我一直试图从各种语言中找到一些共同点，找到几个主流语言的共同特点（共同点非常多），或者细微的区别。我接下来的文章，就写一下在这方面的我个人努力研究出来的谬论。</p>
-<hr>
-<p>形成本文的草稿</p>
-<p><img src="/uploads/02-programming-variable_1.jpg" alt="02-01"></p>
-<p><img src="/uploads/02-programming-variable_2.jpg" alt="02-02"></p>
-<h1 id="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><a href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？" class="headerlink" title="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"></a>找区别，左边是Apple推出的Swift语言，右边是Google支持的<a href="https://kotlinlang.org/" target="_blank" rel="external">Kotlin</a>语言，是不是非常的相似？</h1><p>也可以自己去这个网站看看。 <a href="http://nilhcem.com/swift-is-like-kotlin/" target="_blank" rel="external">http://nilhcem.com/swift-is-like-kotlin/</a></p>
-<p><img src="/uploads/002.programming-02.png" alt="kotlin"></p>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/编程感悟/" rel="tag"># 编程感悟</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/14/02-programming-variable/" rel="next" title="《这些年编程的一些反思》002. 变量">
+                <i class="fa fa-chevron-left"></i> 《这些年编程的一些反思》002. 变量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -533,6 +442,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -552,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -635,6 +557,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整数类型"><span class="nav-number">1.</span> <span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点类型"><span class="nav-number">2.</span> <span class="nav-text">浮点类型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -749,6 +687,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
