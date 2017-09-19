@@ -249,6 +249,149 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/02-programming-variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/14/02-programming-variable/" itemprop="url">
+                  《这些年编程的一些反思》002. 变量
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T12:32:27+08:00">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算机计算的本质是什么？"><a href="#计算机计算的本质是什么？" class="headerlink" title="计算机计算的本质是什么？"></a>计算机计算的本质是什么？</h1><p>如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。</p>
+<p><img src="/uploads/02-huoyunxueshen.jpg" alt="快"></p>
+<p>计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在主流中档CPU<strong>1秒</strong>的运算量，在京东上可以花1000来块钱买一个。一个人计算100年，一个主流家用电脑计算1秒，这就是电脑在某些方面的过人之处吧。电脑每完成一次计算，光可以在空中行走10厘米。</p>
+<p>可以认为电脑里有个神奇的小精灵，他不知疲倦搬运数据，以人类无法想象的速度来做事。想必大家曾经看过闪电侠吧，他就是以极快的速度来做事，现在每台电脑里都有一个闪电侠。</p>
+<h1 id="比喻的好处和坏处"><a href="#比喻的好处和坏处" class="headerlink" title="比喻的好处和坏处"></a>比喻的好处和坏处</h1><p>在学习计算机的时候，有个必须要接受的现实，<strong>无论你研究到哪一个层次，下面总有一个层次是你无法了解的。</strong>所以，要学会和自己的无知相依相伴。</p>
+<p>不止在学习编程的过程中，在现实生活中，我们也无时无刻的不用到比喻。比如，我们会把孩子比喻成祖国的花朵，把老师比喻成辛勤的园丁。在软件开发中把流程描述成瀑布流开发模型，像瀑布一样从上而下的开发。这些比喻在一定程度上隐藏了一些东西，又在一定程度上展示了一些东西。</p>
+<p>当我在下面用到比喻的时候，希望你也能明白，这只是学自行车的时候，用到的那个辅助轮。比喻只是比喻，不是编程的本质。因为抽象的来解释，会让人昏昏欲睡。[这个方法借鉴自罗素，他在研究集合论的时候，没有办法给集合一个完美的定义，他就回避了这个定义，变抽象为具体。]</p>
+<h1 id="变量是什么"><a href="#变量是什么" class="headerlink" title="变量是什么"></a>变量是什么</h1><p>再回到本文最开始的时候，我们电脑里的那个小精灵在干什么呢？答案是，在不停的搬运并计算数据。数据存在哪里呢？准确的答案是，一部分在CPU里，一部分在内存里，还有一部分在硬盘里。</p>
+<p><strong>变量本质上是一段由0和1组成的数字串，他存放在内存里。</strong></p>
+<p>我要用到比喻了，希望能把这个事情说清楚一点。</p>
+<p>我家附近有个超市，这个超市有个规定，带包是不能进去的，可能怕别人进去偷一包辣条什么的。他有个自动的存包柜，你可以按一个按钮，就会弹开一个小柜子，让你把东西放进去，然后就会弹出一张条形码。用比喻的话，内存就是那个存包柜，弹出的那个条形码就是变量名，而存进去的东西就是变量。</p>
+<p>我觉得如果你不是特别的理解的话，可以停下来想一下，是不是这个样子？这个比喻是不是有一点道理？</p>
+<p>当你把包取走以后，就是程序员经常所说的内存释放，这个柜子又可以给别人使用了。</p>
+<h1 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h1><p>如果我们能够看到计算机内存的话，会发现无论什么样的数据，都是一样的表示方法，都是一串0和1组成的数字。在内存的层面上，并没有区分什么整数型，字符型，都是一样的。</p>
+<p>采用的这些类型，只是人为的加上的一些数据，如果搞错了这些类型，比如0110 0001这一串数字，在C语言中，如果解释成是整数，就是十进制的97，如果解释成字符，就是小写字母’a’。</p>
+<p>不同的语言，对数据类型的规定有些不同，我会在接下来的几篇文章里，(狂妄的试图)分析一下数据类型的进化历史。从古老的Fortran语言开始，在Fortran语言中，如果一个变量名是以I,J,K,L,M,N开头，那么，这个变量就是整数，非常的简单粗暴。再后来到C语言中有了隐性类型转换，到了C++中，类也是一种数据类型，再到了前两年Apple公司强推的Swift语言，所有的数据类型其实都是个Structure，每种数据类型都可以有自己的properties, initializers和methods。</p>
+<p>我一直试图从各种语言中找到一些共同点，找到几个主流语言的共同特点（共同点非常多），或者细微的区别。我接下来的文章，就写一下在这方面的我个人努力研究出来的谬论。</p>
+<hr>
+<p>形成本文的草稿</p>
+<p><img src="/uploads/02-programming-variable_1.jpg" alt="02-01"></p>
+<p><img src="/uploads/02-programming-variable_2.jpg" alt="02-02"></p>
+<h1 id="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><a href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？" class="headerlink" title="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"></a>找区别，左边是Apple推出的Swift语言，右边是Google支持的<a href="https://kotlinlang.org/" target="_blank" rel="external">Kotlin</a>语言，是不是非常的相似？</h1><p>也可以自己去这个网站看看。 <a href="http://nilhcem.com/swift-is-like-kotlin/" target="_blank" rel="external">http://nilhcem.com/swift-is-like-kotlin/</a></p>
+<p><img src="/uploads/002.programming-02.png" alt="kotlin"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/115/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -382,153 +525,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/01-programming-naming/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘延栋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="栋哥的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/12/01-programming-naming/" itemprop="url">
-                  《这些年编程的一些反思》 001. 起一个好名字
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T11:58:57+08:00">
-                2017-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>我们生了两个小宝宝，如果你要说生完小孩最难的事情是什么，栋哥可以告诉你，是给小孩起个好听好记又有好意义的名字。当时我的脑袋都要想破了，我给两个宝宝起的名字都是以天上的星星来取的，我希望他俩能够在一生中，仰望一下星空，也希望N年以后，他俩可以看到我写的这段话。</p>
-<p>给小孩取名字，是非常难的；同样，对写软件的程序员，给变量和项目起名字也是非常难的。</p>
-<p>如果你已经为人父母，你应该能够认同我。如果你是程序员，不认同我说的，认为给项目起个名字，或者给变量起个名字，是最简单不过的事情了，也许，你对编程爱的不够深 :)</p>
-<p>我已经无从考证编程中名字的由来，反正从古老的Fortran语言开始，变量就有了自己的名字。随后的所有语言，不止变量，还有所有的函数，常量等等…都有自己的名字，甚至语言本身，也有自己的名字，为什么有的语言叫Python，有的语言叫Java，有的语言叫Scheme，有的语言叫Go，甚至，Go语言和很早以前的另一个也叫Go的语言重命了。</p>
-<h1 id="好好的想想如何起名字这件事"><a href="#好好的想想如何起名字这件事" class="headerlink" title="好好的想想如何起名字这件事"></a>好好的想想如何起名字这件事</h1><p>现在随便拿起一本书，或者看一个编程的视频，都是随意的给一个变量起一个类似a，b，c这样的名字，我觉得这是要尽量避免的事情。这不是小事，不管以后是自己写项目，还是和别人合作，多花几秒钟时间考虑一下起名字这个事，绝对是一件回报巨大的事情。</p>
-<h1 id="什么样的名字是好名字？"><a href="#什么样的名字是好名字？" class="headerlink" title="什么样的名字是好名字？"></a>什么样的名字是好名字？</h1><p>一个好名字要反映出问题。我再以中国人起名字举例，中国的名字大部分是3个字或者2个字，4个字的相对来说要少一些。如是是2个，第一字是姓，这个没法让人发挥，老爸姓啥你就姓啥。如果是3个字的，很可能第2个字是辈份，也没法自由发挥，只有第3个字才能让我们发挥。</p>
-<p>一个好名字要能描述一个问题，或者能表达自己的某种愿望。所以，如果中国的父母相信五行八卦的话，如果这个孩子五行缺木，可能会取一个森字；如果这个孩子五行缺水的话，可能取个淼字；当然，这也是我随便用五行来解释的，这并不能解释为什么有人取个名字叫晶。</p>
-<p>和给中国人取名一样，一个好的变量名应该是个名词，而不能是动词。这个名词最好能让人望文生意。比如，first_name，last_name这样的名字就比a，b，name要好。</p>
-<p>这个我也没有什么神奇的办法，有给变量起好名字的算法，给人起名字有起名字的软件，目前可能还没有给变量起名字的软件。</p>
-<h1 id="变量名多长比较好"><a href="#变量名多长比较好" class="headerlink" title="变量名多长比较好"></a>变量名多长比较好</h1><p>这个分情况，有个（我认为是玄学的）报告说，把变量名限制在8-15个字符，会比较好。其实不同的编程语言，所遵守的规则有点不同，如果你是Objective-C程序员，可能见到这么长的变量名也不奇怪：</p>
-<blockquote>
-<p>INGetAvailableRestaurantReservationBookingDefaultsIntentResponse</p>
-</blockquote>
-<p>但是，如果这么长的变量名被一个Python程序员或者C程序员看到，可能会吓一跳。</p>
-<p>所以，这个看情况的。但是，我觉得一个好名字，无论长短，最好能没有歧义，不要一看名字，可以有许多的解释。比如，date就不是个好名字，currentDate就是个相对比较好的名字，如果把currentDate简化成cd，就是个更差的名字了。大家可以体会一下。</p>
-<p>只要是能足够清晰的表示出变量的意义，就是好名字，长点短点，没什么关系的。</p>
-<h1 id="重名了怎么办"><a href="#重名了怎么办" class="headerlink" title="重名了怎么办"></a>重名了怎么办</h1><p>在现实中，我们总是能听说过几个叫李鹏，刘鹏，王鹏的人，这是非常非常正常的事情。在编写程序的时候，几个同事想到一起，给不同的变量起相同的名字，这也是非常正常的事情。</p>
-<p>在软件中，有一整套解决方案来处理这个事情，比如说名字空间(namespace)。这个留在以后再详细说。</p>
-<h1 id="一个故事"><a href="#一个故事" class="headerlink" title="一个故事"></a>一个故事</h1><p>先看一个照片，这个人叫Michael。</p>
-<p><img src="/uploads/01-michael.jpg" alt="Michael"></p>
-<p>如果你不知道他，我觉得你肯定知道他有个产品叫MySQL。是的，你也许会说，你看，他的名字也不好，叫MySQL。其实，他有3个孩子，两个女儿，一个儿子。其中一个女儿叫My，在他把MySQL卖给Oracle以后，他出来做了一个新的数据库叫MariaDB，是因为他另一个女儿叫Maria。他还做过一个数据库叫MaxDB，是因为他有个儿子叫Max。</p>
-<p>下一次，不要再给自己的变量定义为myInput，myCount… 除非你也有个女儿叫My。</p>
-<p>好好想想，给自己的孩子起个好听的名字，这是为人父母的第一步；给自己的项目和变量起个好点的名字，这是学习编程的第一步。</p>
-<hr>
-<p>形成本文的草稿</p>
-<p><img src="/uploads/01-draft-01.jpg" alt="01-draft-01"></p>
-<p><img src="/uploads/01-draft-01.jpg" alt="01-draft-02"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -578,7 +574,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
