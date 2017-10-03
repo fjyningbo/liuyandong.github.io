@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程感悟," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -85,24 +85,20 @@
 
 
 
-<meta name="description" content="我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是">
-<meta name="keywords" content="编程感悟">
+<meta name="description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《这些年编程的一些反思》004 整数的使用">
-<meta property="og:url" content="http://yoursite.com/2017/09/24/04-programming-int/index.html">
+<meta property="og:title" content="《linux从入门到放弃》001 介绍">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/linux-cmd-001/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是">
+<meta property="og:description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/uploads/04-01-ruby.png">
-<meta property="og:image" content="http://yoursite.com/uploads/04-01-python.png">
-<meta property="og:image" content="http://yoursite.com/uploads/04-01-swift.png">
-<meta property="og:image" content="http://yoursite.com/uploads/04-01-scheme.png">
-<meta property="og:image" content="http://yoursite.com/uploads/04-draft.jpg">
-<meta property="og:updated_time" content="2017-09-24T02:59:58.000Z">
+<meta property="og:image" content="http://yoursite.com/uploads/cmd.png">
+<meta property="og:image" content="http://yoursite.com/uploads/cmd02.png">
+<meta property="og:updated_time" content="2017-10-03T00:03:24.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《这些年编程的一些反思》004 整数的使用">
-<meta name="twitter:description" content="我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是">
-<meta name="twitter:image" content="http://yoursite.com/uploads/04-01-ruby.png">
+<meta name="twitter:title" content="《linux从入门到放弃》001 介绍">
+<meta name="twitter:description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
+<meta name="twitter:image" content="http://yoursite.com/uploads/cmd.png">
 
 
 
@@ -130,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/24/04-programming-int/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/03/linux-cmd-001/"/>
 
 
 
 
 
-  <title> 《这些年编程的一些反思》004 整数的使用 | 栋哥的博客 </title>
+  <title> 《linux从入门到放弃》001 介绍 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +251,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/04-programming-int/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/linux-cmd-001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘延栋">
@@ -276,7 +272,7 @@
             
             
               
-                《这些年编程的一些反思》004 整数的使用
+                《linux从入门到放弃》001 介绍
               
             
           </h1>
@@ -291,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T10:54:55+08:00">
-                2017-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T07:57:38+08:00">
+                2017-10-03
               </time>
             
 
@@ -327,32 +323,26 @@
       
 
       
-        <p>我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是第二种知识，你了解再多的IT历史，了解再多的编程人物，都不会让你学会编程。</p>
-<p>所以，你还是要在你的电脑上装上几个编译器，来试试。我也不知道蒙娜丽莎的微笑是怎么画出来的。我想，应该是一笔一笔画出来的吧。我希望能尝试一下，把自己的手弄脏，打开电脑上的几个编译器，试试到底怎么回事。</p>
-<h1 id="先来试试整数类型"><a href="#先来试试整数类型" class="headerlink" title="先来试试整数类型"></a>先来试试整数类型</h1><p>在计算机中，不同的编程语言，和现实中的整数有一些不同。在现实中，我们对整数进行的四则运算分别是加减乘除，在计算机中分别用<strong>+ - * /</strong>这四个符号来表示，在现实中，9/10我们都知道是0.9，但是在计算机中，这可能会是0，也可能是负无穷大，也可能是最接近0.9的整数1。这会导致下面这两个在现实中是等式的两个算式完全不同，算式A： 2 <em> ( 8 / 10)， 算式B： (2 </em> 8) / 10。是的，乘除法的交换率在这里失效了。</p>
-<p>我分别在Ruby, Python, Swift中的展示一下。</p>
-<p>在Ruby中是这样的：</p>
-<p><img src="/uploads/04-01-ruby.png" alt=""></p>
-<p>在Python中是这样的：</p>
-<p><img src="/uploads/04-01-python.png" alt=""></p>
-<p>在苹果的swift语言中是这样的：</p>
-<p><img src="/uploads/04-01-swift.png" alt=""></p>
-<p>以上的3种语言在处理这种情况的时候，采用的方式是一样的。</p>
-<p>在古老的Lisp语言Scheme中，是另外一个情况，他两次给出的结果都是一样的。</p>
-<p><img src="/uploads/04-01-scheme.png" alt=""></p>
-<p>Scheme是我比较喜欢的编程语言之一，虽然很多时候，学习Scheme语言对找工作没有丝毫帮助，据我所知，没有什么公司会用这种编程语言，如果只是玩一玩，Scheme还是非常的有趣的。</p>
-<h1 id="留给兴趣的人"><a href="#留给兴趣的人" class="headerlink" title="留给兴趣的人"></a>留给兴趣的人</h1><p>你要不要自己试试C语言和Java言，或者PHP语言中，整数类型会有什么不一样呢？学编程，总得自己动手试试吧。在PHP中，可以让一个整数类型直接加上一个字串类型，在Ruby等语言中则不能，这就是所谓的强类型语言(Strong typed language)和弱类型语言(Weak typed language)。如果是使用C/C++语言来编程，是要首先进行编译才能运行，但是像Python, Ruby这样的语言，则不用编译，这就是静态语言(static language)和动态语言(dynamic language)的区别。因此，我们学习的每种主流语言，都可以划分到强/弱类型和动/静语言的2维坐标里。</p>
-<p><img src="/uploads/04-draft.jpg" alt=""></p>
-<h1 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h1><p>虽然我不认为盲目的追求代码优美有什么好处，尤其是在项目初期的时候就试图写完美的代码，但是，我认为，在任何时候，都不要在代码中出现一些非常神秘的数字。比如100，200，1024… 这是非常让人崩溃的事情。只要过了24小时，这些神秘的数字，你自己都搞不清楚代表的意义是什么，你知道1024是什么意思么？在任何时候，代码中只能出现两个数字，一个是0，一个是1，其它的，最好定义一个有意义的变量或者常量，这样对自己有好处。</p>
-<hr>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>我认为一个合格的程序员，至少要掌握这几个东西：</p>
+        <h1 id="为什么要用Linux"><a href="#为什么要用Linux" class="headerlink" title="为什么要用Linux"></a>为什么要用Linux</h1><p>我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。</p>
+<blockquote>
+<p>Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。</p>
+</blockquote>
+<p>我们上淘宝的时候，用的就是淘宝家的Linux机器，访问的每一个衣服列表，每一双鞋子，每年接近1,000个小时的信息朋友圈，其中的每一秒种都是在和Linux打交道。虽然以前也许不知道，但是，希望以后知道了，Linux和我们，其实是最熟悉的<strong>陌生人</strong>。</p>
+<h1 id="应用场合"><a href="#应用场合" class="headerlink" title="应用场合"></a>应用场合</h1><p>(淘宝家的)服务器，追求的不是界面美观，所有的服务器追求的都是稳定(如果让广大的淘友一天不能上淘宝，那可是大事)，高效(一定要效率非常的高，在很多人都上网抢购的时候，也要能够快速的做出响应)。也正是因为这个，没有几家公司愿意使用Windows当服务器，甚至(有比较可靠的)传闻说，微软家自己的hotmail服务器，也是使用Linux服务器，一直使用了好多年，自家的windows server才有能力替换。</p>
+<p>因此，淘宝家的服务器可能有几万个，几十万个，你让每个服务器前面坐一个拿鼠标的人，也是不现实的。因此，使用的是一个叫<strong>c</strong>ommand-<strong>l</strong>ine <strong>i</strong>nterface (CLI)的用户界面，翻译在中文大概叫命令行用户界面。与之相对的，你用的iPhone和Windows系统，叫<strong>g</strong>raphical <strong>u</strong>ser <strong>i</strong>nterface (GUI)。</p>
+<p>熟练的掌握CLI的用户界面是每个软件工程师必须具备的技能。</p>
+<p>一个常见的CLI用户界面大概就是这个样子的，这是使用terminal登录的样子:</p>
+<p><img src="/uploads/cmd.png" alt=""></p>
+<p>正如上面显示的，这是使用ssh(<strong>S</strong>ecure <strong>Sh</strong>ell)登录的，</p>
+<h1 id="启动terminal"><a href="#启动terminal" class="headerlink" title="启动terminal"></a>启动terminal</h1><p>在Mac和Linux上，有自带的terminal软件，我习惯在mac上安装一个名为iTerm2的软件，这个软件是免费的；在Windows上，要自己安装上一个叫putty的软件，这个软件也是免费的。安装以后，点一下就OK了，就能启动起来了。下面是一个简单的例子，使用ls命令，显示出一个文件夹中的内容。</p>
+<p><img src="/uploads/cmd02.png" alt=""></p>
+<p>基本上所有的Linux命令都是类似的样子，我分别来介绍一下:</p>
 <ol>
-<li>(Linux下的)命令行</li>
-<li>一个非图形化的文本编辑器(如果用ssh登录服务器，是没法用图形化的编辑器的，这里我就特指vi :)</li>
-<li>版本管理系统(现在用的最多的可能是linus出的git，我在公司用Subversion，我自己用git)</li>
-<li>能熟练用2-3种编程语言，能读懂5-6种编程语言。(在公司里打工的人，比如我，如果接手一个已经10年的项目，是c写的，那就用c，如果是Java写的，那就用Java，有些脚本是perl，你就得会读perl… 当然，有能力的大牛，能扭转局面的人不用拘泥于此，此条建议仅供打工仔参考。栋哥就像劳务市场的零工，根本不知道雇主让干啥活，可能是刷大白，可能是清理抽油烟，可能是按摸……反正，多会点技能，混口饭吃)</li>
+<li>这是一个美元的符号，这一般情况下意味着是普通用户。在Linux中，有两种用户，一种是普通用户，一个是root用户，如果使用root用户，一般情况下提示符是#，而不是$</li>
+<li>命令(command)，这就是Linux的命令</li>
+<li>选项(option)，Linux的命令可以使用参数来改变命令的一些行为，如果对ls命令使用了 -l 选项，那么ls这个命令的输出就会有所不同。</li>
+<li>参数(ChezScheme)，这个命令执行的对象，在这里是一个名为ChezScheme的文件夹</li>
 </ol>
-<p>在以后的这个文章后面，我会着重介绍第4种主要技能。前3种在每篇文章的扩展里讲一点，每次讲一点。就这样。</p>
 
       
     </div>
@@ -406,12 +396,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/编程感悟/" rel="tag"># 编程感悟</a>
-          
-        </div>
-      
 
       
         
@@ -421,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/19/116/" rel="next" title="116. 现代CPU之父(上)">
-                <i class="fa fa-chevron-left"></i> 116. 现代CPU之父(上)
+              <a href="/2017/09/30/118/" rel="next" title="118.现代CPU之父(下)">
+                <i class="fa fa-chevron-left"></i> 118.现代CPU之父(下)
               </a>
             
           </div>
@@ -430,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/25/117-cpu/" rel="prev" title="117.现代CPU之父(中)">
-                117.现代CPU之父(中) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先来试试整数类型"><span class="nav-number">1.</span> <span class="nav-text">先来试试整数类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#留给兴趣的人"><span class="nav-number">2.</span> <span class="nav-text">留给兴趣的人</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小建议"><span class="nav-number">3.</span> <span class="nav-text">小建议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展"><span class="nav-number">4.</span> <span class="nav-text">扩展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要用Linux"><span class="nav-number">1.</span> <span class="nav-text">为什么要用Linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场合"><span class="nav-number">2.</span> <span class="nav-text">应用场合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动terminal"><span class="nav-number">3.</span> <span class="nav-text">启动terminal</span></a></li></ol></div>
             
 
           </div>

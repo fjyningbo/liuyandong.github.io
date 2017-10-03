@@ -249,6 +249,146 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/linux-cmd-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/10/03/linux-cmd-001/" itemprop="url">
+                  《linux从入门到放弃》001 介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T07:57:38+08:00">
+                2017-10-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="为什么要用Linux"><a href="#为什么要用Linux" class="headerlink" title="为什么要用Linux"></a>为什么要用Linux</h1><p>我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。</p>
+<blockquote>
+<p>Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。</p>
+</blockquote>
+<p>我们上淘宝的时候，用的就是淘宝家的Linux机器，访问的每一个衣服列表，每一双鞋子，每年接近1,000个小时的信息朋友圈，其中的每一秒种都是在和Linux打交道。虽然以前也许不知道，但是，希望以后知道了，Linux和我们，其实是最熟悉的<strong>陌生人</strong>。</p>
+<h1 id="应用场合"><a href="#应用场合" class="headerlink" title="应用场合"></a>应用场合</h1><p>(淘宝家的)服务器，追求的不是界面美观，所有的服务器追求的都是稳定(如果让广大的淘友一天不能上淘宝，那可是大事)，高效(一定要效率非常的高，在很多人都上网抢购的时候，也要能够快速的做出响应)。也正是因为这个，没有几家公司愿意使用Windows当服务器，甚至(有比较可靠的)传闻说，微软家自己的hotmail服务器，也是使用Linux服务器，一直使用了好多年，自家的windows server才有能力替换。</p>
+<p>因此，淘宝家的服务器可能有几万个，几十万个，你让每个服务器前面坐一个拿鼠标的人，也是不现实的。因此，使用的是一个叫<strong>c</strong>ommand-<strong>l</strong>ine <strong>i</strong>nterface (CLI)的用户界面，翻译在中文大概叫命令行用户界面。与之相对的，你用的iPhone和Windows系统，叫<strong>g</strong>raphical <strong>u</strong>ser <strong>i</strong>nterface (GUI)。</p>
+<p>熟练的掌握CLI的用户界面是每个软件工程师必须具备的技能。</p>
+<p>一个常见的CLI用户界面大概就是这个样子的，这是使用terminal登录的样子:</p>
+<p><img src="/uploads/cmd.png" alt=""></p>
+<p>正如上面显示的，这是使用ssh(<strong>S</strong>ecure <strong>Sh</strong>ell)登录的，</p>
+<h1 id="启动terminal"><a href="#启动terminal" class="headerlink" title="启动terminal"></a>启动terminal</h1><p>在Mac和Linux上，有自带的terminal软件，我习惯在mac上安装一个名为iTerm2的软件，这个软件是免费的；在Windows上，要自己安装上一个叫putty的软件，这个软件也是免费的。安装以后，点一下就OK了，就能启动起来了。下面是一个简单的例子，使用ls命令，显示出一个文件夹中的内容。</p>
+<p><img src="/uploads/cmd02.png" alt=""></p>
+<p>基本上所有的Linux命令都是类似的样子，我分别来介绍一下:</p>
+<ol>
+<li>这是一个美元的符号，这一般情况下意味着是普通用户。在Linux中，有两种用户，一种是普通用户，一个是root用户，如果使用root用户，一般情况下提示符是#，而不是$</li>
+<li>命令(command)，这就是Linux的命令</li>
+<li>选项(option)，Linux的命令可以使用参数来改变命令的一些行为，如果对ls命令使用了 -l 选项，那么ls这个命令的输出就会有所不同。</li>
+<li>参数(ChezScheme)，这个命令执行的对象，在这里是一个名为ChezScheme的文件夹</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/30/118/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -372,152 +512,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/201709Q-A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘延栋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="栋哥的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/28/201709Q-A/" itemprop="url">
-                  2017年9月问答
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T11:12:21+08:00">
-                2017-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>因为新关注者每个月都会增加一些，所以我每个月都要重复回答一些问题。</p>
-<h1 id="电台状况类问题"><a href="#电台状况类问题" class="headerlink" title="电台状况类问题"></a>电台状况类问题</h1><h2 id="有多少关注者了"><a href="#有多少关注者了" class="headerlink" title="有多少关注者了?"></a>有多少关注者了?</h2><p>到今天为止，微信公众号是5816人，喜马拉雅App上是6790人，网易云音乐上是12656人。</p>
-<h2 id="阅读量是多少？"><a href="#阅读量是多少？" class="headerlink" title="阅读量是多少？"></a>阅读量是多少？</h2><p>公众号平均是15%左右，也就是800次左右。喜马拉雅和网易云音乐上，都不太准确，我也不知道他们为了能给主播一点自信，主动刷了多少量，这很搞笑。经常是我刚刚上传完成，就已经有了600次播放量，所以，电台上面公开显示的数字，大家随便看看就好。</p>
-<h2 id="你开通了流量主，收入多少"><a href="#你开通了流量主，收入多少" class="headerlink" title="你开通了流量主，收入多少?"></a>你开通了流量主，收入多少?</h2><p>在公众号文章下面的那个广告，每天的收入在2-3元之间，每次点击大概是4毛5毛钱，每天有5-10次点击，比如昨天的收入是2.30，前天的收入是3.44。</p>
-<h2 id="我是学生，想做个公众号，靠打赏收入，可行么？"><a href="#我是学生，想做个公众号，靠打赏收入，可行么？" class="headerlink" title="我是学生，想做个公众号，靠打赏收入，可行么？"></a>我是学生，想做个公众号，靠打赏收入，可行么？</h2><p>如果做成我这样，100%不可行，我写了150篇左右的文章，收入了3500元:) 如果你是大V，那我就不知道了。</p>
-<h1 id="我该怎么办型问题"><a href="#我该怎么办型问题" class="headerlink" title="我该怎么办型问题"></a>我该怎么办型问题</h1><h2 id="我执行力不强，一编程就头痛，我该怎么办？"><a href="#我执行力不强，一编程就头痛，我该怎么办？" class="headerlink" title="我执行力不强，一编程就头痛，我该怎么办？"></a>我执行力不强，一编程就头痛，我该怎么办？</h2><p>我也不知道</p>
-<h2 id="我是该去BAT工作呢，还是该去Stanford读博呢？-真的有这个问题"><a href="#我是该去BAT工作呢，还是该去Stanford读博呢？-真的有这个问题" class="headerlink" title="我是该去BAT工作呢，还是该去Stanford读博呢？(真的有这个问题)"></a>我是该去BAT工作呢，还是该去Stanford读博呢？(真的有这个问题)</h2><p>这，我只能说，你都这么厉害了，想怎么作就怎么作！</p>
-<h2 id="我想写个操作系统，我该怎么做？"><a href="#我想写个操作系统，我该怎么做？" class="headerlink" title="我想写个操作系统，我该怎么做？"></a>我想写个操作系统，我该怎么做？</h2><p>我小时候最迷恋酒井法子，一个日本女星，我一直在考虑如果我和她生了孩子，应不应该让孩子入日本国籍，后来我觉得当时我想的有点多。</p>
-<h1 id="你该怎么办型问题"><a href="#你该怎么办型问题" class="headerlink" title="你该怎么办型问题"></a>你该怎么办型问题</h1><h2 id="主播你普通话太差了，你写稿，我来读，你说阔不阔以哇？"><a href="#主播你普通话太差了，你写稿，我来读，你说阔不阔以哇？" class="headerlink" title="主播你普通话太差了，你写稿，我来读，你说阔不阔以哇？"></a>主播你普通话太差了，你写稿，我来读，你说阔不阔以哇？</h2><p>在1949年10月1日，有个湖南人，一口湖南湘潭味，站在城楼上念：东华忍民共火鬼，东阳忍民正负，今天，增式成立了！比我的普通话糟多了，当时我就和他说，你说的太难听了，我上去，我来说好不好，他竟然不愿意！</p>
-<h2 id="你应该去认识XX大牛，让人家帮忙推广一下"><a href="#你应该去认识XX大牛，让人家帮忙推广一下" class="headerlink" title="你应该去认识XX大牛，让人家帮忙推广一下"></a>你应该去认识XX大牛，让人家帮忙推广一下</h2><p>大牛，别说大牛了，我连个小牛也不认识。</p>
-<h2 id="你为什么不抽奖，互推，互粉来扩大自己的影响力呢？"><a href="#你为什么不抽奖，互推，互粉来扩大自己的影响力呢？" class="headerlink" title="你为什么不抽奖，互推，互粉来扩大自己的影响力呢？"></a>你为什么不抽奖，互推，互粉来扩大自己的影响力呢？</h2><p>首先，其次，最后… 这三点的主要意思是，我不是这样的人，我不喜欢交际。我是在教室里坐角落的那种人。</p>
-<h1 id="不想回答的私人问题"><a href="#不想回答的私人问题" class="headerlink" title="不想回答的私人问题"></a>不想回答的私人问题</h1><h2 id="多大-多长-多高-多胖"><a href="#多大-多长-多高-多胖" class="headerlink" title="多大? 多长? 多高? 多胖?"></a>多大? 多长? 多高? 多胖?</h2><p>我都不想回答，又不约炮，你问这些也没什么用。</p>
-<h2 id="在哪工作-哪里毕业"><a href="#在哪工作-哪里毕业" class="headerlink" title="在哪工作? 哪里毕业?"></a>在哪工作? 哪里毕业?</h2><p>我又不找工作，知道这些也不会有太多用，知道了难道会让电台更好听么？都说隐私无价，栋哥的有价，100块就说。</p>
-<h2 id="爱好兴趣什么的"><a href="#爱好兴趣什么的" class="headerlink" title="爱好兴趣什么的"></a>爱好兴趣什么的</h2><p>性别男，爱好女。</p>
-<h1 id="可以回答的私人问题"><a href="#可以回答的私人问题" class="headerlink" title="可以回答的私人问题"></a>可以回答的私人问题</h1><h2 id="你平时听电台么？"><a href="#你平时听电台么？" class="headerlink" title="你平时听电台么？"></a>你平时听电台么？</h2><p>听，国内的我真的就只听我自己的电台。因为我觉得大部分电台，都是营销过度的，也没有什么真心话大冒险，当然，他们的普通话还是不错的。国外的我会听的有这几个：</p>
-<ol>
-<li>Marco Arment，如果你不知道这个人，我介绍一下吧，他是个独立开发者。比我还要小1岁，但是成就是我今生无法达到了。他的文章，他的twitter，他的软件，我都买了，当然，他的超跑我买不起。他有一个电台叫Accidental Tech Podcast。这个人，三言两语也介绍不完，有个东西叫Google… 然后你可能会惊奇的发现，这个软件竟然是他做的?!!!</li>
-<li>Scale Your Code. 这个是个访谈节目，就是找一些程序员来分享经验，而且大部分人不怎么亮title，即使在Google是个人物，在wikipedia上有他的条目，还有一些著名软件的创始人也会去，比如说RoR的DHH，Netflix和Reddit的Jeremy，Stack Exchange的Jeff Atwood…</li>
-<li>还有几个少儿不宜的，有女的聊男的长短，有男的聊女的深浅，国外的文化啊，水太深了！我就不分享了。近日，我国网络安全部门主动出击，切断了不少水太深的国外糟粕网站，由于这些网站胡来，没有他们本国的监督，比如Guys We Fucked电台，两个美女”舔”不知耻的聊她们上了多少个男人，使国内用户的权益得不到保障，网警看在眼里，急在心里，果断出击，断了他们的网，广大人民听众悬着的心终于放下了。我想对那两个女的说：禽兽，放开那些男人，有本事，冲我来！</li>
-<li>这些都是英语的么？是的，不要抱怨山丘高，学好英语，越过山丘，那是你去看世界的路。(此处应该有李宗盛的山丘:因为不安而频频回首，无知的索求，羞耻于求救，不知疲倦的翻越，每一个墙头)</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -562,7 +561,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

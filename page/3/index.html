@@ -249,6 +249,152 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/04-programming-int/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/24/04-programming-int/" itemprop="url">
+                  《这些年编程的一些反思》004 整数的使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T10:54:55+08:00">
+                2017-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是第二种知识，你了解再多的IT历史，了解再多的编程人物，都不会让你学会编程。</p>
+<p>所以，你还是要在你的电脑上装上几个编译器，来试试。我也不知道蒙娜丽莎的微笑是怎么画出来的。我想，应该是一笔一笔画出来的吧。我希望能尝试一下，把自己的手弄脏，打开电脑上的几个编译器，试试到底怎么回事。</p>
+<h1 id="先来试试整数类型"><a href="#先来试试整数类型" class="headerlink" title="先来试试整数类型"></a>先来试试整数类型</h1><p>在计算机中，不同的编程语言，和现实中的整数有一些不同。在现实中，我们对整数进行的四则运算分别是加减乘除，在计算机中分别用<strong>+ - * /</strong>这四个符号来表示，在现实中，9/10我们都知道是0.9，但是在计算机中，这可能会是0，也可能是负无穷大，也可能是最接近0.9的整数1。这会导致下面这两个在现实中是等式的两个算式完全不同，算式A： 2 <em> ( 8 / 10)， 算式B： (2 </em> 8) / 10。是的，乘除法的交换率在这里失效了。</p>
+<p>我分别在Ruby, Python, Swift中的展示一下。</p>
+<p>在Ruby中是这样的：</p>
+<p><img src="/uploads/04-01-ruby.png" alt=""></p>
+<p>在Python中是这样的：</p>
+<p><img src="/uploads/04-01-python.png" alt=""></p>
+<p>在苹果的swift语言中是这样的：</p>
+<p><img src="/uploads/04-01-swift.png" alt=""></p>
+<p>以上的3种语言在处理这种情况的时候，采用的方式是一样的。</p>
+<p>在古老的Lisp语言Scheme中，是另外一个情况，他两次给出的结果都是一样的。</p>
+<p><img src="/uploads/04-01-scheme.png" alt=""></p>
+<p>Scheme是我比较喜欢的编程语言之一，虽然很多时候，学习Scheme语言对找工作没有丝毫帮助，据我所知，没有什么公司会用这种编程语言，如果只是玩一玩，Scheme还是非常的有趣的。</p>
+<h1 id="留给兴趣的人"><a href="#留给兴趣的人" class="headerlink" title="留给兴趣的人"></a>留给兴趣的人</h1><p>你要不要自己试试C语言和Java言，或者PHP语言中，整数类型会有什么不一样呢？学编程，总得自己动手试试吧。在PHP中，可以让一个整数类型直接加上一个字串类型，在Ruby等语言中则不能，这就是所谓的强类型语言(Strong typed language)和弱类型语言(Weak typed language)。如果是使用C/C++语言来编程，是要首先进行编译才能运行，但是像Python, Ruby这样的语言，则不用编译，这就是静态语言(static language)和动态语言(dynamic language)的区别。因此，我们学习的每种主流语言，都可以划分到强/弱类型和动/静语言的2维坐标里。</p>
+<p><img src="/uploads/04-draft.jpg" alt=""></p>
+<h1 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h1><p>虽然我不认为盲目的追求代码优美有什么好处，尤其是在项目初期的时候就试图写完美的代码，但是，我认为，在任何时候，都不要在代码中出现一些非常神秘的数字。比如100，200，1024… 这是非常让人崩溃的事情。只要过了24小时，这些神秘的数字，你自己都搞不清楚代表的意义是什么，你知道1024是什么意思么？在任何时候，代码中只能出现两个数字，一个是0，一个是1，其它的，最好定义一个有意义的变量或者常量，这样对自己有好处。</p>
+<hr>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>我认为一个合格的程序员，至少要掌握这几个东西：</p>
+<ol>
+<li>(Linux下的)命令行</li>
+<li>一个非图形化的文本编辑器(如果用ssh登录服务器，是没法用图形化的编辑器的，这里我就特指vi :)</li>
+<li>版本管理系统(现在用的最多的可能是linus出的git，我在公司用Subversion，我自己用git)</li>
+<li>能熟练用2-3种编程语言，能读懂5-6种编程语言。(在公司里打工的人，比如我，如果接手一个已经10年的项目，是c写的，那就用c，如果是Java写的，那就用Java，有些脚本是perl，你就得会读perl… 当然，有能力的大牛，能扭转局面的人不用拘泥于此，此条建议仅供打工仔参考。栋哥就像劳务市场的零工，根本不知道雇主让干啥活，可能是刷大白，可能是清理抽油烟，可能是按摸……反正，多会点技能，混口饭吃)</li>
+</ol>
+<p>在以后的这个文章后面，我会着重介绍第4种主要技能。前3种在每篇文章的扩展里讲一点，每次讲一点。就这样。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/116/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -375,147 +521,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/02-programming-data-type1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="刘延栋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="栋哥的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/16/02-programming-data-type1/" itemprop="url">
-                  《这些年编程的一些反思》003. 整型和浮点型
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T13:13:08+08:00">
-                2017-09-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示都是数字0和数字1，但是，必须要人为的定义一种约定，让这些用0和1来表示的数字串有不同的意义。</p>
-<p>中国有句古话：“橘生淮南则为橘，生于淮北则为枳。” 就有点这个意思，同样的一串数字，如果认为是整数则表示某种意义，如果认为是字符串则是另外一个意义。如果你是一个有名气的富人，如果在公共场合穿拖鞋，就是接地气，平易近人，如果你是个穷鬼，在公共场合穿拖鞋，就是个没素质的家伙。是的，同样是公共场合穿拖鞋这件事，因为不同的身分，就会被解读出不同的意义。</p>
-<p>计算机中的事情，总是能够找到现实中不同的解读。下面，我就来解读一下各种数据类型。</p>
-<h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><p>我们总是从123开始学习的数学，这个123就是整数类型。我记得小学时候的作业经常是回家写123456789，然后每个数字写10遍。如果给你一张田字格纸，每个格子里只能写一个数，你能写的最大的数是多少呢？顶多就是写满9，不能再大了，如果是在田字格纸上写数字，写满了还可以换一张纸继续写，但是，在计算机中就没有这么好的运气了。如果写满了，就会有个经典的错误叫：溢出。是的，就是精满则溢的溢，中出的出。溢出的根本原因是田字格不够用了。</p>
-<p>在编程语言中，人为规定了整数能够使用的田字格的长度，这个世界就是这样，经常出现各式各样的人为定义。比如在C语言中，表示正整数的只能使用8个田字格的类型叫无符号的8-bit整数，可以表示0到255之间的任何一个数。如果可以表示正整数又可以表示负整数的，也是只能使用8个田字格的类型，有个名字叫带符号的8-bit整数，这个数可以表示-128到127之间的任何整数。我测试了一下苹果新推出的Swift语言，里面的Int类型，最大和最小的值分别是下图：</p>
-<p><img src="/uploads/03.int.png" alt=""></p>
-<p>是的，非常非常巨大的一个数字，如果我能有这么多钱就好了，即使单位是日元也挺好的。</p>
-<h1 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h1><p>浮点，英文名叫Floating-Point，为什么叫浮点呢，而不是叫凸点呢？有没有想过这个哲学问题呢？那是因为浮点真的会浮，而不会凸，会凸的是下面这种东西。</p>
-<p><img src="/uploads/03-durex-point.jpg" alt=""></p>
-<p>我来讲讲为什么浮点会浮吧。在整数类型中，我已经讲了整数如何表达，其实，整数是相对比较容易表示的，反而是3.1415这种的，难以在计算机中表示。怎么记录下这个小数点呢？起初，人为的规定（是的，人就是这样，经常搞人为规定）小数点的位置，比如说，人为规定，看见整数就左移4位，比如，31415，左移4位就成了3.1415，1000左移4位就成了0.1，1左移4位就成了0.0001… 非常的简单粗暴，某些情况也有些效果。但是，如果领导要求小数点后4位不够精确了，要后5位怎么办呢？好办，再重新约定一个… 如果某天要求后10位了，这个应该怎么办？还是约定… 这种一碰到事情就开会约定的办法叫定点数。不叫浮点，浮点的小数点是可以浮动的。</p>
-<p>我们再设计一个方法，一行田字格有16个格子。我们再人为规定一下，前10个格子是表示数的，后6个格子来表示小数点的位置。如果用10个格子中都填满1，这就是著名的1024-1=1023了。后面的6个格子里都填满1，因为小数点可以左右移动，因此可以移动左边-33，右移30。。因此，最大的数字可以表示为1023，后面跟30个0，这是一个超级巨大的数，如果表示很小的数，就是小数点后33位，这是一个超级小的数。一般情况下(或者任何情况下，光速的光速倍…这个数字大到天长久了已经…)我们用不到这么大的数字，也用不到这么小的数字。这基本上是浮点数的基本原理，当然，现实中有不同的实现方法，这些方法都已经写进IEEE 754 (IEEE Standard for Floating-Point Arithmetic) 中了，如果你特别喜欢仔细研究，可以下载看看，这个文档是绝对免费的纯沙漠级别的干货，里面有5种类型的标准，我只说了其中的一点点点点湿货。</p>
-<p>需要注意的是，如果有同学是研究核弹，在银行工作的，在华尔街工作的，一定要特别注意，浮点数是不准的，几乎所有的语言都没有办法精确的实现1/3，1/5，1/7这种数，如果你是这种要求变态级别精确度的工作，应该有其它的方法，我就不作介绍了。最后，我来展示几个不准吧，比如10个0.3相加，或者11个0.3相加，几乎没有编程语言能算出是3，或者3.3来。</p>
-<p><img src="/uploads/03.float-03.png" alt=""></p>
-<p>上图是使用苹果推出的swift语言，用11个0.3相加，得到的是3.2999999999。下图是Python 3.5, 用10个0.3相加，得到的是2.99999999996</p>
-<p><img src="/uploads/03.float-04.png" alt=""></p>
-<p>那还能用浮点类型么？当然了，用魅族的老大黄章说的那句名言“天线性能差？又不是不能用！”来结束这一小节吧！</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -560,7 +570,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
