@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程感悟," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -85,23 +85,19 @@
 
 
 
-<meta name="description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
-<meta name="keywords" content="编程感悟">
+<meta name="description" content="为什么要用vim如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《这些年编程的一些反思》003. 整型和浮点型">
-<meta property="og:url" content="http://yoursite.com/2017/09/16/02-programming-data-type1/index.html">
+<meta property="og:title" content="《vim从入门到放弃》001">
+<meta property="og:url" content="http://yoursite.com/2017/10/04/vim-001/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
+<meta property="og:description" content="为什么要用vim如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/uploads/03.int.png">
-<meta property="og:image" content="http://yoursite.com/uploads/03-durex-point.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/03.float-03.png">
-<meta property="og:image" content="http://yoursite.com/uploads/03.float-04.png">
-<meta property="og:updated_time" content="2017-09-16T05:19:00.000Z">
+<meta property="og:image" content="http://yoursite.com/uploads/freebsd-girl.jpg">
+<meta property="og:updated_time" content="2017-10-04T00:09:34.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《这些年编程的一些反思》003. 整型和浮点型">
-<meta name="twitter:description" content="和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示">
-<meta name="twitter:image" content="http://yoursite.com/uploads/03.int.png">
+<meta name="twitter:title" content="《vim从入门到放弃》001">
+<meta name="twitter:description" content="为什么要用vim如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，">
+<meta name="twitter:image" content="http://yoursite.com/uploads/freebsd-girl.jpg">
 
 
 
@@ -129,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/16/02-programming-data-type1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/04/vim-001/"/>
 
 
 
 
 
-  <title> 《这些年编程的一些反思》003. 整型和浮点型 | 栋哥的博客 </title>
+  <title> 《vim从入门到放弃》001 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/02-programming-data-type1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/04/vim-001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘延栋">
@@ -275,7 +271,7 @@
             
             
               
-                《这些年编程的一些反思》003. 整型和浮点型
+                《vim从入门到放弃》001
               
             
           </h1>
@@ -290,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T13:13:08+08:00">
-                2017-09-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T07:43:06+08:00">
+                2017-10-04
               </time>
             
 
@@ -326,22 +322,24 @@
       
 
       
-        <p>和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示都是数字0和数字1，但是，必须要人为的定义一种约定，让这些用0和1来表示的数字串有不同的意义。</p>
-<p>中国有句古话：“橘生淮南则为橘，生于淮北则为枳。” 就有点这个意思，同样的一串数字，如果认为是整数则表示某种意义，如果认为是字符串则是另外一个意义。如果你是一个有名气的富人，如果在公共场合穿拖鞋，就是接地气，平易近人，如果你是个穷鬼，在公共场合穿拖鞋，就是个没素质的家伙。是的，同样是公共场合穿拖鞋这件事，因为不同的身分，就会被解读出不同的意义。</p>
-<p>计算机中的事情，总是能够找到现实中不同的解读。下面，我就来解读一下各种数据类型。</p>
-<h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><p>我们总是从123开始学习的数学，这个123就是整数类型。我记得小学时候的作业经常是回家写123456789，然后每个数字写10遍。如果给你一张田字格纸，每个格子里只能写一个数，你能写的最大的数是多少呢？顶多就是写满9，不能再大了，如果是在田字格纸上写数字，写满了还可以换一张纸继续写，但是，在计算机中就没有这么好的运气了。如果写满了，就会有个经典的错误叫：溢出。是的，就是精满则溢的溢，中出的出。溢出的根本原因是田字格不够用了。</p>
-<p>在编程语言中，人为规定了整数能够使用的田字格的长度，这个世界就是这样，经常出现各式各样的人为定义。比如在C语言中，表示正整数的只能使用8个田字格的类型叫无符号的8-bit整数，可以表示0到255之间的任何一个数。如果可以表示正整数又可以表示负整数的，也是只能使用8个田字格的类型，有个名字叫带符号的8-bit整数，这个数可以表示-128到127之间的任何整数。我测试了一下苹果新推出的Swift语言，里面的Int类型，最大和最小的值分别是下图：</p>
-<p><img src="/uploads/03.int.png" alt=""></p>
-<p>是的，非常非常巨大的一个数字，如果我能有这么多钱就好了，即使单位是日元也挺好的。</p>
-<h1 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h1><p>浮点，英文名叫Floating-Point，为什么叫浮点呢，而不是叫凸点呢？有没有想过这个哲学问题呢？那是因为浮点真的会浮，而不会凸，会凸的是下面这种东西。</p>
-<p><img src="/uploads/03-durex-point.jpg" alt=""></p>
-<p>我来讲讲为什么浮点会浮吧。在整数类型中，我已经讲了整数如何表达，其实，整数是相对比较容易表示的，反而是3.1415这种的，难以在计算机中表示。怎么记录下这个小数点呢？起初，人为的规定（是的，人就是这样，经常搞人为规定）小数点的位置，比如说，人为规定，看见整数就左移4位，比如，31415，左移4位就成了3.1415，1000左移4位就成了0.1，1左移4位就成了0.0001… 非常的简单粗暴，某些情况也有些效果。但是，如果领导要求小数点后4位不够精确了，要后5位怎么办呢？好办，再重新约定一个… 如果某天要求后10位了，这个应该怎么办？还是约定… 这种一碰到事情就开会约定的办法叫定点数。不叫浮点，浮点的小数点是可以浮动的。</p>
-<p>我们再设计一个方法，一行田字格有16个格子。我们再人为规定一下，前10个格子是表示数的，后6个格子来表示小数点的位置。如果用10个格子中都填满1，这就是著名的1024-1=1023了。后面的6个格子里都填满1，因为小数点可以左右移动，因此可以移动左边-33，右移30。。因此，最大的数字可以表示为1023，后面跟30个0，这是一个超级巨大的数，如果表示很小的数，就是小数点后33位，这是一个超级小的数。一般情况下(或者任何情况下，光速的光速倍…这个数字大到天长久了已经…)我们用不到这么大的数字，也用不到这么小的数字。这基本上是浮点数的基本原理，当然，现实中有不同的实现方法，这些方法都已经写进IEEE 754 (IEEE Standard for Floating-Point Arithmetic) 中了，如果你特别喜欢仔细研究，可以下载看看，这个文档是绝对免费的纯沙漠级别的干货，里面有5种类型的标准，我只说了其中的一点点点点湿货。</p>
-<p>需要注意的是，如果有同学是研究核弹，在银行工作的，在华尔街工作的，一定要特别注意，浮点数是不准的，几乎所有的语言都没有办法精确的实现1/3，1/5，1/7这种数，如果你是这种要求变态级别精确度的工作，应该有其它的方法，我就不作介绍了。最后，我来展示几个不准吧，比如10个0.3相加，或者11个0.3相加，几乎没有编程语言能算出是3，或者3.3来。</p>
-<p><img src="/uploads/03.float-03.png" alt=""></p>
-<p>上图是使用苹果推出的swift语言，用11个0.3相加，得到的是3.2999999999。下图是Python 3.5, 用10个0.3相加，得到的是2.99999999996</p>
-<p><img src="/uploads/03.float-04.png" alt=""></p>
-<p>那还能用浮点类型么？当然了，用魅族的老大黄章说的那句名言“天线性能差？又不是不能用！”来结束这一小节吧！</p>
+        <h1 id="为什么要用vim"><a href="#为什么要用vim" class="headerlink" title="为什么要用vim"></a>为什么要用vim</h1><p>如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，会用vim还是非常的有用的。</p>
+<p>有没有人真的使用vim来做任何的文本编程呢？毕竟世界之大，无奇不有，这种变态还是有的，比如说我就是了。只要是用输入文本的地方，我就用vim。我甚至在chrome流览器上装了一个vim插件。</p>
+<p>一个能到处使用vim的人，一定有一些故事。在10几年前，我在劳务市场找了一个工作，当了程序员，在大学时候，对vim的使用只会保存退出这几个操作，当然，我恨死了vim，这个东西，早就应该扫入历史的垃圾堆，我当时这样想。我去工作的第一天，公司给我了一台电脑，是的，一台崭新的Thinkpad电脑，性能很强大。当我开机以后，我看到了一个我从来没有用过的操作系统，一个满身通红的小妖怪拿着一个三钉耙，无论从哪个角度看，都像是在对我嘲笑。我知道了这个系统叫FreeBSD。</p>
+<p><img src="/uploads/freebsd-girl.jpg" alt=""></p>
+<p>当然，这个系统用起来，让我满身的不舒服，让我更不舒服的是，我的上司告诉我，以后开发就在这个系统上，一个连纸牌和扫雷都没有的电脑上，我听了以后，在9月的高温里，我觉得从内到外都凉透了。没过几天，我才知道，这个世界上除了FreeBSD，还有个操作系统叫Solaris，还真是刘姥姥进了大观园，看啥都新鲜，我们开发的软件至少要确保在FreeBSD和Solaris上运行，这也是跨平台了吧，跨了两个极其小众的平台。</p>
+<p>如果说FreeBSD奇怪的话，起码它还是个电脑的样子，我几乎没有机会看看当时Solaris安装在啥地方，又过了好久，公司要从SUN公司买一批Solaris系统，我才见到那种电脑，是的，一个不像电脑的电脑。没有显示器接口，没有键盘接口，没有鼠标接口，只有一个叫串口的东西，一个电源开关，一个网线接口。就像是一个主板，外面装了个铁盒子。我甚至都不知道如何设置它。vim是唯一一个在Solaris和FreeBSD不用安装就可以运行的软件，就像windows上的记事本一样。</p>
+<p>长话短说，就像所有得了斯德哥尔摩综合症的人一样，我在被vim不停的摧残和蹂躏中，我爱上了她。我先是讨厌她，后来适应她，再后来喜欢她，现在，我已经离不开她了。</p>
+<p>我现在觉得，在键盘上移动10个手指头比一只手移动鼠标要快的多。这就是我使用vim的(说服我自己的)理由。</p>
+<h1 id="vim的历史"><a href="#vim的历史" class="headerlink" title="vim的历史"></a>vim的历史</h1><p>vim的历史太长了，简直要和个人电脑的历史一样长，如果算上vim的爸爸，一个叫vi的编辑器，这个历史就比个人电脑的历史要长了。vi在1976年就发布了，他的作者是Sun公司的创始人之一，同时也是Java语言的重要支持者，他的名字叫Bill Joy。当时，个人电脑这个东西，很少有人买，也没多少人有兴趣，几乎所有的电脑都是学校或者商业机构才能买的起。当时大学里已经在使用Unix了，上面的王牌编辑器叫ed，每次只能处理一行，是的，一行。Bill Joy觉得，他能搞个处理全屏的文本编辑器，就就是vi的由来，取的是visual interface的首字母。</p>
+<p>但是，他只做了一半，就去忙其它事情了，本来，他承诺要给这个vi编辑器写一个GUI的界面，用这个GUI来操作vi的命令部分，但是，他只做了命令的部分，就去忙更重要的事情了(比如建一个市值千亿美金的SUN公司)…但是，他就先让人用着这个半成品，等他忙完了，就来把GUI的部分写完，这一忙，就是永远。人们适应了这个半成品，完全不想要GUI了，后来无数的人尝试给vi写了GUI，但是，没有人用，就是喜欢这个半成品。</p>
+<p>同样的故事还发生过一次，在lisp上，这个就不细讲了，这就是半成品流行的两个好例子，让大家用了半成品以后，等到成品出来了，结果，人已经爱上半成品了。</p>
+<p>在1988年，有个叫Bram Moolenaar的家伙，他买了一台Amiga电脑，上面没有一个好用的编辑器，然后，他就基于一个开源软件开始的，vim的本意是vi improved，不管如何，在众多试图改进vi编辑器的努力中，vim取得了最大的成功。</p>
+<p>那是不是意味着vim的代码是非常优秀呢？以我来看，vim是代码比较糟糕的C语言之一，比起SQLite这样的开源代码，vim的代码质量实在是不敢恭维，无论是在一个中就包含25,000多行C语言，还是经常会出现连续的500多个#ifdefs语句，还是在一个文件中有2,000行定义的常量。甚至由于历史的原因，vim的有些源代码文件既不是UIT-8格式，也不是ASCII格式，并且为了支持一些早就过时的平台，比如BeOS，VMS，vim中仍有大量的代码，几乎没有人愿意去读vim代码，当你知道一个eval.c文件中有25,000行代码，这简直就是恐怖袭击。</p>
+<p>这仍旧无法阻挡vim是最成功的文本编辑器之一。在开源的世界里，当然会有人想改进这种情况。可能有些人天生就适合看让人头晕的代码，在vim社区里，真有有人整理了vim所有的代码，然后提交了一个push，这次push，实在是太惊天地，泣鬼神了，已经在Google工作的Bram Moolenaar直接不敢将这些代码合并进去。因为，这变化有些太大了，步子太大，有点扯着蛋了。</p>
+<p>没关系，在开源的世界里，你不合并，我就重新弄一个，于是，一个叫neovim的项目诞生了，号称自己是vim的未来。这个项目已经非常的稳定了，我已经用了好长的时间，除了一些插件要自己动手修改一下，其它的方面，我认为是比vim好一些的。号称比vim少了至少30%的代码。</p>
+<p>vim当然不会坐视不理，于是在发布的vim 8.0中，几乎neovim最主要的几个优点，被vim一个不留的全部复制粘贴了过去，而且，也说自己比原来的自己少了30%的代码，这…… 如果不是开源项目，不禁让人以为，这就是阿里巴巴剽窃的呢……</p>
+<p>这是我喜欢看到的开源界的竞争，不撕B，不谩骂，不会背后捅友商一刀，同样的事情也发生在众多的开源项目上，不逼逼，你不采用我的意见，我就自己干出一番事业，让你来看看。比如Ruby on Rails项目和Merb曾经有理念之争，最后两者合并，取互相的优点，这是一种不是死要面子的胸怀。</p>
+<h1 id="知道一些历史"><a href="#知道一些历史" class="headerlink" title="知道一些历史"></a>知道一些历史</h1><p>知道一些历史，还是挺有趣的，我一直这样认为，所以，这一节，只讲了一点历史，这个《vim从入门到放弃》，我会写下去，日拱一卒，不期速成。</p>
 
       
     </div>
@@ -395,12 +393,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/编程感悟/" rel="tag"># 编程感悟</a>
-          
-        </div>
-      
 
       
         
@@ -410,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/14/02-programming-variable/" rel="next" title="《这些年编程的一些反思》002. 变量">
-                <i class="fa fa-chevron-left"></i> 《这些年编程的一些反思》002. 变量
+              <a href="/2017/10/03/linux-cmd-001/" rel="next" title="《linux从入门到放弃》001 介绍">
+                <i class="fa fa-chevron-left"></i> 《linux从入门到放弃》001 介绍
               </a>
             
           </div>
@@ -419,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/19/116/" rel="prev" title="116. 现代CPU之父(上)">
-                116. 现代CPU之父(上) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整数类型"><span class="nav-number">1.</span> <span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点类型"><span class="nav-number">2.</span> <span class="nav-text">浮点类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要用vim"><span class="nav-number">1.</span> <span class="nav-text">为什么要用vim</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim的历史"><span class="nav-number">2.</span> <span class="nav-text">vim的历史</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知道一些历史"><span class="nav-number">3.</span> <span class="nav-text">知道一些历史</span></a></li></ol></div>
             
 
           </div>
