@@ -325,27 +325,15 @@
 
       
         
-          
-            <h1 id="为什么要用vim"><a href="#为什么要用vim" class="headerlink" title="为什么要用vim"></a>为什么要用vim</h1><p>如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，会用vim还是非常的有用的。</p>
+          <h1 id="为什么要用vim"><a href="#为什么要用vim" class="headerlink" title="为什么要用vim"></a>为什么要用vim</h1><p>如果你不用连接服务器，只是在本地使用一个文本编辑器，应该没有什么必要再学习vim这个文本编辑器了。但是，你要经常使用ssh这样的工具，在远程的linux服务器上编辑文件，如果在不同的服务器上，比如redhat, centos, ubuntu, fedora，freebsd等等，vim几乎成了唯一的选择，这些系统几乎都会默认安装vim，但是并不一定会安装其它的编辑器。所以，这个时候，会用vim还是非常的有用的。</p>
 <p>有没有人真的使用vim来做任何的文本编程呢？毕竟世界之大，无奇不有，这种变态还是有的，比如说我就是了。只要是用输入文本的地方，我就用vim。我甚至在chrome流览器上装了一个vim插件。</p>
-<p>一个能到处使用vim的人，一定有一些故事。在10几年前，我在劳务市场找了一个工作，当了程序员，在大学时候，对vim的使用只会保存退出这几个操作，当然，我恨死了vim，这个东西，早就应该扫入历史的垃圾堆，我当时这样想。我去工作的第一天，公司给我了一台电脑，是的，一台崭新的Thinkpad电脑，性能很强大。当我开机以后，我看到了一个我从来没有用过的操作系统，一个满身通红的小妖怪拿着一个三钉耙，无论从哪个角度看，都像是在对我嘲笑。我知道了这个系统叫FreeBSD。</p>
-<p><img src="/uploads/freebsd-girl.jpg" alt=""></p>
-<p>当然，这个系统用起来，让我满身的不舒服，让我更不舒服的是，我的上司告诉我，以后开发就在这个系统上，一个连纸牌和扫雷都没有的电脑上，我听了以后，在9月的高温里，我觉得从内到外都凉透了。没过几天，我才知道，这个世界上除了FreeBSD，还有个操作系统叫Solaris，还真是刘姥姥进了大观园，看啥都新鲜，我们开发的软件至少要确保在FreeBSD和Solaris上运行，这也是跨平台了吧，跨了两个极其小众的平台。</p>
-<p>如果说FreeBSD奇怪的话，起码它还是个电脑的样子，我几乎没有机会看看当时Solaris安装在啥地方，又过了好久，公司要从SUN公司买一批Solaris系统，我才见到那种电脑，是的，一个不像电脑的电脑。没有显示器接口，没有键盘接口，没有鼠标接口，只有一个叫串口的东西，一个电源开关，一个网线接口。就像是一个主板，外面装了个铁盒子。我甚至都不知道如何设置它。vim是唯一一个在Solaris和FreeBSD不用安装就可以运行的软件，就像windows上的记事本一样。</p>
-<p>长话短说，就像所有得了斯德哥尔摩综合症的人一样，我在被vim不停的摧残和蹂躏中，我爱上了她。我先是讨厌她，后来适应她，再后来喜欢她，现在，我已经离不开她了。</p>
-<p>我现在觉得，在键盘上移动10个手指头比一只手移动鼠标要快的多。这就是我使用vim的(说服我自己的)理由。</p>
-<h1 id="vim的历史"><a href="#vim的历史" class="headerlink" title="vim的历史"></a>vim的历史</h1><p>vim的历史太长了，简直要和个人电脑的历史一样长，如果算上vim的爸爸，一个叫vi的编辑器，这个历史就比个人电脑的历史要长了。vi在1976年就发布了，他的作者是Sun公司的创始人之一，同时也是Java语言的重要支持者，他的名字叫Bill Joy。当时，个人电脑这个东西，很少有人买，也没多少人有兴趣，几乎所有的电脑都是学校或者商业机构才能买的起。当时大学里已经在使用Unix了，上面的王牌编辑器叫ed，每次只能处理一行，是的，一行。Bill Joy觉得，他能搞个处理全屏的文本编辑器，就就是vi的由来，取的是visual interface的首字母。</p>
-<p>但是，他只做了一半，就去忙其它事情了，本来，他承诺要给这个vi编辑器写一个GUI的界面，用这个GUI来操作vi的命令部分，但是，他只做了命令的部分，就去忙更重要的事情了(比如建一个市值千亿美金的SUN公司)…但是，他就先让人用着这个半成品，等他忙完了，就来把GUI的部分写完，这一忙，就是永远。人们适应了这个半成品，完全不想要GUI了，后来无数的人尝试给vi写了GUI，但是，没有人用，就是喜欢这个半成品。</p>
-<p>同样的故事还发生过一次，在lisp上，这个就不细讲了，这就是半成品流行的两个好例子，让大家用了半成品以后，等到成品出来了，结果，人已经爱上半成品了。</p>
-<p>在1988年，有个叫Bram Moolenaar的家伙，他买了一台Amiga电脑，上面没有一个好用的编辑器，然后，他就基于一个开源软件开始的，vim的本意是vi improved，不管如何，在众多试图改进vi编辑器的努力中，vim取得了最大的成功。</p>
-<p>那是不是意味着vim的代码是非常优秀呢？以我来看，vim是代码比较糟糕的C语言之一，比起SQLite这样的开源代码，vim的代码质量实在是不敢恭维，无论是在一个中就包含25,000多行C语言，还是经常会出现连续的500多个#ifdefs语句，还是在一个文件中有2,000行定义的常量。甚至由于历史的原因，vim的有些源代码文件既不是UIT-8格式，也不是ASCII格式，并且为了支持一些早就过时的平台，比如BeOS，VMS，vim中仍有大量的代码，几乎没有人愿意去读vim代码，当你知道一个eval.c文件中有25,000行代码，这简直就是恐怖袭击。</p>
-<p>这仍旧无法阻挡vim是最成功的文本编辑器之一。在开源的世界里，当然会有人想改进这种情况。可能有些人天生就适合看让人头晕的代码，在vim社区里，真有有人整理了vim所有的代码，然后提交了一个push，这次push，实在是太惊天地，泣鬼神了，已经在Google工作的Bram Moolenaar直接不敢将这些代码合并进去。因为，这变化有些太大了，步子太大，有点扯着蛋了。</p>
-<p>没关系，在开源的世界里，你不合并，我就重新弄一个，于是，一个叫neovim的项目诞生了，号称自己是vim的未来。这个项目已经非常的稳定了，我已经用了好长的时间，除了一些插件要自己动手修改一下，其它的方面，我认为是比vim好一些的。号称比vim少了至少30%的代码。</p>
-<p>vim当然不会坐视不理，于是在发布的vim 8.0中，几乎neovim最主要的几个优点，被vim一个不留的全部复制粘贴了过去，而且，也说自己比原来的自己少了30%的代码，这…… 如果不是开源项目，不禁让人以为，这就是阿里巴巴剽窃的呢……</p>
-<p>这是我喜欢看到的开源界的竞争，不撕B，不谩骂，不会背后捅友商一刀，同样的事情也发生在众多的开源项目上，不逼逼，你不采用我的意见，我就自己干出一番事业，让你来看看。比如Ruby on Rails项目和Merb曾经有理念之争，最后两者合并，取互相的优点，这是一种不是死要面子的胸怀。</p>
-<h1 id="知道一些历史"><a href="#知道一些历史" class="headerlink" title="知道一些历史"></a>知道一些历史</h1><p>知道一些历史，还是挺有趣的，我一直这样认为，所以，这一节，只讲了一点历史，这个《vim从入门到放弃》，我会写下去，日拱一卒，不期速成。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/04/vim-001/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -463,29 +451,1025 @@
 
       
         
-          
-            <h1 id="为什么要用Linux"><a href="#为什么要用Linux" class="headerlink" title="为什么要用Linux"></a>为什么要用Linux</h1><p>我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。</p>
+          <h1 id="为什么要用Linux"><a href="#为什么要用Linux" class="headerlink" title="为什么要用Linux"></a>为什么要用Linux</h1><p>我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。</p>
 <blockquote>
 <p>Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。</p>
 </blockquote>
 <p>我们上淘宝的时候，用的就是淘宝家的Linux机器，访问的每一个衣服列表，每一双鞋子，每年接近1,000个小时的信息朋友圈，其中的每一秒种都是在和Linux打交道。虽然以前也许不知道，但是，希望以后知道了，Linux和我们，其实是最熟悉的<strong>陌生人</strong>。</p>
-<h1 id="应用场合"><a href="#应用场合" class="headerlink" title="应用场合"></a>应用场合</h1><p>(淘宝家的)服务器，追求的不是界面美观，所有的服务器追求的都是稳定(如果让广大的淘友一天不能上淘宝，那可是大事)，高效(一定要效率非常的高，在很多人都上网抢购的时候，也要能够快速的做出响应)。也正是因为这个，没有几家公司愿意使用Windows当服务器，甚至(有比较可靠的)传闻说，微软家自己的hotmail服务器，也是使用Linux服务器，一直使用了好多年，自家的windows server才有能力替换。</p>
-<p>因此，淘宝家的服务器可能有几万个，几十万个，你让每个服务器前面坐一个拿鼠标的人，也是不现实的。因此，使用的是一个叫<strong>c</strong>ommand-<strong>l</strong>ine <strong>i</strong>nterface (CLI)的用户界面，翻译在中文大概叫命令行用户界面。与之相对的，你用的iPhone和Windows系统，叫<strong>g</strong>raphical <strong>u</strong>ser <strong>i</strong>nterface (GUI)。</p>
-<p>熟练的掌握CLI的用户界面是每个软件工程师必须具备的技能。</p>
-<p>一个常见的CLI用户界面大概就是这个样子的，这是使用terminal登录的样子:</p>
-<p><img src="/uploads/cmd.png" alt=""></p>
-<p>正如上面显示的，这是使用ssh(<strong>S</strong>ecure <strong>Sh</strong>ell)登录的，</p>
-<h1 id="启动terminal"><a href="#启动terminal" class="headerlink" title="启动terminal"></a>启动terminal</h1><p>在Mac和Linux上，有自带的terminal软件，我习惯在mac上安装一个名为iTerm2的软件，这个软件是免费的；在Windows上，要自己安装上一个叫putty的软件，这个软件也是免费的。安装以后，点一下就OK了，就能启动起来了。下面是一个简单的例子，使用ls命令，显示出一个文件夹中的内容。</p>
-<p><img src="/uploads/cmd02.png" alt=""></p>
-<p>基本上所有的Linux命令都是类似的样子，我分别来介绍一下:</p>
-<ol>
-<li>这是一个美元的符号，这一般情况下意味着是普通用户。在Linux中，有两种用户，一种是普通用户，一个是root用户，如果使用root用户，一般情况下提示符是#，而不是$</li>
-<li>命令(command)，这就是Linux的命令</li>
-<li>选项(option)，Linux的命令可以使用参数来改变命令的一些行为，如果对ls命令使用了 -l 选项，那么ls这个命令的输出就会有所不同。</li>
-<li>参数(ChezScheme)，这个命令执行的对象，在这里是一个名为ChezScheme的文件夹</li>
-</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/03/linux-cmd-001/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/30/118/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/30/118/" itemprop="url">
+                  118.现代CPU之父(下)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T15:25:56+08:00">
+                2017-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Intel刚开始的时候，并没有认为CPU是个可以赚钱的东西，这和大部分伟大的发明创造一样，看起来没有什么前途，Intel一直到了1985年左右，才真的放弃了存储器业务，专心的做CPU，这时候，Intel已经是286到368的过渡期了。至于为什么转型，完全是因为存储器业务不赚钱，被日本的同行打的抬不起头来，只好转型。当然，Intel说是看到是CPU良好的发展前景，反正，这个，每个人心里都有数，如果你存储器业务非常的赚钱，当然没有什么动机完全放弃。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/30/118/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/201709Q-A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/28/201709Q-A/" itemprop="url">
+                  2017年9月问答
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T11:12:21+08:00">
+                2017-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>因为新关注者每个月都会增加一些，所以我每个月都要重复回答一些问题。</p>
+<h1 id="电台状况类问题"><a href="#电台状况类问题" class="headerlink" title="电台状况类问题"></a>电台状况类问题</h1><h2 id="有多少关注者了"><a href="#有多少关注者了" class="headerlink" title="有多少关注者了?"></a>有多少关注者了?</h2><p>到今天为止，微信公众号是5816人，喜马拉雅App上是6790人，网易云音乐上是12656人。</p>
+<h2 id="阅读量是多少？"><a href="#阅读量是多少？" class="headerlink" title="阅读量是多少？"></a>阅读量是多少？</h2><p>公众号平均是15%左右，也就是800次左右。喜马拉雅和网易云音乐上，都不太准确，我也不知道他们为了能给主播一点自信，主动刷了多少量，这很搞笑。经常是我刚刚上传完成，就已经有了600次播放量，所以，电台上面公开显示的数字，大家随便看看就好。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/28/201709Q-A/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/117-cpu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/25/117-cpu/" itemprop="url">
+                  117.现代CPU之父(中)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T13:59:58+08:00">
+                2017-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在正式讲故事之前，先来思考一个事情，什么事情最容易让人后悔一生。我认为是这种事，你曾经拥有的，但是，你最终却弄丢了的人或者东西，是最容易让你后悔的。就像是李宗盛的一句歌词：旧爱的誓言就像一个巴掌，你记起一句就挨一个耳光。其实你本来就得不到，最后也得不到的，并不会太后悔，应该说一点也不后悔，因为本来就不是你的，你后悔个毛啊。 </p>
+<p>上一期我讲到，Intel来了一个人，改变了CPU的命运，本来Intel对CPU是属于不爱搭理，也不想推广的一个产品，认为CPU没有什么前途，这个人的名字叫爱德华·盖尔博，他上一家公司是德州仪器。他来到Intel是当销售总监的。他当然也就知道了一个叫霍夫的人，每个月申请一次，问公司能不能卖CPU。他感到非常的惊讶，因为德州仪器最近动用了大量的资源，就为了搞这么一个东西出来卖，结果Intel竟然把这么一个东西放在角落里，甚至连推向市场都不愿意，他就把这个信息报告了Intel的CEO们。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/25/117-cpu/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/04-programming-int/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/24/04-programming-int/" itemprop="url">
+                  《这些年编程的一些反思》004 整数的使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T10:54:55+08:00">
+                2017-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>我认为，至少有两种知识，一种是学习历史的知识类的，比如你是研究明朝历史的，随着学习的深入，你可能会有一些疑问，但是那些疑问会随着你学习的深入找到相关的解释，这个过程不会特别痛苦。还有一种知识是绘画，你看到过蒙娜丽莎的微笑，看过拉斐尔画的那些美女，也许你也想画。但是，那些画就在你的电脑屏幕上，你拿着从淘宝上买来的画笔，就是不知道从哪里下笔，你很痛苦。这是第二种知识，一种痛苦的知识。在某些方面，编程是第二种知识，你了解再多的IT历史，了解再多的编程人物，都不会让你学会编程。</p>
+<p>所以，你还是要在你的电脑上装上几个编译器，来试试。我也不知道蒙娜丽莎的微笑是怎么画出来的。我想，应该是一笔一笔画出来的吧。我希望能尝试一下，把自己的手弄脏，打开电脑上的几个编译器，试试到底怎么回事。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/24/04-programming-int/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/116/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/19/116/" itemprop="url">
+                  116. 现代CPU之父(上)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T17:47:23+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在2010年10月，美国总统奥巴马在白宫里，将美国国家技术创新奖章颁发给了霍夫、费金、麦卓尔以及栋哥，以表彰我们4个人发明了CPU。当然，因为我当时有重要的事情，要去听张学友的1/2世纪演唱会，就没去领奖，就给了他们3个。这三个人在Intel工作期间，共同合作，制造出了改变人类历史的CPU，如果没有他们三个，我觉得CPU绝对不会是今天这个样子，他们三个中，以霍夫为核心，所以，我会讲这个人，其他的两人也很厉害，但是，反正他们3个人，几乎没有人知道，讲哪个都差不多，但是，我还是觉得霍夫更厉害一些。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/19/116/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/02-programming-data-type1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/16/02-programming-data-type1/" itemprop="url">
+                  《这些年编程的一些反思》003. 整型和浮点型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T13:13:08+08:00">
+                2017-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>和我们小学时候学习数学一样，问题先从123这样的整数学起，然后再慢慢的学分数，学小数。在计算机中也是这样，虽然这些数都是数学上的实数，但是，在计算机中，表示的方法却是大不一样。除了数学，还有语文，对语文来说，语言文字是重要的组成部分，所以，在计算机中，如何表达这些字符也是非常重要的一个方面。因此，数学上的数字，语文上的文字，在现实中是不同的科目，在计算机中是不同的类型。虽然在计算机中，最底层的表示都是数字0和数字1，但是，必须要人为的定义一种约定，让这些用0和1来表示的数字串有不同的意义。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/16/02-programming-data-type1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/02-programming-variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/14/02-programming-variable/" itemprop="url">
+                  《这些年编程的一些反思》002. 变量
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T12:32:27+08:00">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="计算机计算的本质是什么？"><a href="#计算机计算的本质是什么？" class="headerlink" title="计算机计算的本质是什么？"></a>计算机计算的本质是什么？</h1><p>如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。</p>
+<p><img src="/uploads/02-huoyunxueshen.jpg" alt="快"></p>
+<p>计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在主流中档CPU<strong>1秒</strong>的运算量，在京东上可以花1000来块钱买一个。一个人计算100年，一个主流家用电脑计算1秒，这就是电脑在某些方面的过人之处吧。电脑每完成一次计算，光可以在空中行走10厘米。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/14/02-programming-variable/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/115/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/13/115/" itemprop="url">
+                  115.虽然他很疯狂，但是他没有灭亡
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T21:16:37+08:00">
+                2017-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>这一期是接第93期接着讲威廉 · 肖克利老师。如果大家是听过我最近几期的话，可能知道，最近这个电台，有些问题，比如网易云音乐，先是不给上传，后来给上传了，但是就是不给你审核。所以，我反思了一下，决定把挖的坑一个一个慢慢的填一下。看看能不能给审批通过，毕竟我本人并没有太多时间来打理这个电台，每周只能搞一次音频。</p>
+<p>有人问我说能多做几次音频么？像XX名人的视频，我回答一下，很难的。首先，我这个名气是没有名气，我和我的绝大部分听众一样，没有名气，甚至我比很多我的听众名气还要小，有些加我Twitter或者Weibo的听众，有个都有13万粉丝，我只有20多个。正是因为这样，我没有足够的财力和能力将电台内容做到特别准确，也没办法做到没有什么错误。说实在的，我没有钱，更没有团队帮忙写稿子，所以，错误肯定是没法避免的。就算我现在做了，比如网易云音乐上的电台，不见得给你审核通过。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/13/115/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -522,7 +1506,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
