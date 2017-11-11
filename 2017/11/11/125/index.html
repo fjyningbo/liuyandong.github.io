@@ -1,0 +1,709 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这一期继续讲冯•诺伊曼。在正式讲故事以前，因为总有一些新人听我这个电台，希望我能讲干货，我要再重复的声明一下，其实我没有什么干货可以讲，编程这种东西，千万不要指望听电台就能学会，这个肯定是100％学不会的，编程就得自己动手写程序，听人讲不能说完全没用，基本上是没用的。就和天天看英超，意甲这种5大联赛的足球，自己不练习，用处几乎没有。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="125. 天才冯•诺伊曼(3)">
+<meta property="og:url" content="http://yoursite.com/2017/11/11/125/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这一期继续讲冯•诺伊曼。在正式讲故事以前，因为总有一些新人听我这个电台，希望我能讲干货，我要再重复的声明一下，其实我没有什么干货可以讲，编程这种东西，千万不要指望听电台就能学会，这个肯定是100％学不会的，编程就得自己动手写程序，听人讲不能说完全没用，基本上是没用的。就和天天看英超，意甲这种5大联赛的足球，自己不练习，用处几乎没有。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-11T11:54:46.582Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="125. 天才冯•诺伊曼(3)">
+<meta name="twitter:description" content="这一期继续讲冯•诺伊曼。在正式讲故事以前，因为总有一些新人听我这个电台，希望我能讲干货，我要再重复的声明一下，其实我没有什么干货可以讲，编程这种东西，千万不要指望听电台就能学会，这个肯定是100％学不会的，编程就得自己动手写程序，听人讲不能说完全没用，基本上是没用的。就和天天看英超，意甲这种5大联赛的足球，自己不练习，用处几乎没有。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/11/125/"/>
+
+
+
+
+
+  <title> 125. 天才冯•诺伊曼(3) | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/11/125/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                125. 天才冯•诺伊曼(3)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-11T19:53:42+08:00">
+                2017-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一期继续讲冯•诺伊曼。在正式讲故事以前，因为总有一些新人听我这个电台，希望我能讲干货，我要再重复的声明一下，其实我没有什么干货可以讲，编程这种东西，千万不要指望听电台就能学会，这个肯定是100％学不会的，编程就得自己动手写程序，听人讲不能说完全没用，基本上是没用的。就和天天看英超，意甲这种5大联赛的足球，自己不练习，用处几乎没有。</p>
+<a id="more"></a>
+<p>还有人问冯•诺伊曼真的这么厉害么？他写过什么软件没有？这种问题，我觉得比较业余。他发明了计算机，而且这个是他的业余工作，他主要的工作是数学方面，他可能没有写过什么软件，但是，他不用靠写个开源软件来证明自己是个大牛。有人问他和图灵谁厉害一些？这个问题不是很容易回答。虽然我心里有明确的答案。</p>
+<p>为了避免争议，我还是扯点足球的事情吧，在足坛上，名气最高的人是贝克汉姆，不看足球的人也知道他，他的影响力远远超过足球。但是如果说球技的话，贝克汉姆是个好球员，能达到他水平的人，在同时代找出个几十个来不成问题，比如菲戈，皮尔洛，内德维德这些人，水平和他差不多，甚至比他还要好一些，但是远远没有贝克汉姆有名气。在同时代，有个巴西的叫罗纳尔多的人，水平100％超过同时代的人，可能只有齐达内可以和他相提并论。但是，对于不看足球的人，贝克汉姆仍然要比罗纳尔多厉害一些。如果贝克汉姆出一个奖，叫贝克汉姆奖，然后颁发给罗纳尔多，我觉得是有点搞笑的。这就是图灵和冯•诺伊曼在我心中的地位，一个是贝克汉姆，一个是罗纳尔多。我得说一下，罗纳尔多是我年轻时候的偶像，在我心目中是神一样的人，浑身都是缺点，不注重自己的形象，吃喝嫖赌，根本不在乎记者跟拍，微笑的进出各种夜总会，还和记者打招呼，看到美女就笑得合不拢腿。但是，一到场上，就变了，他就成了决定比赛的人。冯•诺伊曼也类似于这样，属于能办成事的人。虽然在球场上有人下黑脚踢他，但是罗纳尔多在场上，那是一个猛。有的人属于在场下打嘴炮厉害，他不是。</p>
+<p>冯•诺伊曼的少年时候，国家处于动荡不安的情况，到处都在打仗，打仗的理由也是非常的“正义”，每一方都觉得自己非常的“正义”。他所在的国家参与了欧洲战争，然后打败了，国家只剩了1/3的面积，其它的送给别人了。在当时，伟大的发明家发明了一个好东西，叫机枪，以前冷兵器时代，你杀个人，得砍好几下才行，想杀掉10个人，累一身汗。到了热兵器时代，一枪一个，还行。等到了欧洲战争的时候，机枪广泛的应用，发现人不够杀了，5000-6000人，一会儿工夫就突突完了，所以俄国人，奥地利人，德国人，带着崇高的使命感，坐上新时代的蒸气火车，奔赴战场，当然，在机枪的突突下，这些人很快也就挂了。人根本就不够用了，当一方无力再发动反击的时候，战争就没法再继续了。对打仗来说，武器没了，还可以再造，但是，人没了，时间比较长。至少得17－18年吧，还得洗脑，比较麻烦，总不能上7－8岁的儿童团吧，力气不够。这个时候，作为一个人，应该如何选择呢？当然是移民了！冯•诺伊曼家决定36计走为上。所以，冯•诺伊曼就开始了到处游学的经历，当然了，这个没有什么太大的意思，就是在顶级大学里，和顶级人物学习，成长。基本上和大部分人的成长经历相类似，有痛苦，有反复，但是，总体上来说，在雄厚的金钱和极高的智商做后盾的情况下，他过的还是比较顺利的，可能换了几个专业，去了不少夜店，游历了许多国家，认识了不少教授。在战争中，他没有去白白送死。</p>
+<p>我为什么说是白白送死呢，因为当时的战争都是内战，互相之间都是匈牙利人打匈牙利人，比较混乱，每一方都认为自己是正义的。如果说是和别的国家打，是一场反侵略的也就算了，但是，这个不是。就是匈牙利的马扎尔人之间互相干，一会这个上台杀几千，一会儿那个上台杀几千，本来就没多少人，杀来杀去，战斗力就弱了。然后列宁来了，在列宁的指导下，又成立了一个革命集团，这下爽了，如果大家知道列宁这个人的话，他对敌人可是秋风扫落叶一样，结果导致两边互相猜忌，又死了一批。有人说在冷战时期，冯•诺伊曼对苏联如此强硬，都是年轻时候给列宁吓出来的后遗症，这可能有点小根据。其实当时，整个匈牙利都被北极熊给吓的够呛，也许就是这个原因，匈牙利在2战时候，坚定的跟着德国打苏联，而且打的格外卖力，这都是我自己瞎猜的，因为之前苏联红军对匈牙利实施了残暴的屠杀。当然可能还有更深的仇恨。后来德国战败以后，又是红军，对布达佩斯再一次进行了屠杀，也就是最血腥的布达佩斯围城战，在长达2个月的战斗后，在饥渴的苏联红军的淫威下，至少有5万名妇女被强奸，这个不是我胡扯的，大家可以在<a href="https://en.wikipedia.org/wiki/Siege_of_Budapest这里看到。因为东欧这几个国家，对苏联简直了，包括在1956年，苏联又再一次对匈牙利进行了武装侵略。这个新仇旧恨吧，估计这几百年是和解不了了。以我们外人的眼光来看，在这种战争中死亡，太不值得了，不如能跑就跑，跑不掉再说。" target="_blank" rel="external">https://en.wikipedia.org/wiki/Siege_of_Budapest这里看到。因为东欧这几个国家，对苏联简直了，包括在1956年，苏联又再一次对匈牙利进行了武装侵略。这个新仇旧恨吧，估计这几百年是和解不了了。以我们外人的眼光来看，在这种战争中死亡，太不值得了，不如能跑就跑，跑不掉再说。</a></p>
+<p>冯•诺伊曼和爱因斯坦非常的有缘分，虽然到最后这两人的观点越来越不相同，甚至发展到彼此讨厌的地步，但是，他们两人的轨迹真的是有相似之处。如果一个人能混到让牛顿，爱因斯坦讨厌你的地步，也绝对不是一般人。在冯•诺伊曼游学的时候，他和爱因斯坦又成了校友，区别在于，冯•诺伊曼报考苏黎世联邦工业大学的时候，他一下子就考中了。但是在当年爱因斯坦报考的时候，还复读了一年才考取。这两个人的一生，在非常小的时候，就能看出是不同的道路。冯•诺伊曼一生都非常的观注实用性，而爱因斯坦在落榜的那一年，就和他父亲说，他永远也无法忍受学一门像化学这样的实用科学。冯•诺伊曼不一样，他选了化学。而且，可能是他的父亲影响他太厉害了，冯•诺伊曼一生非常会赚钱，而且，非常会享受。</p>
+<p>(我觉得知道一些大人物的生平，没有太大的意思，我更喜欢猜测一下这些人为什么会持有截然相反的观点，在后来，冯•诺伊曼和爱因斯坦的政治观点完全相反了，所以两个人并不是朋友，甚至还有点互相看不惯。为什么会这样呢，我试图猜测一下，也能理解不同的人。)首先，我觉得两个人的家庭环境不同，爱因斯坦上学的时候，得借钱；冯•诺伊曼上学的时候，是夜店的VIP客户，他的朋友费尔纳后来说冯•诺伊曼在夜店讲笑话的能力，比他的数学能力好，苏黎世大学附近夜店的姑娘，都认识冯•诺伊曼。可能是家境的不同，让爱因斯坦特别的同情穷人，而且，爱因斯坦是认同共产主义的，他对苏联有感情，觉得苏联比美国好。但是，冯•诺伊曼不一样，他认同资本主义，他认为，单纯的靠强行的把富人的钱分给穷人，是救不了穷人的，而是要让穷人受教育，并且提供工作机会。</p>
+<p>还有一个不同是，爱因斯坦认为之所以战争能爆发，是互相之间缺乏文化的尊重，对苏联不能采取敌视的态度，要采取友好的态度，才能世界和平。但是，冯•诺伊曼认为，苏联这种国家，就得全方位的压制他，摧毁他，对日本这种国家，也不能手软，要尽快的丢原子弹。冯•诺伊曼认为，和平需要有武力做后盾，你和平咱们也和平，你不和平，马上就揍你。所以，冯•诺伊曼长期被人认为是个战争狂人。但是，我个人认为，冯•诺伊曼还是有点道理的，像爱因斯坦这种的，有点太理想化了。(要是搁现在，冯•诺伊曼还活着，鑫胖的事，早就解决了！)</p>
+<p>很多的科学家企业家在现实生活中是相对比较讨厌的人，他们实际上是比较扭曲的一种生活状态，像我以前在节目里多次说过的一些我比较喜欢的科学家，像罗素，他很大程度上，就非常的扭曲。他一生结婚了4－5次，情人多达3位数，但是，他认为他能写鸡汤教育年轻人，所以，他写过不少鸡汤，比如《幸福之路》《幸福婚姻》这种的书。实际上，他的婚姻一点也不幸福，他第一个老婆大他5岁，他很快就烦了，但是这个老婆死活就是不离婚，拖了他20年才离。结果他还教育别人如何如何过幸福的婚姻生活，当然，道理讲的挺好，但是，总有人不信，有个年轻人不相信，曾经当面挤兑他，结果罗素毛了，直接和那个年轻人打架。主要他是名人，所以，书还卖的不错，京东就有，我很早的时候买过，刚结婚的时候。现在都结婚10年了，我觉得维持婚姻生活，根本不用写好几本书，六个字就可以，这六个字是“我的错，别打脸”。我就靠这六个字，至今生活还能过的下去。</p>
+<p>我之所说到罗素，是因为刚才说到了列宁，所以就跑题了，罗素最崇拜的两个人是列宁和爱因斯坦，爱因斯坦在1918年也说过，他最敬重的人之一就是列宁。因为罗素有巨大的影响力，在日本皇室问他最崇拜谁的时候，他说列宁和爱因斯坦，当然了，日本天皇肯定请不动列宁，只好请爱因斯坦了，还请爱因斯坦参观了天皇夫妇的菊花，那种种在皇宫里菊花，植物。正是因为这层关系，爱因斯坦去日本的时候，顺便来了一次中国。</p>
+<p>我个人也很喜欢罗素，爱因斯坦，但是我一想到他们两人都很喜欢列宁，我就觉得，真是，人无完人啊。好了，这一期就到这里了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/06/124/" rel="next" title="124. 天才冯•诺伊曼(2)">
+                <i class="fa fa-chevron-left"></i> 124. 天才冯•诺伊曼(2)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
