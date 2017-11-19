@@ -85,20 +85,17 @@
 
 
 
-<meta name="description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
+<meta name="description" content="我发现，如果你要说服一个人做某件事情，基本上是不可能的。只有忽悠加欺骗，才有可能达成目标。无论你怎样摆事实，讲道理，都不如唱首歌来得直接。这里面的原因可能是说的不如唱的好听吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《linux从入门到放弃》001 介绍">
-<meta property="og:url" content="http://yoursite.com/2017/10/03/linux-cmd-001/index.html">
+<meta property="og:title" content="《vim从入门到放弃》003　编辑之道">
+<meta property="og:url" content="http://yoursite.com/2017/11/19/vim-003/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
+<meta property="og:description" content="我发现，如果你要说服一个人做某件事情，基本上是不可能的。只有忽悠加欺骗，才有可能达成目标。无论你怎样摆事实，讲道理，都不如唱首歌来得直接。这里面的原因可能是说的不如唱的好听吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/uploads/cmd.png">
-<meta property="og:image" content="http://yoursite.com/uploads/cmd02.png">
-<meta property="og:updated_time" content="2017-10-05T01:57:04.286Z">
+<meta property="og:updated_time" content="2017-11-19T11:34:45.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《linux从入门到放弃》001 介绍">
-<meta name="twitter:description" content="为什么要用Linux我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。  Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。  我们">
-<meta name="twitter:image" content="http://yoursite.com/uploads/cmd.png">
+<meta name="twitter:title" content="《vim从入门到放弃》003　编辑之道">
+<meta name="twitter:description" content="我发现，如果你要说服一个人做某件事情，基本上是不可能的。只有忽悠加欺骗，才有可能达成目标。无论你怎样摆事实，讲道理，都不如唱首歌来得直接。这里面的原因可能是说的不如唱的好听吧。">
 
 
 
@@ -126,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/03/linux-cmd-001/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/19/vim-003/"/>
 
 
 
 
 
-  <title> 《linux从入门到放弃》001 介绍 | 栋哥的博客 </title>
+  <title> 《vim从入门到放弃》003　编辑之道 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +248,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/linux-cmd-001/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/vim-003/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘延栋">
@@ -272,7 +269,7 @@
             
             
               
-                《linux从入门到放弃》001 介绍
+                《vim从入门到放弃》003　编辑之道
               
             
           </h1>
@@ -287,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T07:57:38+08:00">
-                2017-10-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-19T19:33:35+08:00">
+                2017-11-19
               </time>
             
 
@@ -323,27 +320,33 @@
       
 
       
-        <h1 id="为什么要用Linux"><a href="#为什么要用Linux" class="headerlink" title="为什么要用Linux"></a>为什么要用Linux</h1><p>我说点外行人也许不知道的事情，如果你想成为一个还算合格的开发者的话，一定要学会除了上淘宝和用手机，windows以外的一个小技能，就是用Linux或者Mac。</p>
-<blockquote>
-<p>Linux家族非常的多，几乎除了Windows，就是Unix/Linux，这其中包括我们翻墙所用的Linux(日本的那台机器)，还有Android手机，iPhone，iPad和Mac都Unix/Linux家族。</p>
-</blockquote>
-<p>我们上淘宝的时候，用的就是淘宝家的Linux机器，访问的每一个衣服列表，每一双鞋子，每年接近1,000个小时的信息朋友圈，其中的每一秒种都是在和Linux打交道。虽然以前也许不知道，但是，希望以后知道了，Linux和我们，其实是最熟悉的<strong>陌生人</strong>。</p>
+        <p>我发现，如果你要说服一个人做某件事情，基本上是不可能的。只有忽悠加欺骗，才有可能达成目标。无论你怎样摆事实，讲道理，都不如唱首歌来得直接。这里面的原因可能是说的不如唱的好听吧。</p>
 <a id="more"></a>
-<h1 id="应用场合"><a href="#应用场合" class="headerlink" title="应用场合"></a>应用场合</h1><p>(淘宝家的)服务器，追求的不是界面美观，所有的服务器追求的都是稳定(如果让广大的淘友一天不能上淘宝，那可是大事)，高效(一定要效率非常的高，在很多人都上网抢购的时候，也要能够快速的做出响应)。也正是因为这个，没有几家公司愿意使用Windows当服务器，甚至(有比较可靠的)传闻说，微软家自己的hotmail服务器，也是使用Linux服务器，一直使用了好多年，自家的windows server才有能力替换。</p>
-<p>因此，淘宝家的服务器可能有几万个，几十万个，你让每个服务器前面坐一个拿鼠标的人，也是不现实的。因此，使用的是一个叫<strong>c</strong>ommand-<strong>l</strong>ine <strong>i</strong>nterface (CLI)的用户界面，翻译在中文大概叫命令行用户界面。与之相对的，你用的iPhone和Windows系统，叫<strong>g</strong>raphical <strong>u</strong>ser <strong>i</strong>nterface (GUI)。</p>
-<p>熟练的掌握CLI的用户界面是每个软件工程师必须具备的技能。</p>
-<p>一个常见的CLI用户界面大概就是这个样子的，这是使用terminal登录的样子:</p>
-<p><img src="/uploads/cmd.png" alt=""></p>
-<p>正如上面显示的，这是使用ssh(<strong>S</strong>ecure <strong>Sh</strong>ell)登录的，</p>
-<h1 id="启动terminal"><a href="#启动terminal" class="headerlink" title="启动terminal"></a>启动terminal</h1><p>在Mac和Linux上，有自带的terminal软件，我习惯在mac上安装一个名为iTerm2的软件，这个软件是免费的；在Windows上，要自己安装上一个叫putty的软件，这个软件也是免费的。安装以后，点一下就OK了，就能启动起来了。下面是一个简单的例子，使用ls命令，显示出一个文件夹中的内容。</p>
-<p><img src="/uploads/cmd02.png" alt=""></p>
-<p>基本上所有的Linux命令都是类似的样子，我分别来介绍一下:</p>
+<p>无论是挖黄河的时候，挖出一个只有一只眼的石头人，并且配上元朝的民谣，“莫道石人一只眼，挑动黄河天下反”。还是“骑白马，挎洋枪。三哥哥吃了八路军的粮，有心回家看姑娘，呼儿嗨哟，打日本也顾不上。三八枪，没盖盖。八路军当兵的没太太。待到那打下榆林城，呼儿嗨哟，一人一个女学生！”</p>
+<p>所以，几乎所有说服别人用vim的努力，其实都是徒劳的。当别人说到骑白马的时候，首先想到的是榆林城里的一个女学生；当别人说到乐视的时候，首先想到的是为梦想窒息；当别人说到锤子的时候，首先想到的是每家都有的一种常用来砸钉子的工具；当别人说到小米的时候，首先想到的是为发烧而生；当别人说到vim的时候，首先想到的是vim是啥？</p>
+<p>讲真，vim界缺少一个有影响力的大忽悠！</p>
+<p>听约炮界的达人说，虚与委蛇要比开门见山好用的多。他们说，想卖手机，你得谈情怀；想卖会员，你得谈梦想；想上床，你得讲故事。我觉得好有道理，那天周日，我真的讲了一晚上软件的故事，讲到口干舌燥，东方渐白，就直接从咖啡馆出门骑了个单车去上班了。</p>
+<p>我打算讲点编辑的道理，然后旁敲侧击的说vim做这些事情是最好的，因为明说vim是世界上最好的编辑器，这个是违反广告法的。我把这篇文章叫编辑的艺术，或者编辑之道，哪个题目能忽悠住人，我以后有时间做个AB测试。下面，正文开始了。</p>
+<p>我觉得中文比英文在某些方面要有些优点。最近，twitter网站把每条tweet的140字符的限制，从140字符，放宽到280个字符。同志们，280个字啊，3条tweet就是一篇高考作文啊！这是什么概念！汉字的信息密度比英文的信息密度的不知道哪里去了…</p>
+<p>比如”How old are you?”对应的中文”怎么老是你？”，英文是12个字符，中文是5个字符。如果要删除的话，英文要按12次删除键，中文要按5次删键。当然，有个小技巧是按住删除键不动，在刚删完的瞬间抬起来，否则就删多了。当然还有个方法是，用鼠标选定以后，再删。一手键盘，一手鼠标，高手啊！</p>
+<p>如果是删3个单词呢？删2个句子呢？删2个段落呢？当然只能是一手鼠标选，一手键盘删了，高手都是这么弄的。毕竟按20秒删除键实在是有点太不专业了！</p>
+<p>如果能把单词，句子，段落，文章当成一个整体的对象就好了。当然了，现在稍微专业点的编辑器都支持这种操作。可以一次编辑一个单词，一个句子，一个段落。更有意思的是，根本用不着鼠标选定，双手根本不用离开键盘就能搞定这一切。</p>
+<p>因为中文操作的词，英文操作的是字母，所以，中文操作的层次会更高一点。<strong>字母　&lt;　词语　&lt;　句子　&lt;　段落　&lt;　文章　&lt;　秘书</strong>。你越是从更高层次上操作文本，编辑起来就越有效率。<strong>最高的层次的文本编辑是找个秘书写稿子。</strong></p>
+<p>再想想，你最喜欢的编辑器如何做到如下的操作：</p>
 <ol>
-<li>这是一个美元的符号，这一般情况下意味着是普通用户。在Linux中，有两种用户，一种是普通用户，一个是root用户，如果使用root用户，一般情况下提示符是#，而不是$</li>
-<li>命令(command)，这就是Linux的命令</li>
-<li>选项(option)，Linux的命令可以使用参数来改变命令的一些行为，如果对ls命令使用了 -l 选项，那么ls这个命令的输出就会有所不同。</li>
-<li>参数(ChezScheme)，这个命令执行的对象，在这里是一个名为ChezScheme的文件夹</li>
+<li>让光标向下移动10行</li>
+<li>把光标下面这个单词删了，外加单词后面的空格也不要了</li>
+<li>把这个文件第50行到100行中的所有的typo替换成type</li>
+<li>光标下面的单词是controller.rb，我知道这是个文件，我想快速打开它</li>
+<li>现在5:59分了，还有1分钟就下班了，工作没做完，想保存所有的环境，回家加班 :)</li>
+<li>我经常要打“软件那些事儿”这个词，我希望打rjn就自动的展开</li>
+<li>一个gfwlist文件有2000行，我只要每一行前面的域名部分，如何快速的去除其它部分</li>
+<li>一个文件，都是小写字母的，我想把每一句的首字母改成大写的</li>
+<li>复制粘贴了好几个部分，要重复使用，如何方便的切换粘贴板中的内容？总不能每次都重复的复制一遍吧？</li>
+<li>同时打开一个文件在两个窗口，查看并编辑不同的部分，方便我抄代码</li>
 </ol>
+<p>你最喜欢的编辑器如何快速的做到这些呢？我知道，左手键盘右手鼠标，肯定是没问题的。vim做以上的事情，可能就是几个按键就搞定了。因为宣传vim是最好的编辑器是违反广告法的，国家规定，在广告中不能用最好这个词。我觉得，vim是上半球和下半球比较好用的编辑器之一。</p>
+<p>下次再慢慢说点程序员的常用操作。</p>
 
       
     </div>
@@ -406,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/30/118/" rel="next" title="118.现代CPU之父(下)">
-                <i class="fa fa-chevron-left"></i> 118.现代CPU之父(下)
+              <a href="/2017/11/17/126/" rel="next" title="126. 天才冯•诺伊曼(4)">
+                <i class="fa fa-chevron-left"></i> 126. 天才冯•诺伊曼(4)
               </a>
             
           </div>
@@ -415,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/04/vim-001/" rel="prev" title="《vim从入门到放弃》001">
-                《vim从入门到放弃》001 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -465,17 +464,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -557,22 +547,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要用Linux"><span class="nav-number">1.</span> <span class="nav-text">为什么要用Linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场合"><span class="nav-number">2.</span> <span class="nav-text">应用场合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动terminal"><span class="nav-number">3.</span> <span class="nav-text">启动terminal</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
