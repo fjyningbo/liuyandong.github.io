@@ -1,0 +1,711 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Twitter公司在早期的时候，技术水平是非常的差的，如果有人在2010年前上过twitter的话，可能知道一个非常搞笑的事情，这个网站非常非常容易就挂了，在所有比较有影响力的网站中，可能没有比Twitter容易挂的。现在当然好多了，挂的情况非常少了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="131. 为什么初创公司选取什么技术并不是特别重要？">
+<meta property="og:url" content="http://yoursite.com/2017/12/19/131/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="Twitter公司在早期的时候，技术水平是非常的差的，如果有人在2010年前上过twitter的话，可能知道一个非常搞笑的事情，这个网站非常非常容易就挂了，在所有比较有影响力的网站中，可能没有比Twitter容易挂的。现在当然好多了，挂的情况非常少了。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-19T14:34:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="131. 为什么初创公司选取什么技术并不是特别重要？">
+<meta name="twitter:description" content="Twitter公司在早期的时候，技术水平是非常的差的，如果有人在2010年前上过twitter的话，可能知道一个非常搞笑的事情，这个网站非常非常容易就挂了，在所有比较有影响力的网站中，可能没有比Twitter容易挂的。现在当然好多了，挂的情况非常少了。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/19/131/"/>
+
+
+
+
+
+  <title> 131. 为什么初创公司选取什么技术并不是特别重要？ | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/131/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                131. 为什么初创公司选取什么技术并不是特别重要？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T22:32:11+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Twitter公司在早期的时候，技术水平是非常的差的，如果有人在2010年前上过twitter的话，可能知道一个非常搞笑的事情，这个网站非常非常容易就挂了，在所有比较有影响力的网站中，可能没有比Twitter容易挂的。现在当然好多了，挂的情况非常少了。<br><a id="more"></a><br>我在技术行业工作了很多年了，越来越发现一个问题，在大部分的企业中，技术是非常不重要的因素之一，这种情况在初创企业中更是如此。这个观点可能让很多热爱技术的人听着不爽，作为一个技术工人，整天在工地搬砖的电台主播，竟然说技术不重要，哪个网站，哪个产品不是技术人员做的呢？这么说是有点小道理。大家都知道，北京城这么大，楼房这么高，道路这么宽，哪条路，哪个楼不是农民工一砖一瓦的修起来的呢？但是，你真的认为，是农民工修的，这个城市就是农民工的么？这个道理在IT企业也是如此，起码我认为是如此。</p>
+<p>那技术是不是不重要呢？我当然也没这么说，我只是说没有那么重要，起码没有大部分程序员认为的那么重要。而且，对绝在部分的公司，技术肯定不是决定成败的主要因素。</p>
+<p>有一些听众听了我的一些言论以后，经常会觉得没有干货，他们会认为评价某种编程语言，或者测评不同编程语言之间的性能是干货，哪个语言最快，用内存最少，希望我能做一个像测评手机一样的电台，把不同的语言，不同的框架列出来，最后给出综合评价，像大米测评那样的，干货满满。（我个人一直追着看的唯一的手机测评就是大米测评，因为我买不起手机，到现在主力手机还是一台红米，抽奖时候抽到的，所以，看测评给我很大的乐趣，就像我真的玩过那些手机一样。）</p>
+<p>这种干货满满的测评，用在技术上，我认为是非常搞笑的，起码在99%的情况下是非常搞笑的。有个问我PHP是不是不好，我只能说Facebook就是用PHP，有人说Ruby on Rails是不是太慢了，我只能说要分情况，如果栋哥做一个网站，是不慢的，因为总共就几个人，用一台小霸王学习机当服务器也很不错，更不要说慢了。有那么多网站用Ruby on Rails，也没见人家说太慢了。</p>
+<p>编程的电台，编程的视频多如牛毛，在这个年代，你可以轻松的下载到几乎任何顶级大学的课程，比如国外的有哈佛，斯坦福大学的计算机课程，国内的有清华的，浙大的，各种课程都有，我当年考研的时候，就看的严蔚敏老师的数据结构。绝对保证你一辈子都看不完。有纯干货的东西太多了，只是你想不想学的问题，而不是你找不找的到的问题。如果你想学物理，都能找到费曼这种人的讲课视频，数学的话，有史济怀的数学分析视频，这个在国内绝对是顶级干货。所以，我实在是想不太懂，找我来要干货，难道这些人真的想通过一个电台学到编程知识么？</p>
+<p>我倒是真的录了一些编程视频，我打算从头录一个如何做twitter的网站，记得当年，我特别想知道如何真的做东西，而不是做一些玩具一样的例子，当时书上都是一些例子，我觉得一点实用性都没有，所以，我觉得从0做一个实用一点的项目，也许能帮助一些像我一样，当年的我，看书吧，觉得书上的知识有点单薄，主要也是自己眼高手低了，学校里用的有点落后，不实用，结果一参加工作，马上觉得，我去，书上根本就不教一些比如单元测试，比如如何部署的东西，一到公司就觉得啥也不懂了，其实在公司里的东西，也不是特别难，我觉得是写书的人，或者在学校当老师的人，主要是远离了搬砖第一线，不太清楚如何搬砖了，我现在已经录了13期了，我打算录100期，做一个真正能用的网站，主要是模仿twitter，功能上实现个7788，用一下在公司使用的东西，比如TDD开发方法，用Git做版本管理等等。我一般是周末录3－4个小时，然后，上传到YouTube上，国内上传到B站上，只是审批时间不固定，也容易被拒绝。我本来也打算上传到网易云课堂上，结果我的视频上有我网站的链接，给拒绝了，说不能有链接，也不能有公众号，那意思是我沾网易的便宜，给自己打广告是不行的，所以，只好不传了。国内的环境，非常的不开放，我做的视频，竟然不能加上我自己的网站链接的水印。</p>
+<p>接着说电台，都是湿货。说实在的，你认为的干货可能是湿货，你认为的湿货可能是干货，和你的阅历有很大的关系。在Twitter初期，技术水平是非常的差的，上一期说的这个Jack，他来到公司以后，编程水平非常的高，后来在他的努力下，他成功的排挤了公司的创始人之一，就是那个有点多动症的诺阿，这个故事我就不说了，反正，他的建议，让诺阿彻底从公司走人了，从此，推特公司再如何，诺阿都和这个公司没有什么联系了，失去了成为亿万富翁的机会。这一段就不说了，多说一句，这个诺阿没有自杀，人家仍然很快乐的活在这个世界上，所以，不要自杀。即使你被人阴了，被人误解了，被人放弃了，被人绿帽子了，都不要自杀，自杀是这个世界上最愚蠢的事情，没有之一。想想你才多大，他再NB，再一手遮天，能干几年，你总有一天能熬到红太阳下山的，然后再干死他，而不是干死自己。想想电影《教父》，回去把自己仇人的肚子一刀拉开。</p>
+<p>在Jack把前CEO弄走以后，他当上了公司的CEO，是的，他就是这么厉害。前面我也说了，他的技术水平是公司最厉害的，但是，Twitter网站还是三天两头的挂掉，说明这个人的技术水平虽然很高，但是，仍然不够高。但是，这仍然不能阻止Twitter从一个胜利走向另一个胜利，用户量是突飞猛进，网站挂的频率是越来越快，挂的时间越来越长，直到有一天，员工发现，这个网站，连备份都没有，如果丢了数据，这个公司就只能从删库到跑路了。在这个重大失误之后，Jack的CEO也保不住了。在技术水平如此弱的情况下，Twitter还是一路狂奔。我这期的主题是，技术在初创公司，并不是特别的重要，我再多举几个例子。</p>
+<p>大家应该都知道，这个星球上最大的程序员问答网站是：stackoverflow。这个星球上最大的程序员评论网站之一，可能是hacker news。很多的网站在刚做出产品来的时候，是要做一下宣传的，像栋哥也做过宣传，我去v2ex这个网站上发了10来个帖子，到发第7次还是第8次的时候，就被移动到水深火热这个没人看的区了，我就没有再宣传。外国也这样，他们一般去hacker news去给自己做广告，或者被人拉上去讨论。在stackoverflow，也曾经在很弱小的时候被hacker news的程序员们拉过去喷了个半身不遂。我把这个2009年帖子挖了出来，现在已经过了3000多天，我把链接放在公众号里，希望有兴趣的人去看看这个帖子的回复。<a href="https://news.ycombinator.com/item?id=678501" target="_blank" rel="external">https://news.ycombinator.com/item?id=678501</a> 。这个帖子的主题思想是，stackoverflow这个网站，我一个周末就能做出来，技术太落后了。</p>
+<p>当然，我也认为发贴的人，并不是吹牛，stackoverflow那个网站，在最初的时候，非常非常的简单，从技术上山寨，一点问题也没有。如果一个周末不能完全复制，用个一周是肯定没有问题的。在当年，这个帖子给了我深深的震憾，从某种意义上来说，我真的是眼看着stackoverflow从一个被人嘲笑的小网站，一直成长为这个星球上最好的程序员网站。从程序员的角度上来说，stackoverflow的技术当时来看确实不怎么样，用的是windows当服务器。当时，stackoverflow的联合创始人Jeff Atwood可能也是被喷的太委屈了，还发了一篇文章来解释，这篇文章我也找到了，2009年的一篇文章，链接我也放在我的公众号里，<a href="https://blog.codinghorror.com/code-its-trivial" target="_blank" rel="external">https://blog.codinghorror.com/code-its-trivial</a> 。结果这篇文章一写出来，又被拉出来，报以更大的嘲讽。当然，随着时间的推移，都已经快10年过去了，嘲讽的人，只留下了ID，被嘲讽的人，留下了一个伟大的网站。</p>
+<p>我大概说一下Jeff Atwood的大概意思，他也认为，复制一个stackoverflow在技术上一点难度也没有，但是，技术真的不是stackoverflow这个网站的精华，除了写代码，还要做的事情有很多，也更重要。要回复大量的用户反馈，这个用不到编程；还要写文章解释这个网站怎么用，这个也用不到编程；还要自己去网站上回答问题，这个大部分时候也用不到编程；还要去删一些帖子，并且回答为什么这个问题不适合放在这个网站上，这个也不用编程；还要维持公司的运行，这个大部分时间也不用编程；还有保证饮水机里有水，这个也不用编程。所以，做一个stackoverflow，代码并不是特别的重要。这是他的观点，当然，在当时那个情况下，无论如何也不可能喷过那些键盘侠的，当时的帖子特别多，我就不一一挖坟了，这两个最有代表性。</p>
+<p>还有，Dropbox, Airbnb在hackernews也被喷的不行，但是，这两个公司成功了。我也在hackernews和挖了10年前Airbnb的帖子，<a href="https://news.ycombinator.com/item?id=426120，当时的评价也不好。还有Dropbox的帖子，也是10年前的，https://news.ycombinator.com/item?id=8863，这个评价也不是特别的正面。" target="_blank" rel="external">https://news.ycombinator.com/item?id=426120，当时的评价也不好。还有Dropbox的帖子，也是10年前的，https://news.ycombinator.com/item?id=8863，这个评价也不是特别的正面。</a></p>
+<p>如果你正在做事情，这个世界上有两种人，一种是论证为什么别人不能成功的人，一种是真的做了一点事情的人，第一种人，是靠批评第二种人活着。至于为什么他们会成功，我几乎可以肯定，不仅仅是代码写的好，技术多么高超。在国外有一个叫PlanGrid的软件，是给建筑工地上的人存图纸的，就是个照片软件，当时iPad刚发布不久，工人都不会用iPad,更别说这个软件了。我看过这个软件的创始人的访谈，他说最难的是说服别人使用你的软件，所以，他在部分时间都拿着iPad，只要有工人的地方，他就过去和人家说话，教别人使用iPad，然后，再顺便问问要不要用个软件来管理他们的工地图纸。</p>
+<p>当时我看到这个故事，感动到想哭，像我这种有社交恐惧症的人，真是不知道怎么办！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/14/130/" rel="next" title="130. Twitter公司的又一个“怪胎”创始人">
+                <i class="fa fa-chevron-left"></i> 130. Twitter公司的又一个“怪胎”创始人
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
