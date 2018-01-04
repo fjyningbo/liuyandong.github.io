@@ -1,0 +1,718 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在2013年的时候，在IT界有一个比较轰动的新闻，FBI把这个世界上最大的毒品交易网站——丝绸之路——给摧毁了，这个网站的创始人也被FBI给抓住了，据说这个叫罗斯乌布里希的29岁的人，开了这家网站，毒品的交易额在20亿左右，他从中赚了1亿佣金。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="133. 暗网里如何和FBI玩“捉迷藏”?">
+<meta property="og:url" content="http://yoursite.com/2018/01/04/133/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="在2013年的时候，在IT界有一个比较轰动的新闻，FBI把这个世界上最大的毒品交易网站——丝绸之路——给摧毁了，这个网站的创始人也被FBI给抓住了，据说这个叫罗斯乌布里希的29岁的人，开了这家网站，毒品的交易额在20亿左右，他从中赚了1亿佣金。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-04T06:13:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="133. 暗网里如何和FBI玩“捉迷藏”?">
+<meta name="twitter:description" content="在2013年的时候，在IT界有一个比较轰动的新闻，FBI把这个世界上最大的毒品交易网站——丝绸之路——给摧毁了，这个网站的创始人也被FBI给抓住了，据说这个叫罗斯乌布里希的29岁的人，开了这家网站，毒品的交易额在20亿左右，他从中赚了1亿佣金。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/04/133/"/>
+
+
+
+
+
+  <title> 133. 暗网里如何和FBI玩“捉迷藏”? | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/133/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                133. 暗网里如何和FBI玩“捉迷藏”?
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T14:11:13+08:00">
+                2018-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在2013年的时候，在IT界有一个比较轰动的新闻，FBI把这个世界上最大的毒品交易网站——丝绸之路——给摧毁了，这个网站的创始人也被FBI给抓住了，据说这个叫罗斯乌布里希的29岁的人，开了这家网站，毒品的交易额在20亿左右，他从中赚了1亿佣金。<br><a id="more"></a><br>和大部分情况一样，我也是翻车以后才知道的这个事情，我当时觉得这玩意和我的生活离的太远了，别说吸毒了，我这天天都是吃土度日，毕竟你吸毒，得有雄厚的经济实力为后盾，比如说，在演艺界的明星，不吸毒就不入流什么的。我这种吃土的人，就算了。不过，我对暗网有了很大的好奇，想找个暗网去看看。在国内，顶多能上一些中国不让上，但是美国让上的网，上多了也没什么意思，我就打算找一些美国政府也不让上的网，那就是暗网了。</p>
+<p>之所以叫暗网，就是没法光明正大上的网，首先你没有什么办法在搜索引擎上找到，不管是Google还是Bing，直接不用想，也不用做SEO，直接没什么用处。上暗网，只能使用一个叫tor的浏览器，中国把这个叫“洋葱”，这个浏览器是专门给一些需要隐藏身份的人准备的，比如一些对政府有意见的人，一些窝底的人，还有一些记者，比如说著名的卧底记者君特瓦尔拉夫，这种人经常拿生命来写稿子，比如去各种战乱国家，自投罗网当政治犯，我记得我第一次知道这个人，就是去了希腊，当了军政府的政治犯。在我的印象中，当记者首先应该是歌功颂德，最不济也应该写一些黑稿，带节奏黑黑厂家，然后让厂家出点钱，我从来没想到还有国外还有这种不要命的人。这个记者是德国人，君特瓦尔拉夫，虽然我无法理解这种人，但是，我敬佩这种人。这些人上网，是要用到tor这个浏览器的，当然了，如果是国内的人，就别想了，tor在国内没法使用，你还得有更多的技术，才能让tor正常的上网。</p>
+<p>最近，tor这个项目在捐款，这个世界上，很多东西都是要用钱的，因为面包要钱，矿泉水也要花钱，所以，要维持一个项目，是要一定的钱来做后备的。所以，这次tor要筹集5000美元，我觉得，这种项目，要筹集5000美元还是可以的，这相当于王思聪和他的女朋友们吃一个早饭的钱。国外可能比较富，而且这个项目也确实比较出名，在twitter上，有不少人连一次tor都没用过，就捐钱，我用过几次吧，就捐了$20。最后还是有公司进来捐钱了，比如Mozilla这个公司，最后竟然募捐了超过40万美元。搞的项目的负责人出来吃洋葱来募捐。这个和做直播的美女类似，要漏胸才能有打赏一样。 </p>
+<p>tor这个软件的始作俑者是美国政府，这个项目是1996年，由美国海军实验室搞出来的一个项目，这个不是程序员搞出来的，而是科学家弄的，非常的专业，其中有数学家和计算机科学家，所以，bug有，但是都是小bug。这个软件最主要的目的是匿名，现在，美国政府，尤其是FBI对此非常头疼，因为他们也搞不定这个tor，他们也尝试出钱，让有技术的大学，比如有传闻说是卡内基梅隆大学，来攻击tor网络，就是传闻中比较厉害的女巫攻击，我也不知道是怎么个攻击方法，然后又借助法院，搞定了丝绸之路2.0(这个不是第一个丝绸之路)中的一个雇员的IP，这个雇员的名字叫Brian Farrell，目前还在监狱里。</p>
+<p>我认为，tor是一种社会管理的退步，因为，在网上的每个人，都应该是透明的，尤其是对美国政府和FBI这种组织来说，想送你快递，必须能知道快递的地址才行。对广大的想交朋友的人来说，最好也不能有欺诈，比如，照片什么的，不能过份的美化，否则，一点诚意也没有。正是因为这两点，我认为，这个社会有些人自甘堕落的两个因素是，第一，使用tor这种工具，肆无忌惮的浏览不正能量的信息；第二，使用美图秀秀这种不诚信的工具，肆无忌惮的美化真相。 </p>
+<p>第二个工具我不懂，第一个工具我可以谈谈我的认识。批判一下tor这个软件。</p>
+<p>先说一下tor给政府造成了多大的困难。在2012年的时候，美国的NSA(美国国家局)和英国的一个部门发表了一个调查说，监听tor网络太难了，根本无法根据网络中的信息定位的具体的人，只能使用人工分析，才能辨别其中的一小部分用户，而且他们还在这个调查里透露了使用的是Firefox的一个漏洞，否则根本没用。结果，这个Firefox在得知以后，一点都不顾大局，紧急发布了一个补丁，把这个漏洞给补住了。</p>
+<p>那这个网络是怎么做到让美国政府都如此难堪的呢？首先，这个tor网络有许多的节点，这些节点叫中转节点。当这个tor启动以后，第一件事情是开始联接一个目录的服务器，这个目录服务器里有全球网络的结点信息。根据他们官方的数据，现在总共有6209个节点，这个网络的带宽是23.8G。这些节点主要分布在美国和欧洲，亚洲的那几个发达国家。 </p>
+<p>当用户要访问网站的时候，比如说，一个美国佬想访问中国的一个网站，douban.com，他不想暴露自己的身份，豆瓣网的用户特别害怕自己的ID对应到了自己的真实身份，就像我一样，在Douban上，我关注了1000多个妹子，但是在现实中我朋友圈里一个女性好友都没有。那么，这个美国佬打开tor浏览器，这个浏览器开始工作，先是连接tor网络，然后在那6209个结点中，随机的选择3个，这3个结点是用来中转的。</p>
+<p>首先，这个美国佬的电脑连接A节点，A结点再把你要的信息发送给一个B节点，B节点再转发信息给C结点，C结点是所有的三个结点中的一个，因此，在C结点之后，就开始访问douban.com了。然后，你的信息就被隐藏在这3个结点之后，那安全么？这个真不好说。</p>
+<p>最大的风险在C结点上，因为C结点是最终要访问Douban的最后一个环节，如果C结点被人搞定了，那么你的信息就被泄露了，尤其是，如果Douban做的还不好，用的是HTTP协议，连HTTPS协议都没有启用，那么，在C结点上可以看到你所有的信息。</p>
+<p>所幸，tor也知道这个缺点，所以tor这个网络，每隔10分钟，他就换3台机器，毕竟人家的网络里有6209台机器，随机给你选3台，拿出笔来，算一下概率，还是相对比较安全的。 安全都是相对的，tor还有不少配置，让你避开你认为的不安全的节点，比如说你信不过美国以及其盟友国家所提供的网络，你是可以在配置文件中填入那些节点所在的国家信息，比如美国是us, 他的盟友肯定包括英国uk, 还有日本jp, 当你把这些信息放进某个配置文件，tor网络就不再连接这些国家的网络了。</p>
+<p>丝绸之路最终被抓了，有各种传闻，但是，人家FBI肯定不会说明是哪个方法抓的你，毕竟这是核心机密。我就说几个网络上流传比较广泛的传言吧。有人说，这个人，有些代码不会写，就用了和丝绸之路上相同的ID，到论坛上去问了一个PHP的问题，然后被抓住了。这个么，我当然不知道是真是假，反正，FBI不会出来说，那个当事人还在坐监狱，也不会出来说，这个事，只有网络上在说，至于真假，自己评判就是了。我觉得太过传奇了，我不是很相信。具体的故事是这样的，一个人，先用altoid这个ID在网上谈丝绸之路，然后还投资了一个比特币公司，接着用这个ID在网上给这家比特币公司招揽工程师，还用这个ID注册Google+这种网站上，还分享视频。但是，我没有搜到这个ID，可能已经被删了。这个故事版本，说的这个人特别的2。说他为了比特币杀人，而且雇佣的杀人的人是一个FBI的特工，这个特工伪造了一张杀人后的照片，这个哥就给这个特工汇款了8万美元。而且，这个人还用15万个比特币杀另外一个客户。他说的一句话我倒是很认同，有人问他，你这搞比特币，到底是为是犯罪还是为了你宣传的货币的革命？他回答，为了犯罪使用比特币，为了革命而继续使用比特币。(这个真实性是非常值得怀疑的，就和网上流传的鲁迅的名言一样，真真假假，分不清楚，大家听听就好。) </p>
+<p>另外一种说法是，FBI攻击成功了一些匿名托管服务的供应商，然后在上面设置了木马，这个木马会检测你是不是在用tor浏览器，如果是，就记录你访问的IP地址，然后把IP地址发送给FBI，这样个锅是Firefox来背。后来就是Firefox 修复bug这个事，至于是不是这样，FBI也没出来说，也是大家来猜测的。我觉得有可能性，起码比那个问了个PHP代码，就给抓了，要真实一点点。 </p>
+<p>还有一种说法是，那6000多台tor网络的节点，有一多半是FBI出钱控制的，无论你如何搞，也翻不出如来佛的手掌心，只是他们不想抓你，这个，也太传奇了，我相信FBI能搞定不少机器，当成蜜罐，但是，你说他搞定了其中的3000多台，有点扯。如果他能搞定，去年美国大选为什么还是不停的爆料出来，难道希拉里和她老公搞不定FBI么？反正我是不太信FBI能搞定其中的一多半。</p>
+<p>还有一种说法是FBI根本不用掌握机器，tor网络中使用的加密，不是很安全，FBI有自己不肯泄露的技术，能破解tor的加密算法，以前我是不相信的，现在越来越相信了。美国佬还是比较坏的，他们知道很多漏洞，然后自己不说，比如OpenSSL的心脏出血漏洞，说美国国安局早就知道并利用了这个漏洞好几年。自己偷偷的用，闷声大发财。这个可能性很大，因为连红帽子这种商业公司都能提前知道并且能赶在漏洞被爆出之前先打好补丁，反正我认为美国国安局应该会比红帽子公司更厉害一些吧。TOR网络中是加密传输的，加密解密这个东西，对普通人来说，运算力不够，但是，对美国国家局这种级别的，你不知道他掌握了多少运算力。 </p>
+<p>TOR网络的加密是基于椭圆曲线的加密算法，比如DCDHE算法，但是，有报道说，美国国安局有这个本事，能简化椭圆曲线的解密难度。设计比特币的中本聪就避开了美国国安局挖的坑，这个可能性有多少，我也是不知道。</p>
+<p>除了tor以外，这些人还是要联系的，他们用什么工具呢？在说这些通讯工具之前，我先说一下我对这些罪犯的看法，首先，他们是坏人，其次，他们是聪明人。如果做智商测试的话，在监狱里的人，平均智商肯定是要高于社会的平均智商的。他们用什么工具呢？放心，100%不是用QQ和微信，用这个做暗网，明显是云自首。他们用的最多的工具是telegram，还有苹果手机的iMessage。这两个是罪犯的选择，当然了，我选择QQ和微信。 </p>
+<p>罪犯是聪明的坏人，当然，他们也可以选择当聪明的好人。但是，有些人只能选当好人，像我，好人卡有一堆，简直就是经过认证的好人。其实我也不想当好人啊，可惜，只能当好人，没得选。 </p>
+<p>好，这一期到这里，下一期我想讲在暗网中，这些卖毒品的人如何获得信用，毕竟，这玩意可不能人家给个差评，你就打电话过去骂。这样，让FBI爽了，买一份，给个差评，然后等卖家打电话过来自首。</p>
+<p>在暗网中获得信用，比开淘宝店可难多了！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/26/132/" rel="next" title="132. Twitter创始人告诉你如何成为亿万富翁">
+                <i class="fa fa-chevron-left"></i> 132. Twitter创始人告诉你如何成为亿万富翁
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
