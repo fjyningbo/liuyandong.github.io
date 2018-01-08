@@ -1,0 +1,718 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这一期我来说一下暗网上做生意的人，是如何赢得别人的信任的。 我上一期讲过，上暗网需要使用一个叫tor的浏览器，这个浏览器的下下载量每年是5000万次，在互联网行业有个术语叫存活量，就是你下载了，过了多少天还继续使用的量。这个并没有多少，每天使用tor的人，大概是数十万，肯定不到100万。所以，这不是一个特别巨大的量，尤其是对整个全球的上网人口来说，只占极小的一个比例，几乎可以忽略不计。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="134. 暗网中如何获取用户的&quot;信任&quot;?">
+<meta property="og:url" content="http://yoursite.com/2018/01/08/134/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这一期我来说一下暗网上做生意的人，是如何赢得别人的信任的。 我上一期讲过，上暗网需要使用一个叫tor的浏览器，这个浏览器的下下载量每年是5000万次，在互联网行业有个术语叫存活量，就是你下载了，过了多少天还继续使用的量。这个并没有多少，每天使用tor的人，大概是数十万，肯定不到100万。所以，这不是一个特别巨大的量，尤其是对整个全球的上网人口来说，只占极小的一个比例，几乎可以忽略不计。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-08T04:26:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="134. 暗网中如何获取用户的&quot;信任&quot;?">
+<meta name="twitter:description" content="这一期我来说一下暗网上做生意的人，是如何赢得别人的信任的。 我上一期讲过，上暗网需要使用一个叫tor的浏览器，这个浏览器的下下载量每年是5000万次，在互联网行业有个术语叫存活量，就是你下载了，过了多少天还继续使用的量。这个并没有多少，每天使用tor的人，大概是数十万，肯定不到100万。所以，这不是一个特别巨大的量，尤其是对整个全球的上网人口来说，只占极小的一个比例，几乎可以忽略不计。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/08/134/"/>
+
+
+
+
+
+  <title> 134. 暗网中如何获取用户的"信任"? | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/134/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                134. 暗网中如何获取用户的"信任"?
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T12:25:27+08:00">
+                2018-01-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一期我来说一下暗网上做生意的人，是如何赢得别人的信任的。</p>
+<p>我上一期讲过，上暗网需要使用一个叫tor的浏览器，这个浏览器的下下载量每年是5000万次，在互联网行业有个术语叫存活量，就是你下载了，过了多少天还继续使用的量。这个并没有多少，每天使用tor的人，大概是数十万，肯定不到100万。所以，这不是一个特别巨大的量，尤其是对整个全球的上网人口来说，只占极小的一个比例，几乎可以忽略不计。<br><a id="more"></a><br>暗网并没有什么特别神奇的功能，也不是大部分人想的特别的变态，上面最多的其实就是卖毒品，因为卖枪，还有大部分的成人内容，在美国等很多国家是合法的，因此，也就不用偷偷摸摸的干，所以，和网上流传的不少内容相反，说上面有多么变态，其实看了以后，就会觉得，就是一个现实世界的阴暗面而已。</p>
+<p>我本来以为网上那些传闻是真的，比如说现在我们用的百度，微博，是冰山的一角，大部分是暗网，这纯粹是胡扯，其实暗网才是非主流，关于暗网的传言，绝大部分都是传言，人就喜欢这些传言。</p>
+<p>几个被FBI盯上并被伟大光荣正确的FBI干掉的暗网，基本上都是卖毒品的，比如Alphabay，丝绸之路，都是卖毒品的，这些网站是如何在不宣传，不打广告，不做推广，不分享朋友圈送大麻的情况下增长到数10亿的交易额的呢？我觉得，还是有值得学习的地方，当然不是说要让你学去卖毒品，而是学习他们如何赢得别人的信任的。</p>
+<p>我先说一下，这几个最大的毒品网站，Alphabay的创始人，被抓住以后，就自杀了，钱有不少，但是人没了。丝绸之路的站长，被判了终身监禁，可以在里面玩真正的《越狱》了，学一把Machael Scofield…</p>
+<p>我在研究丝绸之路的时候，我发现了一个重要的细节，FBI为了能找线索，就从丝绸之路上买了100多份，用来当犯罪的证据，然后，他们还检测了这些买了的毒品，得出的结论是“high purity levels”，就是高纯度的，童叟无欺的产品。卖毒品的网站在暗网有千千万，能成器的并不多，我觉得卖高质量的产品，并且允许用户评论是非常重要的一个环节。当然，这个也不允许删除评论。然后靠大家口口相传来传播。</p>
+<p>这个其实是社交的力量，和暗网关系也不大。中国有句话叫“物以类聚，人以群分”，所以，这些瘾君子也是有群组的，比如说在国外有个网站叫Reddit，这个网站上，有一个频道叫DarkNetMarkets，如果你想去的话，到我录电台的今天，这个频道还存在。我觉得在未来也会存在，国外和国内不相同，国外的人比较不怕堕落，他们美国政府也不关心广大人民群众的要求，基本上，这种东西在国外的网上真心多，什么骂美国的，骂美国总统的，要让某个州独立的，交流如何把美国总统给干了，我觉得这都是和好莱坞学的，他们没事就暗杀个美国总统。</p>
+<p>当然，像Reddit这种美国网站，还是少上，尤其是你是个正能量很强大的人，去了这种网站，会非常的不舒服，这种网站正能量的含量不高，倒是丧文化极其发达。我觉得中国没有和Reddit这个网站对应的Reddit，这个网站像个极其混乱的夜总会，几乎覆盖你所想要的任何东西。也有类似于每天打卡，学习让我快乐这种正能量的频道，但是，我觉得真正好玩的频道，不是这种正能量的，而是那些搞笑的。</p>
+<p>这个网站是人肉点击喜欢和不喜欢，不像是中国的，是机器算法，而且中国的新闻网站几乎都差不多，本质上，这几个新闻网站，前20条都是一样的。所以，如果有人觉得可以去感受一下Reddit的堕落和腐朽，可以注册去玩一下，顺便学习一下英语什么的。</p>
+<p>就在DarkNetMarkets这些群组里，那些朋友就会在里面分享买来的这些货，哪个网站比较好，就这样口口相传，质量好的，自然就越卖越好了。 这些网站之所以能脱颖而出，首先是自己的产品质量过硬，其次就是借助社交的力量。</p>
+<p>人是社交动物，即使是程序员，也是社交动物。根据我的观察，可以很方便的分出一个真正的程序员是外向还是内向，一个外向的程序员，在和人讲话的时候，会把目光落到别人的鞋子上，而一个内向的程序员，则是会把目光落到自己的鞋子上。而当一个程序员在讲话的时候，敢把目光放在别人的上半身，基本上，他选错行业了，他应该去当项目经理或者去卖保险什么的，当程序员太委曲他了，大材小用了。作为一个社交动物，他就要选择他应该相信谁说的话。</p>
+<p>当然了，作为一个中国人，最应该相信的是党和国家，但是，我这个故事说的是美国的网站，那么，对于美国佬，他们会相信谁呢？因为美国的媒体经常自相矛盾，没有主流的声音。比如说CNN，纽约时报，NBC这些，不管什么样的报道，不管是科技还是新闻，他们几乎一定要骂一下现任美国总统。所以，我一直非常不理解，这几个主流媒体都已经把川普黑出翔了，他是如何才能当上美国总统的呢？</p>
+<p>后来在Reddit上，我个人觉得，可能美国的年轻人，是不太相信CNN，纽约时报这种严肃媒体的。在Reddit上，有一个叫the_donald的频道，这个频道的订阅大概有50多万人。这个数字在美国是个非常大的数字了，毕竟像中国的weibo，只要是个明星，关注者至少是2000万起步，这个在美国是不现实的，只有发小黄图的频道，才会达到十万这个数量，中国人多，这一点小小的美国是比不了的。如果你看到一个信息，有两个不同的报道，一个是主流媒体的报道，另一个是你的朋友的一些小道消息，你会相信哪一个？</p>
+<p>我觉得，大部分人会相信朋友的消息。在DarkNetMarkets这种频道里的传闻，尤其是都是有相同爱好的瘾君子们，更加相信这是真实的，因为主流媒体根本就不报道哪里买毒品的更好，因此，就只有这一个信息来源了。如果说CNN做个测评的话，还能分流一部分人，但是，CNN这种主流媒体根本不可能去暗网买毒品来测评，所以，这更加让这些人相信论坛里人话。现在丝绸之路1.0和2.0已经都被FBI给一锅端了。现在3.0还没有被端，即使3.0被搞了，我是丝毫不怀疑会有4.0，5.0，100.0出来的。因为需求在这里，不是你FBI能搞定的。大家的香烟盒子上印着“吸烟有害健康”，根本阻止不了吸烟的人，更别说比香烟更猛的毒品了。</p>
+<p>如果有人去暗网看过的话，就会知道，这里中文的内容不多，大部分都是英文。那是不是说明中文用户就没有这方面的需求呢？我认为，中国的，根本不用暗网，直接在百度贴吧，或者QQ上就联系了，连tor浏览器都不用。大家肯定知道，现在的QQ群也好，贴吧也好，隐藏着很多不太和谐的东西，这些东西，很多比暗网上劲爆多了，所以，我认为国内的用户还是不太有可能用到暗网的，因为暗网，是很难给你送快递的。但是，你用QQ这种，只要想，就能给你送快递，如果QQ这种管的太严格了，把这些人都给赶到暗网上，就得不偿失了。所以这个一松一紧，张弛有度，分寸要把握好。</p>
+<p>大家上淘宝也好，还是用vim这个编辑器也好，可能会看到这样的宣传，你买这个淘宝上的什么东西，就会有几分钱捐助给中国红十字会什么的，还有vim这个编辑器，开始的介绍是，希望你帮助乌干达儿童。这会显得你这个企业或者软件比较有爱心，毕竟你是帮助别人，红十字会也好，还是vim的作者建立的ICCF基金会也好，都会比较有爱心。这一点，在暗网中也有！</p>
+<p>有些卖家，就会说你买了这个毒品，就能帮助这个毒品产地的贫苦农民，比如Guatemala山区的人，这里除了毒品，什么都没法长，你买这个是献爱心。你说这个有没有用吧，我觉得在心理上是有点用的，因为对大多数人来说，他做这种事情，心理上可能有点小纠结，但是，你买这些东西竟然还能帮助Guatemala山区的农民，我去，我这不就是活雷锋么，就多买点了。</p>
+<p>其实这也很好理解，人最难说服的是自己，尤其是第一次做不好的事情，太难说服自己了。如果大家看过金庸的《连城诀》的话，里面有个人叫花铁干，这个人是个好人，在刚开始的时候，但是，他一旦做了第一次违背他道德的事，迅速的就沦陷成一个大坏蛋。所以，第一次很重要，万一有个人真的把买毒品认为是求助Guatemala山区的农民，他的人生那就比较悲惨了。就好像现在很多人，就喜欢救助付不起学费的女大学生，爱心泛滥的都快上瘾了，天天去救助，也不考一考那些是不是真的大学生，起码救助之前，先让她们算一个三重积分，用个夹逼定理什么的，先验证一下是不是真的大学生，再求助也不迟。当然了，我不是没有爱心，我是没钱，我倒是挺有爱心的！</p>
+<p>这个网站还有一招，第一次免费品尝，不用付钱，先寄个样品给你，你试试能不能up起来，如果不up，那就别买了。这个也不是什么创新的手段，现实中也有不少先尝后买的例子。比如微信或者支付宝，或者各种单车，就是先尝后买，让你先吃点甜头，到时候把你养大了，再杀肉吃。还比较大一点的超市，里面就有不少免费品尝的，因为我实在太穷了，经常骑着免费的单车，去个大超市，先尝点菜，再尝点肉，最后尝些主食，临走的时候再尝点酸奶什么的，一顿饭就解决了。最后门卫都认识我了，见面就打招呼，栋哥又来吃饭了？临走的时候再说一句，欢迎下次光临…这种网站免费邮寄试用品的策略，肯定能大大的增加知名度。</p>
+<p>所以，按照我上面所能想到的，就可以看到，这个暗网一点也不暗，而完全是一个现实社会营销的综合体。首先，你的产品要足够好，好到FBI买了100多次，一次假货都没有。其次，有一些忠实的用户帮你宣传，比如在Reddit的DarkNetMarkets这个频道上的忠实瘾君子们的口口相传。再就是做公益事业，还有给免费的试用品。</p>
+<p>如果把商品名字隐藏起来，无论换成化妆品还是食品，这些都可以在现实中找到对应的方法，所以，暗网的暗只是商品和amazon上的有点不同，但是，促销的手段和amazon没有本质的区别，所以我觉得这些做暗网的，如果做暗网能做到非常大的规模，一旦想洗白了，来卖面膜也好，卖保健品也好，应该也能做的非常的大。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/04/133/" rel="next" title="133. 暗网里如何和FBI玩“捉迷藏”?">
+                <i class="fa fa-chevron-left"></i> 133. 暗网里如何和FBI玩“捉迷藏”?
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
