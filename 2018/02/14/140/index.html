@@ -1,0 +1,723 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这一期还是接着说沃兹。上两期跑了很远的题，说了一下美国的电话发展史，主要是说一下为什么沃兹和乔布斯可以卖这个盗打电话的东西，就是蓝盒子。因为我觉得电话系统也很有趣，所以，我讲了两期，这一期再回到主线上，然后看看下回再跑题到哪个地方。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="140. 第一台苹果电脑是怎么研发出来的?">
+<meta property="og:url" content="http://yoursite.com/2018/02/14/140/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这一期还是接着说沃兹。上两期跑了很远的题，说了一下美国的电话发展史，主要是说一下为什么沃兹和乔布斯可以卖这个盗打电话的东西，就是蓝盒子。因为我觉得电话系统也很有趣，所以，我讲了两期，这一期再回到主线上，然后看看下回再跑题到哪个地方。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-14T13:15:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="140. 第一台苹果电脑是怎么研发出来的?">
+<meta name="twitter:description" content="这一期还是接着说沃兹。上两期跑了很远的题，说了一下美国的电话发展史，主要是说一下为什么沃兹和乔布斯可以卖这个盗打电话的东西，就是蓝盒子。因为我觉得电话系统也很有趣，所以，我讲了两期，这一期再回到主线上，然后看看下回再跑题到哪个地方。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/14/140/"/>
+
+
+
+
+
+  <title> 140. 第一台苹果电脑是怎么研发出来的? | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/14/140/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                140. 第一台苹果电脑是怎么研发出来的?
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-14T21:13:07+08:00">
+                2018-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一期还是接着说沃兹。上两期跑了很远的题，说了一下美国的电话发展史，主要是说一下为什么沃兹和乔布斯可以卖这个盗打电话的东西，就是蓝盒子。因为我觉得电话系统也很有趣，所以，我讲了两期，这一期再回到主线上，然后看看下回再跑题到哪个地方。<br><a id="more"></a><br>按照沃兹的说法，他重新改进了这个蓝盒子，他用晶体振荡器保持频率的精确度，就是上期讲的那个2600HZ的频率，然后还加入了晶体管放大器，他自己多次提到这个装置，就是输入放大输出，这是他引以为豪的设计。后来他说他将这个设计加入了第一代苹果电脑，这个我就不知道是什么了。</p>
+<p>他和乔布斯就开始卖这个盒子，这个盒子的成本是8美元，如果不算沃兹的设计，那几个零件是8美元就可以买到，沃兹想卖10美元，只想赚个2美元的手工费。这时候就是搭档的魅力了，乔布斯说你专心造盒子就行了，我去卖货！然后，沃兹想卖10美元的盒子，就让乔布斯卖到了300美元，卖一台赚292美元。所以，我还是很服乔布斯的销售能力的，这个盒子还提供售后服务，只要坏了，就免费给一台新的，反正就是8美元，给你一台新的也不亏，毕竟，这可是300美元的盒子啊，人家赚了292，给一台新的，也还不错了。所以，他们两个人，卖了很长时间的盒子，具体赚到了多少这个他们都没说，但是，沃兹在学生期间，买了一辆新车。我在大学期间，也买过一辆新自行车，骑了一周，被偷了！当然，沃兹买的是新汽车…</p>
+<p>然后，沃兹又一次退学去打工了，他去的是一家电子设备公司，当技术员，干了半年，他还有个朋友，叫艾伦鲍姆，这个朋友就说，来HP造计算器吧，钱很多。然后，沃兹就去HP做了四年程序员。在HP的几年，他没有怎么提，但是，他很有钱，而且吧，一周的工作经常一天做完，然后就没事可做了，让他的经理也很崩溃，因为，他的工作效率太高了，让别人觉得“跟不上你的脚步，干脆就说迷了路。”也就随便他搞点什么了，他的HP期间，又开始做电台了，他做的电台是你打个电话，电话里自动给你讲个笑话，受到了很多人的欢迎。这个电台有巨大的收获，有个女孩，就喜欢沃兹讲的笑话，天天打这个电话，然后，就成了沃兹的第一任老婆，她的名字叫Alice Robertson。这也是我坚持做软件那些事儿的动力，我坚信有一天，会有一个叫Alice Robertson的女孩，会听到我的电台。但是，我也知道，世界上的事，十有八九都不如意，还有一二特别不如意。让我流下眼泪的，不止是昨夜的酒。</p>
+<p>沃兹的第一次婚姻，正应了大话西游中的那句话，我的意中人是个盖世英雄，有一天他会踩着七色云彩来娶我，我只猜中了开头，可是我却猜不中这结局。沃兹的老婆Alice和他，也是轰轰烈烈的离婚了！这也是童话故事里经常以一句话结尾的原因，从此王子和公主幸福的生活在一起，因为不敢再写了，再写下去，王子和公主就会离婚了。</p>
+<p>沃兹在HP最大的成就可能就是因为做了个电台，找到了第一任老婆。其它的也有不少，比如，他的经理叫Stan Mintz，家里有娃喜欢玩游戏，他就设计了一款电子弹珠游戏，有音响有比分，让经理很高兴。还有帮助各种好朋友玩成各种项目，比如，帮助一个开酒店的朋友做了一套电影点播系统。还有就是我们耳熟能详的的帮助乔布斯做了一个游戏。</p>
+<p>当时乔布斯也找了个工作，在雅达利工作，当时有个项目是做一个打乒乓球的游戏，时间比较紧张，老板诺兰希望能在4天内做出来，乔布斯搞不定，然后就来找沃兹，沃兹就下班后搞了两个通宵的时间，做出了这个东西。这不仅仅是个软件，而是从硬件到软件全部重新设计一下。当时雅达利的老板对乔布斯说，你每少用一块芯片就奖励100美元，沃兹少用了50块芯片，乔布斯就拿了5000块奖金，但是，乔布斯对沃兹说谎了，说他拿了700块，来，见面分一半，就分给了沃兹350，自己含泪留下了4650。后来，沃兹知道这件事情以后，流下了伤心的眼泪，乔布斯只用了几个字就回应了这个事情，他只简单的说了一句，我忘记了。</p>
+<p>这个乒乓球机器并没有大批量生产，因为这种游戏市面上太多了，还因为沃兹设计的太紧凑了，这样让雅达利生产起来比较困难，就没有广泛的流行开，市面上最流行的打乒乓球游戏其实不是他们两个设计的版本。当时打乒乓球，打网球这种游戏太多了，根本就是粗制滥造。那个年代，大家也是赚快钱，结果最后雅达利公司把自己玩挂了，这是另外一个故事了。</p>
+<p>后来，沃兹和乔布斯加入了一个家酿电脑俱乐部，当时一台电脑，就是大众科学上那台著名的Altair 8080，这台电脑，不仅启发了沃兹和乔布斯，还启发了比尔盖茨。这台电脑的广告是这样说的：世界上第一台可以与专用电脑竞争的微电脑。虽然这台电脑极度简单，只要一些零件和一把电烙铁就可以搞定，价格也不贵，只要400美元，比沃兹那个打电话的盒子贵100块钱。沃兹在聚会上，搞到了一份8080的技术规格，他觉得这个东西，他自己也能做出来，根本就是小菜一碟。他在HP，就自己设计过一台电脑，那台电脑比这个Altair 8080还复杂一些，他那台电脑，还能连接到阿帕网呢(这个网在以前的节目里我讲过了)，他设计的那台电脑，还能在把从阿帕网上的信息显示到电视上，而这台登上大众科学的Altair 8080，只能用8盏灯显示信息，和他的设计比起来，也太差了。在聚会结束的那天晚上，沃兹就开始设计新电脑了。</p>
+<p>他没有采用Intel 8080的芯片，因为有更先进的芯片，他想用的芯片是Moto的6800，但是，这个芯片太贵了，要么用贵的Moto，要么用便宜的Intel，在两者衡量的时候，他碰到了新的合适的芯片，MOSTEK的MOS 6502芯片。用这个芯片，沃兹就开始弄第一台电脑了，名字叫苹果一号。他当时还在HP上班，因此他上班的时候，用一点时间做做工作，就形始设计这台新电脑。这台电脑当时只有一个问题，就是开机会要预热30分钟，才能用。沃兹讲过这个bug以及bug的修复过程，但是，我没听懂他说的是什么意思，反正是硬件的问题，他修复了这个bug以后，又给这个电脑装了一个随机存取的内存，这在当时也是一在创新，尤其是对一些爱好者来说。这个电脑可以接到显示器上，正常有键盘，当打字的时候，可以在电视上显示出打了什么字。想想当时Altair 8080，你只能看到8个灯泡，通过这8个灯泡如何亮来推测出电脑在做什么，这是一个天大的进步，当时家酿俱乐部的人惊呆了，甚至一向目中无人的乔布斯也惊呆了！</p>
+<p>在1975年6月29日晚上10点，一个新的时代开启了。真正的个人电脑从一个不善言辞的大男孩手里诞生了。</p>
+<p>乔布斯看到这个设计以后，他知道，属于他的时代来了。他说服了沃兹免费发放图纸，只赚吆喝不赚钱的想法，乔布斯看到图纸以后说，这么复杂的图纸，你发给他们也没用，他们根本焊接不出来。连个乐高积木都装不起来的人，你还想让他们对着图纸安装电脑，这不就是赶鸭子上架么？免费给他们图纸，不如咱们把主板做好了，卖给他们。还记得我们卖蓝盒子么？还能顺便赚点钱。以乔布斯的口才，很快沃兹就被说服了。这真是一对天衣无缝的创业组合，一个能做事，一个能卖东西。在商业上有远见卓识，在技术上有超人的能力，这两个能力，很难集中在一个人身上，苹果公司的这两个创始人，一人占一项，已经是非常的厉害了。这两个人一结合，一个改变人类的发明就可以推广到全世界了。</p>
+<p>这就是我经常所说的，技术和眼光，缺一不可。比如说乔布斯，如果没有沃兹造电脑，他肯定没法卖东西；如果是沃兹，如果没有乔布斯帮他推广，他造的东西东西肯定不是现在这么流行。我现在觉得，有眼光的人很多，比如我们总能看到各种各样的PPT，一堆人穿个黑T恤，穿个牛仔裤，就是乔布斯的传人了，但是，总是找不到沃兹帮他制造出革命性的东西出来。其实从明朝以后，我们就再也没有什么创新了，现在有这样一本书，叫《改变世界的1001项发明》，里面只有30项是中国发明的，而且这30项里，还有指南车，地动仪这种都列在里面了，连手推车，这种传闻说是诸葛亮发明的，到底是不是真的，说实在的，真的不好考证。还有厕纸，我认为没有足够能说服我的证据来证明，厕纸是中国人先用的。国外的发明就不说了，就有电脑。</p>
+<p>不管怎么争论了，筷子啊，围棋啊，手推车，厕纸就算都是中国人发明的，但是，仍然无法掩盖一个事实，从明朝以后，中国真的没有什么足以改变世界的发明了，不要说发明，甚至连一些制度，一些文化，都要从国外引进。当然了，师夷长技以制夷，这也无所谓，但是，作为中国人，我的思想还是挺狭隘的，我希望电脑是中国发明的，USB是中国发明的，汽车是中国发明的，PPT是中国发明的，手机是中国发明的，不要总是拿别人的东西来改进一下，就当宝贝了，好像是申请了原创一样洋洋得意。</p>
+<p>再回到1976年初，当时的沃兹26岁，乔布斯21岁。乔布斯以1500美元卖了他的福特汽车，沃兹500美元卖了他的HP65计算器，他们总共筹集了这些钱，成立了一家公司。在公司的名称上，他们很难做出决定，在提交公司申请文件的时候，乔布斯说就叫苹果电脑公司吧，因为当时乔布斯是素食主义者，他刚刚从苹果园回来，就觉得，这个名字起码不太吓人，听上去比较有活力，也比较近人情，就选了这个名字。最初的苹果图标是相当复杂的，是牛顿坐在树下思考，后来才变成了现在这个样子，之所以咬一口，是因为如果不咬一口的话，看起来像西红柿，其实，乔布斯可能不吃西红柿，我经常吃西红柿，有的比苹果还好吃！</p>
+<p>苹果公司成立以后，沃兹的想法还是这个草台班子不行，就想把这个设计给HP看看，毕竟在HP工作，人缘也不错，就向HP的高层展示了一下这台电脑以及这个设计。当沃兹向HP的几个高层展示完成以后，这几个面面相觑，不知道这是个啥玩意。外国人的思维和中国人不同，我们觉得一个东西不行的话，是可能漠视或者不赞美，但是老外不这样，起码这几个HP的高层不这样，虽然不知道沃兹搞了个啥东西，但是，一顿夸，然后就没有然后了。根本就不打算投一分钱在这么个东西上。沃兹非常的伤心，只好带着他的图纸回家了。</p>
+<p>沃兹在这件事情上备受打击，多年后仍然不能释怀，这同时也说明了沃兹没受过什么苦，说实在的，我这拿了几十张好人卡的人，别说这种事情了，我什么都能释怀。就在沃兹认为这个东西可能没有市场的时候，伟大的乔布斯出现了，他用他的口才，就像以前一样，把一个成本8美元的盒子，卖到了300美元。这一次，同样的故事又再次重现，简直就是Yesterday once more，乔布斯一个人走到山景城的一个个人电脑零售店里，那个零售店的名字叫Byte Shop，店的老板叫Paul Terrell。</p>
+<p>多年以后，沃兹回忆到这件事情仍然惊讶不已，他说：我完全惊呆了，我永远也忘不了那一刻。下一期就来讲乔布斯做了什么事情，让他的搭档沃兹惊诧不已的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/08/139/" rel="next" title="139. 蓝盒子“盗打”电话发展史">
+                <i class="fa fa-chevron-left"></i> 139. 蓝盒子“盗打”电话发展史
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
