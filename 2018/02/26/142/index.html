@@ -1,0 +1,724 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这一期是填上一期的坑，讲一下沃兹做Basic语言的故事，顺便讲一下Basic语言的发展历史。2014年是Basic语言50周年的历史，所以，在2014年的时候，有一些相关的纪念，当然了，声势一点也不浩大，就是一些人，一些文章，还有一些纪录片出来。国内的话，几乎没有人在乎这个事，因为用Basic编程的人，相对比较少，毕竟Basic 是一个特别特别早期的语言。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="142. 苹果电脑和Basic语言的故事">
+<meta property="og:url" content="http://yoursite.com/2018/02/26/142/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这一期是填上一期的坑，讲一下沃兹做Basic语言的故事，顺便讲一下Basic语言的发展历史。2014年是Basic语言50周年的历史，所以，在2014年的时候，有一些相关的纪念，当然了，声势一点也不浩大，就是一些人，一些文章，还有一些纪录片出来。国内的话，几乎没有人在乎这个事，因为用Basic编程的人，相对比较少，毕竟Basic 是一个特别特别早期的语言。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-25T23:50:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="142. 苹果电脑和Basic语言的故事">
+<meta name="twitter:description" content="这一期是填上一期的坑，讲一下沃兹做Basic语言的故事，顺便讲一下Basic语言的发展历史。2014年是Basic语言50周年的历史，所以，在2014年的时候，有一些相关的纪念，当然了，声势一点也不浩大，就是一些人，一些文章，还有一些纪录片出来。国内的话，几乎没有人在乎这个事，因为用Basic编程的人，相对比较少，毕竟Basic 是一个特别特别早期的语言。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/26/142/"/>
+
+
+
+
+
+  <title> 142. 苹果电脑和Basic语言的故事 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/26/142/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                142. 苹果电脑和Basic语言的故事
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-26T07:49:26+08:00">
+                2018-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一期是填上一期的坑，讲一下沃兹做Basic语言的故事，顺便讲一下Basic语言的发展历史。2014年是Basic语言50周年的历史，所以，在2014年的时候，有一些相关的纪念，当然了，声势一点也不浩大，就是一些人，一些文章，还有一些纪录片出来。国内的话，几乎没有人在乎这个事，因为用Basic编程的人，相对比较少，毕竟Basic 是一个特别特别早期的语言。<br><a id="more"></a><br>我这一期的节目，主要就是参考YouTube上达特茅斯学院的一个纪录片，还有沃兹写的一个纪念Basic的文章，其实我的节目里，除了我吹牛的部分，绝大部分的软件相关的故事，都是有一定线索的，并不是我胡编乱造的。因为说软件故事的人有非常多，总难免有些名声比我大100倍，1000倍的人说的和我不同，比如有听众会来跟我说，我讲的和XX讲的不同。</p>
+<p>写文章么，总有些套路，同样是说沃兹吧，有个热心听众就转给我了一个大V写的沃兹，大体的意思是个屌丝翻身的套路，说他在碰到乔布斯之前是多么的low，碰到乔布斯之后，一下子翻身了，然后还举了几个其它的例子，什么他在HP过的多么不开心，年轻时候多么闷。然后得出结论，人有无穷的潜力什么的。当然了，这么写文章比较有正能量，我看了一下是10万+的阅读量，他一篇文章的传播力量是我的100多倍，我写了150篇，总阅读量也没有10万，所以，如果大家在碰到我说的和大V说的，有很大差距的时候，动动脑子，想想，大概是谁说的对。我觉得，人家10W+的阅读量肯定有一定的道理。当然是他们说的对。</p>
+<p>在认识乔布斯之前，沃兹已经在13岁的时候获得了业余无线电执照，还有在12岁的时候，就自学了数理逻辑，然后，也是13岁，就自己做了一台加法器，获了奖。他自己做过无线电发射器和接收器。反正从他的经历来看，我很难说他小时候很差劲，如果这也算差劲，这根本就不是打差劲的脸，这分明是在打我的脸啊！虽然这么写，充满了正能量，一个默默无闻的小子，一朝碰到贵人，一下子成了天下皆知的人物。这种写法其实金庸写的挺好的，一个啥也不行的人，比如说虚竹，掉到一个冰窖里，里面竟然还有一个大美女，等好事做完以后，后来发现还是个公主。我曾经是金庸的粉丝，见到冰窖什么的，我都打手电看看，就怕错过了机会。后来，我现在已经38岁了，知道，要面对生活的真相，不能总想着不切实际的事情。我讲了非常多的IT风云人物了，我觉得要面对一个现实是：这些IT风云人物，没有一个是从小默默无闻，一下子一飞冲天的。他们都是从小就一飞冲天的，沃兹是，乔布斯是，比尔盖茨是，还有我要讲的BASIC的发明者，也是！</p>
+<p>要有心理准备，不是打击大家，我在讲冯·诺伊曼的那几期讲过，匈牙利出了大量的人才，Basic两个创始人之一凯梅尼就是匈牙利来的。因为这两个人我并不想过多的去介绍，我就简单的介绍一下吧，用一个词介绍就是，高富帅。这两个人，都是家里很富，学习很好，上的都是全世界最好的大学，普林斯顿大学，这个全球排名经常把哈佛大学压下去的不多的大学之一，然后，以最好的成绩毕业，跟随的老板是诺贝尔奖获得者Richard Feynman，和冯·诺伊曼一起工作，还要给爱因斯坦处理数学上的问题，反正就是这么一个人，设计的BASIC。这些信息在YouTube上的BASIC的纪录片上有详细的介绍，有兴趣的人可以想办法弄来看看。我再多说一句，YouTube上有没有恶心的视频，真的，多如毛，各种少儿不宜的视频，我见过，血腥的有，色情的也有，但是，一般人找不到，并且，就算你找到，很快就删了，他们也有人工和机器的审核，包括现场直播的球赛，也有，还是那句话，YouTube和这个社会一样，这个社会上的丑恶，YouTube上都有。但是，YouTube上有优秀的东西么？也有的是，比如达特茅斯大学的这个Basic纪录片，虽然看的人不多，但是，我仍然认为这个很优秀。总不能因为上面有有害的东西，就一封了之，结果，国内搞的视频网站都是最热门的，娱乐节目什么的，当然了，国外也是，最热门的都是唱歌跳舞，但是，国内除了这个，几乎没有其它小众的东西了。我在YouTube上，最喜欢看的都是一些小众节目，比如，各种古老的软件硬件的纪录片，各种很小众的歌曲。关于Basic语言的，我就都不讲了，这个纪录片的名字叫Birth of Basic，Dartmouth大学出品的，质量非常靠谱，看完以后，对电脑的理解，更深入了。快4年了，现在已经有5万多播放量了，还是比较小众的，要是taylor swift发一首歌，一分钟就破5万。</p>
+<p>沃兹和Basic的故事，来自他的自传和他写的文章。woz在高中的时候，就已经是汇编语言和Algo以及FORTRAN语言的高手了，但是，他在第一眼看到BASIC语言的时候，仍然很开心，他喜欢这个语言。在他参加的那个自制计算机俱乐部里，这些电脑爱好者对BASIC语言也普遍比较欢迎，其中一个成员，也就是日后的世界首富Bill Gates，还写了一本书叫101 Games in BASIC，这本书受到了这些爱好者的欢迎，用沃兹的话来说，他嗅到了家用计算机时代就要到来的味道。</p>
+<p>当时沃兹虽然是写程序的高手，但是，他还没有自己写过编译器，而且，当时处于一个最初期的时代，Bill Gates是在Intel的芯片上写的软件，沃兹没有这些芯片，因此，他要运行一些Bill Gates写的Basic程序，还要先写个模拟器来模拟一下。然后，我仔细看了几遍，他说的那些芯片有什么不同，他用了什么方法给处理的，结果，我看不懂，沃兹是个耿直的汉子，他详细说了HP的计算器的芯片应该如何编译Basic。这个人不按照套路来，如果一般人写书，应该吹自己的情怀什么的，他不，他在书里讲如何写软件，包括什么浮点数，精度什么的，非常的有技术男的情怀，反正我是看不懂了。有兴趣的人自己去研究一下。</p>
+<p>里面我注意到了一个细节，沃兹当然也注意到了BASIC语言运行起来非常的慢，用他的话来说，可能要比汇编语言慢100倍或者1000倍。现在我们网上，经常会比较各种语言的优劣，其中一个最搞笑的测评是benchmark，就是把C语言，Java，PHP，Python等语言，跑个分出来。这其实是对一个错误的问题给出的正确答案，不同的语言都有自己不同的生存空间，没人用C语言写网站前端，也没人用Python写驱动程序。当然了，人家沃兹不会这么看问题，他认为，BASIC的慢根本不是什么致命的缺点，但是BASIC的简单却是最好的优点。</p>
+<p>在意识到BASIC的优点之后，woz就坐下来开始写了一些软件，来做Atari街机上能玩的游戏，他用BASIC做的游戏也是打砖块的游戏，他说他当然会用汇编写，但是，他只是想用BASIC，来试试BASIC的力量。他查了一下手册，边写边学，写了一些代码，可以很轻松的改变游戏上砖块的颜色，甚至他还给电脑上加了一个声音，当碰到砖块以后，会发出一个声音。这只是一个下午的工作，改变砖块的颜色和球的速度以及球弹出的角度，可以在一秒钟内完成调整。</p>
+<p>当时的计算机用的语言有数学家们用的是FORTRAN语言，一些计算机科学家用的是Lisp或者Algol语言，这些语言有非常强大的功能，比如Lisp或者Algol语言支持动态，递归，各种范式都能玩的转，深受广大科学家的喜爱，但是，没有受过专业训练的人根本就搞不定！</p>
+<p>在使用BASIC做完这个游戏以后，他就把乔布斯喊过来看看他的研究成果，沃兹首先展示了如何方便的改变这些砖块的颜色。随后，他和乔布斯大概用了1个半小时时间，做了一些游戏方面的探索，他在他写的文章里说，感觉做了用汇编10年才能做的东西。他们认为，BASIC可以给任何年龄段的人使用，不用像FORTRAN一样，只能是科学家，工程师，经过一段时间的学习以后才能使用。乔布斯看过以后，觉得这是个很好的推广个人电脑的机会，因为，让普通人能学会编程，是一个非常好的宣传。所以，沃兹就着手给Apple电脑做一个BASIC的编译环境。</p>
+<p>当时的woz还提到了一个很有用的信息，他刚上中学的时候，他告诉他爸爸，如果有一个4k的内存就好了，他爸爸告诉他，当时一个4k的内存，大概要一个房子那么贵。为什么他想要4k的内存呢？woz说要4k的内存，才能运行高级的编程语言。在1975年的时候，已经有3个公司有4k的DRAM了。这时候，虽然还是比较贵，但是，已经可以不用像他中学时候需要一个房子那么贵了。所以，他让Apple I和Apple II的最小内在都是4k，但是，4k对更高级的编程语言来说，还是太少了，但是，勉强运行个BASIC还是不错的。</p>
+<p>我所了解的关于Basic和woz关于Basic这个编程语言的情况，大部分都是我前面所提到的纪录片和woz自己写的东西，他说什么，我就转述什么，我不生产故事，我只做故事的搬运工。</p>
+<p>如果我讲的故事和你所喜欢的大V讲的版本有点不同，甚至有180度的不同，以大v的为准，毕竟我这没什么名气的，不可能和大v的信息渠道比，所以，不要来和我求证。比如说，我都忘记我在哪一期节目里，说了一下我很佩服台湾的郑成功，可以说是我最服的人之一了。</p>
+<p>结果就有听众来说我这个结论不对，我对郑成功的理解有严重的问题，我也挺好奇的，就说哪里不对了，他说高晓松说郑成功是个大倭寇，我就说这个100%不可能，他绝对不可能是个倭寇！当然了，我这种辩解其实就是自取其辱，毕竟高老师有5亿粉丝，他说倭寇，估计郑成功只能先变一下国籍，因为只有日本人才能是倭，中国人不可能是倭的。当然他的妈妈是日本人。他妈妈是被清军杀害的，所以他一生都和清朝打。</p>
+<p>郑成功的老爸做过海盗，但是郑成功根本就不是做强盗的，而是的商人，因为做强盗，根本赚不到那么多钱，比如荷兰和清政府走的比较近，他就不和荷兰做生意了，结果搞的荷兰的商人来求郑成功，不要不做生意。明显就不是加勒比海盗那种几个船能比的，郑成功长期有十几万军队，船有几千艘，还在台湾有广泛的基础，这靠当海盗抢是不行的，他主要是和日本，荷兰这样的国家做合法贸易。他死后，清朝甚至默许台湾当地人给他修庙。所以，我个人认为他是个大英雄，不是做那种抢人家几个船的海盗。</p>
+<p>他的名声，在大陆，在台湾，在日本，都是很好的。就这么说吧，在这个历史上，很少有人能在朝代几经更迭以后还能屹立不倒，近代的孙中山算唯一的一个。远一点的，郑成功算一个，300年了，郑成功的庙依然是香火不断。看看咱们隔壁的列宁，斯大林的雕像，看看台湾校长的雕像，再看看郑成功的庙。</p>
+<p>虽然我人微言轻，但是，随便说一个还算是非常不错的人，是一个如假包换的大倭寇，还是有点不爽！真是刷了我的三观。</p>
+<p>好了，这一期到这里，再见！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/20/古希腊第一个有完整著作传世的人是谁/" rel="next" title="古希腊第一个有完整著作传世的人是谁 | 老爸的答案">
+                <i class="fa fa-chevron-left"></i> 古希腊第一个有完整著作传世的人是谁 | 老爸的答案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
