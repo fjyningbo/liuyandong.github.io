@@ -1,0 +1,745 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这个电台/公众号快两周年了，如果从2016年6月11日算起的话，还差10来天就到了。一件事情做个两年，多少有点经验，因为我做的不好，不管是关注量还是收听量，是非常的少，所以不好意思说经验，就算分享一下我自己的教训吧，如果有人也想做电台或者做公众号什么的，也许有一点参考价值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="156. 做电台两周年学到的一些经验">
+<meta property="og:url" content="http://yoursite.com/2018/06/01/156/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这个电台/公众号快两周年了，如果从2016年6月11日算起的话，还差10来天就到了。一件事情做个两年，多少有点经验，因为我做的不好，不管是关注量还是收听量，是非常的少，所以不好意思说经验，就算分享一下我自己的教训吧，如果有人也想做电台或者做公众号什么的，也许有一点参考价值。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-01T00:02:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="156. 做电台两周年学到的一些经验">
+<meta name="twitter:description" content="这个电台/公众号快两周年了，如果从2016年6月11日算起的话，还差10来天就到了。一件事情做个两年，多少有点经验，因为我做的不好，不管是关注量还是收听量，是非常的少，所以不好意思说经验，就算分享一下我自己的教训吧，如果有人也想做电台或者做公众号什么的，也许有一点参考价值。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/01/156/"/>
+
+
+
+
+
+  <title> 156. 做电台两周年学到的一些经验 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/01/156/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                156. 做电台两周年学到的一些经验
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T08:00:58+08:00">
+                2018-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个电台/公众号快两周年了，如果从2016年6月11日算起的话，还差10来天就到了。一件事情做个两年，多少有点经验，因为我做的不好，不管是关注量还是收听量，是非常的少，所以不好意思说经验，就算分享一下我自己的教训吧，如果有人也想做电台或者做公众号什么的，也许有一点参考价值。<br><a id="more"></a><br>先提前声明一下，听我电台的人，还是要向更有影响力的人学习，比如说咪蒙，虽然受到诸多非议，但是她一篇文章收几十万广告费，还有最近有981个公众号，估值达到38亿的量子云，这个公司只有50个人写，平均每个人负责20个公众号，以流水线的方式写文章，这也叫新媒体。我之所以说这些，是怕有人说我赚不到这么多钱会比较酸，实际上，我就是比较酸能靠写文章赚到这么多钱的人，一群刚毕业的学生，在一个人的指导下，一天能写20篇文章，每篇阅读量超10万。这个大佬名字叫徐建军，大家可以看看他的采访，当然，他的非议也很多，不过这36亿的估值和1000来个公众号是真的。</p>
+<p>他的新媒体学校，可以让一个刚刚毕业的学生，用他的方法，用三个月时间，就能写理财的内容，或者连女朋友都没谈过的人，写如何泡妞。他的981个号，覆盖各方面的内容，有理财的，有股票的，有励志的，有情感的，有时尚的，亲子的，每天这50多个编辑要写出1000多篇文章，总共有粉丝2.4亿人。</p>
+<p>我做了两年，大概公众号有10,000个关注者，听电台两个地方加起来有3万个关注者。但是，我来说说但是了，只要出现了但是这个词，前面所说的话就不算数了。你是个好人，但是我觉得我们还是做朋友吧。</p>
+<p>先来谈第一个问题：这几个平台怎么样？</p>
+<p>我只谈三个平台，我也只用过这三个平台，一个是微信，另外两个是网易云音乐和喜马拉雅。</p>
+<p>微信我的关注者只有10,000人左右，平均的阅读量是1000出头，也就是10%关注的人会点开看看，这也是我这个公众号的平均阅读率，就是10%左右，我看到网上有人说都是20%，50%的，我不知道他们是怎么做的。</p>
+<p>网易云音乐和喜马拉雅这两个平台做假可能非常严重，尤其是喜马拉雅，数据诡异的不像样，只要我上传音频，不用一分钟，收听量就上了600次，过了一夜，就是1000多次了，而且还给你画出哪些听众在什么时间跳出不听的。我就上传了一个音频，声音是刺耳的电钻声音，大概10分钟左右，然后，这个电钻声音也是不到一分钟600次收听，过一夜就1000多次了。而且给你画的图和其它正常节目大同小异。所以我觉得，这个平台的任何数据，都不值得相信。</p>
+<p>网易云音乐可能会强一点，毕竟网易喜欢在表面上搞的自己非常清高，然后高到一定程度以后，就觉得任天堂什么的小公司，也很low，我感觉，网易云音乐上刷量的情况好像比喜马拉雅好很多，起码不会是1分钟就600次播放。</p>
+<p>再谈第二个问题，关注者是如何增加的，真有指数增加么？</p>
+<p>我没见过，网上有很多营销大师都会说什么裂变，引爆什么的。整的挺像那么回事，如果肯发钱，或者发礼物的话，应该有帮助，但是我这个，没有做这些营销，所以从开始的第一天，到今天，都是以每天10来个人的速度在增加。并没有出现增加的速度越来越快或者越来越慢，就是以线性方程的速度在增加，今天多几个，那明天就少几个。</p>
+<p>第三个问题，为什么节目越做越好，或者越做越差？</p>
+<p>想听干货的人会觉得，真是越来越差。想听湿货的人，会觉得在上下班路听听还可以。对这两种观点，我也没什么好说的。只说一点，如果想通过听广播就学会编程，也就是所谓的干货，可能没有比这个更虚假的梦了，我称之为编程梦。这就相当于通过看梅西踢球想学会踢球一样，不可能的，还是要自己动手为主。</p>
+<p>第四个问题，如何应对谩骂？</p>
+<p>这个确实有点难，当骂别人的时候，我也会建议别人，不要去理骂你的人。但是，当一个人加了我微信，追着我骂的时候，给别人的建议就用不到自己身上了。不过这两年来，我真的淡定了许多，我已经漠视了许多的谩骂。</p>
+<p>第五个问题，我给你提了意见，你为什么不听我的？</p>
+<p>当然，有一些关心我的听众，会给我一些意见，比如有人建议我应该花点钱搞转发抽奖什么的，还有人建议我学哪位大人物的写作方式，我都没有听。其实一个次要的原因是，我觉得有些东西是学不来的，虽然写文章写鸡汤什么的都有套路，我这个电台，是我在开车的时候听的比较多，总不能喂自己喝鸡汤吧。</p>
+<p>还有一个主要的原因是，没有高人的点拨，或者自己没那方面天份，学别人也学不会。这个我是从踢踢球上得来的经验。我特别喜欢看足球，也喜欢自己踢踢球。很多球星的动作，不要说我们这些踢野球的，就是中国国家队的，也学不了。比如说齐达内的马赛回旋，其它人也能学，但是就是不行，像咱们国家队的李毅大帝，他的回旋只能叫蚌埠回旋，就是没有齐达内的管用。</p>
+<p>巴西的那个罗纳尔多，是我年轻时候最喜欢的球星。他过人非常历害，经常连续过几个，再晃过门将把球打进去。有一次一个记者采访他，说你这晃人是怎么晃的，他回答说：“没有刻意去晃，就是看到那么多空间，把球带过去而已。”</p>
+<p>建议我踢球的时候学罗纳尔多，和建议我做电台去转发抽奖，学习高晓松的风格一样，没用。我学不了。不过，还是感谢大家的建议。同样一句话，比如说有情怀，我说出来就是蹭热点。</p>
+<p>第六个问题，栋哥你不能忘了做电台的初心啊！</p>
+<p>这个也是指责我最多的之一，认为我变了，忘记了做电台的初心，现在流行一句话叫不忘初心，方得始终。这句话是政治正确，我个人认为是361度无死角的废话。大家知道曹操，他写过一篇文章叫《让县自明本志令》，因为我们了解的三国是《三国演义》上的三国，这是小说，七分虚，三分实，这个为了戏剧效果，丑化了除诸葛之外的所有人，其实刘备，曹操，孙权，鲁肃这些人都不比诸葛亮差。有兴趣的人可以去读一下《让县自明本志令》，我十分喜欢这篇文章。初心这个东西都是会变的，比如说，你的初恋，不也反脸了么？</p>
+<p>再说了，我做这个电台，难道非要说代码才行么？</p>
+<p>第七个问题，你的很多想法我不喜欢！</p>
+<p>这个真的是太正常了，我不是你，你不是我，我怎么可能啥想法都让你喜欢呢？你不喜欢能有什么办法么？</p>
+<p>孔子有个学生叫宰予，这个人，孔子最看不上。宰予经常给孔子出难题，孔子经常气的半死。我举个例子，来说明一下，我这种你不喜欢的思想，比起两千多年前的宰予，要差多了。</p>
+<p>中国古代的人，尤其是皇帝，因为不好意思说自己的天下是杀人得来的，基本上都是说我这个天下是帮老天爷代理的，我是代理人，我以德治国。然后孔子孟子们就给皇帝的宝座的合法性来了一个双重授权，起码能解释了，不是杀人得来的。这些皇帝最喜欢的是说道德高尚的不行，上行下效，就对孝看的特别重。父母去世了，要守孝三年，其实这个三年不是满打满算的三年，是25个月。两处零一个月。如果是大官的话更少，像皇帝更少，皇帝是连自己父母都杀的人，但是，样子还是要做的。</p>
+<p>这个宰予同学，就去和孔子说，老师，你说父亲去世了，要守孝三年，是不是太长了？这个问题一问出来，孔子当场就气死了，是什么样的畜生才会问这么没有中华传统美德的问题啊。就没好气的说：那你说守几年合适呢？这个宰予说，窝觉得，一个就可以了。孔子气得嘴都歪了，说：一年，你TMD良心上过得去么？你父亲才去世一年，你就吃细粮，穿丝绸，还要性生活，你说说，你良心上过得去么？人家宰予连想也没想，说：老师，我良心上大大的过得去！孔子说：你良心上过得去，你就这么干吧，妈的！不是个东西，是不是小时候没抱你三年啊，你守一年就算了，你小时候，把你抱了三年，你也要还他三年！宰予说：反正我良心上过得去。所以，听我电台的听众，一定要抱自己的小孩三年。要传承中国文化。</p>
+<p>即使宰予提了那么尖锐的问题，人家孔子也只是在他走了以后才说：予之不仁也！子生三年，然后免于父母之怀。夫三年之丧，天下之通丧也。予也，有三年之爱于其父母乎？</p>
+<p>所以，建议大家要有孔子的度量，现在国学热，别光学于丹这种的，于丹这种的，咱不好意思和她比论语，要是比钢管舞啊，编程啊，吊打她没一点问题。以后大家要是看到我讲了你不喜欢的观点，不要来反驳我。多学学孔子，要有雅量。</p>
+<p>第八个问题，一些人生问题，比如应该去做什么工作，应该去学习什么编程语言，应该考什么专业等等。</p>
+<p>这种太个人的问题，我一个都没有回答，因为我不了解你，给出的建议也没什么屁用，都是类似于过马路左右看这种的建议。</p>
+<p>在我看到很多提问以后，我觉得年轻的时候我也是这样，总觉得当下这个问题特别重要，比如选择学什么编程语言这种事，其实过后会发现，一点都不重要的。反而人生最重要的事情，都是悄无声息的发生，比如说你可能只是去上了一堂吉它课，碰到了自己的妻子，或者你在某一天脑袋一短路，就去了一个公司面试，一直干到退休。这种事情反而看起来一点都不壮烈，人生就是这样，不管看谁说的多么正确，也是表面文章。</p>
+<p>现在一些人生导师，自己也是混的不怎样，但是全靠包装。这些导师大部分都是鸡汤调制高手，包括披头士，乔布斯他们信仰的人生导师，也是收钱不要命，还热衷于在指导修行的时候和女学员睡觉。最后披头士发现以后，就离开了。</p>
+<p>自己动个脑子，不要贸然来找我要什么指导，我没心思误导大家，毕竟我没成功经验。以我的见识，你多赚点钱肯定是没什么大错误的，因为国内有些人有意无意的误导，把钱多和很多美好的事情搞对立了。比如说，钱多了，就没有美好的爱情，你看看那么多苦情戏，都是说在最没有能力的时候，碰到了最想保护的女孩。这种话说实在的，只能安慰自己。我觉得还是应该赚到钱，不管是你家的，还是你的，当你碰到一份刻骨铭心的爱情，你能从容的说，正好有一套房子，还有辆宝马，我们来让爱情升华一下组成一个家吧！人家姑娘也不一定是喜欢你的钱，万一人家也有一套房子呢？</p>
+<p>我之所以说这个，是因为有个听众抛给我一个很沉重的话题，他是个找石油的工人，反正全国到处跑，到了有网的地方，就缓存一大堆音频，当然也包括我这个电台。因为找石油么，条件肯定很苦，一年回家两次，一次两周，干了9年了，单身，因为去的地方上网都不方便，别说找女朋友了，网恋都不容易。就问我应该怎么办？我还是没法给什么意见，我只是觉得，你来到这个世界上，作为一个生物，我认为首先要不能太亏待自己。我当然知道你的工作很高尚，如果栋哥这种人，这种工作顶多干三个月就走了，管TMD的能源不能源，战略不战略，我就是打个工每个月这点饭钱，我还担负起与美国的对抗，我哪有这么高尚。但是，北岛同学不是有句话叫“卑鄙是卑鄙者的通行证，高尚是高尚者的墓志铭”，还有一句古代的对联“睡到三更时，凡功名皆成幻境；想到百年后，无少长俱是古人”。</p>
+<p>我个人觉得，你已经帮助中国人民找了9年的石油，真的，别说你对得起谁，我觉得你对得起这个宇宙了！即使你这么努力，油价也没降下来。</p>
+<p>我觉得我还是不够资格给你提出什么具体的建议。痛苦这个东西，不一定要自己尝试的，这个朋友说他最喜欢看乔布斯的Think Different那个广告，这个广告我也喜欢，我只是想说的是，这里面的人大部分没吃什么具体的苦，他们的苦是另外一种精神层面上的苦，别看甘地穿的像穷人，他富的要死，是贵族。卓别林是个大明星，他的一部戏的摩登时代可能让人认为他是个小工人，实际上他有的是钱，光离婚结婚就7-8次，他一生都在寻找16岁的姑娘谈恋爱，找到了不少。你想成功，可以借鉴别人的痛苦，不一定要自己去体验痛苦的。</p>
+<p>最后一个问题，我的编程视频什么时候出？</p>
+<p>我只能说尽快了，我已经录了三期，结果还不合格，让我重录，我重录以后再提交，看看再说。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/01/155/" rel="next" title="155. 亚马逊早期发明的系统对我们有什么影响？">
+                <i class="fa fa-chevron-left"></i> 155. 亚马逊早期发明的系统对我们有什么影响？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">76</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
