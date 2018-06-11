@@ -1,0 +1,723 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="你知道微软收购的github和git曾经有一段不合谐的关系么？ 最近微软宣布以一个我反正觉得很大的数字收购了github网站，我快点趁着热度还没消失，蹭个热点，讲讲github和git软件的故事。那git和github是什么关系呢？基本上，github把git软件商业化了，在商业化的过程中，github社区和git社区的关系一点都不好，多次互喷对方，当然，主要是git社区喷github，githu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="157.github和git当年被忘却的争吵">
+<meta property="og:url" content="http://yoursite.com/2018/06/11/157/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="你知道微软收购的github和git曾经有一段不合谐的关系么？ 最近微软宣布以一个我反正觉得很大的数字收购了github网站，我快点趁着热度还没消失，蹭个热点，讲讲github和git软件的故事。那git和github是什么关系呢？基本上，github把git软件商业化了，在商业化的过程中，github社区和git社区的关系一点都不好，多次互喷对方，当然，主要是git社区喷github，githu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-11T05:03:37.573Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="157.github和git当年被忘却的争吵">
+<meta name="twitter:description" content="你知道微软收购的github和git曾经有一段不合谐的关系么？ 最近微软宣布以一个我反正觉得很大的数字收购了github网站，我快点趁着热度还没消失，蹭个热点，讲讲github和git软件的故事。那git和github是什么关系呢？基本上，github把git软件商业化了，在商业化的过程中，github社区和git社区的关系一点都不好，多次互喷对方，当然，主要是git社区喷github，githu">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/11/157/"/>
+
+
+
+
+
+  <title> 157.github和git当年被忘却的争吵 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/157/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                157.github和git当年被忘却的争吵
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T13:01:50+08:00">
+                2018-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>你知道微软收购的github和git曾经有一段不合谐的关系么？</p>
+<p>最近微软宣布以一个我反正觉得很大的数字收购了github网站，我快点趁着热度还没消失，蹭个热点，讲讲github和git软件的故事。那git和github是什么关系呢？基本上，github把git软件商业化了，在商业化的过程中，github社区和git社区的关系一点都不好，多次互喷对方，当然，主要是git社区喷github，github出来解释一下，然后又闷声大发财了。<br><a id="more"></a><br>先来讲一下这个git软件，git软件和Linux是一个人开发的，都是Linus。至于为什么会起这个名字，Linus也解释过，因为他是个自大狂，写的软件都要用自己的名字来命名，一个是Linux，一个是git，这个git在英语中是饭桶的意思。其实这是Linus开的玩笑，之所以叫Linux是因为他要将操作系统上传的时候，服务器的管理员给他起的这个名字。不管怎么说了，一个人一下子搞两个这么NB的软件出来，还是非常了不得的。</p>
+<p>至于github，是三个人做出来的一个商业公司，这个公司在赚钱方面有一套，但是相对于开源的git来说，理想主义的色彩少了很多，比如github用的git软件是开源的，但是github网站本身是不开源的。其实我觉得要成为一个这么有影响力的网站，没点手段是不行的。比如说，很多人听到github被收购了以后，尤其是被微软收购了以后，就打算找一个github的替代品，实际上很难。github公司早就想到了，你可以很简单的把代码迁出去，但是，一个软件放在github上，重要的东西可不止git repo本身，还有很多附加的功能，比如Issue tracking,wiki这些东西又不在你的repo里面，很难迁出来的。</p>
+<p>我这么说，只是想说明一个商业公司，能做到世界第一，没有点手段是做不到的，只能小打小闹的玩。github的一生，也是战斗的一生，这个公司我经常看他的新闻，做了不少拿出来不太长脸的事情。我只是随便举几个例子，不代表这个公司不是好公司。就像我吸烟，纹身，喝酒，烫头，泡夜店，说脏话，但是我是好男人，坏男人才在装清纯害羞。我还是github的收费用户，因为公司必须要用，所以给所有程序员都买了收费的，好像公司统一买会便宜一点，我不清楚多少钱一个月。</p>
+<p>首先是，这个公司开除员工和所有伟大的公司一样，一点情面也不留的。网上有个文章，是github第9号员工写的。因为我经常拿个电子字典去一个叫hacker news的网站上学英语，这篇文章的名字和链接我放在公众号里：</p>
+<p>How can we fix the firing process if we’re not even talking about it first?</p>
+<p><a href="https://zachholman.com/talk/firing-people" target="_blank" rel="external">https://zachholman.com/talk/firing-people</a></p>
+<p>是不是听了我读的英文，就觉得我的中文还不是那么差劲啊？外语这个东西，是要下苦功夫练的，我给大家讲个故事，希望我的经验能帮助大家。这是个真实的事情，我在地铁上碰到了两个外国的美女，金发碧眼，在地铁上讲话，我为了能练习听力，就过去听她俩讲话。我听了以后非常的感动，她们两个每个词语我都听懂了，一边听，我脑袋里还在回想语法什么的，感觉没有任何错误，就觉得真是天道酬勤啊。我就问她们：“你们两个的中文讲的这么好，学了多久啊？”其中一个姑娘回答说：“无他，天道酬勤，唯手熟耳！。”另一个姑娘说：“是故聪与敏，可恃而不可恃也；自恃其聪与敏而不学者，自败者也。昏与庸，可限而不可限也；不自限其昏与庸，而力学不倦者，自力者也。”所以，希望大家在学习外语的时候，能向这两位姑娘学习。</p>
+<p>这个人在Github工作了5年，然后CEO让他休假了2个月，休假回来第一天发现，自己被解雇了。这个非常的搞笑是么？这篇文章非常长，我还是建议大家读一下，这篇文章的阅读量可能要超过10万+了，这个国外可真算是一篇爆文。其实我觉得大家应该有点心得，如果有一天，你也不幸被公司解雇了，应该做的事情是扭头就走，其实再多的言语，都没什么用。他这篇文章的讲了很多，我只说一点，当你被解雇以后，说再多的理由也没什么用了，不如体面一点走，否则，只会让自己更难堪！我觉得这个不仅仅可以用在被人解雇的时候，分手的时候也是如此。当年我前前前女友要和我分手，为了能留住这份感情，我当场就跪下了，结果跪下以后，被她飞起一脚正踢中脸！所以，读完这篇文章以后，大家一定要记住，男儿膝下有黄金，千万不能跪，否则被解雇了，还被踹脸！</p>
+<p>还有一件事情，也算闹的比较凶，其实呢，Github这个公司，不算是Git社区的，这个公司和Git社区长期以来不合，Linus老大大概写了一天，这个Git软件就已经可以使用了，写了一周左右的时候，他就不怎么管了，代码是开放的，谁都可以维护，有个日本人叫滨野纯，他是Git软件最主要的维护者之一。Github公司刚开始的时候，有意避开Git社区，Git社区最主要的维护者根本没机会使用Github，而且Github还有意做和Git不兼容的Git版本。大家如果关注IT行业的话，很多伟大的公司都做过类似的事情，比如微软当年获得了Java的授权，但是微软就把Java改一下，增加一些只支持windows的特征。还有Ubuntu和Debian也是如此，Ubuntu虽然基于Debian来做的，但是，就是不理Debian的抗议。所以我觉得无论是做软件也好，做事情也好，自己这边一定要有一个有能力的杠精。这种杠精不能只是嘴硬的那种，还得有能力，因为撕逼起来，气势很重要，像Linus就很有气势。这里的Github自己基于Git软件做了一改动，这两个组织出的git软件的daemon程序你说完全不同吧，他又大部分相同，你说他是一个东西吧，两个daemon又不太一样。在2012年的时候，Github的用户Linus同学在linux这个repo上，发了一个request,我把链接发出来，大家可以点进去看看大神的风采。</p>
+<p><a href="https://github.com/torvalds/linux/pull/17" target="_blank" rel="external">https://github.com/torvalds/linux/pull/17</a></p>
+<p>我大概讲一下这个事情的经过，有人在github上给linux提交代码，linus回答说，不要在这里提交，我不接受github上提交的代码。然后他就解释了为什么他不接受github上提交代码，用一句话来说就是：github做的太差了，我已经向github说明了这个情况，但是github的人不听，我已经放弃了，你们可以给他们提bug了。然后呢，github巨搞笑，他们给Linus发了一份说明书，教他如何使用git，人家git这个软件就是linus写的，你发个说明书告诉作者应该怎么用，这就相当于让鲁迅做他写的文章的阅读理解，最后鲁迅把中心思想选错了一样。</p>
+<p>这个事情虽然看起来搞笑，但是，从侧面也可以说明git社区的git软件和github的git软件有太多不同。这件事就一直发酵，后来发展的实在是有点不像话了，Google公司出面，提供了场地，举行了一个GitTogether的活动，两边的成员都来了，谈了三天，后来两家的关系好像好了很多。至于是不是真好，我也不知道。我可以再分享一个视频，2007年的，我认为所有用版本管理系统的人都应该看看，这是Linus被google请去分享git的使用经验，当时另一个版本管理系统叫CVS的作者也在场，然后Linus又火力全开了，一上来就喷CVS。真是火力全开的那种喷，简直说的CVS没什么优点。再多说一句，我上班的时候，那时候基本上所有的公司都用CVS，我们也是，说实在的，CVS非常的简单，比起git来，简单的不是一星半点。只是后来越来越多的项目用git了，我们公司也就开始用git了，我也只好用git了，感觉git也还不错，反正打工，公司让用啥用啥，我们在github也有收费的账户，公司买的，我也就适应了。这个视频在YouTube上，请搜索Tech Talk- Linus Torvalds on git。干货是这个视频，希望大家能看看。</p>
+<p>github公司还出过一个不大不小的事情，从语言上来说，github是ruby阵营的，github整个网站是使用的Ruby on Rails这个框架做的，我正在录Ruby on Rails的视频，现在还没有录好，录好以后我会通知大家。在Ruby语言界，有个人比较特殊，名气也比较大，是个变性人，他的名字叫Coraline Ada Ehmke，他在Github工作了一年，他写了一篇文章来说Github里的工作环境，感觉不是很开放的文化。说到变性人，我又想起了另一个变性人，是写Perl语言的，我刚工作的第一年，写了一年多Perl，台湾有个人叫唐宗汉，他是Perl 6的主要开发者之一，后来他了变性，改了名字，由唐宗汉改成了唐凤。他是我知道的最早尝试中文编程的人之一，他把Perl的指令改成了汉字，大家如果对文言精通的话，可以用文言文编程了。我个人觉得并无必要用中文编程。这个叫Coraline的程序员写的文章我也贴在这里，<a href="https://where.coraline.codes/blog/my-year-at-github有兴趣的人可以去看看。这个故事看起来很夸张，写代码还有这么多政治在里面，最后惊动了公司的副总。" target="_blank" rel="external">https://where.coraline.codes/blog/my-year-at-github有兴趣的人可以去看看。这个故事看起来很夸张，写代码还有这么多政治在里面，最后惊动了公司的副总。</a></p>
+<p>我讲的这几个故事，只是说明一下Git和Github的曾经发生的一些事情，因为Github被微软收购以后，不管是媒体也好，还是公众号也好，发了非常多的文章。这些文章一部分的关注点是微软的战略，解释为什么微软要收购Github。其实这种文章几乎没什么价值，我认为微软公司的基因里做不好收购这些事，微软的收购几乎全是收购完成，被收购的公司就半死不活了。最近的案例是微软收购了Nokia，Nokia挂了。再远一点的例子是微软收购了Minecraft这个游戏，这个游戏一下子不怎么更新了。还有再早一点是微软收购了Skype，结果这个那么火的社交软件，已经风光不再了。</p>
+<p>还有一部分文章的着眼点是正能量，什么这个公司的三个创始人如何苦，如何度过了多少个不眠之夜，然后赚到了多少钱，最后总结出成功人士的几个优点，其实这种文章最受欢迎了，什么从github被收购我们学到了什么？其实我想说的是，这三个人，在创办github之前本来就很有钱的好不好？github的创始人之一在29岁的那一年，他所在的公司也被微软收购了，他分到了一笔钱，这笔钱具体有多少我们不知道，但是我能肯定的是，有了这笔钱，让30万美元看起来不是什么钱。在微软收购他原来的公司的时候，除了工资，额外给他30万美元。然后他没有接受这个条件，不去微软工作了。</p>
+<p>然后他就写了一个叫Grit的小项目，在小酒吧里展示给陌生人看，结果那人家伙很兴奋，两个人就一起做这个项目。两个人就在晚上用Ruby on Rails写代码，写了大概3个多月，网站开始上线了。期间并不怎么痛苦，没有996加班，没有天天吃泡面，反而是经常吃点好的，什么日本料理，越南春卷，这个故事不是我编的，而是Github的创始人在完全没有出名的时候写的，当时还是2008年，那时候Github刚刚出来，神仙也不可能知道10年后会让微软收购。不过这一期的时间到了，下一次我给大家讲讲2008年的故事，当是Github刚出来，没有风投，也没有报道，更没有人想试用这个工具。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/01/156/" rel="next" title="156. 做电台两周年学到的一些经验">
+                <i class="fa fa-chevron-left"></i> 156. 做电台两周年学到的一些经验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
