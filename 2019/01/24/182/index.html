@@ -1,0 +1,732 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="https://lmzdx.com/2018/12/17/182-php语言的历史故事/ PHP是最好的语言，这几乎是每个程序员都知道的真理。虽然绝大部分人都认为这是一句玩笑话，如果你了解一下PHP的历史的话，也许会觉得这句话并不是那么的开玩笑，起码会让你笑的和以前会有点不一样。 在Web领域，PHP是没任何争议的王者，有各种各样的市场份额报告出来，而且各家的倾向不同，但是还没有一家好意思把PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="182. PHP语言的历史故事">
+<meta property="og:url" content="http://yoursite.com/2019/01/24/182/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="https://lmzdx.com/2018/12/17/182-php语言的历史故事/ PHP是最好的语言，这几乎是每个程序员都知道的真理。虽然绝大部分人都认为这是一句玩笑话，如果你了解一下PHP的历史的话，也许会觉得这句话并不是那么的开玩笑，起码会让你笑的和以前会有点不一样。 在Web领域，PHP是没任何争议的王者，有各种各样的市场份额报告出来，而且各家的倾向不同，但是还没有一家好意思把PHP">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-24T01:28:57.993Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="182. PHP语言的历史故事">
+<meta name="twitter:description" content="https://lmzdx.com/2018/12/17/182-php语言的历史故事/ PHP是最好的语言，这几乎是每个程序员都知道的真理。虽然绝大部分人都认为这是一句玩笑话，如果你了解一下PHP的历史的话，也许会觉得这句话并不是那么的开玩笑，起码会让你笑的和以前会有点不一样。 在Web领域，PHP是没任何争议的王者，有各种各样的市场份额报告出来，而且各家的倾向不同，但是还没有一家好意思把PHP">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/24/182/"/>
+
+
+
+
+
+  <title> 182. PHP语言的历史故事 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/24/182/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                182. PHP语言的历史故事
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-24T09:28:23+08:00">
+                2019-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://lmzdx.com/2018/12/17/182-php语言的历史故事/" target="_blank" rel="external">https://lmzdx.com/2018/12/17/182-php语言的历史故事/</a></p>
+<p>PHP是最好的语言，这几乎是每个程序员都知道的真理。虽然绝大部分人都认为这是一句玩笑话，如果你了解一下PHP的历史的话，也许会觉得这句话并不是那么的开玩笑，起码会让你笑的和以前会有点不一样。</p>
+<p>在Web领域，PHP是没任何争议的王者，有各种各样的市场份额报告出来，而且各家的倾向不同，但是还没有一家好意思把PHP的市场份额写到70%以下，基本上，都是在70%到85%之间。Java和Python这两个语言，看写报告的媒体喜欢的角度，基本上，Java是Python的两倍左右，Java可能在8%，Python在4%。像我喜欢用的Ruby on Rails大概在1.5%左右。</p>
+<p>最有影响力的几个网站，比如说Wikipedia，Facebook和Wordpress这三家都是用PHP写的。当然了，这三家网站都没法在中国正常的访问，与PHP的关系不大。</p>
+<p>PHP是几个单词的缩写，比如中国认为是Pai Huang Pian的缩写，实际上不是。国外比较认可的有Hypertext PreProcessor，这是一个递归的名字，和GNU是一样的。其实它最初的名字并不是这个，而是Personal Home Page tools，这是它最初的名字，是在1994年的时候取的名字。</p>
+<p>在1994年的时候，一个叫拉斯马斯·勒德尔夫（Rasmus Lerdorf）的家伙，刚从加拿大的著名大学滑铁卢大学毕业，想在网上发布自己的简历，但是在当时并没有特别好的工具能统计自己的简历有没有人看到过，或者被谁看到过，看了几次。这个出生在丹麦，后来移民加拿大的年轻人在找了一圈发现没有什么好工具以后，就自己做了一个小软件，用来统计多少人访问了他的简历，这个工具的名字就叫Personal Home Page tools。都是解决个人网站的一些问题。</p>
+<p>随后在1995年6月15日的时候，拉斯马斯·勒德尔夫就把这个网站发布在网上了，开源的，这个PHP语言算是1.0版本，然后就有零星的人开始使用，但是用户不多，开发者就是主要是他自己，一直到1997年12月1日，PHP 2.0发布，开发者主要还是他自己，用户并没有出现大量的增长。在发布完成2.0以后，拉斯马斯这个家伙的兴趣就变了，他并没有再介入PHP的开发，起码没有以前那么上心了，开源的好处就是，You can you up, no can no bb。在此时又出现了另外的人接手了PHP的开发。</p>
+<p>拉斯马斯这个家伙在采访中说，他比较有控制的欲望，当时他做这个时候，根本就没打算，也没想到PHP会这么有影响力，所以当有人提交一些代码的时候，他心里并不是特别情愿，他觉得别人写的代码不如他写的好。因为这个原因，当别人写代码给他，他就重新写成他喜欢的样子，才加入到PHP的代码里，结果搞的他也不爽，提交代码的人也不爽。后来愿意提交代码的人越来越多，他知道不能这么有洁癖，这样会搞的所有人都不开心，他就开始学的放权，有人提交代码，只要差不多，他就说OK，与所有提交代码的人来平等的讨论问题。</p>
+<p>我觉得这个转变没几个人能做到，认识到自己能力不足，并且愿意接受别人的意见，下放权力，可能是这个世界上最难的事情。大部分人都是陶醉在自己特别NB的泡泡中，不愿意面对现实。如果再有一些人拍拍马屁，就像皇帝的新装里的皇帝一样，真敢光着屁股到处转悠。但是PHP的作者没有这样，他意识到了自己的缺点，并且勇于承认自己有些地方搞不定。当时PHP 1和PHP 2有个巨大的缺点是速度太慢了，但是他的能力不足以搞定。而且和大部分语言的创始人不一样，拉斯马斯一点也不喜欢编程，当时PHP有内存泄露的情况，会让Apache一会儿就不能运行了，他给出的一个解决方法是，写个脚本，让apache几分钟重启一次就好。幸好，有人能解决这个问题，并且愿意解决这个问题。</p>
+<p>以色列的两个大学毕业生，来自著名的自以色列海法理工学院，据说这个大学号称以色列的麻省理工，这个大学里光诺贝尔奖就出了几十个，应该比较历害。这两个学生一个名字叫Zeev，一个叫Andi，这两个家伙也喜欢用PHP语言，并且编程的水平非常的高，PHP的作者搞不定的问题，他们两个都能搞定，所以从PHP 3开始，PHP的主导权就开始由这两个家伙掌握了，并且这两个家伙还建了一个公司，专门搞PHP，公司的名字就是两个人的名字的组合，叫Zend，这个Zend也是他们在1999年开发的新的PHP的引擎，叫Zend Engine。</p>
+<p>PHP 3.0是在1998年6月6日发布的，PHP 4.0是在2000年5月22日发布的。从这两个版本，开始，PHP越来越好用了，占领的份额也开始越来越多。可以说，这个Zend Engine可谓是功不可没。</p>
+<p>Zend引擎其实是个虚拟机，PHP代码会先翻译成Zend虚拟机认识的中间代码，然后这些代码再运行以后，会生成HTML文件然后再发送给用户。这个引擎是开源的，一直到PHP 5这个语言都是使用这个引擎。在推广PHP的过程中，这个zend公司和zend引擎确实发挥了巨大的作用，这个公司也算是真中流砥柱。</p>
+<p>在1998年的时候，全球当时大概有60万个网站，有接近1%的网站用的是PHP。等到2004年，Zend大量的使用以后，在短短的6年期间，已经有40%多的网站使用PHP了。还是那句话，历史是英雄创造的，这个时候，又出现了一个英雄，使用PHP开发wordpress的matt出现了。</p>
+<p>这个matt也是PHP的代码提供者，他喜欢用PHP开发软件，这个matt在美国的休斯顿大学学政治学，但是很快他就退学了，在CNET找了个工作。业余时间他喜欢写软件，当时他还是个大学生，19岁，他在2003年的1月份做了一个个人网站，使用的是一个叫b2/cafelog的软件，这个软件就是用PHP做的，很不幸的是，这个软件不更新了，他已经有了一些读者群，bug很多，他就想自己搞了。</p>
+<p>因为这个b2软件是GPL协议的，他开始fork了这些代码，基于这些代码开始开发，期间他收到了第一个人，叫Mike Little，他也是wordpress的联合创始人。前几个月，这两个人都是在清理b2的代码，试图让这些代码更清晰一点。在2003年5月23日的时候，他们发布了wordpress的0.7版本。</p>
+<p>在2015年的时候，Matt写了一个回忆的文章，叫Ten Years of Automattic。</p>
+<p>这个故事也许以后可以单独讲一下，现在wordpress是世界第一的CMS软件，现在有25%的网站是用wordpress来做的，在2016年的时候，官方说有至少300个CMS系统，60%的人选择使用的是wordpress。</p>
+<p>但是，这个总有抬杠的地方，比如说PHP是世界上最好的语言，总有各种文章出来说PHP是多么的垃圾。如果想看说PHP是垃圾的文章，可以看到退休也看不完。因为PHP语言本来只是解决一个问题，这个语言的产生，不是为了说明一种思想，而最初仅仅是为了统计自己的简历被多少人看过，是一个面向问题产生的语言。很多的现代语言的特征都是后来加入到PHP中的，比如面向对象。PHP语言可以说是到处充满了随意设计出来的语言，比如PHP语言设计的数组和字典都非常的不合常规，但是我觉得PHP有一个其它几乎所有语言都没有的优点：方便。</p>
+<p>所有技术的趋势是越来越向普通人开放，在很久以前，你如果不是美国大学的科班出身，根本不要想编程，但是后来越来越多的人都能写程序了，我就是在这个浪潮中才能当程序员的。在几次浪潮中，比如说编译器的引入，让大量不能写汇编的也能写C语言了，当时会汇编的人是有点瞧不上用编译器的人的，现在几乎所有人都用编译器了。PHP正好赶上了这样一波浪潮，很多人有在网上建个网站的需求，如果这时候你告诉他，你想建个网站，最好先掌握面向对象编程，如果想更深入的话，可以学习一个函数式编程，这会让大部分人放弃建个网站的。</p>
+<p>到现在为止，没有哪个语言比PHP更容易部署网站，在这个世界上，并不是每个人都喜欢编程的，就是PHP的作者就不喜欢编程，他说比编程好玩的事情多了去了，为什么要浪费那么多时间去学习编程？正是这种怎么方便怎么来的理念，让PHP极其容易写，也极其容易部署，每家网站几乎不用任何配置，就可以让网站上线了。其它的比如说我录的Ruby on Rails，还是Python写的网站，还是Java写的网站，都要至少搞两三个小时，但是PHP，2-3分钟就差不多了。</p>
+<p>说实在的，虽然现在我不怎么写PHP了，但是，我还真的挺喜欢这个语言的，可能和我把编程当成是一种吃饭的工具，而不是一种信仰有关系吧。我不介入编程语言的争论，毕竟一个项目能不能成功，我认为和编程语言的关系，几乎没有吧。就连经常分析编程语言优劣的著名投资人paul graham在回复如果一家公司用PHP，你还会投资么？他说，一家初创公司让人头痛的地方有很多，至于用什么编程语言，这都不是让人头痛的问题，做什么业务才是唯一需要头痛的问题。</p>
+<p>我们总是喜欢拿两个东西来比较，哪一种语言或者哪一种框架历害，其实并不意味着用这个语言或者框架的项目历害。甚至，毫无关系，一种米养百种人。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/24/181/" rel="next" title="181. VisiCalc(2)：生于忧患，死于安乐">
+                <i class="fa fa-chevron-left"></i> 181. VisiCalc(2)：生于忧患，死于安乐
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/24/183/" rel="prev" title="183. MP3格式和数字音乐的发展历史（1）">
+                183. MP3格式和数字音乐的发展历史（1） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">96</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,724 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="https://lmzdx.com/2018/12/10/181-visicalc2：生于忧患，死于安乐/ 再接着讲一讲VisiCalc电子表格的事情，上一期讲到Dan Bricklin从他的师兄或者师弟那里借来了一台Apple II电脑，于是他花了一个周末就写了个BASIC程序，原文就是一个周末，我们普通人一个周末可能就是发发呆，牛人一个周末就能写个Demo程序出来。相关的例子是以前我讲过的在微">
+<meta property="og:type" content="article">
+<meta property="og:title" content="181. VisiCalc(2)：生于忧患，死于安乐">
+<meta property="og:url" content="http://yoursite.com/2019/01/24/181/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="https://lmzdx.com/2018/12/10/181-visicalc2：生于忧患，死于安乐/ 再接着讲一讲VisiCalc电子表格的事情，上一期讲到Dan Bricklin从他的师兄或者师弟那里借来了一台Apple II电脑，于是他花了一个周末就写了个BASIC程序，原文就是一个周末，我们普通人一个周末可能就是发发呆，牛人一个周末就能写个Demo程序出来。相关的例子是以前我讲过的在微">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-24T01:28:12.880Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="181. VisiCalc(2)：生于忧患，死于安乐">
+<meta name="twitter:description" content="https://lmzdx.com/2018/12/10/181-visicalc2：生于忧患，死于安乐/ 再接着讲一讲VisiCalc电子表格的事情，上一期讲到Dan Bricklin从他的师兄或者师弟那里借来了一台Apple II电脑，于是他花了一个周末就写了个BASIC程序，原文就是一个周末，我们普通人一个周末可能就是发发呆，牛人一个周末就能写个Demo程序出来。相关的例子是以前我讲过的在微">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/24/181/"/>
+
+
+
+
+
+  <title> 181. VisiCalc(2)：生于忧患，死于安乐 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/24/181/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                181. VisiCalc(2)：生于忧患，死于安乐
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-24T09:27:38+08:00">
+                2019-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://lmzdx.com/2018/12/10/181-visicalc2：生于忧患，死于安乐/" target="_blank" rel="external">https://lmzdx.com/2018/12/10/181-visicalc2：生于忧患，死于安乐/</a></p>
+<p>再接着讲一讲VisiCalc电子表格的事情，上一期讲到Dan Bricklin从他的师兄或者师弟那里借来了一台Apple II电脑，于是他花了一个周末就写了个BASIC程序，原文就是一个周末，我们普通人一个周末可能就是发发呆，牛人一个周末就能写个Demo程序出来。相关的例子是以前我讲过的在微软开发Windows 2000内核的卡特勒，他用了一周时间就做出了一个可运行的windows 2000内核，我在这个电台的第55期的时候讲过一些这个人的故事，喜欢骂人，喜欢怼人，最经典的语录是：谁TMD不能在一周内开发出一个操作系统？所以，大家不要太怀疑本文的作者，他说一个周末，可能真的就用了一个周末，毕竟他已经在其它的平台上开发过这个软件了，这次应该是类似于移植。</p>
+<p>在访谈中，他详细的介绍了一些设计的细节，比如说没有鼠标，如何才能定位电子表格，他用了一个游戏的操控杆，这个操控杆只能要么是横向移动，要么是纵向移动，切换的时候，按一下操控杆上的开火键，这样就能移动了。但是后来这样还是太慢了，他又给这个操控杆写驱动程序，发现在Basic语言上，还是不够快。所以从他的描述上来看，这个家伙啥都能干，又能玩游戏，又能写软件，连游戏操控杆的驱动程序都能写，全才。后来他没有使用操控杆，但是也没有鼠标给他测试，当时的鼠标才刚刚发明，太贵了，一般的电脑上没有鼠标，他就开始只用键盘，Apple II电脑上有两个方向键，然后他把空格键的功能映射成操控杆上的开火键。在经过了多次修改以后，总算是拿出了一个可以展示的版本。</p>
+<p>于是他就拿着这个版本的软件向他哈佛的同学展示，刚开始的时候，每次运算大概要20秒钟，其中的10秒是用来发出响声，这个响声是一种提示用户，电脑正在工作，所以很慢，但是没有响声的话，用户干等会非常的的烦。同学们非常的开心，这个软件很有用处，其中有个同学叫约翰•里斯，提出了最多的改进意见，当然，这些改进意见非常的重要，改进的过程也非常的漫长，期间Dan Bricklin买了自己的苹果电脑，改进了快两年时间，在这两年里，他所有的同学，还有商学院的所有老师都成了他的第一批用户。后来商学院的教授干脆就用他的软件来出考试题目，这会很快的就出成绩。这让其它学院的老师很有兴趣，也开始采用Dan Bricklin的软件。当时的电脑大部分都没有软盘，性能也非常的差，只有16k字节的内存，当时他要花大量的时间优化软件，让软件尽可能的小。</p>
+<p>在期间，他认识了一个朋友，主要是和他一起编程的同学，叫弗兰克斯顿，他们两个写软件，那个借给他Apple II电脑的哥们，他和他的老婆有一个公司叫Personal Software，先前主要是销售棋类游戏的，现在也来卖这个VisiCalc软件。因此这三个人算是合作伙伴的关系，这个Personal Software是他们的软件发行商。当时写软件的情况和今天有些不同，并不是每个人都有Apple II电脑，并且Apple II电脑是个人电脑，用作开发机不好用，太慢了，他当时采用的方法其实每个人2000年左右的孩子都采用过，就是去网吧上网，租一台机器。当然他租的只是不是网吧，而是哈佛大学里一台性能比较好的大型机，每次租从晚上11点开始到早晨上班的这段时间，这段时间人资费是最便宜的，其实我们上大学的时候也是如此，晚上去上网，大概是10块钱一晚上，正常时间上网，可能是2.5或者2块一小时这样。区别就是我上网只是为了玩游戏，他们上网上为了开创一个事业。</p>
+<p>就这样，他们几个人在大型机上开发软件，调试好了以后，再在苹果电脑上运行。苹果电脑公司知道了这个产品以后，觉得非常的好用，就打算在产品完成以后推广。这几个哥们并不是高枕无忧的，在访谈中说，哈佛的这些老师同学都知道这个软件，苹果公司知道这个软件，还有签了保密协议的Atari也看过这个软件，但是，他们不知道当时的巨头，德州仪器是不是知道他们的软件，他们最害怕的事情是德州仪器知道了以后，直接把他们的想法copy一份，或者微创新一份出来。后来看起来这个是多虑了，这个软件上市以后，并没有太大的反响，没人意识到这是个创新的东西，可能大部分人都不太计算什么东西，毕竟能上哈佛的才几个人啊，上哈佛商学院的就更少了，哈佛商学院喜欢，并不意味着所有人喜欢。</p>
+<p>他们就开始联系杂志做测评，人家根本不理会，后来找了一个朋友关系的，在BYTE上写了一小段测评，这个BYTE杂志的人是其中那个借Apple II电脑的家伙的朋友，在他的婚礼上当伴郎，通过这层关系，他们才能写测评，结果这个哥们又没好好用，写的测评是他们没实现的正弦和余弦，他们只能赶紧花了大量的时间来实现这个功能。虽然他们两个人没能一下子走红，但是他们还是决定进入这一行了，毕竟给人打工也不是长久之际，而且自己已经打了5年工了，早就烦了。</p>
+<p>这个时候有房子的好处就显示出来了，Dan Bricklin有几套房子，其中有一套他不住，就卖了一套，拿了一笔钱，买了一台分时系统的电脑，算是一台小型机了，两个人就算正式的加入了商业领域。他们对自己在软件有信心，但是对如何卖这些软件还没有什么好的经验。于是，Personal Software这个公司做了大量的工作，在各种会议上找人做展示，反正经验么，总要慢慢学，要知道各种各样的机器，哪一种机器卖的最多，就做移植。不可能是只有一个版本的软件，为了用这个软件，还要让人再去买一台电脑，后来这个软件就移植到了TRS-80这个机器上，这个机器在当时非常重要，是销量第二高的机器。然后他们又招了一个家伙，专门做移植的工作。因为他们已经买了一台分时系统，所以，要移植的话，要先在这个机器上做一套模拟器程序，这个程序非常不错，可以写一次代码，生成几个机器的版本，一直到IBM的微机出现，这套程序运行的还是不错。</p>
+<p>在IBM要推出微机的时候，他们和IBM合作，但是IBM非常的严格，除非这个软件运行的非常流畅，否则不可能同步推出这个产品。于是，这两个人的公司，还有Personal Software，还有IBM后来达成了一个三方协议。随着IBM推出的微机，也就今天的电脑的祖宗，这个软件卖的越来越多，第一年就卖出了10万份，因此赚到的钱也就越来越多。</p>
+<p>在中国有句话叫“有福同享，有难同当。”尤其是在电影里，或者小说里，比如三国演义里，或者金瓶梅里都有这样的话。但是，要真正做到是非常困难的，有难同当这个可能相对比较简单，有福同享就难了。在ViciCalc卖的很火以后，Personal Software和他们两兄弟发生了官司，最终没有让这个软件继续火下去，在官司的打击下，Lotus 1-2-3上市以后，终结了这个软件和他们的公司。至于官司为什么会发生，现在也没必要去追究了，这肯定是一个谁都觉得自己有道理的事情，谁说都是自己有理。</p>
+<p>有福同享，有难同当，不止在中国难以做到，看来在外国也难以做到。我仔细想了几分钟，可能做到这一点的为数不多的人是刘备，也是我的祖先。同期的其它两位，一位是曹操，当然了曹操个人非常有才华，但是如果想和他有福同享，难度很大，比如可能因为派系斗争像崔琰和杨修一样被砍了，或者因为你立场不坚定，像于禁一样死掉，或者像荀彧那样被逼着自杀。再来看看江东集团的孙权，像陆逊啊，张昭啊，也没法和主公有福同享，都是被冷落死的。</p>
+<p>有福同享的，刘备做的真的不错。比如你投降了，像黄权一样，刘备不计较这事。人死了，像关羽那样，还会替你报仇。家人犯错误了，更是不用担心，像糜竺他弟弟出了事，刘备说：该吃吃、该喝喝、有事别往心里搁。泡泡澡、看看表、舒服一秒是一秒。根本就不在乎。所以，刘备可以说是称帝后，没有收拾老部下的唯一的人。</p>
+<p>然后，这个第一个电子表格的事情就这样了，至于本文的主人公，Dan Bricklin在网上还是挺的活跃。要不然我也找不到他的资料，后来他又成立了自己的公司，好像还做了iPad上的软件什么的，他有自己的网站，名字叫Software Garden,有很多的访谈，而且他还有podcast，名字叫Dan Bricklin’s Software Licensing Podcast。</p>
+<p>这些资料我都放在telegram的一个channel上，<a href="http://t.me/lmzdxcom，当然我也建了一个电报群，但是发广告的实在是太多了。" target="_blank" rel="external">http://t.me/lmzdxcom，当然我也建了一个电报群，但是发广告的实在是太多了。</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/24/180/" rel="next" title="180. 电子表格(比如Excel)的起源：VisiCalc">
+                <i class="fa fa-chevron-left"></i> 180. 电子表格(比如Excel)的起源：VisiCalc
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/24/182/" rel="prev" title="182. PHP语言的历史故事">
+                182. PHP语言的历史故事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">96</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
