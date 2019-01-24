@@ -1,0 +1,729 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="https://lmzdx.com/2018/09/26/171-理想主义是不是开源成功的关键？/ 我在电台里讲了不少有关开源的，商业的软件故事，虽然听众不多，公众号大概每期只有1000来次阅读，但是，还是有一些留言，包括加我个人微信的，会和人讨论一下开源的问题，因为源代码开放不管从哪个角度来说，都是比较有理想主义精神的。尤其是说到这些人光干活，不收钱，怎么都觉得像共产主义一样。 其实这个说法是错">
+<meta property="og:type" content="article">
+<meta property="og:title" content="171. 理想主义是不是开源成功的关键？">
+<meta property="og:url" content="http://yoursite.com/2019/01/24/171/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="https://lmzdx.com/2018/09/26/171-理想主义是不是开源成功的关键？/ 我在电台里讲了不少有关开源的，商业的软件故事，虽然听众不多，公众号大概每期只有1000来次阅读，但是，还是有一些留言，包括加我个人微信的，会和人讨论一下开源的问题，因为源代码开放不管从哪个角度来说，都是比较有理想主义精神的。尤其是说到这些人光干活，不收钱，怎么都觉得像共产主义一样。 其实这个说法是错">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-24T01:11:38.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="171. 理想主义是不是开源成功的关键？">
+<meta name="twitter:description" content="https://lmzdx.com/2018/09/26/171-理想主义是不是开源成功的关键？/ 我在电台里讲了不少有关开源的，商业的软件故事，虽然听众不多，公众号大概每期只有1000来次阅读，但是，还是有一些留言，包括加我个人微信的，会和人讨论一下开源的问题，因为源代码开放不管从哪个角度来说，都是比较有理想主义精神的。尤其是说到这些人光干活，不收钱，怎么都觉得像共产主义一样。 其实这个说法是错">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/24/171/"/>
+
+
+
+
+
+  <title> 171. 理想主义是不是开源成功的关键？ | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/24/171/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                171. 理想主义是不是开源成功的关键？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-24T09:11:02+08:00">
+                2019-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://lmzdx.com/2018/09/26/171-理想主义是不是开源成功的关键？/" target="_blank" rel="external">https://lmzdx.com/2018/09/26/171-理想主义是不是开源成功的关键？/</a></p>
+<p>我在电台里讲了不少有关开源的，商业的软件故事，虽然听众不多，公众号大概每期只有1000来次阅读，但是，还是有一些留言，包括加我个人微信的，会和人讨论一下开源的问题，因为源代码开放不管从哪个角度来说，都是比较有理想主义精神的。尤其是说到这些人光干活，不收钱，怎么都觉得像共产主义一样。</p>
+<p>其实这个说法是错误的，虽然看起来很美好，开源发展到今天，可以说至少有90%的代码都是商业公司提供的，像Linux的源代码，基本上都是Intel，AMD，Redhat还有IBM这些公司提供的，早在10年前，大概是2009年左右，微软公司就已经开始向Linux提供源代码了，提交了不少驱动程序，这在当时还算是一件不大不小的事情。</p>
+<p>因为开源软件有很多，不仅仅是Linux，但是Linux最出名，所以，我就拿Linux来说一下，其它的出名软件大体上类似。按照2016年的统计，各大厂商提供的Linux源代码比例如下：Intel (12.9 percent), Red Hat (8 percent), Linaro (4 percent), Samsung (3.9 percent), SUSE (3.2 percent), and IBM (2.7 percent)。其中可能大家对Linaro公司不熟悉，这个公司是ARM公司提议组建的，可以说是目前来说最有钱投入到开源的公司之一了，经常看到这个公司到处撒钱到一些开源的会议上。当然，这个撒的钱可不是搜刮的民脂民膏，是收的会员费，这种撒钱的行为是非常值得表扬的。</p>
+<p>开源这个事，和美国建国是一样的。我个人认为宣传是一回事，真实的情况又是另外一回事。因为媒体不要传播这种事情，如果写的开源内部不合，那肯定就没人看了，也不会吸引眼球。就好像美国建国一样，写的好像是美国的这些国父，去费城开了个会，发了个宣言，美国就搞定了。在宣传Linux上，也是这样，一个年轻人，觉得这个世界上缺少一个操作系统，自己在上学的时候，做了一个出来，这个人叫Linus，这样在宣传上会比较好，但是，实际情况绝对不是这样的。</p>
+<p>我们现在基本都认同，美国建国是一群理想主义者搞的，就像我们都认同Linux这些开源也是一群理想主义者，对商业公司不爽了，做了一个软件就成功了，这其实是一种宣传策略，实际情况根本不是那么回事儿。</p>
+<p>华盛顿们带领大陆军和英国打，这都是脑袋放在裤腰带上的创业，上了战场，子弹又不长眼。当然了，华盛顿，麦迪逊，汉密尔顿这些人，肯定是理想主义者。以现在的眼光来看，现在卖个手机，做个软件，研发个协同软件都号称是理想主义者了，那华盛顿，麦迪逊还有许多不知名的，光着脚丫和英国打架的人，肯定算理想主义他爷爷！你可以建公司，你敢建国么？</p>
+<p>但是，就算是华盛顿他们这么有理想的人，期间因为工资发不出来，大陆军发生了至少两次兵变。华盛顿写信求援的时候这样写：我们生病的士兵赤身裸体，健康的士兵赤身裸体，被英国人俘虏的士兵也赤身裸体。非常的可怜，但是，这些信寄到大陆会议那里，有什么用么？没任何用处，因为独立的那13个州也是理想主义者，他们和这些士兵一样，并不是想让美国独立，而是想分点钱，就算你华盛顿的军队失败了，那也是以后的事情，现在有钱，自己花了多好。然后，幸好华盛顿家里有钱，自己掏钱发了一部分军饷。当然，这样的事情，一般是不宣传的。</p>
+<p>同样的事情，也发生在开源软件身上。这个开源软件就是现在大名鼎鼎的Apache软件。Apache软件本来是有美国国家超级计算机中心做的，当时是1990年代，互联网还没有流行，华尔街还不知道这是个什么东西，浏览器战争还要几年后才能打响。但是，这时候已经有了大概150人在做这个东西，当然是赚不到钱的。怎么办呢？美国不像其它国家，赚不到钱的人谁会白白的养着你，就说，你们要么走，要么去做其它的事情，这个项目我是不打算给钱了。</p>
+<p>于是这150人的小组，大部分胆小的人就留在美国国家超级计算机中心了，因为这孬好是个铁饭碗，不做这个项目，做其它项目就是了。还有一小部分人，可能家里有矿啊还是啥的，觉得这个有意思，此处不留爷，自有留爷处，这部分人合计了一下，搞个商业公司吧，超级计算机中心不给钱了，咱们自己赚自己花。还有极个别脑子特别轴的，说，不行，不能收费，我们之前不是说好了么，一直免费共享下去么。好了，理念不合，从美国国家超级计算机中心出来的这一小部分人又分成了两伙，一伙去开了个公司，就是以后生的伟大，死的光荣的网景公司。还剩下了8个人，一根筋，做出了现在广泛被使用的Apache软件。</p>
+<p>那是不是这8个人是理想主义者呢，我认为是的，但是这个Apache软件团队，有一个华盛顿一样的人物，华盛顿不仅有理想主义，还会打仗。这个人叫布莱恩贝伦多夫，不仅会写软件，还有商业头脑。他仔细的分析了一下，觉得Apache虽然不快，bug也多，但是，对手都是商业公司，最好的方法是挑逗起他们互相之间的战争，自己有一线生机。</p>
+<p>这和华盛顿一样，要打赢一场战争，自己的军队是草台班子的情况下，去硬打是不行的。但是，要知道，虽然自己硬打打不赢英国，但是英国自己也打不赢法国，于是富兰克林到处去法国演讲，把法国人忽悠进来了。这其实也是Apache的策略。Apache以前的名字不叫Apache，而是叫NCSA HTTPd Server，只是这个软件的bug太多了，每次出现了bug就打个补丁，pache，所以后来大家都嘲笑这个软件就是个补丁，于是，改成了名字叫Apache，直接叫补丁算了。</p>
+<p>布莱恩贝伦多夫是个商业上的天才，他在很早就指出了，如果开源软件要取得胜利，一定要将理想主义和商业战术联合起来，开源太激进了，会让商业公司感到害怕，他仔细的分析了当时开源的情况，觉得Richard Stallman和Linus就像是宗教中的教皇，但是，只有教皇的宗教是没有前途的，还需要有红衣主教。</p>
+<p>其实在最初的时候，开源软件的名字是叫Free Software，但是这个Free有两层意思，一个意思是免费的，还有一个意思是自由的。对普通人来说，容易造成认知上的困难。所以，在这些商业策略的纠正之下，Free Software这个词语被改变了，改变成了OpenSource，就是我们现在所说的开源。当然，这个事情惹怒了一个教皇，就是Richard Stallman，他不允许叫这个名字，所以有他的聚会上，不能出现OpenSource这个词语。</p>
+<p>有了OpenSource这个词语以后，Free就不太在媒体上宣传，Richard Stallman所发起的Free Software运动就被宣传的少了，商业公司也就对Free不那么反感了。因为一说Free，总感觉让商业公司赚不到什么钱的样子。</p>
+<p>在开源界的另一个教皇Linus对叫什么名字根本不关心，他不在乎叫Free Software还是Open Software。随便叫什么都行。这个商业策略目前看起来还是有效的，因为这不但改变了软件业界的交易条款，还向最大的几个软件商发起了挑战，以现在的眼光来看，越来越多的软件都是直接开放源代码，然后提供服务来收费的。</p>
+<p>开源软件到底能走多远，这个实际上是个未知数，但是就今天2018年的情况来看，还是比较乐观的，因为大部分的商业公司已经不再视开源为洪水猛兽。就像我上面所讲的Linux的源代码，绝大部分是由商业公司提供的。</p>
+<p>在我刚刚上大学的时候，大概是2001年，那个时候，开源软件被围剿的非常历害，在2001年曾经发生了一件很重大的事情。</p>
+<p>在2000年左右的时候，微软公司对整个开源界发起了围剿，那时候，大量的媒体都在说开源为什么不好，bug多，性能差，没有售后服务什么的。其实媒体就这样，只要给钱，什么文章都发。那时候也确实有这方面的问题，当时Linux设计的确实有点问题，尤其是桌面，确实不好看，这时候，是苹果公司雪中送碳，苹果公司的Macintosh团队成立了一个开源的团队，专门帮助Linux开发桌面，我们现在看到的Gnome桌面，就是Macintosh团队设计的成果，虽然现在已经有了巨大的变化，但是，大家如果对比一下KDE和Gnome两个桌面的话，就可以看到KDE是模仿Windows多一些，Gnome模仿苹果多一些。</p>
+<p>原因就是Gnome这个桌面，曾经是苹果的团队做的过设计。当时苹果的股东不同意为Linux花这些钱，因此，这个叫Eazel的公司就关门了。当时给Gnome设计界面的安迪赫兹菲尔德（Andy Hertzfeld）非常的伤心，他觉得当时有一个观点是错误的，当时人们普遍认为，开源软件做不出一流的软件，他认为开源不仅仅能做出一流的软件，而且能做出比商业软件更好的软件。</p>
+<p>在苹果的股东不同意继续给Linux做软件以后，苹果没办法，只好关闭了这个公司，这个公司的大部分人，最后都去了苹果的Safari部门。可能是因为这个部门曾经参于过Linux的开发，有开源的基因，因此，Safari都把能开源的都开源了，比如开放了Safari这个浏览器的内核WebKit，Google基于WebKit做出了Chrome，然后红芯浏览器基于Google Chrome做出了国产浏览器。</p>
+<p>开源会走向哪里我也不知道，但是，有一点我敢肯定，原来的Free Software太激进了，肯定是走不通的，动不动就让人家没钱赚，一下子就共产了，我觉得这是致命的自负。</p>
+<p>开源的成功，应该是理想主义，软件工程技术和商业策略成功的结合，仅仅靠理想主义，是走不到现在这个局面的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/24/170/" rel="next" title="170. 政商手机的王者：黑莓手机(5)：黑莓手机是麦当娜离婚的元凶么？">
+                <i class="fa fa-chevron-left"></i> 170. 政商手机的王者：黑莓手机(5)：黑莓手机是麦当娜离婚的元凶么？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">89</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
