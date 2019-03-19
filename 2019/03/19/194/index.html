@@ -1,0 +1,741 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在硅谷，我们都知道一个这样的故事，Bill Gates和Jobs两人都看到了Xerox的Palo Alto实验室里的产品——图形用户界面的操作系统，然后两个人都分别偷出来，一个做了Windows，一个做了Mac。我再把这个故事在这里重新讲一下，Xerox是图形用户界面的鼻祖，他们在1981年开发了Xerox 8010 Star，价格昂贵，17000美元，卖出去了3-4万台。然后Xerox一看这不行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？">
+<meta property="og:url" content="http://yoursite.com/2019/03/19/194/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="在硅谷，我们都知道一个这样的故事，Bill Gates和Jobs两人都看到了Xerox的Palo Alto实验室里的产品——图形用户界面的操作系统，然后两个人都分别偷出来，一个做了Windows，一个做了Mac。我再把这个故事在这里重新讲一下，Xerox是图形用户界面的鼻祖，他们在1981年开发了Xerox 8010 Star，价格昂贵，17000美元，卖出去了3-4万台。然后Xerox一看这不行">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-19T07:06:59.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？">
+<meta name="twitter:description" content="在硅谷，我们都知道一个这样的故事，Bill Gates和Jobs两人都看到了Xerox的Palo Alto实验室里的产品——图形用户界面的操作系统，然后两个人都分别偷出来，一个做了Windows，一个做了Mac。我再把这个故事在这里重新讲一下，Xerox是图形用户界面的鼻祖，他们在1981年开发了Xerox 8010 Star，价格昂贵，17000美元，卖出去了3-4万台。然后Xerox一看这不行">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/19/194/"/>
+
+
+
+
+
+  <title> 194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？ | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/194/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T15:06:02+08:00">
+                2019-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在硅谷，我们都知道一个这样的故事，Bill Gates和Jobs两人都看到了Xerox的Palo Alto实验室里的产品——图形用户界面的操作系统，然后两个人都分别偷出来，一个做了Windows，一个做了Mac。我再把这个故事在这里重新讲一下，Xerox是图形用户界面的鼻祖，他们在1981年开发了Xerox 8010 Star，价格昂贵，17000美元，卖出去了3-4万台。然后Xerox一看这不行啊，就不搞了，但是Bill Gates和Jobs知道这里的机会巨大。</p>
+<p>后来，Jobs开发了Mac，在1983年1月——晚了Xerox的8010两年——推出了Apple Lisa，乔布斯有个私生女，名字就叫Lisa，因为大人物说话就没有一句实话，起码Jobs说过他起这个名字和他的女儿没有任何关系。最近，Jobs的这个大女儿出了一本回忆录——《small fry》——翻译成中文章可以叫“无足轻重的人”。这本书里就从一个不被父亲接受的女儿眼中，写了他父亲的一生。</p>
+<a id="more"></a>
+<p>我最近看了这本书，因为我知道在中国，有海量的乔布斯的粉丝，这很让人无奈，我记得乔布斯刚去世的时候，有头有脸的人都写文章承认乔布斯是他们精神上的导师，还有的直接像活佛转世一样，直接认为自己就是乔布斯的精神传人。更多的是一些粉丝集体送花，还有的给乔布斯摆了灵堂，直接跪下磕头的，这个网上都有照片，大家可以找来看看。因为这种情况，我还是不能说太多乔布斯的坏话，因为这相当于给神话加上一个污点。</p>
+<p>我就跑个题，在讲Google的时候，讲一下Jobs女儿写的这本书，故事的内容都是这本书里的。如果Jobs粉丝认为我说的不对，我先声明一下，这不是我说的，是Jobs女儿说的，我只是转述一下而已。</p>
+<p>Jobs和布伦南生了个女儿，结果Jobs不认为这个女儿是自己的，还去做了DNA亲子鉴定，然后发现是自己的。但是，虽然DNA鉴定是自己的孩子，但是Jobs选择了不相信DNA这个技术，认为DNA这个技术是假的，可以说是重新定义了DNA鉴定。这个叫Lisa的小姑娘和她的妈妈相依为命，一直到17岁的时候，乔布斯才给了一点钱，在17岁以前，她们母女没有固定的房子，靠政府救济才能生活，可以说真是美国政府养大的孩子。</p>
+<p>乔布斯给这个小孩子起了个名字以后，就消失了，可以说是丧偶式教育，你说有爹吧，但是爹不管，你说没爹吧，但是爹还活着，还是个有钱的名人。爹也不是跑了找不到了，而是没跑，只是不管。这个小孩受到的这是这么个教育，当然了，乔布斯认为DNA亲子鉴定是不靠谱的。所以他没什么压力。压力都在小孩和她的妈妈身上，乔布斯要改变世界，比较忙。</p>
+<p>后来Lisa的妈妈实在是穷困的不像话了，女儿都要穷死了，只能求助于Jobs，经过了各种调节，Jobs也要保证自己的形象，就把Lisa接到了自己家里，然后开始了对Lisa的家庭暴力。我认为这是家庭暴力，但是Jobs另外的亲人，在接受采访的时候说，Lisa是他们家的一份子，她在书里都是瞎写的，Jobs生前非常的爱Lisa。基本上书里这样写的他的父亲，控制她，吓唬她，她是个小孩，Jobs带她去吃饭，然后不付钱就走了，把她丢在餐厅里。还有一次是Jobs问Lisa这个房子漂亮么，Lisa和她的妈妈很高兴，老爸有钱，这是要买房子给她们么？然后Jobs也觉得这个房子很漂亮，然后Jobs真的买下了房子，然后和另外一个老婆搬进去住了。就这么刺激。其中还有一些描述，我就不多说了，比如Lisa刚走过来，Jobs就对她说她身上的味道像“厕所”一样。</p>
+<p>不过好多大人物都这样啦，不能用常人的思维去判断，我在电台里说过，如果你不能眼睛都不眨一下的杀掉自己的儿子，女儿，兄弟，父母，你就当不成大人物。像好多人都敬仰的汉武帝，杀了自己的儿子（被逼自杀），秦始皇囚禁了自己的亲妈，唐太宗李世民杀了自己的哥，关了自己的爹，杀自己创业伙伴的就不说了，几乎每个大人物不都要杀个差不多么？但是，这不影响有人认为他们伟大。</p>
+<p>因为最近看了这本书，又因为说到了Apple Lisa我就跑题了。</p>
+<p>再跑回来，Apple Lisa是在1983年1月出的，到了1983年11月，Bill Gates也出了一台图形化的电脑，这件事让Jobs震怒，就把Bill Gates喊过来骂。我们可以想像，连自己DNA验证是亲生的女儿都骂的人，对Bill Gates更不会留情面。这时候，Bill Gates就说出了他最经典的反击：我们都有个有钱的邻居，叫施乐，我闯进他们家准备偷电视机的时候，发现你已经把它盗走了。</p>
+<p>所以，大家都认为施乐是个倒霉蛋，好多新技术都是从施乐出来的。至少，我认为这句话有点争议，因为还有一家更倒霉的公司，他们也放跑了好多技术，这家公司就是DEC的西部实验室，如果说错过机会，DEC西部实验室说自己是第二，施乐不敢说自己是第一。</p>
+<p>当Google在做搜索引擎的时候，同期，在DEC的西部实验室里，也有一个叫AltaVista的搜索引擎正在开发，这个引擎的作者叫Jeff Dean。Jeff Dean为什么要离开DEC去了Google呢，主要的原因是DEC认为搜索引擎没前途，于是，Jeff Dean和他在DEC的同事Silverstein一同到了Google，这两个人结对编程，是Google职位最高的人，在Google中，只有两个人的职位是Google高级院士，就这两个从DEC过来的哥们。</p>
+<p>如果DEC只是促成了Google还不算什么，还至少错失了两件事情，在1998年的时候，DEC的工程师开发出了一个数字播放器，但是DEC的领导们评估了一下，觉得这不靠谱，又放在了一边，这个团队的人，后来大批的跳槽到Apple，2年后，Apple靠DEC的跳槽员工，做出了iPod。还有一个事情是，在操作系统进化的过程中，DEC的核心工程师，大卫科特勒，在DEC开发操作系统，DEC也不重视，认为电脑操作系统有什么价值？就放走了大卫科特勒，这个家伙去了微软，组建了DEC流亡工程师团队，开发出了windows NT，也就是现在微软的操作系统的核心。</p>
+<p>所以说，DEC也是个狠角色，里面出来的工程师，一部分在Google当了核心把他们的AltaVista做成了Google，一部分在Apple当了核心，做出了iPod，还有一部分在微软当了核心，开发了windows NT，一家实验室放弃的三个团队，造就了三个顶级公司，这也可以说是前无古人了吧。</p>
+<p>在Jeff Dean和一众前DEC的员工加入Google以后，在不到一年的时间里，Google已经聚集了一批顶尖的科学家。如果大家看看最早期的Google的员工的话，好多都是DEC来的，只是名字我不太会读，比如Sanjay Ghemawat，Louis Monier, Bill Weihl, Lirishana<br>Bharat， Wayne Rosing……</p>
+<p>有了这些牛人之后，Google开始扩张，在2000年6月26日，和曾经不舍得花100万美元购买Google技术的Yahoo达成协议，所有的Yahoo搜索都要通过Google的技术来实现，Google要求在每次搜索之后，要提示用户一下，Google支持本次搜索，这样的话，可以当成是一种广告，让越来越多的人意识到Google已经是他们日常生活中的一部分了。</p>
+<p>在和Yahoo达成交易的时候，这是一个里程碑，当时Google号称自己索引的页面已经超过了10亿，但是更新的速度不够快，最开始的时候，更新的速度要几个月更新一次，后来针对热门的站点，更新的速度快了一些，但是仍然不够快。后来签Yahoo合同的时候，Yahoo要求每个月所有页面都要更新一次，Google答应了这个要求。在后来Google的技术越来越先进，更新索引的频率越来越快，后来一个项目叫BART项目，这个项目的负责人名字叫Bart，但是Google对外宣传的是湾区捷运（Bay Area Rapid Transit），这个系统号称可以像本地公交系统一样迅速。</p>
+<p>当然了，这也分什么网站，在今天，如果像我的网站这么不出名的话，更新一篇文章，两三个月都不会来索引，如果是出名的网站的话，就不一样了，所以大家也不要钻牛角尖，认为人家Google的技术不行，实际上有可能是咱们不够出名而已。 </p>
+<p>Google后来越来越聪明，索引的东西越来越多，但是有人发现了一个可以让Google更聪明的方法，但是要记录下某个用户搜了什么东西，Google从最初的时候就已经在侵犯隐私了。当然，在中国来说，侵犯隐私好像没什么事情，中国人很宽容，但是并不是所有人都像中国人这么宽容。</p>
+<p>Google有一个员工名字叫Amit Patel，他是1999年加入Google的，他就开始研究用户都是搜了些什么东西。这个我们可以知道，有人在Google上搜家庭作业，有人搜车牌，有人搜读后感，有的搜种子……这些巨量的搜索实际上可以上Google变得更聪明，如果把这些搜索的日志再加入到分析之中，再加上一些地理位置什么的，肯定能变的更精确。</p>
+<p>比如同样一搜一个汉堡店的名字，在不同的地方要显示不同的汉堡店。如果再能想办法比较精确的定位到是哪个用户搜的，把这些东西存储起来，结果会让搜索越来越精确。在那个时候，Google就已经开始保存所有人的搜索日志，还根据这些搜索的日志推出了Google的拼写检查系统，比如我们拼错了一个单词，Google是可以给出正确的结果的。而且根据这些日志，可以推测相关的搜索，比如我们搜热水的时候，他会连开水的结果也返回你。</p>
+<p>也就是说，我们每搜一次，Google都会把这些存储起来，用在以后的服务之中。对大公司都要小心一点，Google其实也爆出过很多的隐私问题，比如收集用户开个车在路上拍照的时候顺便收集路由器的Mac地址什么的，他们还偷偷收集过医院里患者的信息。其实Google公司的信条不做恶是个广告，在很早的时候，他们就开始分析这个了。Google只不过不说出来而已。在很早的时候，大概是2001年，这个基于用户搜索日志的服务就开始上线了，上线的这几个工程师，在5年后还受到了奖励，Singhal得到了一笔奖金，但是没说具体原因。很多人就猜测可能是与他当年上线的功能有关系，这些功能与用户的隐私又有密切的关系，所以，Google不说，大家只好猜。</p>
+<p>有这样一个故事，Singhal这个家伙过生日的时候，他的老板雇佣了一个人，这个被雇佣的女士假装打电话给Singhal，然后这个女士跟Singhal谈了半天，但是Singhal说我不认识你啊，这个女士说你的工作能不能找到我，这一通电话直接让Singhal很懵。这时候，他的老板说：你下一步的工作就是当有这个人打电话给你的时候，你能精确的定位到这个人是谁。通过声音，电话号码，任何你能想到用到东西，定位到这个人。</p>
+<p>讲这个故事的人是想证明一下Google的技术多么NB，但是我的想法是Google还是太没底线了，人家打一个电话你都要定位到某个人，你这不就是有病么？和独裁政府有什么区别呢？</p>
+<p>好了，这一期就讲到这里了，下一期讲一下Google是如何商业化的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/12/193/" rel="next" title="193. Google英雄辈出的早期岁月 | 软件那些事儿">
+                <i class="fa fa-chevron-left"></i> 193. Google英雄辈出的早期岁月 | 软件那些事儿
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">107</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
