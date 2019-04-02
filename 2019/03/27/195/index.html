@@ -1,0 +1,738 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这几期节目我都是做的Google的东西，前两天有个听众发给我几篇文章，文章说的内容是，在某一次互联网大会的时候，谷歌的两个创始人也参加了，当时还没有回国创业的李百度是在会上发言的，发言的内容就是搜索引擎，然后李百度像天神一样，一下子启发了这两个家伙，在会后，两个Google的创始人还屁颠屁颠的来找李百度请教互联网搜索的问题，李百度给这两个崇拜者指点了一下，这两个人就回去做出了Google。这个也不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="195. Google真是抄袭的百度的专利么？">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/195/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这几期节目我都是做的Google的东西，前两天有个听众发给我几篇文章，文章说的内容是，在某一次互联网大会的时候，谷歌的两个创始人也参加了，当时还没有回国创业的李百度是在会上发言的，发言的内容就是搜索引擎，然后李百度像天神一样，一下子启发了这两个家伙，在会后，两个Google的创始人还屁颠屁颠的来找李百度请教互联网搜索的问题，李百度给这两个崇拜者指点了一下，这两个人就回去做出了Google。这个也不">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-27T01:51:04.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="195. Google真是抄袭的百度的专利么？">
+<meta name="twitter:description" content="这几期节目我都是做的Google的东西，前两天有个听众发给我几篇文章，文章说的内容是，在某一次互联网大会的时候，谷歌的两个创始人也参加了，当时还没有回国创业的李百度是在会上发言的，发言的内容就是搜索引擎，然后李百度像天神一样，一下子启发了这两个家伙，在会后，两个Google的创始人还屁颠屁颠的来找李百度请教互联网搜索的问题，李百度给这两个崇拜者指点了一下，这两个人就回去做出了Google。这个也不">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/27/195/"/>
+
+
+
+
+
+  <title> 195. Google真是抄袭的百度的专利么？ | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/195/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                195. Google真是抄袭的百度的专利么？
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T09:42:07+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这几期节目我都是做的Google的东西，前两天有个听众发给我几篇文章，文章说的内容是，在某一次互联网大会的时候，谷歌的两个创始人也参加了，当时还没有回国创业的李百度是在会上发言的，发言的内容就是搜索引擎，然后李百度像天神一样，一下子启发了这两个家伙，在会后，两个Google的创始人还屁颠屁颠的来找李百度请教互联网搜索的问题，李百度给这两个崇拜者指点了一下，这两个人就回去做出了Google。这个也不是空口说白话，还发给我了两个专利文件，一个是李百度的，一个是Google的大学的。</p>
+<a id="more"></a>
+<p>这个李百度的专利是1999年的 <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=5,920,859.PN.&amp;OS=PN/5,920,859&amp;RS=PN/5,920,859" target="_blank" rel="external">http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=5,920,859.PN.&amp;OS=PN/5,920,859&amp;RS=PN/5,920,859</a></p>
+<p>Google的专利是2001年的 <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=6,285,999.PN.&amp;OS=PN/6,285,999&amp;RS=PN/6,285,999" target="_blank" rel="external">http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/PTO/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=6,285,999.PN.&amp;OS=PN/6,285,999&amp;RS=PN/6,285,999</a></p>
+<p>说实在的，我在这两份文档上花了点时间，后来证明，我都没看懂。网上也是众说纷纭，百度的粉丝认为Google太恶心了，明目张胆的抄袭自家爱豆的专利，非百度的粉丝则指出根本没抄，人家Google在你发专利之前就已经做了，只是申请专利比你晚，再说了，申请的专利和百度的也有很大的不同。</p>
+<p>作为一个兼职的电台播主，我又不是法官，这么说吧，你们认为抄了就抄了，没抄就没抄。Google的两个创始人和百度的创始人都是对世界有巨大改变的人，Google改变了人们检索信息困难的方式，百度改变了中国人治病求医难的问题，都是值得写进书里的人。我就不说了，我看的这些Google传记里，没写Google抄的百度，我不好意思乱编。我虽然不说，但是仍然不排除Google那两个人就是抄的百度的，希望百度粉丝不要追着我咬。</p>
+<p>接下来还是讲Google的故事。</p>
+<p>Google公司对外宣称的最核心的技术是PageRank，这个技术最优秀的地方在于可以有效的抵制垃圾信息。我个人觉得这里的垃圾信息其实也有点问题，因为拉圾信息的意思是这些信息没什么用，但是Google只能通过链接到这个页面的链接是不是很多来判断。其实这实际上会产生一个效果，当然了，这个效果并不是Google能解决的，这个是任何技术或者社会都没法解决的，就是一些名人一旦说了一件事情，那就成为定理了，很难再翻案。好像前些日子，有人转发了高晓松老师讲的秦始皇焚书坑儒是冤枉了秦始皇，因为高老师有大量的粉丝，这直接导致大量的人也跟着他说，秦始皇烧书只是为了书同文，坑儒都是坑的一些江湖术士。这种问题不是Google能解决的，也不是任何社会可以解决的，名人说话就是一言九鼎。</p>
+<p>这事放在互联网上也不算什么大事，比如搜一些信息什么的，链接的人多，自然就说明这个链接被更多人喜欢。但是，我们可以想象一下，互联网上有很多少儿不宜的信息，需求量大，链接超多，但是他不能显示出来。Google当时就碰到了这么个情况，如果把这些符合PageRank原理的链接不让搜到呢？</p>
+<p>这时候又来了一个叫Matt Cutts的工程师，他是北卡的博士，他读博士的时候，写论文写烦了，就找了个Google的电话，问问如果我去应聘的话，Google能给我多少钱呢？Google回答说，这个价格都是不一定的，就看你有多大的本事了，自己来谈，本事越大，给钱越多。这个人就在电话里聊了一会儿，也没打算真去，Google这边放下电话，就去搜了一下这个工程师，发现这个工程师不是一般人，做了很多软件，算法也写得很棒。于是Google就打电话回去说，你来吧，来谈谈，你看看机票给你定在什么时候你比较方便？闲话少说，去肯定就给了大价钱，然后他留在了Google，博士不念了。</p>
+<p>他当时有个女朋友，不喜欢去那么远，还是个不知名的小公司，觉得自己的男朋友是不是脑子有问题，闹情绪。于是他就连哄带骗的和他女友结婚了，结婚以后去度蜜月，顺便不回来了。到了Google以后，当时是2000年，当时，我最开始说的Google的专利还没有申请呢。他和两个创始人在一个大屋里办公，用了一张门板当桌子。他刚去，两个创始人就说，我们看了你的研究，觉得你能搞定这个事情，Google的PageRank太好用了，以致于搜少儿不宜的东西也超好用，你想个方法让PageRank在搜少儿不宜的内容的时候，不起作用，直接把这些内容删掉，要提供对“儿童和家庭”友好的内容。Brin和Page就说，这项工作特别的重要，可能要亲自观看很多少儿不宜的内容，问他有没有什么问题，他回答说，没有。于是他就接手了这项工作。</p>
+<p>至于怎么做的我也不知道，书里也没讲，反正刚开始的时候效果不好，后来越来越好，他的老婆还会在家里做一些饼干，来奖励大家发现的毛片漏洞，于是他的老婆有了个外号叫：Google毛片甜点女士。后来这个技术用在了很多方面，比如一些垃圾站点，也是用这个技术把垃圾信息给消除的。因为Google越做越大以后，很多人试图让自己的站点排名靠前，用了很多SEO的方法，这些SEO就是来和Google玩躲猫猫的游戏。 他们具体是如何找到这些垃圾网站的我是不得而知的，有些听电台的哥们认为我应该知道，实际上我根本不知道，而且连做SEO的人都不知道。在2002年10月的时候，一个叫SearchKing的公司，直接起诉了Google，这个公司的业务是帮助自己的客户，如何能在Google上有比较好的排名，但是，Google发现了以后，直接让这个公司的排名直线下降，原来在第一页就能显示的，现在在后面十几页才能显示。如果搜索结果不在第一页而是在第10页，基本上就完蛋了。</p>
+<p>所以这个公司一怒之下，把Google给告了，起诉的理由是Google把自己公司的PageRank从8降到了4，业务受到了严重的影响。后来这个官司比较有意思，Google打赢了官司，法官给出的理由是PageRank这个东西本质上是一种观点，对你网站的一种评价，而这种评价是言论自由的一部分，言论自由是受美国宪法保护的。这里就有一个比较有趣的问题了，什么是言论自由？美国的言论自由和乌干达的肯定不同，世界著名的喜欢吃人肉的前乌干达总统阿明曾经杀了数万反对他的人，有人问他，你这也太不言论自由了吧？他很诧异？啥叫我不言论自由？我又没限制他们说话，既然他们随便说，你们也不能限制我随便杀啊？这是一种非常流氓的言论自由。</p>
+<p>经常上网的人也有一种言论自由，比如我有个电台，或者公众号，然后我就说了一些他不喜欢听的话。这个可爱的听众就来和我理论，我懒得和他理论，要么不回复，要么直接拉黑了。直接拉黑是一个比较不尊重人的方法，有一些人就怒了，可能还要加我的私人微信或者QQ群，问一下，为啥不理他？然后我又拉黑了。可能有人会觉得，你这不是侵犯言论自由么？我觉得这种也不是侵犯言论自由，这只是我不想和他交流。如果他觉得我说的不对，是可以建一个电台来和我唱反调的。</p>
+<p>除了Google的这个PageRank在打官司的时候用了言论自由，我又想到了另外一个更出名一点的用了言论自由的案例，当然，也是在美国，我觉得这个言论自由，也就是在发达国家有点用处，在美国这样的发达国家也经常保证不了言论自由，在乌干达这样的国家，这玩意就是聋子的耳朵，纯摆设。</p>
+<p>如果你是对隐私特别重视的人，比如说你是FBI或者007，对信息的保密性要求非常高，这时候，你能用的软件并不多，因为咱们现在大部分的软件都已经没有隐私可谈了，比如你有一份中情局的绝密文档——《如何制造原子弹》，这样一份文件肯定不能用明文的，也不可能像好莱坞电影里一样，给个加密文件，还要输入几位数密码。因为这非常危险，为啥，因为你有可能被人抓住，电脑上有个输入密码的对话框，那肯定是一顿老虎凳，辣椒水，马上就招了。你可能说，我视死如归，像栋哥一样，喜欢吃辣椒，喝辣椒水很爽呢还，又加上工作是跳钢管舞，身体柔软，多高的老虎凳不怕。但是人都有缺点的，比如我本人不怕老虎凳，不怕辣椒水，但是如果他们用美人计，这就戳中我的弱点了。如果人家连美人计都用上了，你还不招，这就政治不正确了，这是明显的不尊重女性。作为一个绅士，大节上不能亏，不能为了保住原子弹的制作方法这种小事，就不尊重女性。</p>
+<p>所以呢，所有靠人脑子里的密码来保存资料的，都是极度不靠谱的。更靠谱的是，资料被加密了，但是和没加密没什么区别。目前最好用的两三个方法可能是，一个是PGP加密，一个是True-Crypt加密。这两种加密可以让一个硬盘分区有数据和没数据没有区别，也就是说，加密以后看不到特征值。像有些加密就不好，特征值特别明显，一看就知道加密的，肯定招来一顿打。像True—Crypt这样的，可以用加密因子来加密，比如你拿起手机，来张自拍，就用这张独一无二的照片作为Key来加密你的硬盘。但是这张照片丢了以后，你再也拍不出一张一模一样的二进制的照片了，所以，当007被抓住的时候，可以把这张照片物理摧毁掉。这张照片被物理摧毁以后，以目前的技术，没法解密True-Crypt加密的文件。这时候，就算使用了几次美人计，也没办法恢复数据，不是不尊重女性，是实在没办法。</p>
+<p>这种技术对政府是一种威胁，于是美国政府禁止这种技术传播。其中PGP的发明者Phil Zimmermann就被政府给禁止了。但是Phil Zimmermann决定要把这个PGP源码开源，但是只要开源了，就要进监狱。于是Phil Zimmermann这个家伙就想了个主意，他出版了一本书，把PGP所有的源代码都印在书上，这本书的名字叫《Pgp: Source Code and Internals》。美国是一个相对比较遵守法律的国家，出版书是言论自由的一部分。最后Phil Zimmermann打赢了官司，美国的政府部门一点脾气没有。如果这件事情发生在乌干达类的国家，啥言论自由，要是敢这样和政府玩这些花花肠子，坟头的草都几米高了。不过也不用担心，乌干达也出不了Phil Zimmermann这样的人，所以也就不用担心这个问题了。</p>
+<p>这好像有点说乌干达的坏话了，我没有去过乌干达，我有个同学在那边当过医生，好像听他说，乌干达的医生大部分都是云南的，他考大学去了云南，留在在云南当医生，不知道是有什么规定还是什么的，要轮流去1-2年，说还可以，比较痛苦的就是玩DOTA的时候，连中国国内的服务器延迟非常的严重，可能要大几百的延迟，没法玩。但是微信，QQ这些聊天软件一点问题没有，有时候他发现YouTube上一些好玩的视频，就下载下来传到我们群里，让大家看看。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/19/194/" rel="next" title="194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？">
+                <i class="fa fa-chevron-left"></i> 194. 哪家公司的流亡工程师可以支撑起Google，Apple和Microsoft？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/02/196/" rel="prev" title="196. Google商业化初期也有不少痛苦的抉择与挣扎">
+                196. Google商业化初期也有不少痛苦的抉择与挣扎 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">109</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
