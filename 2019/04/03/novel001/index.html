@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程感悟," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,23 +87,17 @@
 
 
 
-<meta name="description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
-<meta name="keywords" content="编程感悟">
+<meta name="description" content="最近经济不景气，因为年龄太大了，刘栋梁被公司裁员后，一直开滴滴为生。 这三个月来，除了每天能拉几单客人，倒也闲得无聊，甚至脑门上还多留下了几根头发。因为回家难免又被老婆抱怨，刘栋梁宁愿晚上在路边打盹，也不想早回家。前几天凌晨3点还接了一单生意，是从郊区拉客人到城市另一边的郊区。在郊区的机房外面等了半个多小时，出来的是两个年轻人，一看就是程序员的模样，上车后万分抱歉。 两个年轻人在车后面谈话的时候，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《这些年编程的一些反思》002. 变量">
-<meta property="og:url" content="http://yoursite.com/2017/09/14/02-programming-variable/index.html">
+<meta property="og:title" content="经典面试题">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/novel001/index.html">
 <meta property="og:site_name" content="栋哥的博客">
-<meta property="og:description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
+<meta property="og:description" content="最近经济不景气，因为年龄太大了，刘栋梁被公司裁员后，一直开滴滴为生。 这三个月来，除了每天能拉几单客人，倒也闲得无聊，甚至脑门上还多留下了几根头发。因为回家难免又被老婆抱怨，刘栋梁宁愿晚上在路边打盹，也不想早回家。前几天凌晨3点还接了一单生意，是从郊区拉客人到城市另一边的郊区。在郊区的机房外面等了半个多小时，出来的是两个年轻人，一看就是程序员的模样，上车后万分抱歉。 两个年轻人在车后面谈话的时候，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/uploads/02-huoyunxueshen.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/02-programming-variable_1.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/02-programming-variable_2.jpg">
-<meta property="og:image" content="http://yoursite.com/uploads/002.programming-02.png">
-<meta property="og:updated_time" content="2017-10-05T02:01:09.000Z">
+<meta property="og:updated_time" content="2019-04-03T13:05:03.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《这些年编程的一些反思》002. 变量">
-<meta name="twitter:description" content="计算机计算的本质是什么？如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。  计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在">
-<meta name="twitter:image" content="http://yoursite.com/uploads/02-huoyunxueshen.jpg">
+<meta name="twitter:title" content="经典面试题">
+<meta name="twitter:description" content="最近经济不景气，因为年龄太大了，刘栋梁被公司裁员后，一直开滴滴为生。 这三个月来，除了每天能拉几单客人，倒也闲得无聊，甚至脑门上还多留下了几根头发。因为回家难免又被老婆抱怨，刘栋梁宁愿晚上在路边打盹，也不想早回家。前几天凌晨3点还接了一单生意，是从郊区拉客人到城市另一边的郊区。在郊区的机房外面等了半个多小时，出来的是两个年轻人，一看就是程序员的模样，上车后万分抱歉。 两个年轻人在车后面谈话的时候，">
 
 
 
@@ -131,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/14/02-programming-variable/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/03/novel001/"/>
 
 
 
 
 
-  <title> 《这些年编程的一些反思》002. 变量 | 栋哥的博客 </title>
+  <title> 经典面试题 | 栋哥的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/02-programming-variable/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/novel001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘延栋">
@@ -277,7 +271,7 @@
             
             
               
-                《这些年编程的一些反思》002. 变量
+                经典面试题
               
             
           </h1>
@@ -292,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T12:32:27+08:00">
-                2017-09-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T21:02:37+08:00">
+                2019-04-03
               </time>
             
 
@@ -328,30 +322,26 @@
       
 
       
-        <h1 id="计算机计算的本质是什么？"><a href="#计算机计算的本质是什么？" class="headerlink" title="计算机计算的本质是什么？"></a>计算机计算的本质是什么？</h1><p>如果喜欢看武侠小说的话，可能对武术的精髓有了解，有句话叫“天下武功，无坚不破，唯快不破”。</p>
-<p><img src="/uploads/02-huoyunxueshen.jpg" alt="快"></p>
-<p>计算机计算的本质，非常完美的诠释了这个道理，电脑之所以厉害，就是靠一个“快字诀”。如果人的心脏每秒跳一次的话，假设人的平均寿命是100岁，那么，人一生心脏跳动的次数是30亿次左右，假设每跳一次，人可以计算1次，那么，人一生可以计算30亿次。但是对电脑的CPU来说，30亿次大概是现在主流中档CPU<strong>1秒</strong>的运算量，在京东上可以花1000来块钱买一个。一个人计算100年，一个主流家用电脑计算1秒，这就是电脑在某些方面的过人之处吧。电脑每完成一次计算，光可以在空中行走10厘米。</p>
+        <p>最近经济不景气，因为年龄太大了，刘栋梁被公司裁员后，一直开滴滴为生。</p>
+<p>这三个月来，除了每天能拉几单客人，倒也闲得无聊，甚至脑门上还多留下了几根头发。因为回家难免又被老婆抱怨，刘栋梁宁愿晚上在路边打盹，也不想早回家。前几天凌晨3点还接了一单生意，是从郊区拉客人到城市另一边的郊区。在郊区的机房外面等了半个多小时，出来的是两个年轻人，一看就是程序员的模样，上车后万分抱歉。</p>
+<p>两个年轻人在车后面谈话的时候，刘栋梁听出了他们之所以加班这么晚，是因为网络部门都是凌晨2-3点割接网络，这个点才下班，当然不会有什么人跑到这个鬼都不来的地方，刘栋梁不禁冷笑了一下，觉得自己混的连鬼都不如。</p>
 <a id="more"></a>
-<p>可以认为电脑里有个神奇的小精灵，他不知疲倦搬运数据，以人类无法想象的速度来做事。想必大家曾经看过闪电侠吧，他就是以极快的速度来做事，现在每台电脑里都有一个闪电侠。</p>
-<h1 id="比喻的好处和坏处"><a href="#比喻的好处和坏处" class="headerlink" title="比喻的好处和坏处"></a>比喻的好处和坏处</h1><p>在学习计算机的时候，有个必须要接受的现实，<strong>无论你研究到哪一个层次，下面总有一个层次是你无法了解的。</strong>所以，要学会和自己的无知相依相伴。</p>
-<p>不止在学习编程的过程中，在现实生活中，我们也无时无刻的不用到比喻。比如，我们会把孩子比喻成祖国的花朵，把老师比喻成辛勤的园丁。在软件开发中把流程描述成瀑布流开发模型，像瀑布一样从上而下的开发。这些比喻在一定程度上隐藏了一些东西，又在一定程度上展示了一些东西。</p>
-<p>当我在下面用到比喻的时候，希望你也能明白，这只是学自行车的时候，用到的那个辅助轮。比喻只是比喻，不是编程的本质。因为抽象的来解释，会让人昏昏欲睡。[这个方法借鉴自罗素，他在研究集合论的时候，没有办法给集合一个完美的定义，他就回避了这个定义，变抽象为具体。]</p>
-<h1 id="变量是什么"><a href="#变量是什么" class="headerlink" title="变量是什么"></a>变量是什么</h1><p>再回到本文最开始的时候，我们电脑里的那个小精灵在干什么呢？答案是，在不停的搬运并计算数据。数据存在哪里呢？准确的答案是，一部分在CPU里，一部分在内存里，还有一部分在硬盘里。</p>
-<p><strong>变量本质上是一段由0和1组成的数字串，他存放在内存里。</strong></p>
-<p>我要用到比喻了，希望能把这个事情说清楚一点。</p>
-<p>我家附近有个超市，这个超市有个规定，带包是不能进去的，可能怕别人进去偷一包辣条什么的。他有个自动的存包柜，你可以按一个按钮，就会弹开一个小柜子，让你把东西放进去，然后就会弹出一张条形码。用比喻的话，内存就是那个存包柜，弹出的那个条形码就是变量名，而存进去的东西就是变量。</p>
-<p>我觉得如果你不是特别的理解的话，可以停下来想一下，是不是这个样子？这个比喻是不是有一点道理？</p>
-<p>当你把包取走以后，就是程序员经常所说的内存释放，这个柜子又可以给别人使用了。</p>
-<h1 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h1><p>如果我们能够看到计算机内存的话，会发现无论什么样的数据，都是一样的表示方法，都是一串0和1组成的数字。在内存的层面上，并没有区分什么整数型，字符型，都是一样的。</p>
-<p>采用的这些类型，只是人为的加上的一些数据，如果搞错了这些类型，比如0110 0001这一串数字，在C语言中，如果解释成是整数，就是十进制的97，如果解释成字符，就是小写字母’a’。</p>
-<p>不同的语言，对数据类型的规定有些不同，我会在接下来的几篇文章里，(狂妄的试图)分析一下数据类型的进化历史。从古老的Fortran语言开始，在Fortran语言中，如果一个变量名是以I,J,K,L,M,N开头，那么，这个变量就是整数，非常的简单粗暴。再后来到C语言中有了隐性类型转换，到了C++中，类也是一种数据类型，再到了前两年Apple公司强推的Swift语言，所有的数据类型其实都是个Structure，每种数据类型都可以有自己的properties, initializers和methods。</p>
-<p>我一直试图从各种语言中找到一些共同点，找到几个主流语言的共同特点（共同点非常多），或者细微的区别。我接下来的文章，就写一下在这方面的我个人努力研究出来的谬论。</p>
-<hr>
-<p>形成本文的草稿</p>
-<p><img src="/uploads/02-programming-variable_1.jpg" alt="02-01"></p>
-<p><img src="/uploads/02-programming-variable_2.jpg" alt="02-02"></p>
-<h1 id="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><a href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？" class="headerlink" title="找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"></a>找区别，左边是Apple推出的Swift语言，右边是Google支持的<a href="https://kotlinlang.org/" target="_blank" rel="external">Kotlin</a>语言，是不是非常的相似？</h1><p>也可以自己去这个网站看看。 <a href="http://nilhcem.com/swift-is-like-kotlin/" target="_blank" rel="external">http://nilhcem.com/swift-is-like-kotlin/</a></p>
-<p><img src="/uploads/002.programming-02.png" alt="kotlin"></p>
+<p>可以听出这两个年轻人才刚上班不久，谈论的问题也颇为幼稚，两人为运营商为何放着数百万的机器，竟然不用更高级的技术而争论不休。刘栋梁实在是听不下去，就打断了两个人的谈话，给他们讲了为何在国企，最新的技术不会被使用，两个小伙听的有点意思，没想到一个开出租的还会编程，就留了联系方式，问刘栋梁要不要去他们公司面试一下，如果可以的话，说不定可以不用开出租了。盛情难却，他们就互留了联系方式。</p>
+<p>后来这两个小伙也真是守信用，真给刘栋梁安排了今天上午的面试。刘栋梁觉得去一下也没什么，就去了。</p>
+<p>简单的寒暄以后，一个看起来比刘栋梁小至少十岁的技术主管问了一道经典的面试题。能配得上经典面试题的不多，这道题至少有20岁了吧，刘栋梁20年前面试回答过，失业前他问过别人，现在又要回答一次。这道题是：当我们在浏览器上输入一个链接，点回车以后，后面发生了什么？</p>
+<p>刘栋梁沉思了片刻，说：“这个要分情况，也要分什么浏览器，还要分是什么链接。”</p>
+<p>那个技术主管刚才皮笑肉不笑的脸上，已经皮笑肉也笑了，他哈哈一笑说：“那你说来看看，我第一次听说竟然还要分浏览器和链接的。”</p>
+<p>刘栋梁只好苦笑一下道：“不同的链接会在不同的浏览器里产生不同的效果，比如最近程序员们为抗议996工作制做的网站，这个链接如果输入到浏览器里，国产的浏览器有的会返回404，有的会返回该网站是恶意网站，有的会返回本次访问被非法劫持，不建议访问。有的则直接说根据国家法律法规，本页面禁止访问。像Chrome和Firefox这样的浏览器，则很普通的返回一个页面，总体来说，这个要分情况，不同的网站，不同的链接，不同的浏览器都有不同的处理方式。”</p>
+<p>一直坐在技术主管旁边没讲话的一个姑娘终于开口问了：“你刚刚说的是什么意思？什么996工作制？”</p>
+<p>刘栋梁意识到她不知道什么叫996工作制，只好继续解释说：“996工作制是早9点上班，晚9点下班，一周工作6天休息1天的简称。这是非常不人道的做法，以前同性恋还没有被广泛接受的时候，共产主义者切格瓦拉对同性恋群体进行残酷的迫害，每周让他们工作60个小时，其实比起996来，还是要人道很多的。”</p>
+<p>刘栋梁还有许多话要讲，但是刚刚的皮笑肉也笑的技术主管突然换了另一副脸，冷冷的说：“也就是说，你没法加班了?” 还没等栋梁回答，这个主管把拿在手里的笔向桌子上一扔，身子往椅子上一靠，幽幽的说：“你现在是开出租车吧，开出租车你从不加班么？公司给了你工作机会，这年头，有工作就不错了，还挑三拣四的，你这年龄段的人，就不要太任性了吧。现在房子，孩子，车子，哪样不要钱？996总比失业好吧，多少人想996，还没资格呢？”</p>
+<p>刘栋梁听出了话里的讽刺，不顾自己债务缠身，一睁眼就欠银行几百块的囧境，自己赌气壮胆说道：“我可不想有996的资格！”如果外人看来，栋梁说话的口气，仿佛中国四大银行的钱现在全都在他的口袋里，但是脑子里的声音提醒他不要这么放肆，现在的房子和车子，还抵押在银行里呢。于是，栋梁很快又冷静了下来，脸上又挂上了笑容。</p>
+<p>技术主管此时已经放弃要找这么一个不听使唤的人来公司了，一心想着要结束这次面试，中国最不缺的东西就是人！但是自己的员工面前，还是要保持说话要委婉得体，这个出租车司机，真是不识抬举，好好的一场面试，结果被这老东西一张嘴就给带歪了，四十来岁的人了，还不懂得变通，怪不得到现在还在开出租车，将来肯定也没什么出息。旁边就坐着3位手下，外面还有几十号员工，技术主管不好发作，就拿出自己平时敷衍的本领，很快的打了一通腹稿，一张嘴就淌了出来。</p>
+<p>“刘先生感谢你今天的到访，经过这次交流，我们对你的技术实力有了很深刻的印象，说实在的，你的回答并不能让我们满意，虽然你有多年的工作经验，但是我觉得你不懂技术。我们会把你的简历放在人才库里，如果有合适的位置，我们会再联系你，请问，你还有什么问题要问的么？”</p>
+<p>刘栋梁微微一笑说：“我有什么问题要问你的？我想问一下，当我们在浏览器里输入google.com的时候，会发生什么事情？”</p>
+<p>技术主官一楞，尴尬的笑了一下，还是回答说：“当我们在浏览器里输入Google.com的时候，首先要到进行DNS解析，然后把Google.com这个域名进行DNS解析，DNS有递归查询和迭代查询，这里我就不展开说了，当解析以后，拿到IP地址，就开始TCP的三次握手，当握手结束以后，就发送HTTPS请求，然后服务器会处理这些请求，然后这些请求会返回给我们的浏览器，再经过浏览器的解析，生成DOM树，CSS规则树，就会在我们的浏览器里显示Google的首页了。”</p>
+<p>刘栋梁听他讲完，道了一声谢谢，起身离开了他们的会议室，为了让自己显示的高大一点，他特意抬头挺胸，可惜会议室太小了，走了两步就出了门。当时的精神只注意让自己的背影显的高大，对前面的东西照顾不周，刚出门就撞到了一个去接水的员工身上，幸亏是塑料杯子，没有摔碎，栋梁连声道谦，那去接水的小哥满脸苦笑，勉强说了一句：“没有关系”。</p>
+<p>下楼以后，赶紧去停车的地方一看，一张罚单夹在雨刷器上，原来这条路边的停车位只能晚上10点后停车。叹了一口气，栋梁开车走了。</p>
 
       
     </div>
@@ -405,12 +395,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/编程感悟/" rel="tag"># 编程感悟</a>
-          
-        </div>
-      
 
       
         
@@ -420,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/13/115/" rel="next" title="115.虽然他很疯狂，但是他没有灭亡">
-                <i class="fa fa-chevron-left"></i> 115.虽然他很疯狂，但是他没有灭亡
+              <a href="/2019/04/02/196/" rel="next" title="196. Google商业化初期也有不少痛苦的抉择与挣扎">
+                <i class="fa fa-chevron-left"></i> 196. Google商业化初期也有不少痛苦的抉择与挣扎
               </a>
             
           </div>
@@ -429,10 +413,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/16/02-programming-data-type1/" rel="prev" title="《这些年编程的一些反思》003. 整型和浮点型">
-                《这些年编程的一些反思》003. 整型和浮点型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,17 +459,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -587,22 +558,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机计算的本质是什么？"><span class="nav-number">1.</span> <span class="nav-text">计算机计算的本质是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比喻的好处和坏处"><span class="nav-number">2.</span> <span class="nav-text">比喻的好处和坏处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量是什么"><span class="nav-number">3.</span> <span class="nav-text">变量是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量的类型"><span class="nav-number">4.</span> <span class="nav-text">变量的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？"><span class="nav-number">5.</span> <span class="nav-text">找区别，左边是Apple推出的Swift语言，右边是Google支持的Kotlin语言，是不是非常的相似？</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
