@@ -1,0 +1,739 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="接上两期接着说计算机的历史，先回顾一下，第200期的时候说的是Atanasoff和Berry两位师徒做出了世界上第一台Atanasoff-Berry Computer的电脑，这台电脑在1973年的时候被法院认定为拥有计算机的专利。第201期讲的是Mauchly通过一系列不太光彩的操作，从Atanasoff那里搞到了人家电脑的配方，和他的学生Ecket一起做出了Mauchly-Ecket Compu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="202. 世界上第一台量产的计算机：UNIVAC">
+<meta property="og:url" content="http://yoursite.com/2019/06/07/202/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="接上两期接着说计算机的历史，先回顾一下，第200期的时候说的是Atanasoff和Berry两位师徒做出了世界上第一台Atanasoff-Berry Computer的电脑，这台电脑在1973年的时候被法院认定为拥有计算机的专利。第201期讲的是Mauchly通过一系列不太光彩的操作，从Atanasoff那里搞到了人家电脑的配方，和他的学生Ecket一起做出了Mauchly-Ecket Compu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-07T07:33:57.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="202. 世界上第一台量产的计算机：UNIVAC">
+<meta name="twitter:description" content="接上两期接着说计算机的历史，先回顾一下，第200期的时候说的是Atanasoff和Berry两位师徒做出了世界上第一台Atanasoff-Berry Computer的电脑，这台电脑在1973年的时候被法院认定为拥有计算机的专利。第201期讲的是Mauchly通过一系列不太光彩的操作，从Atanasoff那里搞到了人家电脑的配方，和他的学生Ecket一起做出了Mauchly-Ecket Compu">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/07/202/"/>
+
+
+
+
+
+  <title> 202. 世界上第一台量产的计算机：UNIVAC | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/07/202/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                202. 世界上第一台量产的计算机：UNIVAC
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-07T15:33:09+08:00">
+                2019-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>接上两期接着说计算机的历史，先回顾一下，第200期的时候说的是Atanasoff和Berry两位师徒做出了世界上第一台Atanasoff-Berry Computer的电脑，这台电脑在1973年的时候被法院认定为拥有计算机的专利。第201期讲的是Mauchly通过一系列不太光彩的操作，从Atanasoff那里搞到了人家电脑的配方，和他的学生Ecket一起做出了Mauchly-Ecket Computer。后来由于二战爆发，Mauchly和Ecket两个人参与了美国军方的弹导实验室的项目，要开发一台叫ENIAC的机器，这台电脑的全称叫（Electronic Numerical Integrator and Computer），这台叫ENIAC的机器也是我们计算机书上经常说的人类历史上第一台电脑，实际上并不是。<br><a id="more"></a><br>实际上这台电脑制造出来并且能正常运行的时候，二战已经快结束了，在1945年下半年才完成，每秒钟计算5000次，当时这已经是个非常惊人的成绩了，当时其它的机械计算机要用2天时间的计算量，用ENIAC用20秒就能解决了。这个ENIAC是十进制的，也是在Mauchly和Ecket的主导下建的。当然不仅仅是这两个人的功劳，因为这台计算机是在宾夕法尼亚大学做的，当时这个大学里投入了巨大的人力物力，而且吧，军方是出钱的大头。按道理说，Mauchly和Ecket应该先感谢国家吧？他不，他感谢个屁，他偷摸的就去把这台计算机相关的技术都去注册了了专利，如果别人要用他的技术，不管是军队，学校还是美国政府，要先交钱。</p>
+<p>美国人么，一点也不以大局为重，接下来的故事，可能和大家在课本里学到的非常不一样。Mauchly和他的学生Ecket觉得造ENIAC有钱赚，就去注册了公司，注册了专利，第一棒子就是打在了宾夕法尼亚大学。宾夕法尼亚大学有点懵，我这提供钱，提供人，提供场地，得到的回报是你要告我侵权。于是，宾夕法尼亚大学就和Mauchly以及Ecket打起了官司，胳膊拧不过大腿，最后宾夕法尼亚最后还是迫使Mauchly放弃了权利要求，但是我们应该知道，这种双方的不满早晚会爆发的。</p>
+<p>在这些人都各怀鬼胎以后，宾夕法尼亚大学上马了新的改进机器，名字叫EDVAC（Electronic Discrete Variable Automatic Computer），原来的ENIAC是用的十进制，现在这台机器开始使用二进制。原来的ENIAC只能算炮弹的弹道，如果要改计算其它的东西，就特别的麻烦了。因此，就想做一个能由机器指令控制的电脑，也就是现在电脑的原型。但是在如何存储指令上有很大的问题，一直搞不定。当时有一位科学家，他的名字叫冯诺伊曼，这个冯诺伊曼我在以前的电台里讲过他的生平故事了，在这里就不再说一遍了，如果有人有兴趣的话，请去收听123期到127期，我给这个家伙做了5期电台，说明他在我心中还是很厉害的。</p>
+<p>当时冯老师在负责曼哈顿计划，就是造原子弹，当时他也需要很大的计算能力，这个人官非常大，朋友都是高层，能和总统谈话的那种。还有一点就是冯老师非常喜欢出风头，日常活动是开派对，以前我节目里讲过一些，他这个人有钱，有能力，又聪明，谦虚谨慎这种中国人认为的美德和他一点关系也没有。他属于那种去哪里都是主场的人，在军方里就更不用说了，他是负责曼哈顿计划的几个人之一。他听说宾夕法尼亚大学正在研究一个计算机设备，速度挺快，但是只能算弹导，不能给原子弹提供帮助，于是在他的协调下，他空降到宾夕法尼亚大学，当起了EDVAC这个项目的负责人。他是个数学家，有人说他借鉴了图灵的思想，但是我觉得吧，以冯诺伊曼的实力，他不一定要借鉴图灵的思想，其实图灵和冯诺伊曼比起来，我个人觉得冯老师在各方面碾压图灵没什么问题，即使在惹同事讨厌上，图灵能让全团队的人讨厌，冯诺伊曼在这方面也是高手。</p>
+<p>冯诺伊曼空降EDVAC项目组以后，提出了现代计算机的架构，主要是他证明了如何在程序运行时修改控制计算机的程序代码。在ENIAC上，如果要改变程序，需要手工设置电路开关，而在他的主导下，计算机设置的时候，通过输入的数据就能控制，不用再用硬件控制了。这种动态的编程，也是计算机程序最关键的一步。我举个例子，在ENIAC时代，如果能运行微信和网易云音乐的话，当我们用完微信想再听网易云音乐的话，需要手工设置硬件开关，因为在ENIAC时代，计算机只为一种程序设置的，当换软件的时候，只能通过硬件设置。EDVAC就解决了这个问题，切换程序不用来设置硬件了，只需要切换程序就可以了，这是一个巨大的进步。</p>
+<p>这也不是冯诺伊曼自己一个人的成绩，这份EDVAC的说明书提交的时候，冯诺伊曼做了一点小小的修改，他把提交人的名字由三个人改成了一个人，其它人的名字被他删了。于是，他才去了几个月，就和宾夕法尼亚大学闹翻了，翻脸的速度和图灵有的一比，图灵在英国的时候，至少还干了半年才让同事把他开除了，冯老师取得这个成就，只用了3个月不到。Mauchly和Ecket对些非常的不满，虽然这两个人也是偷Atanasoff的创意做出来的ENIAC，但是当有人偷ENIAC做EDVAC的时候，他们还是非常不满的。但是这两个家伙的对手是冯诺伊曼，痛恨归痛恨，但是动不了他，冯老师到现在也是EDVAC机的专利拥有者，同时这个专利也是军队上专利。所以冯老师还是比较会做人的，不注册自己的专利，只注册军队和他共同拥有的专利。</p>
+<p>Mauchly和Ecket觉得自己吃了大亏，就开始做小动作，他们分别注册了电路刷新技术和存储刷新技术的专利，这种小动作当然逃不过冯老师的眼睛，于是，Mauchly和Ecket被宾夕法尼亚开除了，并且得罪了美国政府，他俩显然低估了冯老师的能力。虽然美国一直宣称自己是自由民主的政府，但是得罪了美国政府，让Mauchly和Ecket和在后来很长一段时间里都比较被动，被收拾的够呛。这个恶果在Mauchly和Ecket出去创办了自己的公司——Electronic Controls Corporation公司——这是一家充满了痛苦的公司。</p>
+<p>当时他们没想到的是，他们得罪了美国政府，美国政府对Mauchly和Ecket进行了审查，他们一建立公司，美国当时对共产主义反应过度，又加上当时的民主党议员麦卡锡吹牛说自己拥有一份共产党名单，麦卡锡反共运动一启动，首先对Mauchly进行了审查。当年他们俩个傻大哥对美国国防部就有怨言，结果人家国防部对他们俩也有怨言，这样一搞，计算机合同肯定没他们的份。而且还怀疑Mauchly这个家伙做了损害美国利益的事情，这么说并不冤枉，Mauchly同学年轻时候加入过共产党，对左翼有很多同情，还经常组织会议来批判资本主义。所以，好几年时间，这个公司虽然成立了，但是一笔业务也没有。当时Mauchly希望有人能收购他的公司，当时最有可能的是IBM公司，当时IBM公司一直是美国政府的铁杆合作伙伴，又加上当时美国做人口普查，IBM的机械设备有点力不从心，就有意搞点新技术试试。Mauchly像抓住了救命的稻草，结果IBM没买，原因是什么呢？还是得怪Mauchly本人。</p>
+<p>在1946年9月，Mauchly和他老婆去新泽西的海边游泳，第二天他打电话报警说他老婆不见了。口供是前一天晚上游泳，第二天早上报警，警察找了半天，发现他老婆已经死了，而且还是淹死的。只要是个正常人，就知道这里面有猫腻，但是警察没有证据。如果换成咱们，老婆和你去游泳，老婆没了，你就回家睡觉了，第二天早上发现老婆不见了，你才报警，我反正觉得是有很大的问题。美国没有福尔摩斯，法院判的意外死亡。</p>
+<p>IBM是个保守的公司，一看Mauchly这家伙，专利在打官司，和美国国防部有问题，还在接受美国政府的审查，再加上老婆死的不明不白，还有杀害妻子的嫌疑。那还合作个屁啊，IBM拍拍屁股说再见了。</p>
+<p>中国有句话叫：“一分钱难倒英雄汉”。Mauchly和Ecket继续出去找钱。美国社会有个好处是，所有人都向钱看，他们终于找到了另一位赞助者，是一家赌博公司，这家公司的老板也是个见钱眼开的主，他经营赌马生意，要用复杂的数学计算赔率，自己也是个花天酒地的主。他们达成了交易，两年时间给50万美元，然后拥有Mauchly公司40%的股份。这笔钱简直就是及时雨，让Mauchly没死透。但是好景不长，这个赌博公司叫美国赌金公司，老板是个狠人，当年就有自己的私人飞机，而且喜欢自己开飞机，不幸的是，飞机失事了。结果没拿到多少钱，这个赌博公司的新主人不再投资了。Mauchly的公司又陷入了困境。</p>
+<p>美国梦还存在的年代里，总是不缺少各种梦想家，赌博公司的老板开飞机去世以后，Mauchly又找了一个不按常规出牌的主，这个公司有个特点是，喜欢与IBM公司竞争。这个公司也就是Remington Rand公司，是世界上第一个量产计算机univac的公司。我再来讲讲这个Remington Rand公司，这个公司现在已经不存在了，但是他比IBM造计算机还要早。这个公司也是美国梦的典型公司。</p>
+<p>Remington Rand的创始人叫Rand，他爸爸是个公司老板，和一般的只会吃喝玩乐的富二代不同，他觉得他老爸不会经营公司，虽然他老爸的公司在当时已经是记账行业仅次于IBM的公司的，但是这个富二代不满足。他和他爸共同发明了一个专利，是一套记账系统，当年还没有电子计算机，这套系统可以称之为纸上的Oracle系统吧，反正一套数据库。他和他爸就卖这套数据库为生。这个产品称之为Kardex。富二代觉得他老爸不行，不会做生意，和他老爸多次冲突，被他老爸一气之下，赶出去了。这个富二代也争气，自己成立了个公司，按照自己的想法做生意，具体做什么生意呢？这个不好归类，因为他什么生意也做。</p>
+<p>这个公司有1000多种产品，从男人用的电动剃须刀到二战期间用的最多的手枪Remington M1911A1手枪，这个手机光在美国生产了270万把，没有授权的是授权的3倍，也就是说这个手机在二战期间大概有1000万把。反正这个公司有1000多种产品，没人知道具体有哪些产品。其中有一个打字机是和IBM竞争的，最后把IBM竞争的也很难受，两家公司还私下定了一个互不侵犯协议，如果Remington公司不做电子制表机业务，那么IBM就不涉足机械制表机业务。最后司法部一看，这不行，就把这个协议给否决了。这样，两家公司就开始干了。</p>
+<p>后来Remington的公司越来越火，当年和老爷子分家的事也不能一直拖下去，于是Remington就花了300万把他爸爸的公司买了下来，成了自己的子公司。</p>
+<p>既然Remington有1000多种产品，也就不在乎多一种电子计算机，于是Remington就决定给Mauchly投资，让他们做电子计算机，经过了一系列的兼并，Remington有各种公司，简直有完整的生产链，造计算机所有的东西，自家的公司都能生产。于是Remington就决定让这两个哥们继续做他们的产品，名字叫UNIVAC，这个也是缩写，UNIVersal Automatic Computer，翻译一下叫通用自动计算机。</p>
+<p>在当时的情况是这样，很多的公司都号称自己拥有最先进的技术，但是没有一家能推出商用的计算机。类似于现在的量子计算机吧，好多公司都说自己的量子计算机世界第一，但是老百姓就是看不到。当时IBM，Underwood，NCR这些公司都说自己有黑科技，但是没有一台能拿出来的机器。当时的叫法叫“电子大脑”。</p>
+<p>Remington公司不太相同，这家公司的老板有推出1000种产品的经验，他知道如何卖东西，也知道如何宣传。他集合了公司的力量，制造出来了几十台机器，但是要有个好的市场营销活动。于是这个不按常规的老板把目光盯在了1952年的美国大选之前。他决定要让UNIVAC预测美国大选的情况。这种级别的老板肯定是有门路的，他们就和CBS（哥伦比亚电台）做了一项交易，他们免费提供各种设备给CBS使用。作为回报，CBS要展示至少一次UNIVAC机器做出的预测。</p>
+<p>当时美国大选的双方是民主党的史蒂文森和共和党这边的艾森豪威尔，不管是当时的民调还是报纸，都认为是民主党会大胜。这有点像上一次一样，大部分人认为是希拉里获胜，实际上是川普获胜。看来美国大选的不可预测性一直以来就是如此啊。不管怎么说了，预测得准也好，预测不准也好，美国都不如中国的制度好，中国的制度世界第一好。当年这台UNIVAC预测说艾森豪威尔要领先20%。这个结果让当时的Ecket不敢相信自己的眼睛，虽然这台电脑是他自己制作的，但是他也相信自己的电脑。</p>
+<p>这一点和我一样，我虽然也写了一些软件，但是我也不相信我写的软件能跑起来。虽然有时候它们确实能跑起来。有时候想想还真是挺神奇的，我们写的软件竟然可以运行起来。</p>
+<p>Ecket认为自己做的电脑出了错误，他害怕自己说出了结果会让别人嘲笑他，于是他乱编了一个数据。但是电台的主持人可不这么认为，我们可以想象，反正出丑不是自己出丑，误差越大越有喜剧笑果，于是电台的主持人在电台里说了这个结果，艾森豪威尔会以领先20%的结果获胜。当时这已经是笑柄了。</p>
+<p>没想到的是，当大选结果出来以后，真得是差了20%，电脑预测的完全正确。这个新闻播出以后，UNIVAC一下子就成了当时的神，大部分人认为电脑就是比人聪明，和现在的人工智能一样，大部分人觉得人工智能就是比人聪明，即使现在也只是人工智障。这一下子就让UNIVAC家喻户晓，卖掉了几十台机器，有数据说是46台，当时能用计算机的不多，都是政府机构，而且还非常昂贵，一台100来万美元，折合现在的1000多万美元，就算是50台的话，也是一笔巨大的销售额，卖了5亿美元。这也是人类历史上第一台商业化的计算机。</p>
+<p>UNIVAC出了好几个型号，但是总体来说，最高的不过2.25MHz，不如现在的电子表。这台机器根据型号不同，是电子管和晶体管的组合，数量也不尽相同。我查网上，有5600到20000都有可能，尺寸大概相当于100平的房子那么大，2米高，7米宽，15米长。</p>
+<p>这件事情深深的刺痛了Remington Rand的老对手IBM公司，当时IBM还是老沃森当CEO，他对这件事情感到震怒，大选之后的第一天，他把公司的高层都喊过来，一顿臭骂，他要这些经理解释一下他们是如何让UNIVAC拿到CBS合同的。相比于IBM，Remington公司一年赚到的钱还不如IBM一年投入的研究费多。在1950年，Remington净利润1000万，同期，IBM投入的开发费用也是1000万，所以，老沃森的震怒是有原因的。但是，这时候的老沃森离退休还只有3年时间，下一期我就来讲讲IBM是如何在被动的局面下反败为胜，并长期主导了计算机行业的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/27/201/" rel="next" title="201. 计算机真正的发明人（2）| 软件那些事儿">
+                <i class="fa fa-chevron-left"></i> 201. 计算机真正的发明人（2）| 软件那些事儿
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">118</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
