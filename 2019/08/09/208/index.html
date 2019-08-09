@@ -1,0 +1,742 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="再接上一期，上一期讲到西摩·克雷，这个超级计算机之父，在创建了一个叫CDC的公司以后，很快在公司推出了性能超越IBM机器的电脑。CDC觉得IBM一时半会也追不上自家的超级计算机，董事会否决了西摩·克雷老爷子提议的新机器，于是克雷就从公司离开，去开创了一家新的公司。如果老爷子不走，CDC还是有很大机会继续压制IBM的，但是灵魂人物走了，CDC只剩下了一帮管理人员，我们并不是说管理人员对公司不重要，但">
+<meta property="og:type" content="article">
+<meta property="og:title" content="208. IBM 360，星球大战和空城计">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/208/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="再接上一期，上一期讲到西摩·克雷，这个超级计算机之父，在创建了一个叫CDC的公司以后，很快在公司推出了性能超越IBM机器的电脑。CDC觉得IBM一时半会也追不上自家的超级计算机，董事会否决了西摩·克雷老爷子提议的新机器，于是克雷就从公司离开，去开创了一家新的公司。如果老爷子不走，CDC还是有很大机会继续压制IBM的，但是灵魂人物走了，CDC只剩下了一帮管理人员，我们并不是说管理人员对公司不重要，但">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-09T08:50:36.241Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="208. IBM 360，星球大战和空城计">
+<meta name="twitter:description" content="再接上一期，上一期讲到西摩·克雷，这个超级计算机之父，在创建了一个叫CDC的公司以后，很快在公司推出了性能超越IBM机器的电脑。CDC觉得IBM一时半会也追不上自家的超级计算机，董事会否决了西摩·克雷老爷子提议的新机器，于是克雷就从公司离开，去开创了一家新的公司。如果老爷子不走，CDC还是有很大机会继续压制IBM的，但是灵魂人物走了，CDC只剩下了一帮管理人员，我们并不是说管理人员对公司不重要，但">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/09/208/"/>
+
+
+
+
+
+  <title> 208. IBM 360，星球大战和空城计 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/208/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                208. IBM 360，星球大战和空城计
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T16:49:12+08:00">
+                2019-08-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>再接上一期，上一期讲到西摩·克雷，这个超级计算机之父，在创建了一个叫CDC的公司以后，很快在公司推出了性能超越IBM机器的电脑。CDC觉得IBM一时半会也追不上自家的超级计算机，董事会否决了西摩·克雷老爷子提议的新机器，于是克雷就从公司离开，去开创了一家新的公司。如果老爷子不走，CDC还是有很大机会继续压制IBM的，但是灵魂人物走了，CDC只剩下了一帮管理人员，我们并不是说管理人员对公司不重要，但是如果你只会管理，一直也拿不出新产品出来，肯定没用。<br><a id="more"></a><br>CDC凭借西摩·克雷留下的一台比IBM快8倍的机器来和IBM竞争，实际上，从西摩·克雷离开公司以后，就再也没出过更好的电脑，一直到CDC公司被IBM打败，IBM的电脑性能还是不如西摩·克雷的电脑，但是，CDC的那群商业天才被IBM的商业天才按在地下摩擦。西摩·克雷创办CDC公司的时候，私下里的股票价格是35美分，不到一块钱。然后老爷子开挂了一样两三年推出一个超级计算机，CDC的股票从35美分涨到了76美元，离开后没多久，股票20美元，10几美元，一直到CDC被IBM摧毁，最后尸体还卖了点钱，IBM赔偿了一定数额的钱。最让我惊讶的是，CDC都破产了，IBM还没有任何可以与西摩·克雷留给CDC性能相匹配的超级计算机。</p>
+<p>我个人觉得，像西摩·克雷这种超级技术天才，可能性格比较差，但是，如果一旦得到这样的人才，无论他想干啥，就让他去干，千万不能让这号人走了。其实很多人，用世俗的眼光去评价的话，都是不合群的人，但是他们有超强的能力，我随便举几个例子吧，比如上一期讲的西摩·克雷，不合群，很古怪，但是擅长制造超级计算机。再比如创建了苹果的Jobs，如果用世俗的眼光，就算放在美国的嬉皮士那个年代，他干的那些事儿，老婆不要，女儿不管，也算比较渣的，但是他走了以后，苹果差点就破产了。</p>
+<p>IBM把CDC干掉，还是用了一些计谋的，但是这个计谋并不是每一家公司都可以用的，一会儿我再讲这个故事，现在主要先做一下铺垫，讲讲IBM做的360系统，如果没有IBM 360，下面的商业策略根本没法做。</p>
+<p>当年IBM主要有三种机器，一种是IBM 7090为主的7000系列，一种是IBM1400，还有一种是作为过渡的8000系列。当时IBM在电脑上是老大，虽然在超级计算机上被CDC打的特别惨，但是其它方面没问题，还是当老大。其它的小弟都是做与IBM机器兼容的设备来赚点钱。但是IBM可没兴趣让别人把钱赚走，于是IBM的高层做了一个大胆的决定，要生产与目前IBM设备不兼容的机器，这样研发出来以后，钱就都让自己赚了，这个方法最后得到了高层的支持。</p>
+<p>于是一个名为文森特•里尔森的家伙来负责这个项目，他是IBM公司的副总裁，还是董事会成员。这个里尔森比IBM的小沃森还要大两岁，是IBM的技术天才，他将要开创的新计算机将会改变历史，这个新的产品名字叫IBM 360，无论是软件还是硬件，都将在日后的不停被提及，也经常被写入教科书上，比如最著名的软件工程的书《人月神话》就是IBM 360项目的经验总结。IBM 360系统因为软件硬件都是自己做，光硬件工厂就自己建了6个，这几个工厂除了总装厂之外，还要做自己的半导体生产线，考虑通货膨胀以后，IBM 360项目至今仍然是美国历史上最大的单项私人出资的项目，IBM为了这个360计划，每年支出10亿美元，大概是现在特斯拉电动车的4倍左右，总共用了5万员工。这个项目的成本超过了造原子弹的“曼哈顿”计划，足以媲美美国的登月计划。</p>
+<p>360计划的方方面面早已被曝光的没什么秘密了，我觉得当年他们的策略在今天仍然非常的现实，而且被越来越多的人模仿。当年360计划的核心层，包括沃森，里尔森当时认识到如果想让竞争对手没机会，不能靠硬件，而是要靠软件与硬件想结合。而且他们已经意识到软件比硬件更容易保护，如果自己的软件只能运行在自己的硬件上，那么别人根本就没法来竞争，想用软件必须买IBM的硬件，如果不买IBM的硬件，就没法用流行的软件。而且这还可以绕过1956年强加在IBM身上的反垄断法。像现在我觉得Apple也是这个策略，想用iOS必须买苹果的设备。</p>
+<p>当年IBM就这么做的，唯一的缺点是他们低估了开发一个操作系统的难度，当他们开发这个操作系统的时候，结果在1963年CDC推出了超越IBM的超级计算机，这让小沃森非常的震怒，他命令公司去调查一下这个CDC用了多少人，结果调查报告出来以后，他更愤怒了，当时IBM已经投入了6个工厂，5万员工。结果当时CDC只有34个人，其中还包括4个保安，只有4个人做软件，14个人做硬件，剩下的人都围绕着西摩·克雷做研究，这些人中只有一个博士。这份报告送到小沃森的桌子上，他当场就发飙了，他觉得他找的这5万多人都是废物啊，5万多人打不赢34人。这让我想起了我老家莱芜战役一句非常著名的话。这句话是国军长官王耀武说的，因为莱芜战役3天就干掉了国军5万多人，这让王耀武崩溃了，他骂下属说：“五万多人，三天就被消灭光，就是放五万头猪，叫共军抓，三天也抓不完”。</p>
+<p>我相信当年小沃森看到自己的6个工厂，5万多人竟然打不了CDC的西摩·克雷带领的34个人，其中4个保安，当时的心情应该是和王耀武一样一样的，就是上5万头猪，也应该能写出360这个系统啊。然后他当场就解雇了里尔森，让自己的亲弟弟亚瑟从国际业务部门回来来负责IBM 360的项目。后来证明这是个灾难，他弟弟回来以后，玩起了人海战术，5万人不够，又加了3万。结果鼎盛时期，有8万个员工在做IBM 360项目。软件开发和我们工地上挖排水管不同，人越多还真就不一定能加快工作进度，这也是《人月神话》这本书的由来，对软件开发来说，人越多并不一定越快。人增加到8万以后，每年花的钱更多了，但是开发的进度更加延期了，这让他弟弟也没有面子，他弟弟自己请辞了，于是小沃森只好又请回了里尔森。</p>
+<p>里尔森回来以后，先进行了裁员，人数先减少再说，先减去了一半人，因为开支实在是太大了。然后为了补这个无底洞，骄傲的IBM再次出售自己的股票，又筹集了10多亿美元，如果花没了这10多亿，也就是一年的钱，还不行的话，IBM就真完蛋了，现在已经花了40多亿，软硬件还不能运行，公司上下都快彻底崩溃了。幸好，里尔森在被解雇以后，又加上自己的亲弟弟也搞不定这个IBM 360，反思了这些事情以后，不管是里尔森还是小沃森，都重新认识了软件开发不简单，这不是5万头猪的问题，就是5万个人也不容易搞。</p>
+<p>里尔森重新回来以后，把一些不靠谱的需求先放一边，把那些异想天开的项目经理解雇了一批，聚焦最基本的功能，先把机器做出来卖掉才是正事。最后IBM 360还是成功了，只是软件的功能被大大的压缩了。在IBM 360开始卖的最初一个月，就以每个月2万美元租出去了1000台，到60年代结束，IBM已经租出去了4万台IBM 360，每个月1000到3000美元不等，这让IBM每个月有接近8亿美元的收入。因为IBM只租不卖，这笔收入很赚钱，让当初投入的50亿美元只要半年就赚回来了。IBM 360的成功，也让IBM成了美国最大的公司之一，很爽的，除了IBM的360论性能还是让CDC的机器压一头。</p>
+<p>IBM有钱以后，决定要干掉CDC公司，但是就是造不出超级计算机来。这时候就得想点盘外招了，主要的方法是让CDC没有钱就可以倒闭了。</p>
+<p>我们都知道美苏争霸的时代，最后是美国赢了，苏联输的原因五花八门，但是我认为有一个最重要的原因是，苏联没钱了，只有经济崩溃了，政权才崩溃，我个人认为民心不民心的没什么太大的作用。苏联的老百姓的主要作用是劳动，然后提供劳动成果给统治他们的人，因此要让苏联没钱了，有两个方法，一个方法是让苏联百姓都不劳动了，这是不可能的，如果不劳动了，就可能被丢到监狱里或者直接打靶了，还有另一种方法是让苏联的统治者乱花钱就可以了。</p>
+<p>美国的里根总统就宣布了一个叫“星球大战”的计划，这个计划的正式名称叫“战略防卫先制”，里面都是一些假大空，根本实现不了的黑科技，以各种手段攻击敌方的外太空的洲际战略导弹和外太空航天器，以防止敌对国家对美国及其盟国发动的核打击。其技术手段包括在外太空和地面部署高能定向武器（如微波、激光、高能粒子束、电磁动能武器等）或常规打击武器，在敌方战略导弹来袭的各个阶段进行多层次的拦截。而且还让美国的盟友来参与。这项计划的投入资金是一亿亿美元。</p>
+<p>一亿亿是什么概念呢？苏联的戈尔巴乔夫时代，苏联的科研军费不到200亿。我看过一些当年讲美国宣布星球大战之后苏联反应的书，像《戈尔巴乔夫回忆录》《戈尔巴乔夫的改革与苏联的毁灭》还有军工系统中的巴维尔·普鲁因斯基写的《苏-27研制历程·历史的起点》和《苏-27研制历程·传奇的诞生》，后面这两本书不推荐购买，首先太贵了，一本150，最主要的还是看不懂，反正我是看不懂，里面讲了一些技术细节。但是能感觉到苏27这个飞机花了无数的钱，最后上天飞200个小时就报废了，光试飞员就在天上死了好多。</p>
+<p>从这些书里，有一个很诡异的现象，苏联的科学家知道美国的星球大战在吹牛，更诡异的是戈尔巴乔夫这级别的人也知道美国的星球大战是假的，但是所有人都不说。比如说美国的星球大战计划说要把F18，这是一架可以在航空母舰上起飞的飞机，相比于空军的飞机要弱一些，装上火控雷达，这在当年根本就是不可能实现的东西。但是，苏联就上马了这个项目，花了N多钱，造了一堆废物。现在被中国军迷推崇的苏27，一直到苏联解体，花了好几百亿，总共交付了70架，这70架没有一架是作战飞机，都是实验机型，发动机300小时就完蛋了。这70架飞机还包括几架没有发动机的，因为当时没协调好，光把外壳造出来了，发动机忘了。</p>
+<p>当年谁都不把美国撒谎这件事明说，谁明说谁就是软骨头，于是苏联上下团结一心，终于上马了一大堆黑科技，这都是烧钱的无底洞。美国在星球大战上大概花了2000亿美元，苏联大概花了1000多亿，但是对美国来说2000亿并不算什么，也造出来了一些好东西，对苏联就不同了，这1000多亿，就彻底把苏联搞到了坟墓里。</p>
+<p>这个和IBM有什么关系么？有！战略上是一样的，IBM和CDC竞争的时候，也发布了自己的星球大战计划，因为IBM有360做底子，发布了一个名为IBM 360/91的计划，这个计划要统一超级计算机市场，而且IBM举行了盛大的发布会，说IBM 360/91非常的历害，全方位的超越CDC的机器。当时CDC的很多人是不相信的，但是CDC不相信不要紧，只要美国买超级计算机的客户相信就可以，IBM一家一家的上门谈判，承诺还有一年就能上市了，这个IBM 360/91比IBM 360还要好五倍。因为IBM以前是不吹牛的，再加上人们普遍认为IBM靠谱，而且IBM现在已经便宜的租机器先让咱们用得着，所以就等着IBM出的超级计算机问世，等了一年又一年，终于等到第三年的时候，CDC因为现金流没了，就挂了。在1967年初，CDC已经半死不活了，IBM宣布取消IBM 360/91的开发。这一点和星球大战计划也差不多，苏联一挂，美国就宣布取消星球大战计划。</p>
+<p>当然了，CDC是个公司，公司的CEO比尔•诺里斯气死了，就找IBM打官司，说IBM不正当竞争，后来IBM确实被认定为不正当竞争。这个官司持续了好几年，最后IBM付给CDC1亿多美元，还有一些与CDC类似的公司也在这个战争中破产了，最后IBM总共付出了大约3.5亿美元给战争的受害者。</p>
+<p>这一系列官司一直持续到1982年才结束，也许是命运的安排，和他的父亲老沃森一样，小沃森的晚年也是在和美国政府打官司。也和你的父亲一样，他也没能在CEO的位置上结束与政府的官司，在1975年，他心脏病发，从公司退休了。同年，曾经负责IBM 360的弟弟也离开了公司，去法国当了美国驻法国大使馆大使。自从IBM创立以来的60年里，第一次没有沃森家族的人，这个家庭也已经够荣耀了，父亲创立了IBM，儿子把IBM发展成为世界上最知名的计算机公司，我觉得他的儿子比他还要伟大一些。</p>
+<p>那是不是说用欺骗的方法就好用呢？实际上不是的。小说上有空城计，在现实中肯定不可能出现的，自己有十万大军，别说还大门敞开了，就是不敞开也给你城门打烂。所以，吹牛骗对方这事，还是得真有实力才能骗人，如果啥都没有，就容易成为笑话。比如说美国说要搞星球大战搞苏联，苏联不可能完全不相信，毕竟万一他真搞了呢？再比如说IBM说要搞IBM 360/91，CDC要有点担心，万一真搞了呢。如果说，咱们的邻居，天鹏元帅，猪脸人身的猪悟能说要搞星球大战干美国，这只能是骗自己人相信，除了他们自己的那脑子进了屎的2000多万人相信，我觉得其它人都应该没人相信。再比如说，我建立了一个公司，绿帽子大学，我说我的目标是收购哈佛大学，肯定没人相信，因为这太狂妄了。但是如果我在我擅长的领域，那就不一样了，比如我说我180毫米的核心竞争力，大家都会相信。</p>
+<p>有人问我这些故事的素材是哪里来的？其实都是书上的，因为我有这方面的爱好，买了书也不舍得丢掉，就积累了很多书。这里的故事不止一本，有一本1995年出版的书，可能有些听众还没出生，这本书的名字叫《父与子，IBM发家史》，还有《沃森传 特立独行者和他的IBM帝国》这本书是2004年出版的，可能得去旧书店购买。至于哪一段参考的哪本书，我就不一一介绍了。</p>
+<p>再说两句读书的事情，有些人觉得读书好，实际上并不一定，不止现在这个年代，实际上在任何年代里都是如此，要有钱才好。就像《金瓶梅》里写的，当西门庆要和十个哥们拜兄弟，实际上年龄最大的是应伯爵，但是应伯爵也不敢当老大，还是让西门庆当老大，应伯爵说的那句话：“如今年时，只好叙些财势。”有钱有势就能当老大，都一样的。我自己读了很多书，现在是每次哥们聚会都不用付钱的那个，低头吃肉，有钱的同学都已经买单了 :)</p>
+<p>关于IBM就讲这些吧，讲了好几期了，下一步再讲讲晶体管和半导体这一块，IBM很多机器都是用电子管做的，但是科技的历史就要进入晶体管的时代了，其实晶体管以前有讲过一些，这次再系统的讲讲吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/17/207/" rel="next" title="207. 隐居丛林的隐士，超过IBM同期电脑40倍的超级计算机之父：西摩·克雷">
+                <i class="fa fa-chevron-left"></i> 207. 隐居丛林的隐士，超过IBM同期电脑40倍的超级计算机之父：西摩·克雷
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/09/209/" rel="prev" title="209. IBM一些花边事情和宜家的故事">
+                209. IBM一些花边事情和宜家的故事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">131</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
