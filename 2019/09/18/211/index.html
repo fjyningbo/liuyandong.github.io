@@ -1,0 +1,756 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="UNIX不是一个操作系统，而是一个家族，在这个家族数十年的繁衍中，已经有了太多的分支，但不可否认，这个家族至今仍然是最有影响力的高门大族，子孙后代繁荣昌盛。 占领所有人手机的Android和iOS两大操作系统，如果追本溯源，都要追到UNIX这棵古老的根基上。在这几十年的发展中，有太多的公司因为对Unix不满或者满意，进而做了自己的UNIX。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="211. UNIX前传并纪念我今天小腿腓肠肌拉伤的伟大时刻">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/211/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="UNIX不是一个操作系统，而是一个家族，在这个家族数十年的繁衍中，已经有了太多的分支，但不可否认，这个家族至今仍然是最有影响力的高门大族，子孙后代繁荣昌盛。 占领所有人手机的Android和iOS两大操作系统，如果追本溯源，都要追到UNIX这棵古老的根基上。在这几十年的发展中，有太多的公司因为对Unix不满或者满意，进而做了自己的UNIX。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-18T05:45:35.565Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="211. UNIX前传并纪念我今天小腿腓肠肌拉伤的伟大时刻">
+<meta name="twitter:description" content="UNIX不是一个操作系统，而是一个家族，在这个家族数十年的繁衍中，已经有了太多的分支，但不可否认，这个家族至今仍然是最有影响力的高门大族，子孙后代繁荣昌盛。 占领所有人手机的Android和iOS两大操作系统，如果追本溯源，都要追到UNIX这棵古老的根基上。在这几十年的发展中，有太多的公司因为对Unix不满或者满意，进而做了自己的UNIX。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/18/211/"/>
+
+
+
+
+
+  <title> 211. UNIX前传并纪念我今天小腿腓肠肌拉伤的伟大时刻 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/211/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                211. UNIX前传并纪念我今天小腿腓肠肌拉伤的伟大时刻
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-18T13:44:49+08:00">
+                2019-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>UNIX不是一个操作系统，而是一个家族，在这个家族数十年的繁衍中，已经有了太多的分支，但不可否认，这个家族至今仍然是最有影响力的高门大族，子孙后代繁荣昌盛。</p>
+<p>占领所有人手机的Android和iOS两大操作系统，如果追本溯源，都要追到UNIX这棵古老的根基上。在这几十年的发展中，有太多的公司因为对Unix不满或者满意，进而做了自己的UNIX。<br><a id="more"></a><br>一些已经消失在历史的长河中，比如谁曾记得曾与Linux势如水火的Microsoft曾经也出过自己的UNIX，这个叫Xenix的微软版Unix从1980年一直卖到1989年。这是一个基于BSD4.1代码的UNIX，这个版本的Unix因为价格便宜，适合跑在个人电脑上，曾经是占据了大量的市场份额，而当时Linus Torvalds还只是个十来岁的小学生。</p>
+<p>如果说Xenix有什么遗产留给世界，那就是可以按Alt-F1, Alt-F2……这些快捷键来切换不同的控制台，这个功能是微软首先实现并在商业推广中大量宣传的，后来成了Linux的标准配置。</p>
+<p>苹果公司除了今天我们用的这个基于BSD的iOS，曾经在30年前的1988年推出过另外一个UNIX：A/UX，这个UNIX在世上存活了大概10年左右，苹果将很多的新技术都用在这个操作系统上，比如采用了System V内核，实现了抢占式多任务，这一切都要领先其它的操作系统数年之久，可惜当时的硬件不足以支撑这些伟大的梦想，在1996年，Apple放弃了A/UX。此后，System V内核的大旗将由Sun公司的Solaris举起，在UNIX上，一段BSD与System V分庭抗争又惺惺相惜的双雄争霸就此拉开。</p>
+<p>也有太多的人对UNIX不满，对UNIX进行了大刀阔斧的改进，比如UNIX虽然宣称一切都是文件，但是做的不够彻底，于是就出现了一个所遗留的技术，影响至今的操作系统，名字叫Plan 9。Plan 9的创始人参于创造了UNIX，现在在Google公司创造Go语言。</p>
+<p>UNIX是如此地混乱，以致于无论从哪个角度，都可以找到UNIX的缺陷；UNIX又是如此地包容，受得起诋毁，也受得起赞美。UNIX不强调思想统一，任何人都可以对不满的地方做出改进，从某些方面来说，UNIX像是一堆积木，在一个非常宽松的POSIX标准下，谁都可以选择不同的积木搭建不同的房子。</p>
+<p>无组织无纪律就是UNIX的写照。</p>
+<p>最突出的就是UNIX的桌面了，我们很难见到两个完全相同的桌面，发展了这么多年，不仅Gnome和KDE越行越远，而且更多的桌面被开发了出来。因为X Windows本来不是UNIX的一部分，和Unix的关系几乎可以说是没关系，X Window是MIT开发的，与宿主(可不仅仅为UNIX或者Linux开发的)是松耦关系，如果你需要桌面，就安装X Window，如果不需要，就像很多的服务器一样，就不用安装X Window。如果觉得X Window太慢还可以做XGL加速。</p>
+<p>于是，我们看到的UNIX千奇百怪，iOS，Android，KDE，Android，Gnome……就像乐高积木，可以千变万化，根源却都在UNIX。就像所有的人类，可能都来自非洲一样。</p>
+<p>这是糟糕的设计么？</p>
+<p>20多年前，Richard Gabriel的一篇文章《Worse is Better》也许可以回答这个问题。</p>
+<p><a href="https://www.jwz.org/doc/worse-is-better.html" target="_blank" rel="external">https://www.jwz.org/doc/worse-is-better.html</a></p>
+<p>UNIX的原名叫UNICS（Uniplexed Information and Computing Service），翻译成中文也许可以叫单行信息与计算服务。之所以取这个名字，是为了取笑另外一个操作系统，名字叫MULTICS（MULTiplexed Information and Computing Service）翻译成中文大概叫多路信息与计算服务。</p>
+<p>Ritchie后来也说，这是一个有点反叛的名字。从某种意义上来说，UNIX也有父亲，这个父亲就是上面提到的这个MULTICS，在很多教科书上都会说这个一个失败的系统，实际上，这个“失败的”系统也并不是那么失败。</p>
+<p>在1965年的时候，MIT，GE，Bell Labs等几个大公司，要在Unix的爷爷辈分时系统CTSS（Compatible Time-Sharing System）上开发一个雄心勃勃的新系统，当时Unix的两个作者是年轻人，这两人参与了这个分时系统的开发，但是在1969年，觉得没希望的Bell Labs退出了这个项目，这两个年轻人才有机会开发Unix。</p>
+<p>Multics并没有因为Bell Labs退出就不开发了，而是一直开发到能正常运行，并且布署在各大公司内部使用，在2000年的时候，最后一台Multics机器才宣告结束，前些年，MIT开放了Multics的源代码，供喜欢的人下载，有人将这个源码编程成功，并且运行后，才发现，Unix大量的借用了Multics上的一些理念。</p>
+<p><a href="http://web.mit.edu/multics-history/" target="_blank" rel="external">http://web.mit.edu/multics-history/</a></p>
+<p>有兴趣的人可以找一下，有人将这个系统编译到了树莓派上，在2000年最后一台商业的Multics关闭以后，因为开源，Multics又重新复活了。</p>
+<p><a href="https://multicians.org/simulator.html" target="_blank" rel="external">https://multicians.org/simulator.html</a></p>
+<p>时光流逝，时间的指针马上就是进入2020年，在50年前，也就是1969年的时候，世界上第一个配置了Multics操作系统的机器在MIT大学开始运行，负责学校的信息处理工作。</p>
+<p>50年过去了，这个启发了包括UNIX在内的所有现代操作的前辈已经功成身退，虽然在众多的教课书里，Multics被形容为一个失败的项目，提到Multics只是为了衬托UNIX的伟大，但是不要忘记了正是Multics，将进程的概念引入了操作系统，将分时系统发扬光大。</p>
+<p>我们先来看一下什么叫操作系统。操作系统也是一组计算机程序，和别的计算机程序并无太多不同，都是给处理器提供指令，重要的区别是这些指令的动机，操作系统是管理计算机软件和硬件的程序。内存，输入输出设备，文件系统，CPU等等，都是操作系统来管理的。除此之外，操作系统还要有一个与用户交互的界面。</p>
+<p>20世纪40年代末到50年代中期，计算机刚刚被发明出的时候，是没有操作系统的，程序员通过控制台直接和硬件打交道，控制台上都是一些显示灯，触发器和有要输出结果的打印机。</p>
+<p>最初的计算机运行的方式是所有的软件功能都写在纸带上，然后，根据纸带上的功能来运行。这种效率非常低，而且对程序员的要求极高，纸带不能有错误，有了错误，要重新弄纸带。调度的方式是人工调度，就像今天去洗浴中心一样，当年的程序员也是以小时为单位和计算机签约，比如，签了一个钟。在这一个小时里，要花大量的时间去做准备工作。</p>
+<p>比如可能要拆卸磁带，准备卡片组，加载编译器等等，这些准备活动的过程里，计算机的CPU一直闲着。这势必造成了巨大的浪费，准备活动可能用了30分钟，运算只用了5秒钟，还剩下29分钟55秒被白白浪费掉了，如果去洗浴中心，还可以和人聊聊天，计算机没法聊天，只能交一个小时的钱，有效工作实际只用了5秒钟，没办法，拍拍屁股走人。</p>
+<p>在这种严重的浪费中，操作系统慢慢的从无到有，不可能像孙悟空一样，轰的一声就出来了。而是有一个进化的过程，下面我来说一下操作系统是如何发展出来的。</p>
+<p>在20世纪50年代中期，由General Motors开发，运行在IBM 701和IBM 704电脑上的第一个批处理系统出现了。这并不算严格意义上的操作系统，只能算是一个监控程序，调试的方式是人工调度。批处理，所谓的批，就是一批的意思，可以由磁带输入一批程序，编译成最终的目标程序。这一批完成了以后，再调入下一批。在这个阶段，程序员不能亲自接触计算机，而是让专门的人来操作这个事情，你只要提交自己的磁带和纸带，剩下的事情，操作员来处理。在这一个阶段，有了一个专门的控制语言（Job Control Language, JCL）。有一批程序排队顺序执行，尽量让CPU没有空闲的时间，提高宝贵的CPU资源利用率。</p>
+<p>这个阶段的操作系统，或者说是批处理操作系统，功能不强，但是仍然要保证进入计算机的一批程序之间不会发生冲突，比如要保护A程序不会被B程序把内存修改了，这时候内存保护的功能被开发出来。</p>
+<p>还要保证不能让C程序长期占用CPU，计时器到点了，就要让C程序把CPU的控制权返回给监控程序，在这个阶段，计时器和中断的功能被开发出来。</p>
+<p>还要保证有些指令只能是监控程序使用，普通程序不能使用，比如一些I/O指令。这个需求下，特权指令被开发了出来。</p>
+<p>在需求的推动下，操作系统就慢慢有了雏形。</p>
+<p>Lisp语言之父，计算机界的先知John McCarthy已经敏锐的发现，操作系统只有做成分时系统，才能发挥更大的作用。于是在John McCarthy和Fernando Corbato的带领下，MIT开始了艰苦的研究，在2009年采访Fernando Corbato教授的访谈里，他谈到了当年的情况，所有人对当时计算机的运行方法都不满意，但是又没有人知道下一步应该去哪里。</p>
+<p>在1960年，MIT启动了一个项目叫Project Mac（不是苹果那个Mac，只是重名了），这个项目是想让至少30个机器通过终端连接到学校的机房，教授可以在家里使用，而不是去机房排队。负责这个项目的教授名叫Licklider，当时的主机是IBM 709，这是一台960kg的大家伙，是一台真空管计算机，至今仍在使用的Fortran语言就是在这种机器上研发的。</p>
+<p>最后项目还不错，出来的成果是CTSS，也被称之为多路存取计算机，Project Mac可以连接30到160台终端到这个主机上，只是有的人要几秒钟才能输入一个字，非常的让人恼火。起初以为是IBM 709的性能不行，后来换了性能更强大的IBM 7094，当时300万美元一台，放在今天，相当于1800万美元一台，每秒钟运行的速度是10万次。虽然换了这么个强大的机器，可惜当160个终端一起连接的时候，仍然不容乐观，于是，一个更大的想法在MIT这些天才教授心里浮起。重新做一个更好的操作系统吧！</p>
+<p>这个项目就是Multics。MIT想让IBM合作，主要是能免费出一台电脑就好了，但是当时IBM有其它事情，MIT就找来了GE（General Electirc Company），用的是GE 645来开发这个机器，还拉来了贝尔实验室，三个组一起来定制Multics。</p>
+<p>要知道，CTSS相当的原始，运行的机器上只有32000个36位的内存，CTSS用了其中的5000个，应用程序从5001位置开始存放，系统时钟以0.2秒一个的速度产生中断。但是到了Multics，机器指令暴涨到2000万条，超过了同期IBM OS/360的20倍，当时IBM OS/360有100万条，中国有句俗话是：步子太大，扯到蛋了！</p>
+<p>Multics经历了4年的发展，并没有达到预期的效果，贝尔实验室决定退出，在退出的人员里，有两个年轻人，一个叫里奇(Dennis Ritchie)，一个叫汤姆森(Ken Thompson)，这两个人对贝尔实验室退出Multics项目很生气，在后来的采访中，里奇回忆说：“我们想要的不仅仅是一个好的编程环境，人机互动要重要的多，提供一个具有远程操作，分时系统的互动环境要比把程序输入计算机重要的多。我开发Multics的时候，已经非常熟悉互动编程环境了，这要比先给工作台一堆卡片，一小时后取回另一堆卡片好得多。我们回贝尔以后，就要再重新用这样的机器了。”</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/18/210/" rel="next" title="210. 初期的宜家以及创始人和纳粹的关系">
+                <i class="fa fa-chevron-left"></i> 210. 初期的宜家以及创始人和纳粹的关系
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/18/212/" rel="prev" title="212. 录一份我2006年写的作业">
+                212. 录一份我2006年写的作业 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">134</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
