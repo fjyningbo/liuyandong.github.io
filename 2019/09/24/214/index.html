@@ -1,0 +1,736 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在讲之间我先声明一个事情，我的电台是上传到国内的喜马拉雅和网易云音乐上的，因为一些不可说的原因，苹果的中国区的podcast，除非你有特别的手段和影响力，只能通过几个平台审核后才能登上去。所以，当这些平台节操失守的时候，事情就比较难办了，最近有听众说在我的电台里听到了广告，还是编程培训班的广告，这个真不是我加的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="214.德州仪器的蓬勃发展以及肖克利的迅速衰落">
+<meta property="og:url" content="http://yoursite.com/2019/09/24/214/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="在讲之间我先声明一个事情，我的电台是上传到国内的喜马拉雅和网易云音乐上的，因为一些不可说的原因，苹果的中国区的podcast，除非你有特别的手段和影响力，只能通过几个平台审核后才能登上去。所以，当这些平台节操失守的时候，事情就比较难办了，最近有听众说在我的电台里听到了广告，还是编程培训班的广告，这个真不是我加的。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-24T12:08:37.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="214.德州仪器的蓬勃发展以及肖克利的迅速衰落">
+<meta name="twitter:description" content="在讲之间我先声明一个事情，我的电台是上传到国内的喜马拉雅和网易云音乐上的，因为一些不可说的原因，苹果的中国区的podcast，除非你有特别的手段和影响力，只能通过几个平台审核后才能登上去。所以，当这些平台节操失守的时候，事情就比较难办了，最近有听众说在我的电台里听到了广告，还是编程培训班的广告，这个真不是我加的。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/24/214/"/>
+
+
+
+
+
+  <title> 214.德州仪器的蓬勃发展以及肖克利的迅速衰落 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/24/214/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                214.德州仪器的蓬勃发展以及肖克利的迅速衰落
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-24T20:06:19+08:00">
+                2019-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在讲之间我先声明一个事情，我的电台是上传到国内的喜马拉雅和网易云音乐上的，因为一些不可说的原因，苹果的中国区的podcast，除非你有特别的手段和影响力，只能通过几个平台审核后才能登上去。所以，当这些平台节操失守的时候，事情就比较难办了，最近有听众说在我的电台里听到了广告，还是编程培训班的广告，这个真不是我加的。<br><a id="more"></a><br>我的电台和公众号里至今为止没有做过一次广告，虽然有人找过我，但是主要是因为我的听众和阅读量很少，他们出的价格自然也不高，人之常情，所以，我从来没打过广告。不管是编程培训班还是做保险的，还是英语培训的，我都没有做过。不是我清高，主要是钱给的真的很少。还不如我找个网贷公司，拍个裸照贷的多，所以，我一缺钱，就去搞个裸贷。</p>
+<p>希望大家擦亮眼睛，擦亮耳朵，不要因为我的电台里给放了一个广告，就认为是我加的，并且还下单去购买了产品。如果想听纯净版的音频，我觉得YouTube上可能不太好意思加，我对国内的平台没有太大的信心。说实在的，我挺瞧不起国内这些平台的，这些平台小的时候，做事还是个人样，一旦做大了，什么恶心事都能做出来。</p>
+<p>再接上一期，继续讲晶体管的故事，上一期的结尾处我讲了迪尔用了一个很NB的方式在一个晶体管讨论会上展示了自己的硅晶体管，并且宣称了自己公司已经可以量产硅晶体管了。按照常规的想法，这事已经做成了，应该是订单雪花一样飘过来，实际上不是这么回事。我列个数据大家就知道了，在1954到1956年间，晶体管总共卖出了2800万个，价值5500万美元，同期，电子管卖出了13亿支，价值是65亿美元，所以晶体管只占整个市场的1%不到。</p>
+<p>所以，在1954年他们发布了硅晶体管以后，市场的反响是没有反响，就是一个小群体的人喜悦了一下，大家又去用电子管了。</p>
+<p>老板哈格蒂决定得做点什么，他把目光瞄准了收音机市场，当时美国人听的收音机是电子管的，尺寸像柜子那么大。他觉得晶体管可以把收音机的尺寸和功耗都降下来，因为当时晶体管的功耗是电子管的千分之一，于是他就去找收音机的厂商去谈，结果谈了很多家，人家厂商的态度是哪有那闲心赚这钱，现在的收音机就挺赚钱的，不搞晶体管。</p>
+<p>老板哈格蒂碰了一鼻子灰就出来了。但是还是不死心。</p>
+<p>哈格蒂做主要做了这两件事情，第一是改进工艺，让晶体管的成本和电子管的成本相差无几，因为晶体管刚出来的时候，平均价格是16.5美元，他花了一年时间降到了2.5美元一只，这已经和电子管差不多了。然后，他开始做广告。他找了一家叫IDEA的公司，讨论广告的方案，这个广告公司还是比较靠谱的，他们说，你做的这个东西确实是好东西，但是老百姓也确实不懂这东西，你不能去展示晶体管，而是要有个产品才行。要不你找个厂家试试？老板一听，要是能找到厂家用，我还用做广告么，不是没人用我才做广告么。</p>
+<p>于是这个IDEA公司说，反正你有钱，又想做收音机，你自己做吧。</p>
+<p>老板也只能这样了，在1954年，德州仪器的收音机上市了，尺寸是当时的1/20，可以装在口袋里,可以用电池，而且别人的收音机卖150美元，他卖49.95美元。在圣诞节期间就卖了10万台收音机，这个产品大受好评，当然了，因为这是广告，他们每卖一台亏本15美元。在亏了150万以后，其它的收音机厂商接受了这个产品，于是德州仪器牌的收音机退出市场。当年的收音机还是很漂亮的，现在这个型号的收音机如果能用的，在收藏品市场还能卖点钱。</p>
+<p>这个收音机虽然没赚钱，但是有了很响的名声，其它的收音机公司要来买晶体管，于是德州仪器也就能赚钱了。虽然前期用晶体管的人不多，但是，硅晶体管前三年只有他们会制造，所以也算赚了不少钱。还有一个很重要的点是，当时晶体管不是市场的中心，当年各个巨头都在电视机这个领域拼性能拼价格，没空搭理德州仪器还有他的收音机，这是好事也是坏事，好事是没有巨头来碾压他，坏事是，市场炒不热，毕竟收音机不是个大市场。</p>
+<p>德州仪器的老板又研究了一下电视机，发现电视机也能用晶体管，于是他这次没造电视机，而是去说服电视机厂商用晶体管。这次容易了一些，因为晶体管的成本降下来了，德州仪器的炼金小王子迪尔又改进了工艺，这个工艺叫气相沉积技术，别问我这个工艺是什么，我也不知道，反正用了这个技术以后，晶体管的价格已经低于真空管了，而且性能更好，价格也低，功耗还小，这些电视机厂商没有理由和钱过不去。所以，他们就吃下了德州仪器的晶体管，德州仪器的出货量更高了，已经搞定了收音机和电视机这两个行业。所以在24个月内，德州仪器的股票从几块钱飞涨到250美元。大家看到了一片光明的前途。一下子德州仪器成了我们山东的骄傲。</p>
+<p>如果大家来我们山东德州的话，除了德州仪器可以参观，还有很多的景点可以玩，比如说有个叫东南亚古国苏禄国，今天菲律宾苏禄省，东王巴都葛·叭哈喇，在明朝时候，回国途中，在山东省德州市城北的北营村去世，王妃葛木宁和次子温哈喇、三子安都鲁等人留在中国守墓，所以，在德州的温姓和安姓，是有国王的血统。我为什么知道的这么详细，因为我大学有个同学就是安姓的，跟我一个宿舍，据他说，东王的后代已经有好几千人了。我跟他关系还不错，因为都是国王的后代，我姓刘，我祖上是刘邦，身体里也流淌着皇帝的血统。</p>
+<p>说起血统来，我还认识一个自以为是袁士凯后代的家伙，他正儿八经的给我介绍了一下他的血统，袁士凯有十个女人，一个妻子九个妾，至于多少孩子我不太清楚，反正算上孙子辈大概有100来人。袁士凯其实一念之差，否则他在历史上非常有可能是个比孙大炮还要伟大的人物，可惜他称帝了。他在去世前给自己写了一幅挽联：为日本去一强敌，看诸君再造共和。我们历史书上可能写他和日本签了丧权辱国的二十一条，实际上袁大头这么个老奸倶滑的政治家，是不可能这么轻易就把到手的权力让给日本的，他当年在朝鲜的时候，就和日本打，对日本相当了解。所以他经过谈判，只签了其中一部分，最恶心的第五章没签，其它的签了，但是然后一条也没执行。他有个儿子叫袁克定，他为了能忽悠他爸爸当皇帝，然后自己当太子，就在家开了一个报馆，相当于给他爸爸建了一个防火墙。他爸爸想看报纸，他帮忙印，他父亲喜欢看《顺天时报》，他就印，上面的文章都是他写的，专门挑他爸爸喜欢的写，用现在的话来说叫“DNS劫持”，他爸爸想上《顺天时报》的网站，他伪造了一个，这比返回404还恶心。就相当于你想上YouTube，结果返回给你一个YouKu，这比404还要恶心。</p>
+<p>然后袁大头就上当了，他觉得民意不可违，就称帝了。然后，有一天，他不小心看到了一个数据包，这个数据包是一份真的《顺天时报》，用来包花生的还是啥的，然后他发现，我操，怎么他看的《顺天时报》和他儿子给买的《顺天时报》不一样呢？就把他儿子打瘸了。但是已经事已至此，就这样去世了。</p>
+<p>那袁大头能怪他的儿子么？我认为并不能。我觉得是这样，如果有一个人被骗了，是不能完全怪骗他的人的，最主要的原因还是本人，首先要他本人有想法当皇帝才行，如果他不想当皇帝，肯定不会搞那么多事情出来，比如组织请愿团来造势，有“商会请愿团”、“人力车夫请愿团”、“烟民请愿团”，我的微信群里有个资深烟民叫熊大，是罗永浩的忠实粉丝，如果在当年，他可以参加“电子烟请愿团”，他听了他的偶像老罗说电子烟好以后，马上去买了电子烟，成功的去淄博人民医院花了1300拍片，说吸的肺管子疼，是我那个微信群的精神领袖、“孔社请愿团”、“乞丐请愿团”、“妓女请愿团”等。所以，还是内因起作用，很多人在网上想泡妞，结果花了好几百买了茶叶，有些人想吸电子烟戒烟，结果香烟没戒，又多了一种不良嗜好，有些人想炒虚拟币，结果炒没了好几万块钱……这其实不能完全怪别人骗，还是内因起作用。</p>
+<p>不要以为又跑题了，还没有，因为马上要讲的是另一个大家都很熟悉的老朋友，号称被他的员工骗了的肖克利。在电台的93，97和115这三期里，比较详细的讲了他的故事，但是晶体管实在和他的关系太大了，只能再讲点，当然了，尽量讲那三期没讲的东西。肖克利老先生也是个英雄，他看到自己的同事迪尔加盟了德州仪器，又赚到了那么多钱，也心动了。他也出去开公司。</p>
+<p>他的金主来头更大了，当年美国科技界巨富贝克曼，贝克曼很大方，只给钱，不干涉。肖克利的公司在1955年一成立，风头就超过了德州仪器，当时德州仪器还在卖收音机。肖克利在贝尔实验室的人品大家都清楚，没人来找虐，他就将招聘广告以代码形式登在学术期刊上，一般人谁看学术期刊呢？都是些学校的老师学生来应聘。面试前，他要求应聘者测试智商及创造力，还要做心理评估，不过关的话，就不面试。反正搞得自己很专业。在1956年11月1日，肖克利又获得了诺贝尔奖，诺贝尔奖是给他们三个人的，当然了，肖克利老师认为只有他才最有资格得这个奖。得了这个奖是好事，但是对他们的公司可以说是灭顶之灾。</p>
+<p>还记得上面讲的袁大头么？不管他用什么方法吧，其实是用的不太光彩的方法把自己选上去的，具体方法是不选他就不能吃饭，所以从早上选到晚上，选了三次终于把自己选上了。据说第二次的时候，国民党消极抵抗，选谁的都有，连四大名旦之一的梅兰芳都有100多票，如果国民党能提前商量一下，中国的京剧事业能遭受毁灭性打击。肖克利也这样了，他请大家去吃饭，然后他怀疑你们这些做实验的，坑我是吧，而且还把我心爱的秘书弄受伤了，对，肖克利也很喜欢搞办公室恋情。来，然后搬出一个测谎仪，先测测谎再吃饭。大家很无奈，只能饿着肚子测谎。但是也没什么用，人家谁会故意弄你的女秘书啊。但是他越来越反社会了，他骂所有的人，然后他玩了一手更NB的，他直接公开了所有人的薪水，排名第一的是和他关系好的那个小秘书，是其它人的好几倍。这彻底的让人崩溃了。</p>
+<p>后来他的员工实在是受不了了，肖克利是个理论家，但从来不是一个能动手的人，他也不肯听公司其它人的意见，自己想怎么来就怎么来。结果公司吹了一大堆牛，一个也没实现，本来说他造出来的晶体管要5美分一个，实际上成本远高于德州仪器。后来公司的人也不听他的了，实际上他手下的人都是一些牛人，这些牛人创造了硅谷的辉煌。最著名的有八叛徒，这八叛徒后来出去创办了仙童，然后仙童公司又创办了大概50家半导体公司，其中就有Intel，AMD，说是在1969年硅谷的一次半导体峰会上，400多名参会者只有24名不是仙童的前雇员。这也算是肖克利的成就了。</p>
+<p>回到上面我讲的血统，其实我并不知道我是不是刘邦的后代，现在姓刘的人已经占中国人口的6%，我相信每个人都会认识至少10个姓刘的人，血统这个东西也就那么回事。肖克利在晚年不甘寂寞，他又开始认为自己是优等民族中的优秀人群，于是他开始建立精子库，他认为白人的质量要高于其它有色人种，他还想推广低智商人群绝育政策，如果要生孩子的话，先测一下智商，如果智商低于100，就由国家给1000块，买断生育权。后来有英国记者去调查，他的精子库里出生的孩子与其它人没什么两样，并没有表现出特别聪明。从这个角度上来说，可能后天的影响更大一些。所以，不要听很多人瞎扯，自己是黄二代绿三代黑四代的，只是后天受的教育好，并不存在说他们基因好。</p>
+<p>下一期再讲一下内存的事情，因为大家都关注CPU什么的，但是内存在这个时期也有巨大的发展，所以，我想再讲讲内存的起源和发展。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/18/213/" rel="next" title="213. 德州仪器，开拓硅晶体管的先驱">
+                <i class="fa fa-chevron-left"></i> 213. 德州仪器，开拓硅晶体管的先驱
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

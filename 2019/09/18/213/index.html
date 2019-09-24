@@ -1,0 +1,742 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这一期再回归到讲计算机的主题，不跑题了，像上一期我录了个义和团，容易引起争议。我个人觉得很多人只是看了一下历史书啥也不知道就来和我争论，同样的，和我争论的人也认为我研究这种事情跑偏了，三观不正。终于达成了没法说服对方的共识。这一期讲真空管和电子管的事情。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="213. 德州仪器，开拓硅晶体管的先驱">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/213/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="这一期再回归到讲计算机的主题，不跑题了，像上一期我录了个义和团，容易引起争议。我个人觉得很多人只是看了一下历史书啥也不知道就来和我争论，同样的，和我争论的人也认为我研究这种事情跑偏了，三观不正。终于达成了没法说服对方的共识。这一期讲真空管和电子管的事情。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-24T12:05:58.823Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="213. 德州仪器，开拓硅晶体管的先驱">
+<meta name="twitter:description" content="这一期再回归到讲计算机的主题，不跑题了，像上一期我录了个义和团，容易引起争议。我个人觉得很多人只是看了一下历史书啥也不知道就来和我争论，同样的，和我争论的人也认为我研究这种事情跑偏了，三观不正。终于达成了没法说服对方的共识。这一期讲真空管和电子管的事情。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/18/213/"/>
+
+
+
+
+
+  <title> 213. 德州仪器，开拓硅晶体管的先驱 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/213/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                213. 德州仪器，开拓硅晶体管的先驱
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-18T13:46:26+08:00">
+                2019-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一期再回归到讲计算机的主题，不跑题了，像上一期我录了个义和团，容易引起争议。我个人觉得很多人只是看了一下历史书啥也不知道就来和我争论，同样的，和我争论的人也认为我研究这种事情跑偏了，三观不正。终于达成了没法说服对方的共识。这一期讲真空管和电子管的事情。<br><a id="more"></a><br>在最初的时候，电脑都是用真空管做的，因为现在真空管用的不多了，除了一些军事上的用途，就是音乐发烧友在用了，他们的行话叫玩胆机。我听过几次胆机出来的声音，个人感觉差不多，可能是我对声音没什么爱好，像我录电台就一直用手机录，没钱是一方面，另一方面是我对音质不追求。</p>
+<p>就从胆机谈起吧，胆机上用的真空管就是多年前电脑上用的真空管，这个发明人能追溯到爱迪生。当年爱迪生发明电灯的时候，最开始用的是碳丝电灯，这个碳丝太容易蒸发了，用几下就不能用了。爱迪生觉得可以在里面放点金属，也许能延缓碳丝的蒸发，他就放了一根铜线。当然了，没什么用，但是他发现了这根凭空加进去的铜线上有电流。爱迪生也搞不清楚，但是他还是注册了专利，并且给这种现象起了个名字叫“爱迪生效应”。</p>
+<p>后来他可能就把这事给忘记了，很多年以后，英国的一个物理学家叫弗莱明，像爱迪生做电灯一样做出了一个二极电子管，后来美国的一个发明家根据这个二极管，在其中加了一个栅板，做出了一个真空三极管。这种管子有个神奇的功能是放大电子信号，胆机就是使用电子管的功率放大器。像在空中有电波，这个电波的功率是非常小的，收音机的作用是接收到这个微弱的信号，然后再把这些信号放大，放大到能够让喇叭发出声音来就可以了。</p>
+<p>后来在20世纪后期，人们发现了一种元素锗，科学家就在这个元素上做实验，比如放进去一些杂质，然后科学家发现这东西有一些迷人的特质，有时候导电，有时候不导电，有时候受光照的时候还能放出电流，有时候放大电流，有时候又能阻断电流。经过很多科学家反复试验，终于发现在半导体表面涂上恰当的微量元素的时候，这个半导体能够表现出和真空管一样的性质，可以放大通过的小电流。于是一块半导体，在两头和中间插上电线，然后把这玩意装在一个与真空隔绝的盒子里，就这么个东西，创造了如今电脑的革命。</p>
+<p>在讲晶体管的时候，有一个人绕不过去，就是诺奖得主肖克利，可惜在电台里我已经专门讲了他了，所以在这里我只再简单的提一下他，更详细的可以看看第93期，97期，讲的是晶体管之父，专门讲的他。这一期再讲一点那两三期没讲的东西，让他再饱满一点。</p>
+<p>他的父母都是地质学家，他的爸爸是采矿的工程师，他妈妈是地质学家，两个人年年龄差距相差20岁。是老夫少妻的组合，这种组合其实挺好的，我有个忘年交就是这样的组合，我这个朋友姓杨，也不知道他还能不能记得我，在2004年的时候，我受导师的委托，去南京大学办了点事，在南京大学里碰到了这位朋友，名字我就不说了，我说出来怕你们都知道了。肖克利的妈妈比他爸少20岁，很顺理成章的离婚了，两个人都是地质学的，一年见面不到一次，他跟着妈妈，他妈妈从小就教会了他认识很多岩石，而且他攀岩的水平肯定是非常高的。后来他成年后，在贝尔实验室，经常在吃饭的时候，给所有人表演一下爬墙。臂力惊人，估计是麒麟臂。</p>
+<p>肖克利非常的不合群，但是很聪明，他上学的时候以取笑老师为乐，工作后以取笑同事为乐，生活中以取笑从小就没管过他的老爸为乐，在晚年以取笑人类为乐，他办了个诺贝尔精子库，然后捐献精子，接受捐献的人要经过智商测试，还得长的比较漂亮。我对这事比较感兴趣，不知道捐献的流程是什么，是直接捐给本人还是有中间商赚差价，这个没考证出来。晚年上帝和肖克利开了个玩笑，这个精子库总共出生了300多个人，结果都是普通人，并没有他认为的个个都是精英。看来这个后天教育环境与基因到底哪个更有影响力，还真不好说呢。</p>
+<p>他非常聪明这事是真的，在贝尔实验室里关系不好也是真的，于是，他孤立了其他人，或者说其他人孤立了他，这个都不好说，反正没人想理他，他也不理其它人。他加入了一个小组，名字叫肖克利小组，组员一个，就他自己，工作是检测晶体物质以及这些晶体物质的导电性。以前我在电台里也讲过，很早以前电话的交换机都是机械的，好几层楼，里面都是一些机械装置，贝尔实验室想搞个设备出来，用来替代掉那些机械设备。因为弹簧，电磁铁总归是不太靠谱。当时负责这个项目的人叫凯利，这个人肚量很大，宰相肚里能乘船，肖克利这样的人，他也能忍。更厉害的是，他爱才，他知道肖克利的才能，还说服了另外两个家伙来协助肖克利工作，这两个家伙可不像凯利一样大度，于是三个小组又分裂成了两个组，肖克利自己一个一组，那两个家伙一组。</p>
+<p>那两个家伙也不是等闲之辈，一个是理论家巴丁，一个是实验家布莱顿，在1947年12月23日，这两个人做出了世界上第一个能放大电流的晶体管，并且申请了专利，没有肖克利的份。可见三个人之间就有政治啊，这让肖克利极其愤怒，本来都是他取笑别人笨，这次竟然被取笑笨了。他在好胜心的驱使下，在接下来的两年里，一个人做各种实验，因为他同组的那两个家伙做出来的晶体管不稳定，加工难度也太大，他要做一个更好的出来。在1949年，幸运女神青睐他了，他做出了世界上第一个结型晶体管，也就是咱们书上讲的PN结晶体管，他非常的扬眉吐气。这次，他也没把荣誉分给另外两个同事，他自己做的，当然自己要。</p>
+<p>现在我们都说晶体管可能是上世纪最伟大的发明，这个说法是没什么错误的。但是在当时，人们可没意识到这东西有什么大用处。至少能意识到这东西有用的人，可能在个位数，贝尔实验室不在内。</p>
+<p>当时贝尔实验室有的是科学家，好几万，每天都有各种成果，晶体管在当时也就那样吧，只有几个人知道。并且，贝尔实验室很快就把这个晶体管的专利放在了可授权的名单里，并且对像助听器这样的企业免费授权，对商业公司，只要花2万5千美元，就可以授权生产，然后，接下来的几年，没人肯交这2万5，也没有助听器公司来生产。我觉得最主要的原因是，人类其实也没那么有远见，绝大部分好的东西都可能埋没了，晶体管差点就成为其中之一。肖克利发明了晶体管以后，也没再继续研究，而是去做其它的研究了，他也把晶体管给忘记了。</p>
+<p>还是贝尔实验室的一个家伙，他的名字叫戈登•迪尔，他的工作是制造晶体的，他擅长制造各种高纯度的晶体，像锗这种东西，对他就像玩一样，他业余爱好还有提纯金，能把一种元素提纯到小数点后好几位，但是，没什么用，他就在贝尔实验室里改进各种工艺，但是不知道如何才能让公司注意到他的工作。他就找到了一些贝尔实验室申请的专利，要改进一下制造工艺，恰好他拿到了肖克利的晶体管，他看了一眼就觉得，这玩意，制造工艺太差了，他花了几个星期重新改进了PN结晶体管的制作工艺，使用了一种叫线圈中心加热的技术，也叫区域精炼，让晶体管的废品率不到1%。这是一个巨大的进步，但是贝尔实验室还是觉得好像晶体管没什么前途，这事又这样了。</p>
+<p>当时世界上最大的真空管制造商Raython，已经通过与贝尔交换专利，获得了制造晶体管的资格，并且，他们也确实制造出了晶体管，但是晶体管和真空管冲突，这是又一个柯达相机的故事。柯达是世界上最早制造出数码相机的公司，在1975年的时候，就由一个叫沙森的工程师造出来了，但是这东西与主页卖胶卷的业务有冲突，所以就把数码相机雪藏了，结果后来的故事我们都知道了，现在柯达已经破产了。可能柯达没有看过Raython的故事吧，在真空管时候，有一家巨头叫Raython，他们造出了晶体管，但是也雪藏了，后来公司也挂了。</p>
+<p>柯达是被尼康，索尼和佳能这些数码公司干掉的，Raython是被一家叫做德州仪器的公司干掉的。</p>
+<p>有钱了请大家吃天下第一鸡</p>
+<p>当时德州仪器是个小公司，更确切的说是属于GSI公司的一个部门，这个GSI公司业务比较杂，后来改名德州仪器了，为什么改名呢？这事，有中国的巨大功劳，可以说是没有中国，就没有德州仪器。为什么这么说呢，德州仪器的母公司GSI什么都做，从石油钻探到军火，都做，其中德州仪器很幸运的是与美国军队有业务，在1950年的时候，中国和美国发生了一场朝鲜战争，负责军火业务的小部门一下子就赚了，在1951年的时候，已经有数千万的销售额，有数百万的利润，老板叫哈格蒂，直接让部门上位，整合了母公司，改组为德州仪器，专门从事军火业务。但是这个仗又不是天天打，到1953年，战争一结束，德州仪器的股票从几十美元到了三美元，利润直线下降。因此，寻找业务增长点是当务之急。</p>
+<p>老板哈格蒂前两年发了个战争财，厂房增大了好几倍，现在得造点东西了。于是在别人的建议下，他决定造晶体管，问题只有一个，他不知道什么叫晶体管。人家老板肯定有人脉，在别人的指点下，他先是搞定了贝尔实验室的授权，就是花2万5就能造晶体管，然后还和一家钟表厂签了一份合同，卖晶体管给这个钟表厂，只是合同额有点小，100个锗晶体管。有了授权，有了合同，还没有人。于是他就找到了那个在贝尔实验室闲得没事提炼晶体，提纯黄金的家伙说，你来我公司吧，公司现在有合同，你有技术，我有厂房和资金，来做点事吧。</p>
+<p>于是老板叫哈格蒂和在贝尔实验室不受重用的迪尔一拍即合。迪尔说，这个锗晶体管不值得制造，你这100个锗晶体管，我自己一个人一周就能搞定，你要造硅晶体管。老板一听，问了一个问题，什么是硅。迪尔一听就崩溃了，这事闹的。哈格蒂人家虽然不懂什么是硅，但是有人脉，回去找到了一个专家，这个专家就是肖克利，问问能不能造硅晶体管，肖克利谁都瞧不上，更不要说一个才学会晶体管这三个字的老板了，就嘲笑了一下他，直截了当的说，用硅是不可能的，硅没法提纯。</p>
+<p>老板回去，也很实在，就告诉迪尔说，肖克利说不能用硅，因为硅不能提纯。迪尔第二次见面的时候已经把100个锗晶体管制造好了，让老板交给钟表厂，然后告诉哈格蒂说，肖克利不能制造，不代表我不能制造，他还不能制造锗晶体管呢，你看，我不是已经做好这100个锗晶体管了么？老板也是人狠话不多的，就说，你说要多少钱吧。迪尔给他说，提纯硅确实很困难，要的钱有点多，大概要1000万美元，老板一听差点崩溃了，这几年发战争财，好不容易赚了点，如果再加上自己的橡胶公司，咬牙接受了他的提议。迪尔说他需要60个人，一年时间。老板说好，如果一年后造不出来，大家可以一起死了。迪尔说你别这么悲观，现在市场上要的都是锗晶体管，这60个人中有一半是造锗晶体管的，你只要能卖出去，我就能造出来。老板很开心，结果第一年就卖了100万只锗晶体管，质量是市面上最高的，大概卖了500万，老板都开心坏了。所以，找对了人，其实也没什么太大风险。</p>
+<p>锗晶体管不能耐高温，温度一高，稳定性就很差。当然了，现在时过境迁，锗的耗电比硅小，所以现在有一种半导体叫硅锗，兼具省电和耐高温的特征，我是说当年的情况，当年还没有发明硅锗这种东西。在1954年，迪尔已经搞出了硅晶体管，他用了一个特别装逼的方式来展示他的硅晶体管。</p>
+<p>在1954年一次晶体管研讨会上，大家的发言都是围绕如何提高锗晶体管的热稳定性和硅晶体管如何制作上，基本上就是一个吐槽大会，其中，迪尔也是演讲的嘉宾之一，他拿了一个录音机，然后在录音机上有一个他精心设计的锗晶体管，把这个录音机放在油里，然后点燃下面的酒精灯，录音机里放着Artie Shaw的音乐，伴随着酒精灯的火焰，优雅的萨克斯音乐开始变的不稳定，锗晶体管受热后不稳定的特征被展现出来。随后，音乐声嘎然而止，锗晶体管不工作了。随后，他从他的上衣口袋里拿出他制作出的硅晶体管，替换掉那个锗晶体管，音乐声音又重新响声。</p>
+<p>伴随着萨克斯音乐的声音，他把自己的老板哈格蒂请上台，并且宣布了德州仪器已经开始量产硅晶体管。</p>
+<p>当时所有人都震惊了，但是，晶体管还是只占市场1%都不到的份额，排在前面的还是真空管，下一期我再来讲一下德州仪器从一个小公司继续奋斗的故事。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/18/212/" rel="next" title="212. 录一份我2006年写的作业">
+                <i class="fa fa-chevron-left"></i> 212. 录一份我2006年写的作业
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/24/214/" rel="prev" title="214.德州仪器的蓬勃发展以及肖克利的迅速衰落">
+                214.德州仪器的蓬勃发展以及肖克利的迅速衰落 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
