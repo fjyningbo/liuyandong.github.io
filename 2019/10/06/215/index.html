@@ -1,0 +1,738 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="栋哥的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="上一期讲了晶体管的历史，结果有人说只想知道晶体管是如何做的，说实在的，我也不知道，我这个不是科普节目，晶体管怎么做这事，包括现在像AMD的锐龙，Intel的i7 CPU里用的什么晶体管，怎么做出来的，我一窍不通。说实在的，我不认为有中国人能完全搞懂现在主流的CPU是如何造出来的，如果能搞懂，早就去自己搞了，还能申请一大堆钱。我认为像AMD的锐龙，Intel的i7肯定有不为人知的特殊机密，也是人家的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="215. 随机存取内存诞生的故事">
+<meta property="og:url" content="http://yoursite.com/2019/10/06/215/index.html">
+<meta property="og:site_name" content="栋哥的博客">
+<meta property="og:description" content="上一期讲了晶体管的历史，结果有人说只想知道晶体管是如何做的，说实在的，我也不知道，我这个不是科普节目，晶体管怎么做这事，包括现在像AMD的锐龙，Intel的i7 CPU里用的什么晶体管，怎么做出来的，我一窍不通。说实在的，我不认为有中国人能完全搞懂现在主流的CPU是如何造出来的，如果能搞懂，早就去自己搞了，还能申请一大堆钱。我认为像AMD的锐龙，Intel的i7肯定有不为人知的特殊机密，也是人家的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-05T23:39:18.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="215. 随机存取内存诞生的故事">
+<meta name="twitter:description" content="上一期讲了晶体管的历史，结果有人说只想知道晶体管是如何做的，说实在的，我也不知道，我这个不是科普节目，晶体管怎么做这事，包括现在像AMD的锐龙，Intel的i7 CPU里用的什么晶体管，怎么做出来的，我一窍不通。说实在的，我不认为有中国人能完全搞懂现在主流的CPU是如何造出来的，如果能搞懂，早就去自己搞了，还能申请一大堆钱。我认为像AMD的锐龙，Intel的i7肯定有不为人知的特殊机密，也是人家的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/06/215/"/>
+
+
+
+
+
+  <title> 215. 随机存取内存诞生的故事 | 栋哥的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栋哥的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I was so much older then, I'm younger than that now.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/06/215/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘延栋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栋哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                215. 随机存取内存诞生的故事
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-06T07:38:31+08:00">
+                2019-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>上一期讲了晶体管的历史，结果有人说只想知道晶体管是如何做的，说实在的，我也不知道，我这个不是科普节目，晶体管怎么做这事，包括现在像AMD的锐龙，Intel的i7 CPU里用的什么晶体管，怎么做出来的，我一窍不通。说实在的，我不认为有中国人能完全搞懂现在主流的CPU是如何造出来的，如果能搞懂，早就去自己搞了，还能申请一大堆钱。我认为像AMD的锐龙，Intel的i7肯定有不为人知的特殊机密，也是人家的核心技术，肯定是不会透露的，所以，不要问我特别技术的问题，i7怎么造的，我要是知道，我还用白天开出租，晚上跳钢管舞为生么？早就去造CPU了。<br><a id="more"></a><br>这期是讲内存的故事，所以，如果你想知道DDR4，DDR5内存是怎么造出来的，那你来错地方了，我不懂，我只是讲最早期与内存相关的故事，与怎么造内存没关系，我也不懂怎么造内存的。</p>
+<p>讲这个故事有点长，因为任何东西都不是一个天才拍脑门就能想出来的，造内存也是，得有需求和资金，还要有人才，这三个缺一不可。如果只有需求和资金，但是没人才，最后就是花很多钱啥也造不出来，这种情况在美国很多，大家都是骗国家投钱，然后自己装腰包里去了。如果没有资金，只有人才和需求，大家应该知道一分钱难倒英雄汉的故事吧，像我在以前几期讲的阿塔纳索夫造电脑的时候，就是因为没有钱，所用的内存是电容做的，只能凑活。如果有资金有人才，但是没有需求，那就是造一个昂贵的玩具，就像在荒野里修了个电动车充电站，任凭风吹雨打，都长草了。</p>
+<p>造内存的时候，正好有这三方面的条件，可谓天时地利人合，有需求，有人出钱，还有能造内存的人才。这个要先说回到1949年8月的一天。</p>
+<p>在1949年8月，一份报告摆到了美国总统杜鲁门的案头，报告说远东刮来的风里检测到了大量的核辐射。杜鲁门让他的团队打听一下是不是美国又在搞核试验了？结果团队说没有。这就太可怕了，结果传来了一个让美国震惊的消息，苏联宣布成功引爆了核弹，更刺激的是，苏联还宣布了自己有1200架大型图-4轰炸机，已经可以有全球投放核弹的能力。以现在的眼光来看，苏联当年在51节检阅的时候，可能是有点吹牛，他们的图-4轰炸机并不能全球投放，但是也比较厉害了。</p>
+<p>为了防止苏联的核弹扔到美国头上，美国政府一方面查一下谁泄露给苏联的造核弹的机密；另一方面要有反制措施，最好是能让轰炸机进入美国领空之前就给检测出来。对后者来说，就是建立一套系统，对苏联的进行监控，类似于一套雷达报警系统，这肯定需要电脑这种东西。于是，美国政府就把这个工作让麻省理工去做了，找了个叫乔治·瓦利的教授，看看能不能搞点事情出来。当时他有个已经毕业的学生叫杰伊·福雷斯，正在从事另一个项目，那个项目的名字叫“旋风计划”，与飞机相关的，那个项目已经花了400万美元，因为这个杰伊·福雷斯能说会道，技术水平还挺高，与政府的关系又好，类似于一个小号的冯·诺伊曼吧，他想干的事情，基本上都能从政府拉来很多钱，而且完成的还很不错，这种是正循环，给钱，活干的好，下次要钱的时候，就会给更多的钱，如果活又干的好，下次直接闭着眼给钱。</p>
+<p>这个杰伊·福雷斯就是如此，他花了400万美元，搞出来了一个特别厉害的飞机，但是二战结束了，他的飞机并没有真正上战场，所以他经常拿他设计的飞机来些高难度的动作取悦别人，空军的领导很开心，让他当了空军航空部门的一个负责人。他正好没事干，只能自己找点项目干，于是，他又申请了一大笔钱，改进飞机设计的流程，当年飞机要先设计出来，再去飞一下试试，如果不行，再回来改一下，这样比较费钱，他就决定用计算机来设计。如果能在计算机上模拟一下，不用真的飞上天，那就能省一大笔钱了。</p>
+<p>于是他要造一套飞机设计软件，在模拟飞机的时候，他遇到了这样一个困难，以前的电脑都是先输入数据，等一会儿算出来结果，现在他要实时的算出数据并反馈给电脑，比如模拟飞机的操纵杆，电脑要对这个结果马上给出反馈，但是当时的电脑都没这个功能，有点像现在咱们玩游戏一样。于是接下来的问题是，他要先制造一台符合他要求的电脑出来。于是在1946年到1949年之间，他又申请了每年100万美元造电脑，以他的能力，他在第一年就模仿一台ENIAC，当年的知识产权可能还不太严格，但是，这台仿制的ENIAC并不能做到实时的对飞机的操纵杆进行反馈，他分析了一下原因，他觉得是内存不行，当时的内存太慢了，完全没法用。</p>
+<p>他正在为这件事情困扰的时候，他的老师来拜访他，问他能不能搞个雷达能实时的监控苏联的飞机，他想了一下说，目前不行，他正在做的项目就卡在这里了，因为他要模拟的飞机要在1秒钟内对92个独立的变量进行反馈，目前的电脑内存太慢了，不能实时的反馈，这个和雷达一样，如果苏联的飞机来了，要半小时后才能算出来，核弹都投下来了。这两个问题实际上是一个问题，现在电脑的内存都是阴极射线管，和电视一样，用暗点和亮点来存储一系列数据，但是电子很容易受干扰，一不小心，数据就错了。他就和他老师说这事搞不定。他老师就说，如果你都搞不定，我就想不到谁能搞定了，加钱能不能搞定呢？这个杰伊·福雷斯说，加钱可以，现在每年100万，你打算加多少？然后，就给了他每年400万，这样他每年可以花500万美元造内存了。</p>
+<p>在钱的驱使下，他也没有造出内存出来，但是他仅仅花了一年时间，就让空军觉得这钱花得值。在1950年夏天，在汉斯科姆空军基地，这是波士顿的一个秘密空军基地，他们用二战时候的雷达，让空军模拟苏联的飞机，他们可以对一架轰炸机跟踪了10英里，并且模拟算出了最佳的拦截时刻，这件事用咱们中国的话来说算是初次验收，空军觉得这钱没白花，问他能不能同时跟踪几架飞机，杰伊·福雷斯说没问题，只要给时间。然后接下来的几年，钱的问题基本上解决了，只是内存的问题还没有解决。</p>
+<p>在1951年的时候，杰伊·福雷斯的那套东西已经可以跟踪几架飞机了，这也是世界上唯一一个可以实时反馈的系统，但是就是不稳定，因为内存在运行一段时间以后，就会挂掉，数据因此会出错，飞机就跟丢了。这让这个科研团队十分灰心，这个团队里离职了不少人，认为这个是无法解决的问题。最后还是杰伊·福雷斯自己来处理，反正他是负责人，于是他尝试了各种方法，他试试能不能用电场和磁场来记录数据。</p>
+<p>他找到了一位新泽西的朋友，这个朋友是陶瓷专家，开了个公司生产电视机上的铁氧体阻抗变换器，这种变阻器是用电流产生的磁场，比较简单，但是杰伊·福雷斯希望得到一个用电流改变磁场，然后又能读取这个磁场的设备，他的这个朋友说可以试试，两个人研究了一年多，终于做出了后来的芯子存储。他们两个发明了这个东西以后，立刻就注册了专利，从国家赚了不少钱，最后杰伊·福雷斯把这个专利属于他的部分送给了麻省理工学院，这个专利每年光专利费给麻省理工赚2000多万美元。这种存储被称之为随机存取器，到今天为止，我们还是用的这个原理。IBM听到以后，马上出钱购买这个专利的许可，从而开发出了很多产品，这个留到以后再说。</p>
+<p>在继续谈内存之前，我想谈谈冷战和杰伊·福雷斯这个人，在二战以前，美国对国外的态度是只要不打我，我才懒得管，也就是所谓的孤立政策。大部分美国人在打二战之前，对自己国家的实力是没任何想法的，根本不知道自己这么能打。因为美国都是一些低头赚钱的民企，根本没想到要打二战，只有打了，才想到自己能干点啥。可以说是美国靠民企打赢了二战，德国靠纳粹党企打输了二战。也正是因为这个原因，像本文的主人公想到了内存的方法以后，马上注册了专利，实际上，美国的军方是不反对的，不但不反对，而且很乐意你这样坑国家的钱。在1945年到1985年这40年间，美国军方全国撒钱，大概花了3万亿美元，造就了一大批私企，但是军方从来不要股份，甚至还要高价买你的产品。</p>
+<p>美国军方最有影响力的两个部门分别是DARPA（国防高级研究项目署）和IPTO（信息处理技术办公室），这两个部门主要负责撒钱，如果大家听过我以前的节目，就知道这两个部门投资的公司创造了互联网，创造了造鼠标，和图形界面的施乐公司，否则比尔盖茨和乔布斯都不知道去抄谁的。还有这两个部门也创造了一家叫DEC的公司，这家公司的一个员工去了微软，做出了windows NT，DEC公司就是以造内存起家的，其实这两期我想讲DEC公司，但是突然讲的话又感觉太突兀，这一期算是DEC前传了。</p>
+<p>这一点还是要先明确，美国靠民企打赢了二战，所以战后，美国政府对民企那是相当的关心。我就讲一个例子吧，这是一家美国公司，可能不少中国人家里也有这家公司的产品，这家公司的名字比较山寨，叫AO史密斯，国内的和国外的是不是一样就不清楚了，外国公司一进来中国，肯定是要变点味道的，我讲的是美国的公司。</p>
+<p>这家公司在二战前做什么呢？做婴儿车，自行车和热水器。婴儿车，自行车和热水器有什么共同点么？有的，这两个东西都要用管子，自行车用，热水器也用，也就一起造了。没想到二战发生了，美国很郁闷，这么大个国家，竟然没有一个专门造炸弹的专业公司，只要招标，这家公司就接到了标书。政府的人就告诉他，造炸弹简单，比自行车和热水器都简单，就是搞个管子，再焊接上两个铁片当翅子稳定一下就可以了，然后这个公司也是爱国心切，把自己的热水器和自行车生产线改装了2周，就开始造炸弹了。二战期间，这家热水器厂商总共造了450万枚航空炸弹，不计其数的普通炸弹，但是也不要太骄傲，这个公司在美国政府的供应商中排不到前100名。</p>
+<p>期间，他们还修了两条超长的管子，因为在二战期间美国东西海岸之间要交换石油的话，没有铁路，只能通过巴拿马海峡，但是那个海峡被德国搞定了，在1942年美国完全不能运石油。于是，AO·史密斯造了两条管子，这就是横跨美洲大陆的输油管，反正这家默默无闻的公司就是搞管子出身的，从婴儿车一直做到另一个名字听起来像婴儿车的管子，美国投到日本的两颗原子弹，一个名为“小胖子”，一个名为“小男孩”，这两个核弹也是管子，同样是AO·史密斯焊接出来的。当然了，战后这家默默无闻的公司，就像电影里从来回头看爆炸的英雄一样，又默默的回去造热水器了，武器，都是以前的事了。</p>
+<p>大家看过美国队长吧，如果没看过可以去看看，美国队长有个故事是美国队长和他的飞机被冰封了几十年，这个有个真实版本的故事，美国在二战期间，有几架飞机迫降在格陵兰岛茫茫无际的冰原上，飞机的型号是P38，过了小50年的时间，这几架飞机早就被人遗忘了，已经被埋到了80米厚的冰层里。AO·史密斯听说以后，就把自己的大型热水器运到现场，毕竟是专业生产热水器的，花了几个月的时间，这几架P-38飞机像美国队长里的飞机一样，重见天日。</p>
+<p>但是，没有像美国队长里演的那样，这几架飞机没能马上起飞，在运回去修理以后，这几架飞机又得以重回天空。为什么AO·史密斯要去做这件事情呢，一个原因是他家热水器做的好，另一个原因是，这架飞机的起落架，航炮，螺旋桨都是当年AO·史密斯生产的。我前面说过，AO·史密斯并不算太靠前的供应商，像给美军生产谢尔曼坦克那就更传奇了，前两年有部电影叫《狂怒》，布拉德·皮特拍的，里面有个场景是四辆谢尔曼坦克对阵一辆虎式坦克。大家可能觉得4打1有点不公平，实际上，现实上更不公平，德国生产1000辆虎式坦克的时候，美国找了些汽车公司，拖拉机公司，还有一家生产伐木器材的公司，这些公司一合计，每家生产几个零件，然后德国1000辆虎式坦克上战场，美国这边上去6万辆，以60：1的速度摧毁了纳粹。所以战后，作为收藏品的虎式坦克价格是相当贵的，为什么呢？其实并不是有些军迷吹的虎式坦克世界第一好，而是因为虎式坦克生产的少，都被打烂了，物以稀为贵，像谢尔曼坦克多得有点不像话，除了打赢了战争，没有其它优点。</p>
+<p>当然了，有人会说美国造的坦克没有德国人造的有工匠精神，我看过军迷分析过德国亨舍尔公司造的虎式坦克，说实在的，战争这种东西，别说坦克，炸弹这种消耗品了，就算人都是消耗品，要啥工匠精神，又不是造手机，好虎架不住群狼，10辆谢尔曼对1辆虎式坦克，不可能输的。</p>
+<p>二战之前美国的陆军水平打不过荷兰，但是美国人也没想到，自己原来这么能打，这叫什么，这叫藏富于民。美国一开始就孤立政策是因为觉得自己不能打，实际上，在二战期间，他们就靠这些造婴儿车，汽车，热水器，伐木器材的公司，造出了147艘航母，40万架飞机，30万辆坦克，一下子成了战胜法西斯的中坚力量。</p>
+<p>也正是因为这原因，战后的美国特别注重扶植这些民用企业，军方只负责给钱和采购，从来不追求要在这个公司里占股份，因为他们清楚，这些民企关键时刻肯定是和美国政府站在一起的。如果美国再和德国来一场，我一点也不怀疑这些美国的企业，包括高科技企业会对德国进行再一次打击，什么Google啊，Intel啊，别看平时挺正常的，而且还经常和美国政府发生点不愉快，在大是大非面前，肯定不含糊。我也相信，只要国家需要，AO·史密斯热水器还会再拿出自己的看家本领，再焊接一次炸弹。</p>
+<p>在军方的强力投资下，杰伊·福雷斯找到了造内存的方法，军方的态度很有趣，他们开始四处找人看看这个技术行不行，不仅给IBM这样的公司推荐，还找任何对这个技术有兴趣的人推荐，其中就有两个年轻人说想试试，军方说好的，你们出去做个公司吧，只要你们造出来，我们肯定买。这两个年轻人说，有想法，没钱买这个专利授权啊，于是军方说没问题，钱我有，给你们把授权费打个折。这两个家伙就真的出去开公司了，后来这个公司就是DEC公司。</p>
+<p>下一期讲讲这个公司的故事。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="刘延栋 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一下关注我的公众号:软件那些事儿</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎收听我的电台，你的支持将鼓励我继续前进</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="刘延栋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.jpg" alt="刘延栋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/24/214/" rel="next" title="214.德州仪器的蓬勃发展以及肖克利的迅速衰落">
+                <i class="fa fa-chevron-left"></i> 214.德州仪器的蓬勃发展以及肖克利的迅速衰落
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="刘延栋" />
+          <p class="site-author-name" itemprop="name">刘延栋</p>
+           
+              <p class="site-description motion-element" itemprop="description">很少做正确的事,只去做简单的事。然后后悔。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/djradio?id=336387122" target="_blank" title="电台">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  电台
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ruanjiannaxieshier" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/yan_dong_liu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://lmzdx.com" target="_blank" title="绿帽子大学">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                  绿帽子大学
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘延栋</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
